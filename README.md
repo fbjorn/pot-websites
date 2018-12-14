@@ -6,7 +6,6 @@ Portal is one stop shop for all developers.
 
 ## For whom? 
 
-* Internal developers, to build effective, streamlines and enjoyable process for platform component developers and managers. 
 * 1st tier – data providers, to enable easy addition of new data source
 * 2nd tier - 3rd party application developers (+ managers) be productive in minutes and create the apps for the market
 * 3rd tier - Component and tool providers build plugins, SDKs, packages for development frameworks to boost platform adaptation worldwide
