@@ -1,8 +1,8 @@
 # Platform of Trust Developer Portal
 
 
-## Purpose
-Portal is one stop shop for all developers. 
+## Purpose and background
+Portal is one stop shop for all developers. Developer Portal is part of Developer Program, which is coordinated with help of Trello. 
 
 ## For whom? 
 
