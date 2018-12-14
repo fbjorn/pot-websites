@@ -13,5 +13,6 @@ Portal is one stop shop for all developers.
 
 ## Development practices
 
-* We use 2 week sprints. New release after each sprint
-* We use waffle.io in sprint management (TODO: add link here)
+We use 2 week sprints. New release after each sprint
+
+We use waffle.io in sprint management (TODO: add link here). Waffle is the free and tasty way to plan, track, and organize work in GitHub. Built with everyone on your team in mind, Waffle provides a simple board interface for your GitHub Issues and Pull Requests. 
