@@ -1,5 +1,5 @@
 
-** NOTE! Not approved yet! **
+**NOTE! Not approved yet!**
 
 Platform of Trust (PoT) Community exists to facilitate sharing information, resources, and encouragement among the Platform of Trust community.
 
