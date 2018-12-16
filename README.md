@@ -1,4 +1,5 @@
-# Platform of Trust Developer Portal
+
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/PlatformOfTrust/developer.oftrust.net.svg?columns=all)](https://waffle.io/PlatformOfTrust/developer.oftrust.net) # Platform of Trust Developer Portal
 
 
 ## Purpose and background
