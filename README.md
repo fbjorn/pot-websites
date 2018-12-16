@@ -18,4 +18,11 @@ We use 2 week sprints. New release after each sprint
 
 Epics are included in issues and are tagged with label ``EPIC``
 
+User stories labelled as ``User Story`` 
+
+Milestones set in Github for: 
+* alpha
+* beta
+* MVP (end of March 2019)
+
 We use waffle.io in sprint management ([Go to Waffle](https://waffle.io/PlatformOfTrust/developer.oftrust.net)). Waffle is the free and tasty way to plan, track, and organize work in GitHub. Built with everyone on your team in mind, Waffle provides a simple board interface for your GitHub Issues and Pull Requests. 
