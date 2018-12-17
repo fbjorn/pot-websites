@@ -1,10 +1,20 @@
 # Developer Portal - road to MVP
 
-Document describes the must have and should have features of Developer Portal. wWe have three milestones:  
+Document describes the must have and should have features of Developer Portal. wWe have four milestones:  
 
+* Pre-alpha Jan 4th 
 * Alpha by January 31st
 * Beta by March 11th
 * MVP by March 31st
+
+## Pre-alpha 
+
+Preparations for full scale development: 
+* Road to MVP document
+* Known requirements
+* Domain
+* Server
+* Practices clear and documented in Github
 
 ## Alpha
 
