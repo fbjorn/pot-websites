@@ -29,8 +29,14 @@ Aim for the MVP in that sense that your portal will be also one app on the platf
 
 ### Register first app in the sandbox (become a developer for that)
 
+- register app (name, description, logo, license, price)
+
 ### Build their first Digital twin (in three min)
 
+- answers to question: how to build first app on PoT in under 3 minutes. 
+
 ### Get some data flowing linked to that twin
+
+- means verify that data flows
 
 Some of these will be provided by the dev portal
