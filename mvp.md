@@ -20,7 +20,7 @@ Aim for the MVP in that sense that your portal will be also one app on the platf
 
 - top navigation: (left > right): PoT developer portal (link to beginning/top), documentation, support, contact, register/login 
 - layout the steps needed to be productive (create an app): register - build - publish
-- Link to get started package (helps to create first app in under 3 minutes)
+- Link/call for action: create first app in under 3 minutes (get started package)
 
 
 ### Register for user account (a regular user account on PoT)
