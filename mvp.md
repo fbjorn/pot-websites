@@ -18,6 +18,9 @@ Aim for the MVP in that sense that your portal will be also one app on the platf
 
 ### Register for user account (a regular user account on PoT)
 
+- So the frontend has to have register and login/logout buttons. 
+- user management by platform service (Gluu?)
+
 ### Register first app in the sandbox (become a developer for that)
 
 ### Build their first Digital twin (in three min)
