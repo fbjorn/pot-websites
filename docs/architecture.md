@@ -6,4 +6,4 @@
 - that backend would then communicate with other PoT APIs backend-backend
 - frontend would only talk to it's own backend via the same domain etc. via relative paths if possible to remove need for CORS etc. things that tend to add more problems
 
-![Diagram](http://jgraph.github.io/drawio-github/diagram.png)
+![Diagram](https://raw.githubusercontent.com/PlatformOfTrust/developer.oftrust.net/master/docs/pot-developer-portal-architecture.png)
