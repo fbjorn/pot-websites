@@ -19,4 +19,5 @@ Document descrbibed the must have and should have features of Developer Portal. 
 - register first app in the sandbox (become a developer for that)
 - build their first Digital twin (in three min)
 - get some data flowing linked to that twin
+
 Some of these will be provided by the dev portal"
