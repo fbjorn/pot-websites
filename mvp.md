@@ -37,6 +37,6 @@ Aim for the MVP in that sense that your portal will be also one app on the platf
 
 ### Get some data flowing linked to that twin
 
-- means verify that data flows
+- tools/views to verify that data flows and all is good, success 
 
 Some of these will be provided by the dev portal
