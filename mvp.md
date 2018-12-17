@@ -16,10 +16,15 @@ Document describes the must have and should have features of Developer Portal. w
 
 Aim for the MVP in that sense that your portal will be also one app on the platform. 
 
+### Initial view
+
+- layout the steps needed to be productive (create an app): register - build - publish
+
 ### Register for user account (a regular user account on PoT)
 
 - So the frontend has to have register and login/logout buttons. 
 - user management by platform service (Gluu?)
+- with one registration, dev becomes sandbox user too. 
 
 ### Register first app in the sandbox (become a developer for that)
 
