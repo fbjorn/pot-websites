@@ -20,7 +20,7 @@ Epics are included in issues and are tagged with label ``EPIC``
 
 User stories labelled as ``User Story`` 
 
-Milestones set in Github for: 
+[Milestones set in Github for](https://github.com/PlatformOfTrust/developer.oftrust.net/milestones): 
 * pre-alpha (preparations)
 * alpha
 * beta
