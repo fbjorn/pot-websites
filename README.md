@@ -21,6 +21,7 @@ Epics are included in issues and are tagged with label ``EPIC``
 User stories labelled as ``User Story`` 
 
 Milestones set in Github for: 
+* pre-alpha (preparations)
 * alpha
 * beta
 * MVP (end of March 2019)
