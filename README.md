@@ -26,9 +26,9 @@ Milestones set in Github for:
 * MVP (end of March 2019)
 
 ## FrontEnd Prot setup "pot-dev"
-cd to pot-dev
-nmp install
-nmp run dev
-Open up localhost:3000
+* cd to pot-dev
+* nmp install
+* nmp run dev
+* Open in browser localhost:3000
 
 We use waffle.io in sprint management ([Go to Waffle](https://waffle.io/PlatformOfTrust/developer.oftrust.net)). Waffle is the free and tasty way to plan, track, and organize work in GitHub. Built with everyone on your team in mind, Waffle provides a simple board interface for your GitHub Issues and Pull Requests. 
