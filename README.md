@@ -32,7 +32,7 @@ Set in Github for:
 
 ## FrontEnd Prot setup "pot-dev"
 * Clone repository to local machine with ``git clone git@github.com:PlatformOfTrust/developer.oftrust.net.git``
-* ``cd to pot-dev``
+* ``cd pot-dev``
 * ``npm install``
 * ``npm run dev``
 * Open in browser localhost:3000
