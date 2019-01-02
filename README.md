@@ -31,7 +31,7 @@ Set in Github for:
 * MVP (end of March 2019)
 
 ## FrontEnd Prot setup "pot-dev"
-* Clone repository to local machine with ``git clone git@github.com:PlatformOfTrust/developer.oftrust.net.git
+* Clone repository to local machine with ``git clone git@github.com:PlatformOfTrust/developer.oftrust.net.git``
 * ``cd to pot-dev``
 * ``npm install``
 * ``npm run dev``
