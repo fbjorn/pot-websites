@@ -30,7 +30,7 @@ Aim for the MVP in that sense that your portal will be also one app on the platf
 
 - top navigation: (left > right): PoT developer portal (link to beginning/top), documentation, support, contact, register/login 
 - layout the steps needed to be productive (create an app): register - build - publish
-- Link/call for action: create first app in under 3 minutes (get started package)
+- Link/call for action: create first app in under 3 minutes (get started package) "0 to 200 in under 3 minutes". 200 is ok response code in REST APIs.  
 
 
 ### Register for user account (a regular user account on PoT)
