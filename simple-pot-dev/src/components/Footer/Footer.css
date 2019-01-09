@@ -1,0 +1,22 @@
+footer {
+  background: #343a40;
+  color: #fff;
+}
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6,
+footer p,
+footer q,
+footer span,
+footer a:link,
+footer a:visited,
+footer a: hover,
+footer a:active {
+  color: #fff;
+}
+footer .footer-copyright {
+  background: #080808;
+}

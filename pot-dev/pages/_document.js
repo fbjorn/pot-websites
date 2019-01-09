@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>{this.props.styleTags}</Head>
         <body>
-          <Main />
+          <Main foobar={this.props.foobar} />
           <NextScript />
         </body>
       </html>

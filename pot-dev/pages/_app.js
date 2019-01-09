@@ -8,7 +8,7 @@ class Pot extends App {
         return (
             <Container>
                 <Page>
-                   <Component />                 
+                    <Component />                 
                 </Page>
             </Container>
         );

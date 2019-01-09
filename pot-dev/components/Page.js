@@ -56,13 +56,18 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 class Page extends Component {
+  
+
   render() {
+    const { foobar } = this.props;
+
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
           <StyledPage>
             <Meta />
             <Header />
+            props.foobar: {foobar}
             <Inner>{this.props.children}</Inner>
           </StyledPage>
           <GlobalStyle />
