@@ -1,4 +1,5 @@
 footer {
+  margin-top: 2rem;
   background: #343a40;
   color: #fff;
 }
@@ -10,11 +11,7 @@ footer h5,
 footer h6,
 footer p,
 footer q,
-footer span,
-footer a:link,
-footer a:visited,
-footer a: hover,
-footer a:active {
+footer span {
   color: #fff;
 }
 footer .footer-copyright {

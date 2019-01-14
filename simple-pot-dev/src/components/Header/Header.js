@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import './Header.css';
+import icons from 'glyphicons'
 
 class Header extends React.Component {
 
@@ -43,7 +44,8 @@ class Header extends React.Component {
               <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
             <ul className="nav navbar navbar-right">
-              <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up </a></li>
+              <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up {icons.heart} </a></li>
+
               <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
           </div>
