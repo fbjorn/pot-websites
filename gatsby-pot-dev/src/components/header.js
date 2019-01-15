@@ -28,6 +28,9 @@ const Header = ({ siteTitle }) => (
             <Link className="nav-link" to="/blogs">Blogs</Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/wp-blog">WP-blogs</Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link disabled" to="#">Community</Link>
           </li>
           <li className="nav-item">
