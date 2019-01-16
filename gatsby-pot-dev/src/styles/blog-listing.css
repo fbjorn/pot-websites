@@ -1,4 +1,18 @@
-div.blog-post-preview {
+.btn-clipboard {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    z-index: 10;
+    display: block;
+    padding: .25rem .5rem;
+    font-size: 75%;
+    color: #818a91;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: .25rem;
+}
+/* div.blog-post-preview {
     border-bottom: 2px solid #e6e6e6;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -11,4 +25,4 @@ h1 > * {
 h2 {
     font-size: 0.8rem !important;
     font-weight: 100 !important;
-}
+} */
