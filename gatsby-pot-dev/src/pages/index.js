@@ -27,12 +27,13 @@ const IndexPage = () => (
       </div>
   
       <main className="container">
+        <h2>What do you want to do next?</h2>
         <section className="container row equal">
           <div className="col-sm d-flex">
             <div className="card">
               <div className="card-header"><h3>CREATE DATA PRODUCTS</h3></div>
               <div className="card-body">
-                <p>Add new data products with integrations for other developers to consume</p>
+                <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
               </div>
               <div className="card-footer">
                 <Link to="/">Learn more >> </Link>
@@ -43,7 +44,7 @@ const IndexPage = () => (
             <div className="card">
               <div className="card-header"><h3>BUILD APPS</h3></div>
               <div className="card-body">
-                <p>Build new applications on top of the data products</p>
+                <p>Read the getting started and build new applications on top of the data products.</p>
               </div>
               <div className="card-footer">
                 <Link to="/">Learn more >> </Link>
@@ -52,9 +53,9 @@ const IndexPage = () => (
           </div>
           <div className="col-sm d-flex">
             <div className="card">
-              <div className="card-header"><h3>DOCS</h3></div>
+              <div className="card-header"><h3>READ THE DOCS</h3></div>
               <div className="card-body">
-                <p>Read our API documentation and stepby- step guides</p>
+                <p>Take a deep dive into API documentation including code examples for Python, Node.js, Java and shell (curl)</p>
               </div>
               <div className="card-footer">
                 <Link to="/">Explore docs >> </Link>
@@ -64,7 +65,7 @@ const IndexPage = () => (
         </section> 
         <section  className="container">
           <h2>Get started with the Platform of Trust APIs in minutes</h2>
-          <p>(käyttää sandbox rajapintoja)</p>
+          <p>Try out the APIs instantly. Just select API, preferred language and hit "run". The response with headers is printed below.</p>
           <div className="container row">
             <div className="col-md-6">
               <div className="bd-clipboard">
