@@ -16,10 +16,13 @@ const Header = ({ siteTitle }) => (
             <Link className="nav-link" to="/">Home</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link disabled" to="#">My World</Link>
+            <a className="nav-link" href="http://builder-staging.oftrust.net/">My World</a>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/developers">For developers</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link disabled" to="#">Use Cases</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link disabled" to="#">Marketplace</Link>
@@ -33,10 +36,6 @@ const Header = ({ siteTitle }) => (
           <li className="nav-item">
             <Link className="nav-link disabled" to="#">Community</Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link disabled" to="#">Issues</Link>
-          </li>
-
         </ul>
         <form className="form-inline my-2 my-lg-0">
           <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
