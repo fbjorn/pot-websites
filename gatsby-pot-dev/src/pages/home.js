@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+// import Image from '../components/image'
+// import SEO from '../components/seo'
 
 class Home extends React.Component {
 
@@ -15,7 +15,7 @@ class Home extends React.Component {
                 <div className="container">
                     <h1 className="display-4">Platform of Trust</h1>
                     <p className="lead">Platform of trust helps to create better built environments by providing ​data one can trust on.​</p>
-                    <a className="btn btn-primary btn-lg" href="#" role="button">Get started</a>
+                    <a className="btn btn-primary btn-lg" href="/" role="button">Get started</a>
                 </div>
                 </div>
             

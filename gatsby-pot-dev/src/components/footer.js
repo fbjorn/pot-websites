@@ -1,12 +1,11 @@
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
+// import { Link } from 'gatsby'
+// import PropTypes from 'prop-types'
 import React from 'react'
 
 const Footer = () => (
     <footer 
         className="page-footer footer font-small pt-4" 
         style={{
-            background: `rebeccapurple`,
             marginTop: `2rem`,
             background:  `#343a40`,
             color: `white`
