@@ -25,7 +25,7 @@ const IndexPage = () => (
         </div>
       </div>
   
-      <main className="container fullwidth">
+      <main className="container">
         <section className="container row equal">
           <div className="col-sm d-flex">
             <div className="card">

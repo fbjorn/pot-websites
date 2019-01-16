@@ -28,25 +28,25 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
-        title
-        image {
-            childImageSharp {
-                resize(width: 1500, height: 1500) {
-                    src
-                }
-                fluid(maxWidth: 786) {
-                    ...GatsbyImageSharpFluid
+    query BlogPostByPath($path: String!) {
+        markdownRemark(frontmatter: { path: { eq: $path } }) {
+            html
+            frontmatter {
+                date(formatString: "MMMM DD, YYYY")
+                path
+                title
+                image {
+                    childImageSharp {
+                        resize(width: 1500, height: 1500) {
+                            src
+                        }
+                        fluid(maxWidth: 786) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
                 }
             }
         }
-      }
     }
-  }
 `
 ;
