@@ -65,7 +65,7 @@ const IndexPage = () => (
         </section> 
         <section  className="container">
           <h2>Get started with the Platform of Trust APIs in minutes</h2>
-          <p>Try out the APIs instantly. Just select API, preferred language and hit "run". The response with headers is printed below.</p>
+          <p>Try out the most commonly used APIs instantly. Just select API, preferred code example and hit "run". The response with headers is printed below.</p>
           <div className="container row">
             <div className="col-md-6">
               <div className="bd-clipboard">
@@ -89,7 +89,10 @@ const IndexPage = () => (
             <div className="col-md-3">
             <button className="btn btn-primary btn-block">Login API</button>  
             <button className="btn btn-primary btn-block">Context API</button>  
-            <button className="btn btn-primary btn-block">Identity API</button>       
+            <button className="btn btn-primary btn-block">Identity API</button>   
+            <button className="btn btn-primary btn-block">Product API</button>  
+            <button className="btn btn-primary btn-block">Broker API</button> 
+            <Link to="/">Read more about APIs >> </Link>    
             </div>
           </div>
         </section>
