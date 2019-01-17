@@ -36,7 +36,7 @@ const IndexPage = () => (
                 <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
               </div>
               <div className="card-footer">
-                <Link to="/">Learn more >> </Link>
+                <Link to="/developers/getstarted/data-products">Learn more >> </Link>
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@ const IndexPage = () => (
                 <p>Read the getting started and build new applications on top of the data products.</p>
               </div>
               <div className="card-footer">
-                <Link to="/">Learn more >> </Link>
+                <Link to="/developers/getstarted/build-apps">Learn more >> </Link>
               </div>
             </div>
           </div>
@@ -91,7 +91,6 @@ const IndexPage = () => (
             <button className="btn btn-primary btn-block">Context API</button>  
             <button className="btn btn-primary btn-block">Identity API</button>       
             </div>
-
           </div>
         </section>
         <section  className="container row">
