@@ -8,13 +8,13 @@ import SEO from '../components/seo'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/global.css'
 
-const IndexPage = () => (
+const DeveloperPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <section className="Home fullwidth page-content">
       <div className="jumbotron jumbotron-fluid"> 
         <div className="container">
-          <h1 className="display-4">Platform of Trust</h1>
+          <h1 className="display-4">Build trusted products in minutes</h1>
           <p className="lead">Platform of Trust gives access to both rich build environment data and customers.​</p>
           <form>
             <label htmlFor="signup">Sign up for an account today</label>
@@ -153,4 +153,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default DeveloperPage
