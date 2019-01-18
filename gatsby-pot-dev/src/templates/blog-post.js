@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Img from 'gatsby-image';
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import Layout from '../components/layout'
 
@@ -11,6 +11,7 @@ export default function Template({
   const post = data.markdownRemark; 
   return (
     <Layout>
+        <Link to="/blogs">&larr; Back to Blogs</Link>
         <article className="blog-post-container">
             <Helmet title={`CodeStack - ${post.frontmatter.title}`} />
             <div className="blog-post">

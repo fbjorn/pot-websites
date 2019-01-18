@@ -13,7 +13,8 @@ export default function Blogs({ data }) {
     <Layout className="blog-posts">
       <section className="posts">
         {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
+          // .filter(post => post.node.frontmatter.title.length > 0)
+          .filter(post => post.node.frontmatter.type === "blog")
           .map(({ node: post }) => {
             return (
               <div className="blog-post-preview" key={post.id}>
@@ -22,6 +23,8 @@ export default function Blogs({ data }) {
                 </h1>
                 <h2>{post.frontmatter.date}</h2>
                 <p>{post.excerpt}</p>
+                <Link to={post.frontmatter.path}>Read More...</Link>
+                <hr />
               </div>
             );
           })}
@@ -40,6 +43,7 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            type
           }
         }
       }

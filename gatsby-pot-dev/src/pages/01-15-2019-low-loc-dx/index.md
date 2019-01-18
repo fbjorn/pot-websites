@@ -3,6 +3,7 @@ path: "/blogs/low-loc-developer-experience"
 date: "2019-01-15T13:30:33.962Z"
 title: "Introducing Low LOC developer experience concept"
 image: ./developer-problem.png
+type: "blog"
 ---
 # APIs provide access to detailed data and function
 
