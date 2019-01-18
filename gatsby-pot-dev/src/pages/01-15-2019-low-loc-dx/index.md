@@ -26,7 +26,9 @@ Yet to consume services and capabilities of any platform developer often needs t
 
 Ease of use is a way to make sure that larger proportion of the developers can take advantage of your solution. The amount of developers in major application development platforms show that the cap is around 0,28% (white line in below pic. That amount of the platform "users" as developers are in iOS 0,28%, Facebook 0,20% and Android 0,27%.
 
-![Developer proportions in platforms](./developer-problem.png)
+
+![Developer proportions in platforms](developer-problem.png)
+
 
 (Image credits: Ville Ilkkala, Valaa Technologies)
 
@@ -50,7 +52,7 @@ Examples of Low LOC experience can be found from the success stories of API Econ
 
 If you browse to Stripe's website, you'll soon discover the below invitation to test their services. **As you can see, Stripe does not push their APIs, but libraries.**
 
-![Stripe](./stripe.png)
+![Stripe](stripe.png)
 
 Twilio also has official npm packages (helper libraries) such as twilio-node and twilio-video.js. Twilio is not limited to JS only, but provides official python module too. 
 
