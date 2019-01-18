@@ -25,7 +25,10 @@ Yet to consume services and capabilities of any platform developer often needs t
 
 Ease of use is a way to make sure that larger proportion of the developers can take advantage of your solution. The amount of developers in major application development platforms show that the cap is around 0,28% (white line in below pic. That amount of the platform "users" as developers are in iOS 0,28%, Facebook 0,20% and Android 0,27%.
 
+![Developer proportions in platforms][developer-problem]
+![Developer proportions in platforms](developer-problem.png)
 ![Developer proportions in platforms](./developer-problem.png)
+
 
 (Image credits: Ville Ilkkala, Valaa Technologies)
 
