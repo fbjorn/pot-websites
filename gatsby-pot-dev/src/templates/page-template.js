@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Img from 'gatsby-image';
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from '../components/layout'
 
@@ -11,14 +11,13 @@ export default function Template({
   const post = data.markdownRemark; 
   return (
     <Layout>
-        <Link to="/blogs">&larr; Back to Blogs</Link>
-        <article className="blog-post-container">
+        <article className="page-container">
             <Helmet title={`CodeStack - ${post.frontmatter.title}`} />
-            <div className="blog-post">
+            <div className="pagepost">
                 <h1>{post.frontmatter.title}</h1>
                 <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                 <div
-                className="blog-post-content"
+                className="page-post-content"
                 dangerouslySetInnerHTML={{ __html: post.html }}
                 />
             </div>
@@ -28,8 +27,10 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-    query BlogPostByPath($path: String!) {
-        markdownRemark(frontmatter: { path: { eq: $path } }) {
+    query pageByPath($path: String!) {
+        markdownRemark(frontmatter: { 
+          path: { eq: $path } 
+        }) {
             html
             frontmatter {
                 date(formatString: "MMMM DD, YYYY")
