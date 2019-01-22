@@ -53,6 +53,17 @@ const DeveloperPage = () => (
           </div>
           <div className="col-sm d-flex">
             <div className="card">
+              <div className="card-header"><h3>CREATE API PRODUCTS</h3></div>
+              <div className="card-body">
+                <p>Build and publish new functional APIs on top of the Platform of Trust provided trusted data.</p>
+              </div>
+              <div className="card-footer">
+                <Link to="/">Explore docs >> </Link>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm d-flex">
+            <div className="card">
               <div className="card-header"><h3>READ THE DOCS</h3></div>
               <div className="card-body">
                 <p>Take a deep dive into API documentation including code examples for Python, Node.js, Java and shell (curl)</p>
