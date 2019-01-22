@@ -92,7 +92,7 @@ const DeveloperPage = () => (
             <button className="btn btn-primary btn-block">Identity API</button>   
             <button className="btn btn-primary btn-block">Product API</button>  
             <button className="btn btn-primary btn-block">Broker API</button> 
-            <Link to="/">Read more about APIs >> </Link>    
+            <Link to="/developers/apis">Read more about APIs >> </Link>    
             </div>
           </div>
         </section>
