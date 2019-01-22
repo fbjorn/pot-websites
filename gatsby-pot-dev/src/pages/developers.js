@@ -105,7 +105,7 @@ const DeveloperPage = () => (
           <div className="container row equal">
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>USE CASE</h3></div>
+                <div className="card-header"><h3>DATA PRODUCT USE CASE</h3></div>
                 <div className="card-body">
                   <p>Description of use case</p>
                 </div>
@@ -116,7 +116,7 @@ const DeveloperPage = () => (
             </div>
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>USE CASE</h3></div>
+                <div className="card-header"><h3>APP USE CASE</h3></div>
                 <div className="card-body">
                   <p>Description of use case</p>
                 </div>
@@ -127,7 +127,7 @@ const DeveloperPage = () => (
             </div>
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>USE CASE</h3></div>
+                <div className="card-header"><h3>API PRODUCT USE CASE</h3></div>
                 <div className="card-body">
                   <p>Description of use case</p>
                 </div>
