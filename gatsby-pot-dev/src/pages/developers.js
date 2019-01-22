@@ -62,17 +62,6 @@ const DeveloperPage = () => (
               </div>
             </div>
           </div>
-          <div className="col-sm d-flex">
-            <div className="card">
-              <div className="card-header"><h3>READ THE DOCS</h3></div>
-              <div className="card-body">
-                <p>Take a deep dive into API documentation including code examples for Python, Node.js, Java and shell (curl)</p>
-              </div>
-              <div className="card-footer">
-                <Link to="/">Explore docs >> </Link>
-              </div>
-            </div>
-          </div>
         </section> 
         <section  className="container">
           <h2>Get started with the Platform of Trust APIs in minutes</h2>
@@ -106,6 +95,11 @@ const DeveloperPage = () => (
             <Link to="/developers/apis">Read more about APIs >> </Link>    
             </div>
           </div>
+        </section>
+        <section  className="container">
+          <h2>Detailed API documentation</h2>
+          <p>Take a deep dive into API documentation including code examples for Python, Node.js, Java and shell (curl)</p>
+          <button>API Docs</button>
         </section>
         <section  className="container row">
           <h2>Become part of a growth story and ecosystem of trust</h2>
