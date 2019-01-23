@@ -8,7 +8,7 @@ type: "page"
 Building apps on top of Platform of trust...
 
 
-# Process 
+# Process is simple
 
 Image here and open as text
 
