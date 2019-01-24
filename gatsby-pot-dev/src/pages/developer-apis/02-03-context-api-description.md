@@ -8,4 +8,4 @@ status: "published"
 ---
 Description of the API. 
 
-[Overview](/developers/apis/ceontext-rest-api) | [API documentation](https://docs.oftrust.net/#loginapi)
+[Overview](/developers/apis/ceontext-rest-api) | [Use case](https://docs.oftrust.net/usecases/context) | [API documentation](https://docs.oftrust.net/#loginapi)

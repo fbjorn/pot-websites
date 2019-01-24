@@ -8,4 +8,4 @@ status: "published"
 ---
 Description of the API. 
 
-[Overview](/developers/apis/product-rest-api) | [API documentation](https://docs.oftrust.net/#loginapi)
+[Overview](/developers/apis/product-rest-api) | [Use case](https://docs.oftrust.net/usecases/product) | [API documentation](https://docs.oftrust.net/#loginapi)

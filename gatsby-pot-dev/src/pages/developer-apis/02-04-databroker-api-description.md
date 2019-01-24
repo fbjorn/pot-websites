@@ -8,4 +8,4 @@ status: "published"
 ---
 Description of the API. 
 
-[Overview](/developers/apis/data-broker-rest-api) | [API documentation](https://docs.oftrust.net/#loginapi)
+[Overview](/developers/apis/data-broker-rest-api) | [Use case](https://docs.oftrust.net/usecases/databroker) | [API documentation](https://docs.oftrust.net/#loginapi)
