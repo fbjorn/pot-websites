@@ -22,14 +22,12 @@ const IndexPage = ({ data }) => {
     
         <main className="container">
           <section  className="container row">
-            {/* <h2>Become part of a growth story and ecosystem of trust</h2>
-            <p>Jotain sisältöä nyt holderina, pitkästi ja innostavasti....</p> */}
-            {data.allMarkdownRemark.edges.map(({ node }) => (
+             {data.intro.edges.map(({ node }) => (
                 <div key={node.id}>
-                  <h2>{node.frontmatter.title}</h2>
-                  <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
+                <h1>{node.frontmatter.title}</h1>
+                <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
                 </div>
-              ))}
+            ))} 
           </section>
           <section  className="container row">
             <h2>Learn why developers and data providers are choosing Platform of Trust</h2>
@@ -86,20 +84,24 @@ const IndexPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query {
-  allMarkdownRemark(filter: {frontmatter: {type: {eq: "content"}}}) {
-    totalCount
-    edges {
-      node {
-        id
-        html
-        frontmatter {
-          title
-          type
+query {
+    intro: allMarkdownRemark(filter: {
+        frontmatter: {
+        path: {eq: "/developers/apis#introduction"}, 
+        section: {eq: "introduction"}
+        }}) {
+            totalCount
+            edges {
+            node {
+                id
+                html
+                frontmatter {
+                    title
+                    path
+                    }
+                }
+            }
         }
-      }
-    }
-  }
 }
 `
 
