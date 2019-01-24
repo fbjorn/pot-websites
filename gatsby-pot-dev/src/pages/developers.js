@@ -57,10 +57,11 @@ const DeveloperPage = () => {
               <div className="card">
                 <div className="card-header"><h3>CREATE API PRODUCTS</h3></div>
                 <div className="card-body">
-                  <p>Build and publish new functional APIs on top of the Platform of Trust provided trusted data.</p>
+                  <p>Build and publish new functional APIs on top of the Platform of Trust provided trusted data. </p>
+                  <p><b>Coming 2019. Subscribe to mailing list to get notified!</b></p>
                 </div>
                 <div className="card-footer">
-                  <Link to="/">Explore docs >> </Link>
+                  <p></p>
                 </div>
               </div>
             </div>
@@ -174,7 +175,7 @@ const DeveloperPage = () => {
                 <button className="btn btn-primary btn-block">Identity API</button>   
                 <button className="btn btn-primary btn-block">Product API</button>  
                 <button className="btn btn-primary btn-block">Broker API</button> 
-                <Link to="/">Read more about APIs >> </Link>    
+                <Link to="/apis">Read more about APIs >> </Link>    
                 </div>
               </div>
             </section>
