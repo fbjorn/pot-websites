@@ -6,6 +6,6 @@ type: "content"
 section: "api-descriptions"
 status: "published"
 ---
-Description of the API. 
+The Identity API provides means to create, update and delete digital twins (identities) and manage links between them. The links provides the direction and type (sometimes called role) of the link.
 
 [Overview](/developers/apis/identity-rest-api) | [Use case](https://docs.oftrust.net/usecases/identity) | [API documentation](https://docs.oftrust.net/#loginapi)

@@ -6,6 +6,6 @@ type: "content"
 section: "api-descriptions"
 status: "published"
 ---
-Description of the API. 
+The Broker API provides means to connect a service to a translator that will return desired data from different sources. The data broker does not mangle the data in any way, it only functions as a proxy between services and translators.
 
 [Overview](/developers/apis/data-broker-rest-api) | [Use case](https://docs.oftrust.net/usecases/databroker) | [API documentation](https://docs.oftrust.net/#loginapi)
