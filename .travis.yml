@@ -9,5 +9,5 @@ before_install:
  - docker tag platformoftrust/website:$TRAVIS_BUILD_NUMBER platformoftrust/website:latest
 
 script:
- - docker push platformoftrust/website:$TRAVIS_BUILD_NUMBER
  - docker push platformoftrust/website:latest
+ - docker push platformoftrust/website:$TRAVIS_BUILD_NUMBER

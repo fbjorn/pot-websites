@@ -34,7 +34,7 @@ cp -r /src/cmsadmin /var/www/
 chown -R www:www /var/www /var/log/nginx /var/lib/nginx/logs
 
 # Clean up files not needed in final container
-rm -rf /src/gatsby-pot-dev /src/nginx /src/cmsadmin
+rm -rf /src/gatsby-pot-dev /src/nginx /src/cmsadmin /root/.npm /tmp/*
 
 # Show in logs what we're publishing
 set +x
