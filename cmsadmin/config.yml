@@ -1,0 +1,33 @@
+backend:
+  name: "github"
+  repo: "PlatformOfTrust/developer.oftrust.net"
+publish_mode: "editorial_workflow"
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+media_library:
+  name: "cloudinary"
+collections:
+  - name: "developer-blog"
+    label: "Developer Blog"
+    folder: "gatsby-pot-dev/src/pages/developer-blogs/"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "publishDate", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "main-blog"
+    label: "Main Blog"
+    folder: "gatsby-pot-dev/src/pages/main-blogs/"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "publishDate", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "developer-frontpage"
+    label: "Developer Frontpage -blocks"
+    folder: "gatsby-pot-dev/src/pages/developer-frontpage/"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
