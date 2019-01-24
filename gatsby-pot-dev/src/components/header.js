@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => (
             <Link className="nav-link disabled" to="#">Use Cases</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link disabled" to="#">Marketplace</Link>
+            <Link className="nav-link" to="/apis">APIs</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/blogs">Blogs</Link>

@@ -30,20 +30,6 @@ Set in Github for:
 * beta
 * MVP (end of March 2019)
 
-## FrontEnd Proto setup with Next.js "pot-dev"
-* Clone repository to local machine with ``git clone git@github.com:PlatformOfTrust/developer.oftrust.net.git``
-* ``cd pot-dev``
-* ``npm install``
-* ``npm run dev``
-* Open in browser localhost:3000
-
-## FrontEnd Proto setup with Vanilla React "simple-pot-dev"
-* Clone repository to local machine with ``git clone git@github.com:PlatformOfTrust/developer.oftrust.net.git``
-* ``cd simple-pot-dev``
-* ``npm install``
-* ``npm start``
-* Open in browser localhost:3000
-
 ## FrontEnd Proto setup with JAM Gatsby/GraphQL React "gatsby-pot-dev" cms-test
 
 Blogging tests. "Blogs"-page pulls blogs from local markdown files, "wp-blog" from wordpress api.
