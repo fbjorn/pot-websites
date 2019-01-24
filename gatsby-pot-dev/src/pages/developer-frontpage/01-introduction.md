@@ -5,4 +5,4 @@ type: "content"
 info: "test"
 section: "introduction"
 ---
-Jotain sisältöä nyt holderina, pitkästi ja innostavasti.... (src/pages/content/_intro.md)
+Jotain sisältöä nyt holderina, pitkästi ja innostavasti.... (src/pages/developer-frontpage/01-introduction.md)

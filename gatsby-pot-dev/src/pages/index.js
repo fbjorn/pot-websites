@@ -87,7 +87,7 @@ export const query = graphql`
 query {
     intro: allMarkdownRemark(filter: {
         frontmatter: {
-        path: {eq: "/developers/apis#introduction"}, 
+        path: {eq: "/index#introduction"}, 
         section: {eq: "introduction"}
         }}) {
             totalCount
