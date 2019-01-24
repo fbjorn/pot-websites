@@ -6,8 +6,6 @@ services:
 before_install:
  - echo "$DOCKER_PASSWORD" | docker login -u="$DOCKER_USERNAME" --password-stdin
  - docker build -t platformoftrust/website:$TRAVIS_BUILD_NUMBER .
- - docker tag platformoftrust/website:$TRAVIS_BUILD_NUMBER platformoftrust/website:latest
 
 script:
- - docker push platformoftrust/website:latest
  - docker push platformoftrust/website:$TRAVIS_BUILD_NUMBER
