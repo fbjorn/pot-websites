@@ -1,0 +1,7 @@
+pot-dev/**/*
+simple-pot-dev/**/*
+docs/**/*
+**/node_modules
+**/.cache
+**/.vscode
+gatsby-pot-dev/public/**/*
