@@ -30,4 +30,14 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-
+  - name: "developer-apis"
+    label: "Developer APIs pages"
+    folder: "gatsby-pot-dev/src/pages/developer-apis/"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Section", name: "section", widget: "string"}
+      - {label: "Type", name: "type", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
