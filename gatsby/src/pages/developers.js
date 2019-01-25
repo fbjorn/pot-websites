@@ -19,7 +19,7 @@ const DeveloperPage = () => {
             <h1 className="display-4">Build trusted products in minutes</h1>
             <p className="lead">Platform of Trust gives access to both rich build environment data and customers.​</p>
             <form>
-              <label htmlFor="signup">Sign up for an account today</label>
+              <label htmlFor="signup">Be productive in minutes - sign up for an account</label>
               <div className="form-group row" style={{maxWidth: '20em'}}>
                 <input type="email" className="form-control col-sm" id="signup" aria-describedby="emailHelp" placeholder="Enter email"></input>
                 <button type="submit" className="btn btn-primary">Sign up</button>            
@@ -146,81 +146,6 @@ const DeveloperPage = () => {
               </div>
             </div>
             </section> 
-            <section  className="container">
-              <h2>Get started with the Platform of Trust APIs in minutes</h2>
-              <p>Try out the most commonly used APIs instantly. Just select API, preferred code example and hit "run". The response with headers is printed below.</p> 
-              <div className="container row">
-                <div className="col-md-6">
-                  <div className="bd-clipboard">
-                    <button className="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>
-                  </div>
-                  <figure className="highlight">
-                    <pre>
-                      <code className="language-html" data-lang="html">
-                        <span className="nt">&lt;link</span>
-                        <br />
-                        <span className="na"> rel=</span>
-                        <span className="s">"stylesheet"</span> 
-                        <span className="na"> href=</span>
-                        <br />
-                        <span className="s">"https://foo.com.min.css"</span> 
-                        <span className="nt">&gt;</span>
-                      </code>
-                    </pre>
-                  </figure>
-                </div>
-                <div className="col-md-3">
-                <button className="btn btn-primary btn-block">Login API</button>  
-                <button className="btn btn-primary btn-block">Context API</button>  
-                <button className="btn btn-primary btn-block">Identity API</button>   
-                <button className="btn btn-primary btn-block">Product API</button>  
-                <button className="btn btn-primary btn-block">Broker API</button> 
-                <Link to="/apis">Read more about APIs >> </Link>    
-                </div>
-              </div>
-            </section>
-            <section  className="container row">
-              <h2>Become part of a growth story and ecosystem of trust</h2>
-              <p>Jotain talous insentiivejä (developerin managerille)</p>
-            </section>
-            <section  className="container row">
-              <h2>Learn why developers and data providers are choosing Platform of Trust</h2>
-              <div className="container row equal">
-                <div className="col-sm d-flex">
-                  <div className="card">
-                    <div className="card-header"><h3>USE CASE</h3></div>
-                    <div className="card-body">
-                      <p>Description of use case</p>
-                    </div>
-                    <div className="card-footer">
-                      <Link to="/">Learn more >> </Link>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm d-flex">
-                  <div className="card">
-                    <div className="card-header"><h3>USE CASE</h3></div>
-                    <div className="card-body">
-                      <p>Description of use case</p>
-                    </div>
-                    <div className="card-footer">
-                      <Link to="/">Learn more >> </Link>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm d-flex">
-                  <div className="card">
-                    <div className="card-header"><h3>USE CASE</h3></div>
-                    <div className="card-body">
-                      <p>Description of use case</p>
-                    </div>
-                    <div className="card-footer">
-                      <Link to="/">Learn more >> </Link>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-            </section>
             <section  className="container">
               <h2>Start building today</h2>
               <form>
