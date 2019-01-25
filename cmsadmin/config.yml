@@ -9,7 +9,8 @@ media_library:
 collections:
   - name: "developer-blog"
     label: "Developer Blog"
-    folder: "gatsby-pot-dev/src/pages/developer-blogs/"
+    folder: "gatsby/src/pages/developer-blogs/"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -17,17 +18,28 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "main-blog"
     label: "Main Blog"
-    folder: "gatsby-pot-dev/src/pages/main-blogs/"
+    folder: "gatsby/src/pages/main-blogs/"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "publishDate", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "developer-frontpage"
     label: "Developer Frontpage -blocks"
-    folder: "gatsby-pot-dev/src/pages/developer-frontpage/"
+    folder: "gatsby/src/pages/developer-frontpage/"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-
+  - name: "developer-apis"
+    label: "Developer APIs pages"
+    folder: "gatsby/src/pages/developer-apis/"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Section", name: "section", widget: "hidden", default: "section"}
+      - {label: "Type", name: "type", widget: "hidden", default: "content"}
+      - {label: "Body", name: "body", widget: "markdown"}

@@ -21,12 +21,12 @@ adduser -D -g www www
 cp -r /src/nginx/* /etc/nginx
 
 # Build the contents to be published
-cd /src/gatsby-pot-dev
+cd /src/gatsby
 npm install
 npm run build
 
 # Publish everything necessary
-cd /src/gatsby-pot-dev/public/
+cd /src/gatsby/public/
 cp -r . /var/www/
 cp -r /src/cmsadmin /var/www/
 
@@ -34,8 +34,8 @@ cp -r /src/cmsadmin /var/www/
 chown -R www:www /var/www /var/log/nginx /var/lib/nginx/logs
 
 # Clean up files not needed in final container
-rm -rf /src/gatsby-pot-dev /src/nginx /src/cmsadmin /root/.npm /tmp/* /src/.git
-rm -rf /src/*.md /src/docs /src/pot-dev /src/simple-pot-dev /src/Dockerfile
+rm -rf /src/gatsby /src/nginx /src/cmsadmin /root/.npm /tmp/* /src/.git
+rm -rf /src/*.md /src/docs /src/Dockerfile
 rm -rf /src/.github /src/LICENSE
 
 
