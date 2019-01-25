@@ -7,4 +7,4 @@ type: content
 ---
 From this page you'll find Platform of Trust APIs and libraries (official and community driven). Get familiar with the APIs and start building trusted data products and applications on top our platform. 
 
-Added from Netlify GUI
+Added from Netlify GUI part 2 with hidden fields.
