@@ -5,8 +5,7 @@ path: /developers/build-apps
 section: page
 type: page
 ---
-Building apps on top of Platform of trust...
-
+Building apps on top of Platform of trust......
 
 # Process is simple
 
@@ -16,7 +15,8 @@ Image here and open as text
 
 In this example, you'll build your first commandline app to consume Platform of Trust data and other capabilities. 
 
-## Create app skeleton in sandbox 
+## Create app skeleton in sandbox
+
 You start building your app in sandbox environment. In practise your API calls are directed to sandbox environment APIs and not the production environment. A good practise is to put API roots in variables and in the final step you'll change the values to match production APIs. 
 
-<pre><code>// some css grid code </code></pre> 
+<pre><code>// some css grid code </code></pre>
