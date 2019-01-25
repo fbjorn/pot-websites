@@ -10,6 +10,7 @@ collections:
   - name: "developer-blog"
     label: "Developer Blog"
     folder: "gatsby-pot-dev/src/pages/developer-blogs/"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
