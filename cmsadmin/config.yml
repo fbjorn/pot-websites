@@ -14,7 +14,9 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "publishDate", widget: "datetime"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Type", name: "type", widget: "hidden", default: "developerblog"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "main-blog"
     label: "Main Blog"
@@ -22,9 +24,11 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "publishDate", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+       - {label: "Title", name: "title", widget: "string"}
+       - {label: "Path", name: "path", widget: "string"}
+       - {label: "Type", name: "type", widget: "hidden", default: "blog"}
+       - {label: "Publish Date", name: "date", widget: "datetime"}
+       - {label: "Body", name: "body", widget: "markdown"}
   - name: "developer-frontpage"
     label: "Developer Frontpage -blocks"
     folder: "gatsby/src/pages/developer-frontpage/"
@@ -42,4 +46,16 @@ collections:
       - {label: "Path", name: "path", widget: "string"}
       - {label: "Section", name: "section", widget: "hidden", default: "section"}
       - {label: "Type", name: "type", widget: "hidden", default: "content"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "md-pages"
+    label: "Single pages"
+    folder: "gatsby/src/pages/md-pages/"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Section", name: "section", widget: "hidden", default: "page"}
+      - {label: "Type", name: "type", widget: "hidden", default: "page"}
       - {label: "Body", name: "body", widget: "markdown"}
