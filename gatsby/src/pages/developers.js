@@ -19,7 +19,7 @@ const DeveloperPage = () => {
             <h1 className="display-4">Build trusted products in minutes</h1>
             <p className="lead">Platform of Trust gives access to both rich build environment data and customers.​</p>
             <form>
-              <label htmlFor="signup">Sign up for an account today</label>
+              <label htmlFor="signup">Be productive in minutes - sign up for an account</label>
               <div className="form-group row" style={{maxWidth: '20em'}}>
                 <input type="email" className="form-control col-sm" id="signup" aria-describedby="emailHelp" placeholder="Enter email"></input>
                 <button type="submit" className="btn btn-primary">Sign up</button>            
