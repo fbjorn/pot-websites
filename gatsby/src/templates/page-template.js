@@ -15,7 +15,7 @@ export default function Template({
             <Helmet title={`CodeStack - ${post.frontmatter.title}`} />
             <div className="pagepost">
                 <h1>{post.frontmatter.title}</h1>
-                <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+                {post.frontmatter.image && <Img fluid={post.frontmatter.image.childImageSharp.fluid} />}
                 <div
                 className="page-post-content"
                 dangerouslySetInnerHTML={{ __html: post.html }}
