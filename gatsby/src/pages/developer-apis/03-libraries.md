@@ -1,17 +1,15 @@
 ---
-path: "/developers/apis#libraries"
-date: "2019-01-22T13:30:33.962Z"
-title: "Tools and libraries"
-type: "content"
-section: "libraries"
-status: "published"
+title: Tools and libraries
+date: '2019-01-22T13:30:33.962Z'
+path: '/developers/apis#libraries'
+section: libraries
+type: content
 ---
-
 ## Tools
 
-To enable fluent data integration we have created additional tools. 
+To enable fluent data integration and application development we have created additional tools. 
 
-### Translator 
+### Translator
 
 * **Purpose:** Purpose here
 * **Description:** description here
@@ -20,7 +18,6 @@ To enable fluent data integration we have created additional tools.
 ## Official libraries
 
 Building on top of the individual APIs might occasionally be a bit cumbersome and therefore we have plans to provide libraries for common frameworks and runtime environments. We also encourage community to build more libraries and list them next to the platform libraries over here. First official libraries are coming during 2019. 
-
 
 ## Community libraries
 
