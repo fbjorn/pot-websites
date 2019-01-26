@@ -118,7 +118,7 @@ const DeveloperPage = () => {
                     <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
                   </div>
                   <div className="card-footer">
-                    <Link to="/developers/getstarted/data-products">Learn more >> </Link>
+                    <Link to="/use-cases/data-product">Learn more >> </Link>
                   </div>
                 </div>
               </div>
@@ -129,7 +129,7 @@ const DeveloperPage = () => {
                     <p>Read the getting started and build new applications on top of the data products.</p>
                   </div>
                   <div className="card-footer">
-                    <Link to="/developers/getstarted/build-apps">Learn more >> </Link>
+                    <Link to="/use-cases/build-application">Learn more >> </Link>
                   </div>
                 </div>
               </div>
