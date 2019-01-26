@@ -22,7 +22,10 @@ const DeveloperPage = () => {
               <label htmlFor="signup">Be productive in minutes - sign up for an account</label>
               <div className="form-group row" style={{maxWidth: '20em'}}>
                 <input type="email" className="form-control col-sm" id="signup" aria-describedby="emailHelp" placeholder="Enter email"></input>
-                <button type="submit" className="btn btn-primary">Sign up</button>            
+                <button type="submit" className="btn btn-primary">Sign up</button>
+              </div>
+              <div className="form-group row" style={{maxWidth: '20em'}}>
+                <button type="submit" className="btn btn-primary">Explore getting started!</button>            
               </div>
             </form>  
           </div>
