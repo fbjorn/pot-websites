@@ -60,7 +60,7 @@ collections:
       - {label: "Type", name: "type", widget: "hidden", default: "page"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "usa-cases"
+  - name: "use-cases"
     label: "Use cases"
     folder: "gatsby/src/pages/use-cases"
     create: true
