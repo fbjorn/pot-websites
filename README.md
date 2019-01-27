@@ -30,11 +30,11 @@ Set in Github for:
 * beta
 * MVP (end of March 2019)
 
-## FrontEnd Proto setup with JAM Gatsby/GraphQL React "gatsby-pot-dev" cms-test
+## FrontEnd with JAM Gatsby/GraphQL React 
 
 Blogging tests. "Blogs"-page pulls blogs from local markdown files, "wp-blog" from wordpress api.
 * Clone repository to local machine with ``git clone git@github.com:PlatformOfTrust/developer.oftrust.net.git``
-* ``cd gatsby-pot-dev``
+* ``cd gatsby``
 * ``npm install --global gatsby-cli``
 * ``gatsby develop``
 * Open in browser localhost:8000
