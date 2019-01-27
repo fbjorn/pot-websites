@@ -41,5 +41,6 @@ Set in Github for:
 ## CMS 
 Netlify CMS is used for content creation (GUI). All content is stored in Github as markup files. Netlify GUI requires Github account and is run from files in /cmsadmin. Netlify configuration is in same folder as config.yml
 
-
+# Build process
+Each commit fires automated CI process in Azure DevOps.  
 
