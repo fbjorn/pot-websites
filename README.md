@@ -32,11 +32,14 @@ Set in Github for:
 
 ## FrontEnd with JAM Gatsby/GraphQL React 
 
-Blogging tests. "Blogs"-page pulls blogs from local markdown files, "wp-blog" from wordpress api.
 * Clone repository to local machine with ``git clone git@github.com:PlatformOfTrust/developer.oftrust.net.git``
 * ``cd gatsby``
 * ``npm install --global gatsby-cli``
 * ``gatsby develop``
 * Open in browser localhost:8000
+
+## CMS 
+Netlify CMS is used for content creation (GUI). All content is stored in Github as markup files. Netlify GUI requires Github account and is run from files in /cmsadmin. Netlify configuration is in same folder as config.yml
+
 
 
