@@ -1,12 +1,18 @@
 
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/PlatformOfTrust/website.svg?columns=all)](https://waffle.io/PlatformOfTrust/developer.oftrust.net)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/PlatformOfTrust/website.svg?columns=all)](https://waffle.io/PlatformOfTrust/website)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ## Purpose and background
-Portal is one stop shop for all developers. Developer Portal is part of Developer Program, which is coordinated with help of Trello. (TODO: link to Trello)
+Portal is one stop shop to Platform of Trust.  
 
 ## For whom? 
 
+### Business
+
+### Customers
+
+
+### Developers
 * 1st tier – data providers, to enable easy addition of new data source
 * 2nd tier - 3rd party application developers (+ managers) be productive in minutes and create the apps for the market
 * 3rd tier - Component and tool providers build plugins, SDKs, packages for development frameworks to boost platform adaptation worldwide
