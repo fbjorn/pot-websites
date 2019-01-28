@@ -59,7 +59,6 @@ collections:
       - {label: "Section", name: "section", widget: "hidden", default: "page"}
       - {label: "Type", name: "type", widget: "hidden", default: "page"}
       - {label: "Body", name: "body", widget: "markdown"}
-
   - name: "use-cases"
     label: "Use cases"
     folder: "gatsby/src/pages/use-cases"
@@ -69,4 +68,14 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Path", name: "path", widget: "string"}
       - {label: "Type", name: "type", widget: "hidden", default: "usecase"}
+      - {label: "Body", name: "body", widget: "markdown"}
+   - name: "plans"
+    label: "Plans"
+    folder: "gatsby/src/pages/plans"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Type", name: "type", widget: "hidden", default: "plan"}
       - {label: "Body", name: "body", widget: "markdown"}
