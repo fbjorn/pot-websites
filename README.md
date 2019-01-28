@@ -1,5 +1,5 @@
 
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/PlatformOfTrust/developer.oftrust.net.svg?columns=all)](https://waffle.io/PlatformOfTrust/developer.oftrust.net)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/PlatformOfTrust/website.svg?columns=all)](https://waffle.io/PlatformOfTrust/developer.oftrust.net)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ## Purpose and background
