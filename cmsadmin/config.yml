@@ -1,6 +1,6 @@
 backend:
   name: "github"
-  repo: "PlatformOfTrust/developer.oftrust.net"
+  repo: "PlatformOfTrust/website"
 publish_mode: "editorial_workflow"
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
