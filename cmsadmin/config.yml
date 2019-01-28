@@ -69,7 +69,7 @@ collections:
       - {label: "Path", name: "path", widget: "string"}
       - {label: "Type", name: "type", widget: "hidden", default: "usecase"}
       - {label: "Body", name: "body", widget: "markdown"}
-   - name: "plans"
+  - name: "plans"
     label: "Plans"
     folder: "gatsby/src/pages/plans"
     create: true
