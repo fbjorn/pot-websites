@@ -32,11 +32,12 @@ const DeveloperPage = () => {
         </div>
     
         <main className="container">
-          <h2>What do you want to do next?</h2>
+        <h2>What do you want to do next?</h2>
           <section className="container row equal">
+          
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>CREATE DATA PRODUCTS</h3></div>
+                <div className="card-header"><h3>REGISTER DATA PRODUCT</h3></div>
                 <div className="card-body">
                   <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
                 </div>
@@ -47,7 +48,7 @@ const DeveloperPage = () => {
             </div>
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>BUILD APPS</h3></div>
+                <div className="card-header"><h3>REGISTER APPLICATION</h3></div>
                 <div className="card-body">
                   <p>Read the getting started and build new applications on top of the data products.</p>
                 </div>
@@ -58,18 +59,58 @@ const DeveloperPage = () => {
             </div>
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>CREATE API PRODUCTS</h3></div>
+                <div className="card-header"><h3>REGISTER TRANSLATOR</h3></div>
                 <div className="card-body">
-                  <p>Build and publish new functional APIs on top of the Platform of Trust provided trusted data. </p>
-                  <p><b>Coming 2019. Subscribe to mailing list to get notified!</b></p>
+                  <p>Register new translator to Platform of Trust. You can use registered translators in data products. </p>
+                  
                 </div>
                 <div className="card-footer">
-                  <p></p>
+                <Link to="/developers/getstarted/register-translator">Lets do it! >> </Link>
                 </div>
               </div>
             </div>
           </section> 
-          <section  className="container">
+
+          <section className="container row equal">
+          <div className="container row">
+            <h2>Practical getting started packages</h2>
+          </div>
+          <div className="col-sm d-flex">
+            <div className="card">
+              <div className="card-header"><h3>HOW TO CREATE DATA PRODUCTS</h3></div>
+              <div className="card-body">
+                <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
+              </div>
+              <div className="card-footer">
+                <Link to="/developers/getstarted/data-products">Learn more >> </Link>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm d-flex">
+            <div className="card">
+              <div className="card-header"><h3>HOW TO BUILD APPS</h3></div>
+              <div className="card-body">
+                <p>Read the getting started and build new applications on top of the data products.</p>
+              </div>
+              <div className="card-footer">
+                <Link to="/developers/getstarted/build-apps">Learn more >> </Link>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm d-flex">
+            <div className="card">
+              <div className="card-header"><h3>HOW TO REGISTER TRANSLATOR</h3></div>
+              <div className="card-body">
+                <p>Register new translator to Platform of Trust. You can use registered translators in data products. </p>
+                
+              </div>
+              <div className="card-footer">
+              <Link to="/developers/getstarted/register-translator">Lets do it! >> </Link>
+              </div>
+            </div>
+          </div>
+        </section> 
+        <section  className="container">
             <h2>Get started with the Platform of Trust APIs in minutes</h2>
             <p>Try out the most commonly used APIs instantly. Just select API, preferred code example and hit "run". The response with headers is printed below.</p>
             <div className="container row">
