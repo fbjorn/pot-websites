@@ -79,3 +79,17 @@ collections:
       - {label: "Path", name: "path", widget: "string"}
       - {label: "Type", name: "type", widget: "hidden", default: "plan"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "events"
+    label: "Events"
+    folder: "gatsby/src/pages/events"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Address", name: "address", widget: "string"}
+      - {label: "Event Date & time", name: "eventdate", widget: "string"}
+      - {label: "Registration url", name: "Registration url", widget: "string"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Type", name: "type", widget: "hidden", default: "event"}
+      - {label: "Body", name: "body", widget: "markdown"}
