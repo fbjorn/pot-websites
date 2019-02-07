@@ -82,6 +82,7 @@ collections:
 
   - name: "events"
     label: "Events"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     folder: "gatsby/src/pages/events"
     create: true
     fields:
