@@ -69,48 +69,54 @@ const DeveloperPage = () => {
           </div>
         </section> 
 
-          <section  className="container">
-            <h2>We love developers</h2>
-            <p>Developer experience is at the forefront of everything we do. We strive to make products 
+        <section  className="container">
+          <h2>We love developers</h2>  
+          <p>Developer experience is at the forefront of everything we do. We strive to make products 
               that are both delightful and get out of your way, so that you can focus on what you do best - 
               building great apps and data products. </p>
               
-            <p>Take a deep dive into API documentation including code examples for Python, Node.js, Java and shell (curl)</p>
-            <button className="btn btn-primary btn-block">Visit the docs</button>
-          </section>
-          <section  className="container row">
-            <h2>Become part of a growth story and ecosystem of trust</h2>
-            <p>Jotain talous insentiivejä (developerin managerille)</p>
-          </section>
-          <section  className="container row">
-            <h2>Learn why developers and data providers are choosing Platform of Trust</h2>
-            <div className="container row equal">
-              <div className="col-sm d-flex">
-                <div className="card">
-                  <div className="card-header"><h3>DATA PRODUCT USE CASE</h3></div>
-                  <div className="card-body">
-                    <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
-                  </div>
-                  <div className="card-footer">
-                    <Link to="/use-cases/data-product">Learn more >> </Link>
-                  </div>
+          <p>Take a deep dive into API documentation including code examples for Python, Node.js, Java and shell (curl)</p>
+          <button className="btn btn-primary btn-block">Visit the docs</button>
+        </section>
+        
+        <section  className="container row">
+          <h2>Become part of a growth story and ecosystem of trust</h2>
+          <p>Jotain talous insentiivejä (developerin managerille)</p>
+        </section>
+        <section  className="container row">
+          <h2>Learn why developers and data providers are choosing Platform of Trust</h2>
+          <div className="container row equal">
+            <div className="col-sm d-flex">
+              <div className="card">
+                <div className="card-header"><h3>DATA PRODUCT USE CASE</h3></div>
+                <div className="card-body">
+                  <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
+                </div>
+                <div className="card-footer">
+                  <Link to="/use-cases/data-product">Learn more >> </Link>
                 </div>
               </div>
-              <div className="col-sm d-flex">
-                <div className="card">
-                  <div className="card-header"><h3>APP USE CASE</h3></div>
-                  <div className="card-body">
-                    <p>Read the getting started and build new applications on top of the data products.</p>
-                  </div>
-                  <div className="card-footer">
-                    <Link to="/use-cases/build-application">Learn more >> </Link>
-                  </div>
+            </div>
+            <div className="col-sm d-flex">
+              <div className="card">
+                <div className="card-header"><h3>APP USE CASE</h3></div>
+                <div className="card-body">
+                  <p>Read the getting started and build new applications on top of the data products.</p>
+                </div>
+                <div className="card-footer">
+                  <Link to="/use-cases/build-application">Learn more >> </Link>
                 </div>
               </div>
+            </div>
                
               
             </div>
             </section> 
+            <section  className="container">
+              <h2>Stay informed and participate</h2>  
+              <p>Our daily communication is based on Slack and mailing list. Subscibe now and stay informed!</p>
+              <button className="btn btn-primary btn-block">Set subscription</button>
+            </section>
             <section  className="container">
               <h2>Start building today</h2>
               <form>
