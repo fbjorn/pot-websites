@@ -18,13 +18,11 @@ const DeveloperPage = () => {
           <div className="container">
             <h1 className="display-4">Build trusted products</h1>
             <p className="lead">Platform of Trust gives access to both rich build environment data and customers.​</p>
-            <form>
-              <label htmlFor="signup">Sign up for an account</label>
-              <div className="form-group row" style={{maxWidth: '20em'}}>
-                <button type="submit" className="btn btn-primary">Sign up</button>
-              </div>
             
-            </form>  
+                <button type="submit" className="btn btn-primary">Sign up</button>
+                <button type="submit" className="btn btn-primary">View APIs</button>
+                <button type="submit" className="btn btn-primary">View Documentation</button>
+              
           </div>
         </div>
     
@@ -76,7 +74,9 @@ const DeveloperPage = () => {
               building great apps and data products. </p>
               
           <p>Take a deep dive into API documentation including code examples for Python, Node.js, Java and shell (curl)</p>
-          <button className="btn btn-primary btn-block">Visit the docs</button>
+          
+                <button type="submit" className="btn btn-primary">Visit the docs!</button>
+              
         </section>
         
         <section  className="container row">
