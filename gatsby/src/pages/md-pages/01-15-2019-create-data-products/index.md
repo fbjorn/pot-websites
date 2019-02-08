@@ -176,7 +176,7 @@ curl "http://sandbox.oftrust.net/api/translator/fetch" \
   -H "X-PoT-App: xxx" 
 
   -d
-    {"paramaters": {
+    {"parameters": {
         ....
     }}
 ```
@@ -217,12 +217,12 @@ See API documentation for details.
 
 So far you have been using beta (source API) and sandbox environment. Before publishing the Data product you need to set the production configuration if you haven't done it before. You also need to set the visibility to "public" and status to "production". 
 
-Here's a simple curl example how you configure production environment for the data product with Product API: 
+Here's a simple curl example how you configure production environment for the data product with Product API. Since this is an update to existing data product, use **PUT** method: 
 
 ```
 
 curl "http://api.oftrust.net/product/" \
-  -X POST \
+  -X PUT \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
   -H "X-PoT-App: xxx" 
@@ -238,11 +238,11 @@ curl "http://api.oftrust.net/product/" \
 ```
 
 
-You can set the publicity and status with below Product API call: 
+You can set the publicity and status with below Product API call. Since this is an update to existing data product, use **PUT** method: 
 
 ```
 curl "http://api.oftrust.net/product/" \
-  -X POST \
+  -X PUT \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
   -H "X-PoT-App: xxx" 
