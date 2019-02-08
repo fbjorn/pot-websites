@@ -52,8 +52,8 @@ You can register the translator with Product API (see documentation). You can se
 Here's an example how you would add just Translator's beta API environment configuration to Platform of Trust. 
 
 ```
-# Notice the sandbox URL, change to production when needed. 
-curl "http://sandbox.oftrust.net/api/translator/fetch" \
+
+curl "http://api.oftrust.net/product/" \
   -X POST \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
@@ -62,19 +62,46 @@ curl "http://sandbox.oftrust.net/api/translator/fetch" \
   -d
     {"translator": {
         "name": "Just a name",
-        "desc": "Short description"
+        "desc": "Short description",
+        "visibility": "organisation",
+        "status": "testing",  
+        "configuration": {
+            "testing": {
+            "url": "https://0.0.0.0" 
+        }
     }}
 ```
-In case of success (200), you will get a response similar to this: 
+In case of success (200), you will get a response body similar to this: 
 
+```json
+{"translator": {
+  "translator_id": "0001002202010ERQ123", // given by core platform
+  "name": "Just a name",
+  "desc": "Short description",
+  "visibility": "organisation",
+  "status": "testing",
+  "org_id": "pot org id", // given by core platform
+  "user_id": "pot user id", // given by core platform
+  "modified": "1997-07-16T19:20:30.45+01:00",
+  "created": "1997-07-16T19:20:30.45+01:00", 
+  "configuration": {
+    "testing": {
+      "url": "https://0.0.0.0" 
+    },
+    "production": {
+      "url": "" 
+    }
+  }
+}}
 
+```
 
 
 Here's an example in which both environments are configured with one API POST method: 
 
 ```
-# Notice the sandbox URL, change to production when needed. 
-curl "http://sandbox.oftrust.net/api/translator/fetch" \
+
+curl "http://api.oftrust.net/product/" \
   -X POST \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
@@ -84,6 +111,14 @@ curl "http://sandbox.oftrust.net/api/translator/fetch" \
     {"translator": {
         "name": "Just a name",
         "desc": "Short description"
+         "configuration": {
+            "testing": {
+            "url": "https://0.0.0.0" 
+            },
+            "production": {
+            "url": "https://0.0.0.0" 
+            }
+        }
     }}
 ```
 
@@ -108,7 +143,7 @@ Go to Developer Portal ("For Developers" in platformoftrust.net and select "Regi
 You can create the data product with Product API (see documentation). An example: 
 
 ```
-# Notice the sandbox URL, change to production when needed. 
+
 curl "http://sandbox.oftrust.net/api/translator/fetch" \
   -X POST \
   -H "X-PoT-Signature: xxx" \
@@ -133,7 +168,7 @@ In case of success (200), you will get a response similar to this:
 
 Set the available paramaters for 3rd party data consumer. The options are shown in market place for the 3rd party developer. 
 ```
-# Notice the sandbox URL, change to production when needed. 
+
 curl "http://sandbox.oftrust.net/api/translator/fetch" \
   -X POST \
   -H "X-PoT-Signature: xxx" \
@@ -168,8 +203,8 @@ Define available parameters for 3rd party data consumer by picking the ones from
 Use Platform of Trust Data Broker API to test your data product. An example: 
 
 ```
-# Notice the sandbox URL, change to production when needed. 
-curl "http://sandbox.oftrust.net/api/translator/fetch" \
+
+curl "http://api.oftrust.net/api/translator/fetch" \
   -X POST \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
@@ -185,23 +220,38 @@ So far you have been using beta (source API) and sandbox environment. Before pub
 Here's a simple curl example how you configure production environment for the data product with Product API: 
 
 ```
-# Notice the sandbox URL, change to production when needed. 
-curl "http://sandbox.oftrust.net/api/translator/fetch" \
-  -X GET \
+
+curl "http://api.oftrust.net/product/" \
+  -X POST \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
   -H "X-PoT-App: xxx" 
+
+  -d
+    {"product": {
+        "product_id": "ID",
+        "configuration": {
+            "production": {
+            "url": "https://0.0.0.0" 
+        }
+    }}
 ```
 
 
 You can set the publicity and status with below Product API call: 
 
 ```
-# Notice the sandbox URL, change to production when needed. 
-curl "http://sandbox.oftrust.net/api/translator/fetch" \
-  -X GET \
+curl "http://api.oftrust.net/product/" \
+  -X POST \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
   -H "X-PoT-App: xxx" 
+
+  -d
+    {"product": {
+        "product_id": "ID",
+        "visibility": "public",
+        "status": "production"
+    }}
 ```
 
