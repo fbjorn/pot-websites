@@ -1,23 +1,31 @@
 ---
 path: "/developers/getstarted/data-products"
 date: "2019-01-15T13:30:33.962Z"
-title: "Create data products"
+title: "Create data product guide"
 
 type: "page"
 ---
 This guide will help you create a data product in the Platform of Trust market place for other developers to utilize in applications. 
 
-# What is data product and translator? 
+## What is data product? 
 
-Data product is the final product which 3rd party developers can find from Platform of Trust market place.  3rd party developers always use Data Broker API to access data product data. Translator connects the raw data source to the data product and translates the data model to standard format.
+Data product is the final product which 3rd party developers can find from Platform of Trust market place.  3rd party developers always use Data Broker API to access data product data. 
+
+## What is translator and why do I need it?
+Translator connects the raw data source to the data product and translates the data model to standard format.
 
 IMAGE HERE
+
+
+## Authentication
+
+Describe authentication briefly. 
+
+# Four phases
 
 Phases included in the process: 
 
 ![Data product creation phases](data-product-process.png)
-
-
 
 
 # 1. What data is available and why is it published? 
@@ -60,11 +68,11 @@ Currently you have two options.
 
 You can register the translator with Product API (see documentation). You can set the beta API and production API configuration separately or all at ones. 
 
-Here's an example how you would add just Translator's beta API environment configuration to Platform of Trust. 
+Here's an example how you would register Translator's with beta API environment configuration to Platform of Trust. Don't worry, later we'll set the production environment configuration as well. In the example, Translator is created thus we use **POST** method. 
 
 ```
 
-curl "http://api.oftrust.net/product/" \
+curl "http://api.oftrust.net/product/translator" \
   -X POST \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
@@ -112,7 +120,7 @@ Here's an example in which both environments are configured with one API POST me
 
 ```
 
-curl "http://api.oftrust.net/product/" \
+curl "http://api.oftrust.net/product/translator" \
   -X POST \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
@@ -147,7 +155,7 @@ You can find further details details and other options from Product API document
 
 # 4. Create data product in Platform of Trust
 
-You can create the data product with Product API (see documentation). An example: 
+You can create the data product with Product API (see documentation). In the example you'll attach the data product to translator as well. An example: 
 
 ```
 
@@ -158,7 +166,8 @@ curl "http://api.oftrust.net/product/" \
   -H "X-PoT-App: xxx" 
 
   -d
-    {"translator": {
+    {"product": {
+        "type": "data" 
         "name": "Just a name",
         "desc": "Short description"
     }}
@@ -168,16 +177,16 @@ In case of success (200), you will get a response similar to this:
 
 ```
 {
-  "id": 2
+  "product_id": 2 // Data Product ID needed in next steps. 
 }
 ```
 
 
-Set the available paramaters for 3rd party data consumer. The options are shown in market place for the 3rd party developer. 
+Set the available paramaters for 3rd party data consumer. The options are shown in market place for the 3rd party developer. Use **PUT** method since we are updating existing data product. Notice that the Product ID created in previous step is given in the URL. 
 ```
 
-curl "http://api.oftrust.net/product/" \
-  -X POST \
+curl "http://api.oftrust.net/product/{ID}" \
+  -X PUT \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
   -H "X-PoT-App: xxx" 
@@ -235,7 +244,7 @@ You can configure the data product with Product API (see documentation). Here's 
 
 ```
 
-curl "http://api.oftrust.net/product/" \
+curl "http://api.oftrust.net/product/{ID}" \
   -X PUT \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
@@ -270,7 +279,7 @@ Here's a simple curl example how you configure production environment for the da
 
 ```
 
-curl "http://api.oftrust.net/product/" \
+curl "http://api.oftrust.net/product/{ID}" \
   -X PUT \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
@@ -278,7 +287,6 @@ curl "http://api.oftrust.net/product/" \
 
   -d
     {"product": {
-        "product_id": "ID",
         "configuration": {
             "production": {
                 "url": "https://0.0.0.0" 
@@ -291,7 +299,7 @@ curl "http://api.oftrust.net/product/" \
 You can set the publicity and status with below Product API call. Since this is an update to existing data product, use **PUT** method: 
 
 ```
-curl "http://api.oftrust.net/product/" \
+curl "http://api.oftrust.net/product/{ID}" \
   -X PUT \
   -H "X-PoT-Signature: xxx" \
   -H "X-PoT-Token: meowmeowmeow" \
@@ -299,7 +307,6 @@ curl "http://api.oftrust.net/product/" \
 
   -d
     {"product": {
-        "product_id": "ID",
         "visibility": "public",
         "status": "production"
     }}

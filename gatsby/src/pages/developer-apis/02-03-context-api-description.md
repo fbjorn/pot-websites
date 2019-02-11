@@ -8,4 +8,4 @@ status: "published"
 ---
 The Context API provides means to list available contexts in the PlatformOfTrust/standards repository in GitHub.
 
-[Overview](/developers/apis/ceontext-rest-api) | [Use case](https://docs.oftrust.net/usecases/context) | [API documentation](https://docs.oftrust.net/#loginapi)
+[Documentation](https://docs.oftrust.net/#contextapi)
