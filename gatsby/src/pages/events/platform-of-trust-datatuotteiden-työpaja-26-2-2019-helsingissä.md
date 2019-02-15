@@ -1,6 +1,7 @@
 ---
 title: Platform of Trust datatuotteiden työpaja 26.2.2019 Helsingissä
 date: 2019-02-01T09:12:55.046Z
+language: fi
 address: 'Lapinlahdenkatu 16, Helsinki'
 eventdate: '26.2.2019 10:30 - 15:00'
 Registration url: 'http://www.platformoftrust.net/tapahtumat/työpaja/2019-02-26-0'
