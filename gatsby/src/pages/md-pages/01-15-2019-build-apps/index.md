@@ -5,7 +5,8 @@ title: "Build apps"
 image: ./rush.jpeg
 type: "page"
 ---
-Building apps on top of Platform of trust...
+
+**Note: KOJAMO CASE APP, link to source code if possible**
 
 
 # Process is simple

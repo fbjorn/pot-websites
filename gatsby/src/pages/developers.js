@@ -20,7 +20,7 @@ const DeveloperPage = () => {
             <p className="lead">Platform of Trust gives access to both rich build environment data and customers.​</p>
             
                 <button type="submit" className="btn btn-primary">Sign up</button>
-                <button type="submit" className="btn btn-primary">View APIs</button>
+                <a href="https://docs.oftrust.net">View APIs</a>
                 <button type="submit" className="btn btn-primary">View Documentation</button>
               
           </div>
@@ -55,17 +55,49 @@ const DeveloperPage = () => {
           </div>
           <div className="col-sm d-flex">
             <div className="card">
-              <div className="card-header"><h3>HOW TO REGISTER TRANSLATOR</h3></div>
+              <div className="card-header"><h3>HOW TO USE STANDARD DATA MODELS</h3></div>
               <div className="card-body">
-                <p>Register new translator to Platform of Trust. You can use registered translators in data products. </p>
+                <p>All data exposed by the platform must be harmonised and use standard data models. Get familiar and start using along with Translator component. </p>
                 
               </div>
               <div className="card-footer">
-              <Link to="/developers/getstarted/register-translator">Lets do it! >> </Link>
+              <Link to="/developers/getstarted/data-models">Learn more >> </Link>
               </div>
             </div>
           </div>
         </section> 
+
+        <section  className="container">
+            <h2>Get started with the Platform of Trust APIs in minutes</h2>
+            <p>Try out the most commonly used APIs instantly. Just select API, preferred code example and hit "run". The response with headers is printed below.</p>
+            <div className="container row">
+              <div className="col-md-6">
+                <div className="bd-clipboard">
+                  <button className="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>
+                </div>
+                <figure className="highlight">
+                  <pre>
+                    <code className="language-html" data-lang="html">
+                      <span className="nt">&lt;link</span>
+                      <br />
+                      <span className="na"> rel=</span>
+                      <span className="s">"stylesheet"</span> 
+                      <span className="na"> href=</span>
+                      <br />
+                      <span className="s">"https://foo.com.min.css"</span> 
+                      <span className="nt">&gt;</span>
+                    </code>
+                  </pre>
+                </figure>
+              </div>
+              <div className="col-md-3"> 
+              <button className="btn btn-primary btn-block">Context API</button>  
+              <button className="btn btn-primary btn-block">Identity API</button>   
+              <button className="btn btn-primary btn-block">Product API</button> 
+              <Link to="/developers/apis">Read more about APIs and tools available >> </Link>    
+              </div>
+            </div>
+          </section>
 
         <section  className="container">
           <h2>We love developers</h2>  
@@ -75,7 +107,7 @@ const DeveloperPage = () => {
               
           <p>Take a deep dive into API documentation including code examples for Python, Node.js, Java and shell (curl)</p>
           
-                <button type="submit" className="btn btn-primary">Visit the docs!</button>
+                <button type="submit" className="btn btn-primary">Visit the API docs!</button>
               
         </section>
         
@@ -115,7 +147,7 @@ const DeveloperPage = () => {
             <section  className="container">
               <h2>Stay informed and participate</h2>  
               <p>Our daily communication is based on Slack and mailing list. Subscibe now and stay informed!</p>
-              <button className="btn btn-primary btn-block">Set subscription</button>
+              <a href="https://www.platformoftrust.net/set-subscription">Subscribe >> </a>
             </section>
             <section  className="container">
               <h2>Start building today</h2>

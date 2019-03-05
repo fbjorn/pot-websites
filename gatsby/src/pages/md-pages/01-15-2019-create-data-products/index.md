@@ -7,6 +7,8 @@ type: "page"
 ---
 This guide will help you create a data product in the Platform of Trust market place for other developers to utilize in applications. 
 
+**Note! Lets use kojamo case data product as exmple. Data MUST be also in Sandbox env since we provide sample API calls to the data as well**
+
 ## What is data product? 
 
 Data product is the final product which 3rd party developers can find from Platform of Trust market place.  3rd party developers always use Data Broker API to access data product data. 
