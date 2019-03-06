@@ -20,8 +20,8 @@ const DeveloperPage = () => {
             <p className="lead">Platform of Trust gives access to both rich build environment data and customers.​</p>
             
                 <button type="submit" className="btn btn-primary">Sign up</button>
-                <a href="https://docs.oftrust.net">View APIs</a>
-                <button type="submit" className="btn btn-primary">View Documentation</button>
+                <a href="https://docs.oftrust.net">View API documentation</a>
+                <Link to="/apis">View APIs</Link>
               
           </div>
         </div>
@@ -94,7 +94,7 @@ const DeveloperPage = () => {
               <button className="btn btn-primary btn-block">Context API</button>  
               <button className="btn btn-primary btn-block">Identity API</button>   
               <button className="btn btn-primary btn-block">Product API</button> 
-              <Link to="/developers/apis">Read more about APIs and tools available >> </Link>    
+              <Link to="../developers/apis">Read more about APIs and tools available >> </Link>    
               </div>
             </div>
           </section>
