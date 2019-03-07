@@ -9,15 +9,46 @@ type: "page"
 **Note: KOJAMO CASE APP, link to source code if possible**
 
 
-# Process is simple
+# Publish Application with 5 steps
 
-Image here and open as text
+![Application creation phases](app-process.png)
 
-# First live Digital Twin in 3 minutes with Node.js
+Some of the example code snippets (API invocations) use sandbox environment. 
 
-In this example, you'll build your first commandline app to consume Platform of Trust data and other capabilities. 
+# 1. Get started
 
-## Create app skeleton in sandbox 
-You start building your app in sandbox environment. In practise your API calls are directed to sandbox environment APIs and not the production environment. A good practise is to put API roots in variables and in the final step you'll change the values to match production APIs. 
 
-<pre><code>// some css grid code </code></pre> 
+# 2. Register Application 
+
+
+# 3. Select Data Product to use
+
+# 4. Develop and test in sandbox environment
+
+
+If you need more data, then search for additional data products from the market place and repeat. 
+
+# 5. Deploy and publish
+
+Set the data product configuration in your application to ``production`` to use production environment data instead of sandbox data. 
+
+Use Product API to define missing Application metadata. Required fields are: 
+ - name
+ - description
+ - ....
+
+ Publish your application with Product API by setting the ``publicity`` attribute to ``public``and ``status`` attribute to ``production``. Below is an example how to do that. Note that you need to change appID and....
+
+ 
+```
+
+curl "http://api.oftrust.net/product/translator" \
+  -X PUT \
+  -H "X-PoT-Signature: xxx" \
+  -H "X-PoT-Token: meowmeowmeow" \
+  -H "X-PoT-App: xxx" 
+
+  -d
+    ...
+    }}
+```
