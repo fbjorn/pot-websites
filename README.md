@@ -40,6 +40,7 @@ Set in Github for:
 
 * Clone repository to local machine with ``git clone git@github.com:PlatformOfTrust/developer.oftrust.net.git``
 * ``cd gatsby``
+* ``npm install``
 * ``npm install --global gatsby-cli``
 * ``gatsby develop``
 * Open in browser localhost:8000
