@@ -63,7 +63,8 @@ Keep in mind that more detailed description of options can be found from the [Pr
 
 Next you need to use selected Data Product in your application. Data is queried with Data Broker API. In the below example we get data from the above selected data product. Note that we use sandbox environment. You can see that from the URL. 
 
-``
+```
+
 curl "http://sandbox-api.oftrust.net/data-broker/" \
   -X GET \
   -H "X-PoT-Signature: xxx" \
@@ -88,6 +89,7 @@ Use Product API to define missing Application metadata. Required fields are:
 
  
 ```
+
 curl "http://api.oftrust.net/product/translator" \
   -X PUT \
   -H "X-PoT-Signature: xxx" \
