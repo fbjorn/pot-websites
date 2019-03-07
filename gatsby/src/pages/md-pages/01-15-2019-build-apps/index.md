@@ -55,13 +55,25 @@ curl "http://api.oftrust.net/products/" \
 
 ```
 
+We'll use the Data Product "kojamo" in the following steps and code examples. You should learn with this example how to find needed information about Data Products so you can do it again later again while looking for more data. 
 
-More detailed description of options can be found from the [Product API documentation](https://docs.oftrust.net). 
+Keep in mind that more detailed description of options can be found from the [Product API documentation](https://docs.oftrust.net). 
 
 # 4. Develop and test in sandbox environment
 
+Next you need to use selected Data Product in your application. Data is queried with Data Broker API. In the below example we get data from the above selected data product. Note that we use sandbox environment. You can see that from the URL. 
 
-If you need more data, then search for additional data products from the market place and repeat. 
+``
+curl "http://sandbox-api.oftrust.net/data-broker/" \
+  -X GET \
+  -H "X-PoT-Signature: xxx" \
+  -H "X-PoT-Token: meowmeowmeow" \
+  -H "X-PoT-App: xxx" 
+
+```
+
+
+If you need more data, then go back to step 3 and search for additional data products from the market place. If you are done, proceeed to final step! 
 
 # 5. Deploy and publish
 
