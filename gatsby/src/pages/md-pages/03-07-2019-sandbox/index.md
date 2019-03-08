@@ -4,29 +4,17 @@ date: "2019-01-15T13:30:33.962Z"
 title: "Open Platform of Trust Sandbox"
 type: "page"
 ---
-Platform of Trust sandbox is a self-contained, virtual testing environment that mimics the live Platform of Trust production environment. It provides a shielded space where you can initiate and watch your application process the requests you make to the Platform of Trust APIs without touching any production use data products. 
+The Platform of Trust Sandbox environment is intended to be used by developers to test their applications and data product integrations, prior to production, in a safe and isolated manner.
 
-Likewise for data product owners and integrators, sandbox provides shielded environment to test data products before publishing to market place for application developers to consume. 
+The environment should be used for test data only, but will run the same version of the software as production.
 
-## Sandbox overview
+For things to keep in mind when working with sandbox is that we do NOT guarantee that the data in the database stays intact, and instead we guarantee that it will be regularly reset and your data WILL be lost.
 
-Text...and images...
+For your own integrations to the sandbox environment it is recommended that you also use purely test data with no sensitive information, as other people also use the environment and your data might be viewed by other people as well. This is especially important in case of data products, as during development your access control checks etc. might not be fully complete.
 
-## Sandbox accounts
+The sandbox APIs and other URLs can be identified with the `*-sandbox.oftrust.net` -domain, so e.g. all the APIs for managing your data products etc. are under `api-sandbox.oftrust.net`.
 
-Text...and images...
-
-## Making test calls 
-
-Text...and images...
-
-## Error handling
-
-Text...and images...
-
-## Tips and tricks
-
-Text...and images...
+It is recommended that when you are integrating a data product, that you use a separate "sandbox" deployment for yourself as well. This way you can keep working on the "development version" that is tied to sandbox, while you have a stable production version deployed as well.
 
 # Create account and get started!
 
