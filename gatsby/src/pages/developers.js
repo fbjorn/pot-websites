@@ -67,6 +67,32 @@ const DeveloperPage = () => {
           </div>
         </section> 
 
+        <section className="container row equal">
+          
+          <div className="col-sm d-flex">
+            <div className="card">
+              <div className="card-header"><h3>HOW TO MANAGE DIGITAL TWINS?</h3></div>
+              <div className="card-body">
+                <p>What is digital twin and why should I care? How to use digital twins in managing built environment data?</p>
+              </div>
+              <div className="card-footer">
+                <Link to="/developers/getstarted/data-products">Learn more >> </Link>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm d-flex">
+            <div className="card">
+              <div className="card-header"><h3>WHAT IS INCLUDED IN SANDBOX?</h3></div>
+              <div className="card-body">
+                <p>Read the getting started and build new applications on top of the data products.</p>
+              </div>
+              <div className="card-footer">
+                <Link to="/developers/getstarted/build-apps">Learn more >> </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section  className="container">
             <h2>Get started with the Platform of Trust APIs in minutes</h2>
             <p>Try out the most commonly used APIs instantly. Just select API, preferred code example and hit "run". The response with headers is printed below.</p>
