@@ -8,13 +8,20 @@ The Platform of Trust Sandbox environment is intended to be used by developers t
 
 The environment should be used for test data only, but will run the same version of the software as production.
 
+## Periodic environment reset
+
 For things to keep in mind when working with sandbox is that we do NOT guarantee that the data in the database stays intact, and instead we guarantee that it will be regularly reset and your data WILL be lost.
+
+## Sample data and integrations 
 
 For your own integrations to the sandbox environment it is recommended that you also use purely test data with no sensitive information, as other people also use the environment and your data might be viewed by other people as well. This is especially important in case of data products, as during development your access control checks etc. might not be fully complete.
 
-The sandbox APIs and other URLs can be identified with the `*-sandbox.oftrust.net` -domain, so e.g. all the APIs for managing your data products etc. are under `api-sandbox.oftrust.net`.
-
 It is recommended that when you are integrating a data product, that you use a separate "sandbox" deployment for yourself as well. This way you can keep working on the "development version" that is tied to sandbox, while you have a stable production version deployed as well.
+
+## APIs in sandbox
+
+The sandbox APIs and other URLs can be identified with the `*-sandbox.oftrust.net` -domain, so e.g. all the APIs for managing your data products etc. are under `api-sandbox.oftrust.net`. 
+
 
 # Create account and get started!
 
