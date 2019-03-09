@@ -317,3 +317,11 @@ curl "http://api.oftrust.net/product/{ID}" \
 ## Update and unpublish 
 
 You can always update product configuration and unpublish your data product with Product API. Check out the API Documentation for details. 
+
+# Create account and get started!
+
+If you are application developer, it might be a good idea to read [Application Development Guide](/developers/getstarted/build-apps) first. 
+
+Digital Twins are fundamental features of the platform, take a look at the [Digital Twin Guide](/developers/getstarted/twins).
+
+Open sandbox is your friend! Isolated environment for testing applications and data product integrations, read more from [Sandbox Guide](/developers/getstarted/sandbox).

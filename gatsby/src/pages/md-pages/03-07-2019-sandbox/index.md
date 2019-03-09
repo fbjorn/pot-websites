@@ -23,3 +23,5 @@ Create account and start utilizing the free and open sandbox!
 If you are application developer, it might be a good idea to read [Application Development Guide](/developers/getstarted/build-apps) first. 
 
 If you are integrating data and creating data products, take a look at the [Data Product Guide](/developers/getstarted/data-products). 
+
+Digital Twins is fundamental feature of the platform, take a look at the [Digital Twin Guide](/developers/getstarted/twins).

@@ -87,7 +87,7 @@ const DeveloperPage = () => {
                 <p>Read the getting started and build new applications on top of the data products.</p>
               </div>
               <div className="card-footer">
-                <Link to="/developers/getstarted/build-apps">Learn more >> </Link>
+                <Link to="/developers/getstarted/sandbox">Learn more >> </Link>
               </div>
             </div>
           </div>
