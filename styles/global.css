@@ -1,9 +1,124 @@
-section:not(.page-content) {
-  margin-top: 4rem;
-  margin-top: 6vw;
-  margin-bottom: 4rem;
-  margin-bottom: 6vw;
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+html {
+  font-size: 100%;
+}
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+.color__main.color__block {
+  background-color: #7955ff;
+}
+.color__main--darkest.color__block {
+  background-color: #4311ff;
+}
+.color__main--dark.color__block {
+  background-color: #5e33ff;
+}
+.color__main--medium.color__block {
+  background-color: #7955ff;
+}
+.color__main--light.color__block {
+  background-color: #8666ff;
+}
+.color__main--lightest.color__block {
+  background-color: #9477ff;
+}
+.color__helpers--dark.color__block {
+  background-color: #0a0a0a;
+}
+.color__helpers--light.color__block {
+  background-color: #f0f0f0;
+}
+.color__helpers--light.color__block p {
+  color: #0a0a0a;
+}
+.color__helpers--alert.color__block {
+  background-color: #fb634d;
+}
+.color__helpers--notice.color__block {
+  background-color: #f7c500;
+}
+.color__helpers--notice.color__block p {
+  color: #0a0a0a;
+}
+.color__helpers--success.color__block {
+  background-color: #97d129;
+}
+body {
+  background-color: #af99ff;
+  background-image: url("./platformoftrust-bgtesti-v2-2019-03-21.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header {
+  background-color: rgba(56,34,136,0.6);
 }
 .jumbotron {
-  padding: 1rem;
+  background-color: rgba(121,85,255,0.4);
+}
+footer {
+  background-color: #382288;
+  background-color: rgba(56,34,136,0.6);
+}
+body {
+  color: #f0f0f0;
+}
+a:link {
+  color: #f0f0f0;
+}
+a:visited {
+  color: #d8d8d8;
+}
+a:hover {
+  color: #d8d8d8;
+}
+a:active {
+  color: #c0c0c0;
+}
+.card {
+  border-color: #382288;
+}
+.card .card-header {
+  background-color: #382288;
+}
+.card .card-body {
+  background-color: #af99ff;
+}
+.card .card-footer {
+  background-color: #7c58ff;
+}
+.logo__header {
+  width: 15rem;
+  margin-bottom: 0;
+}
+@media (max-width) {
+  .logo__header {
+    max-width: 40vw;
+  }
+}
+section:not(.page-content) {
+  padding-top: 2rem;
+  padding-top: 3vw;
+  padding-bottom: 2rem;
+  padding-bottom: 3vw;
+}
+.jumbotron {
+  padding: 8rem 0;
+}
+.card {
+  margin: 1rem 0.5rem 1rem 0;
+  width: 100%;
+  border-width: 1rem;
+  border-style: solid;
+  border-radius: 0;
+}
+.card .card-header {
+  border-radius: 0;
+}
+.card .card-body {
+  border-radius: 0;
+}
+.card .card-footer {
+  border-radius: 0;
 }

@@ -2,10 +2,14 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import Logo from "../images/platformoftrust-wide-white-rgb.svg"
+
 const Header = ({ siteTitle }) => (
   <header className="Header">
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <Link className="navbar-brand" to="#">PoT</Link>
+    <nav className="navbar navbar-expand-lg navbar-dark">
+      <Link className="navbar-brand" to="#">
+        <img src={Logo} className="logo__header" alt="Logo" />
+      </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>

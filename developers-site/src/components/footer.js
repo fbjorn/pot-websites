@@ -3,13 +3,7 @@
 import React from 'react'
 
 const Footer = () => (
-    <footer 
-        className="page-footer footer font-small pt-4" 
-        style={{
-            marginTop: `2rem`,
-            background:  `#343a40`,
-            color: `white`
-          }}>
+    <footer className="page-footer footer font-small pt-4" >
 
     <div className="container-fluid text-center text-md-left">
 
