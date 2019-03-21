@@ -11,7 +11,7 @@ import '../styles/global.css'
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Home" keywords={[`Platform of Trust`]} />
       <section className="Home fullwidth page-content">
         <div className="jumbotron jumbotron-fluid"> 
           <div className="container">

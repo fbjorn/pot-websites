@@ -12,14 +12,14 @@ const Header = ({ siteTitle }) => (
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <Link className="nav-link" to="/">Home</Link>
+          <li className="nav-item">
+            <a className="nav-link" href="https://www.platformoftrust.net/">Home</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="http://builder-staging.oftrust.net/">My World</a>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/developers">For developers</Link>
+          <li className="nav-item active">
+            <Link className="nav-link" to="/">For developers</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/use-cases">Use Cases</Link>
