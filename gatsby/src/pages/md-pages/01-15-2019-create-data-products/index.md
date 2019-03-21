@@ -103,11 +103,10 @@ We expect and welcome more integration providers to join the Platform of Trust e
 
 # 3. Register data product in sandbox and test the translator
 
-You can register the translator with our Product API ([see documentation](https://docs.oftrust.net/#product-api)).
+You can register the data product with our Product API ([see documentation](https://docs.oftrust.net/#product-api)).
 The documentation always points to the sandbox APIs, which means that you should first test against that.
 
-Here's an example on how you would register a created translator with the 
-Product API in Platform of Trust, thus creating the data product itself.
+Here's an example on how you would register a data product with the Product API in Platform of Trust.
 
 Note that you need to be logged in to either the MyWorld application or the 
 developer portal, and send the `Authorization` header.
