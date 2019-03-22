@@ -1,5 +1,5 @@
 ---
-path: "/developers/getstarted/build-apps"
+path: "/getstarted/build-apps"
 date: "2019-01-15T13:30:33.962Z"
 title: "Build apps"
 type: "page"
