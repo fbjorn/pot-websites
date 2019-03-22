@@ -1,5 +1,6 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+// import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 // import Image from '../components/image'
@@ -17,7 +18,12 @@ const IndexPage = ({ data }) => {
           <div className="container">
             <h1 className="display-4">Build trusted products</h1>
             <p className="lead">Platform of Trust gives access to both rich build environment data and customers.​</p>
-            <p><button type="submit" className="btn btn-primary">Sign up</button></p>
+            <div className="set">
+              <form>
+                <input type="email" placeholder="Email" />
+                <button type="submit" className="btn btn-primary">Sign up</button>            
+              </form>
+            </div> 
             <p><a href="https://docs.oftrust.net">View API documentation</a></p>
             <p><Link to="/apis">View APIs</Link></p>
 
@@ -171,14 +177,16 @@ const IndexPage = ({ data }) => {
             <p>Our daily communication is based on Slack and mailing list. Subscibe now and stay informed!</p>
             <a href="https://www.platformoftrust.net/set-subscription">Subscribe >> </a>
           </section>
-          <section  className="container">
-            <h2>Start building today</h2>
-            <form>
-              <label htmlFor="signup-2">Sign up for an account today</label>
-              <div className="form-group row" style={{maxWidth: '20em'}}>
+          <section  className="container row">
+            <div className="col">
+              <h2>Start building today</h2>
+              <form>
+                <label htmlFor="signup-2">Sign up for an account today</label>
+                <br />
+                <input type="email" placeholder="Email" />
                 <button type="submit" className="btn btn-primary">Sign up</button>            
-              </div>
-            </form>  
+              </form>
+            </div>  
           </section>
         </main>
       </section>

@@ -81,6 +81,11 @@ a:active {
 .card .card-footer {
   background-color: #7c58ff;
 }
+pre,
+code {
+  background: #333;
+  color: #fff;
+}
 .btn-primary,
 [class$=primary] {
   background-color: #382288 !important;
@@ -100,6 +105,20 @@ a:active {
 .btn-primary:active,
 [class$=primary]:active {
   box-shadow: 0 0 0 0.2rem #382288 !important;
+}
+.navbar-collapse .activedropdown {
+  position: relative;
+}
+.navbar-collapse .activedropdown a:link {
+  display: inline-block;
+}
+.navbar-collapse .activedropdown .dropdown-menu.show {
+  top: 2rem;
+  background-color: #af99ff;
+}
+.navbar-collapse .activedropdown .dropdown-menu.show ul {
+  margin-left: 0.4rem;
+  list-style: none;
 }
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
 html {

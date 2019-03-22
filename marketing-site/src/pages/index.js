@@ -67,15 +67,16 @@ const IndexPage = ({ data }) => {
               </div>
             </div> 
           </section>
-          <section  className="container">
-            <h2>Start building today</h2>
-            <form>
-              <label htmlFor="signup-2">Sign up for an account today</label>
-              <div className="form-group row" style={{maxWidth: '20em'}}>
-                <input type="email" className="form-control col-sm" id="signup-2" aria-describedby="emailHelp" placeholder="Enter email"></input>
+          <section  className="container row">
+            <div className="col">
+              <h2>Start building today</h2>
+              <form>
+                <label htmlFor="signup-2">Sign up for an account today</label>
+                <br />
+                <input type="email" placeholder/>
                 <button type="submit" className="btn btn-primary">Sign up</button>            
-              </div>
-            </form>  
+              </form>
+            </div>  
           </section>
         </main>
       </section>

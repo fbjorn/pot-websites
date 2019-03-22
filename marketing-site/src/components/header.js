@@ -23,22 +23,22 @@ const Header = ({ siteTitle }) => (
             <a className="nav-link" href="http://builder-staging.oftrust.net/">My World</a>
           </li>
           <li className="nav-item">
+            <a className="nav-link disabled" href="#">Market Place</a>
+          </li>
+          <li className="nav-item">
             <a className="nav-link" href="https://developer.oftrust.net/">For developers</a>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/use-cases">Use Cases</Link>
+            <Link className="nav-link" to="/pricing">Pricing</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/apis">APIs</Link>
+            <Link className="nav-link" to="/news">News</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/blogs">Blogs</Link>
+            <Link className="nav-link" to="/events">Events</Link>
           </li>
-          {/* <li className="nav-item">
-            <Link className="nav-link" to="/wp-blog">WP-blogs</Link>
-          </li> */ }
           <li className="nav-item">
-            <Link className="nav-link disabled" to="#">Community</Link>
+            <Link className="nav-link disabled" to="#">About us</Link>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
@@ -47,8 +47,11 @@ const Header = ({ siteTitle }) => (
         </form>
         <ul className="nav navbar navbar-right">
           {/* <li><Link to="#"><span className="glyphicon glyphicon-user"></span> Sign Up </Link></li> */}
-
-          <li><Link to="#"><span className="glyphicon glyphicon-log-in"></span> Login</Link></li>
+          <li>
+            <button className="btn btn-primary my-2 my-sm-0">
+              <a className="nav-link" href="https://login.oftrust.net/">Login</a>
+            </button>
+          </li>
         </ul>
       </div>
     </nav>
