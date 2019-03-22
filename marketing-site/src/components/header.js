@@ -43,10 +43,10 @@ const Header = ({ siteTitle }) => (
         </ul>
         <form className="form-inline my-2 my-lg-0">
           <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button className="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
         <ul className="nav navbar navbar-right">
-          <li><Link to="#"><span className="glyphicon glyphicon-user"></span> Sign Up </Link></li>
+          {/* <li><Link to="#"><span className="glyphicon glyphicon-user"></span> Sign Up </Link></li> */}
 
           <li><Link to="#"><span className="glyphicon glyphicon-log-in"></span> Login</Link></li>
         </ul>
