@@ -1,5 +1,5 @@
 ---
-path: "/developers/getstarted/data-products"
+path: "/getstarted/data-products"
 date: "2019-01-15T13:30:33.962Z"
 title: "Create data product guide"
 
@@ -17,8 +17,6 @@ A Data product is the final product which 3rd party developers can find from Pla
 ## What is a translator and why do I need it?
 
 The translator connects the raw data source to the data product and translates the data model to standard format.
-
-IMAGE HERE
 
 
 ## Authentication
@@ -103,11 +101,10 @@ We expect and welcome more integration providers to join the Platform of Trust e
 
 # 3. Register data product in sandbox and test the translator
 
-You can register the translator with our Product API ([see documentation](https://docs.oftrust.net/#product-api)).
+You can register the data product with our Product API ([see documentation](https://docs.oftrust.net/#product-api)).
 The documentation always points to the sandbox APIs, which means that you should first test against that.
 
-Here's an example on how you would register a created translator with the 
-Product API in Platform of Trust, thus creating the data product itself.
+Here's an example on how you would register a data product with the Product API in Platform of Trust.
 
 Note that you need to be logged in to either the MyWorld application or the 
 developer portal, and send the `Authorization` header.
@@ -219,8 +216,8 @@ You can always update product configuration and unpublish your data product with
 
 # Create account and get started!
 
-If you are application developer, it might be a good idea to read [Application Development Guide](/developers/getstarted/build-apps) first. 
+If you are application developer, it might be a good idea to read [Application Development Guide](/getstarted/build-apps) first. 
 
-Digital Twins are fundamental features of the platform, take a look at the [Digital Twin Guide](/developers/getstarted/twins).
+Digital Twins are fundamental features of the platform, take a look at the [Digital Twin Guide](/getstarted/twins).
 
-Open sandbox is your friend! Isolated environment for testing applications and data product integrations, read more from [Sandbox Guide](/developers/getstarted/sandbox).
+Open sandbox is your friend! Isolated environment for testing applications and data product integrations, read more from [Sandbox Guide](/getstarted/sandbox).

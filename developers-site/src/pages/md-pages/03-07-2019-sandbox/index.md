@@ -1,5 +1,5 @@
 ---
-path: "/developers/getstarted/sandbox"
+path: "/getstarted/sandbox"
 date: "2019-01-15T13:30:33.962Z"
 title: "Open Platform of Trust Sandbox"
 type: "page"
