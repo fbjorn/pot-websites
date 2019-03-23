@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
           
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>HOW TO CREATE DATA PRODUCTS</h3></div>
+                <div className="card-header"><h3>CREATE DATA PRODUCTS</h3></div>
                 <div className="card-body">
                   <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
                 </div>
@@ -55,7 +55,7 @@ const IndexPage = ({ data }) => {
             </div>
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>HOW TO BUILD APPS</h3></div>
+                <div className="card-header"><h3>BUILD APPS</h3></div>
                 <div className="card-body">
                   <p>Read the getting started and build new applications on top of the data products.</p>
                 </div>
@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => {
             </div>
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>HOW TO USE STANDARD DATA MODELS</h3></div>
+                <div className="card-header"><h3>USE STANDARD DATA MODELS</h3></div>
                 <div className="card-body">
                   <p>All data exposed by the platform must be harmonised and use standard data models. Get familiar and start using along with Translator component. </p>
                   
@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
             
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>HOW TO MANAGE DIGITAL TWINS?</h3></div>
+                <div className="card-header"><h3>MANAGE DIGITAL TWINS</h3></div>
                 <div className="card-body">
                   <p>What is digital twin and why should I care? How to use digital twins in managing built environment data?</p>
                 </div>
@@ -93,7 +93,7 @@ const IndexPage = ({ data }) => {
             </div>
             <div className="col-sm d-flex">
               <div className="card">
-                <div className="card-header"><h3>WHAT IS INCLUDED IN SANDBOX?</h3></div>
+                <div className="card-header"><h3>USE SANDBOX</h3></div>
                 <div className="card-body">
                   <p>Read the getting started and build new applications on top of the data products.</p>
                 </div>

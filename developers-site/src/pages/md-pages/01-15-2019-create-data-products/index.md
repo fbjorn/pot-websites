@@ -9,61 +9,21 @@ This guide will help you create a data product in the Platform of Trust market p
 
 **Note! Lets use kojamo case data product as exmple. Data MUST be also in Sandbox env since we provide sample API calls to the data as well**
 
-## What is a data product? 
+## Basic conceps
+
+**What is a data product?** 
 
 A Data product is the final product which 3rd party developers can find from Platform of Trust market place.  
 3rd party developers always use Data Broker API to access data product data.
 
-## What is a translator and why do I need it?
+Note that we expect the raw data provider to have a beta API environment which can be used in the Platform of Trust environment. 
+The beta API is used for testing the data product before launch. 
+
+**What is a translator and why do I need it?**
 
 The translator connects the raw data source to the data product and translates the data model to standard format.
 
-
-## Authentication
-
-Describe authentication briefly. 
-
-# Four phases
-
-Phases included in the process: 
-
-![Data product creation phases](data-product-process.png)
-
-
-# 1. What data is available and why is it published?
-
-You might be tempted to jump directly to the technical integration, but think about the business reasons first. 
-First you need to find out what data is available in the source system. 
-On top of that you need to have a reason why it is published. 
-If you act on behalf of another company and your task is to setup technical 
-facilities for the data product, discuss with your client. 
-Questions which normally needs to be answered before proceeding: 
-
-* What data is available?
-* Why should that data be published via Platform of Trust (business reasons)
-* Who are the expected consumers? 
-* What are the use cases for the data? 
-
-Use a business model canvas or similar to iterate business reasons and other aspects if needed. 
-
-## How do we get access to the desired data? 
-
-How is the data accessed? Where's the API (if there is), documentation, credentials needed. 
-This API refers to the data integration API, not to the data consumer API which is used by the 3rd party developer.
-
-You're about to start building the translator component or functionality between the raw data source system and Platform of Trust.
-
-IMAGE HERE ABOUT APIS REFERRED
-
-Note that we expect the raw data provider to have a beta API environment which can be used in the Platform of Trust environment. 
-The beta API is used for testing the data product before launch. 
-The consuming developer will access the data via the Platform of Trust Data Broker API, 
-which in turn forwards the request to the translator component which handles calls to the raw data system. 
-The beta API is also expected to stay available after the data product release 
-since 3rd party developers will use it while developing applications instead of 
-calling your production API. 
-
-## Get familiar with Platform of Trust ontology
+**Get familiar with Platform of Trust ontology**
 
 Local data most likely uses different names for data attributes. 
 If you haven't done data integration before, use a good amount of time in this step. 
@@ -74,12 +34,58 @@ fields to standard formats used in Platform of Trust.
 With a harmonized ontology and semantics we can be sure that everyone 
 understands the content in a similar way. 
 
-## Sign up as a user
+**Authentication**
+
+Describe authentication briefly. 
+
+# Four steps
+
+Phases included in the process: 
+
+![Data product creation phases](data-product-process.png)
+
+
+# 1. What data is available and why is it published?
+
+You might be tempted to jump directly to the technical integration, but think about the business reasons first. 
+Use a business model canvas or similar to iterate business reasons and other aspects if needed. 
+
+First you need to find out what data is available in the source system. 
+On top of that you need to have a reason why it is published. 
+
+If you act on behalf of another company and your task is to setup technical 
+facilities for the data product, discuss with your client. 
+
+**Business related wuestions which normally needs to be answered before proceeding:** 
+* What data is available?
+* Why should that data be published via Platform of Trust (business reasons)
+* Who are the expected consumers? 
+* What are the use cases for the data? 
+
+You're about to start building the translator component or functionality between the raw data source system and Platform of Trust.
+
+IMAGE HERE
+
+**Technical questions which needs to be asnwered before proceeding**
+* How is the data accessed? API? Something else?
+* Where's the API (if there is)? 
+* Data source system/integration documentation? 
+* How to get credentials are needed?  
+
+The consuming developer will access the data via the Platform of Trust Data Broker API, 
+which in turn forwards the request to the translator component which handles calls to the raw data system. 
+The beta API is also expected to stay available after the data product release 
+since 3rd party developers will use it while developing applications instead of 
+calling your production API. 
+
+
+
+# 2. Sign up as a user
 
 To get started, you need to [sign up as a user](https://developers.oftrust.net/sign-up) to the Platform of Trust.
 
 
-# 2. Create and host a translator 
+# 3. Create and host a translator 
 
 A translator transforms the local data model and attributes to match the Platform of Trust ontology.
 
@@ -99,7 +105,7 @@ which enables a fast way to integrate your raw data to Platform of Trust.
 We expect and welcome more integration providers to join the Platform of Trust ecosystem. 
 
 
-# 3. Register data product in sandbox and test the translator
+# 4. Register data product in sandbox and test the translator
 
 You can register the data product with our Product API ([see documentation](https://docs.oftrust.net/#product-api)).
 The documentation always points to the sandbox APIs, which means that you should first test against that.
