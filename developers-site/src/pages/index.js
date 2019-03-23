@@ -87,7 +87,7 @@ const IndexPage = ({ data }) => {
                   <p>What is digital twin and why should I care? How to use digital twins in managing built environment data?</p>
                 </div>
                 <div className="card-footer">
-                  <Link to="/getstarted/data-products">Learn more >> </Link>
+                  <Link to="/getstarted/twins">Learn more >> </Link>
                 </div>
               </div>
             </div>
