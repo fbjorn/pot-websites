@@ -31,8 +31,15 @@ const IndexPage = ({ data }) => {
         </div>
     
         <main className="container">
-          <h2>What do you want to do next?</h2>
+
+          <section  className="container">
+            <h2>End to End developer eXperience</h2>  
+            <p>An overview of the processes included in the End-to-end Developer eXperience</p>
+            <img src="end-to-end-dx.png"/>
+            <p>From below you'll find getting started guides for the processes. </p>    
+          </section>
           
+          <h2>What do you want to do next?</h2>
           <section className="container row equal">
           
             <div className="col-sm d-flex">
