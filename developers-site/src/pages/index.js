@@ -149,10 +149,6 @@ const IndexPage = ({ data }) => {
           </section>
       
           <section  className="container row">
-            <h2>Become part of a growth story and ecosystem of trust</h2>
-            <p>Jotain talous insentiivejä (developerin managerille)</p>
-          </section>
-          <section  className="container row">
             <h2>Learn why developers and data providers are choosing Platform of Trust</h2>
             <div className="container row equal">
               <div className="col-sm d-flex">
