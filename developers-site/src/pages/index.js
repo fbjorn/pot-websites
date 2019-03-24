@@ -79,7 +79,17 @@ const IndexPage = ({ data }) => {
           </section> 
 
           <section className="container row equal">
-            
+            <div className="col-sm d-flex">
+              <div className="card">
+                <div className="card-header"><h3>SETUP TRANSLATOR</h3></div>
+                <div className="card-body">
+                  <p>A Platform Of Trust translator standardizes the responses from a data source to the Platform itself.</p>
+                </div>
+                <div className="card-footer">
+                  <Link to="/getstarted/twins">Learn more >> </Link>
+                </div>
+              </div>
+            </div>
             <div className="col-sm d-flex">
               <div className="card">
                 <div className="card-header"><h3>MANAGE DIGITAL TWINS</h3></div>
@@ -102,8 +112,10 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
             </div>
+            
           </section>
-
+          <p>We are creating more guides on various topics. We also welcome community driven guides. Checkout how to contribute and see full list of guides.</p>
+          <div><button type="submit" className="btn btn-primary">Full list of guides! (/guides)</button></div>
           <section  className="container">
             <h2>Get started with the Platform of Trust APIs in minutes</h2>
             <p>Try out the most commonly used APIs instantly. Just select API, preferred code example and hit "run". The response with headers is printed below.</p>

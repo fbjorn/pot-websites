@@ -38,11 +38,15 @@ understands the content in a similar way.
 
 Describe authentication briefly. 
 
-# Four steps
+# Create a data product
 
 Phases included in the process: 
 
-![Data product creation phases](data-product-process.png)
+1. What data is available and why is it published?
+2. Sign up as a user
+3. Create and host a translator
+4. Register data product in sandbox and test the translator
+5. Register data product in production
 
 
 # 1. What data is available and why is it published?
