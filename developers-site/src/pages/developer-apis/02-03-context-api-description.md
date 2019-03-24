@@ -6,6 +6,7 @@ type: "content"
 section: "api-descriptions"
 status: "published"
 ---
-The Context API provides means to list available contexts in the PlatformOfTrust/standards repository in GitHub.
+The Context API provides means to list available JSON-LD contexts in the PlatformOfTrust/standards repository in GitHub. The contexts defines the semantic meaning of the keys in the responses from the APIs. 
 
-[Documentation](https://docs.oftrust.net/#contextapi)
+
+[Documentation](https://docs.oftrust.net/#context-api)
