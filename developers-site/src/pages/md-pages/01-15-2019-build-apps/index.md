@@ -1,5 +1,5 @@
 ---
-path: "/getstarted/build-apps"
+path: "/guides/build-apps"
 date: "2019-01-15T13:30:33.962Z"
 title: "Build apps"
 type: "page"
@@ -105,8 +105,8 @@ curl "http://api.oftrust.net/product/translator" \
 # Create account and get started!
 
 
-If you are integrating data and creating data products, take a look at the [Data Product Guide](/developers/getstarted/data-products). 
+If you are integrating data and creating data products, take a look at the [Data Product Guide](/guides/data-products). 
 
-Digital Twins is fundamental feature of the platform, take a look at the [Digital Twin Guide](/developers/getstarted/twins).
+Digital Twins is fundamental feature of the platform, take a look at the [Digital Twin Guide](/guides/twins).
 
-Open sandbox is your friend! Isolated environment for testing applications and data product integrations, read more from [Sandbox Guide](/developers/getstarted/sandbox).
+Open sandbox is your friend! Isolated environment for testing applications and data product integrations, read more from [Sandbox Guide](/guides/sandbox).

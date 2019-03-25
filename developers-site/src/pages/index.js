@@ -49,7 +49,7 @@ const IndexPage = ({ data }) => {
                   <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
                 </div>
                 <div className="card-footer">
-                  <Link to="/getstarted/data-products">Learn more >> </Link>
+                  <Link to="/guides/data-products">Learn more >> </Link>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ const IndexPage = ({ data }) => {
                   <p>Read the getting started and build new applications on top of the data products.</p>
                 </div>
                 <div className="card-footer">
-                  <Link to="/getstarted/build-apps">Learn more >> </Link>
+                  <Link to="/guides/build-apps">Learn more >> </Link>
                 </div>
               </div>
             </div>
@@ -72,7 +72,7 @@ const IndexPage = ({ data }) => {
                   
                 </div>
                 <div className="card-footer">
-                <Link to="/getstarted/data-models">Learn more >> </Link>
+                <Link to="/guides/data-models">Learn more >> </Link>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@ const IndexPage = ({ data }) => {
                   <p>A Platform Of Trust translator standardizes the responses from a data source to the Platform itself.</p>
                 </div>
                 <div className="card-footer">
-                  <Link to="/getstarted/twins">Learn more >> </Link>
+                  <Link to="/guides/translator">Learn more >> </Link>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ const IndexPage = ({ data }) => {
                   <p>What is digital twin and why should I care? How to use digital twins in managing built environment data?</p>
                 </div>
                 <div className="card-footer">
-                  <Link to="/getstarted/twins">Learn more >> </Link>
+                  <Link to="/guides/twins">Learn more >> </Link>
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@ const IndexPage = ({ data }) => {
                   <p>Read the getting started and build new applications on top of the data products.</p>
                 </div>
                 <div className="card-footer">
-                  <Link to="/getstarted/sandbox">Learn more >> </Link>
+                  <Link to="/guides/sandbox">Learn more >> </Link>
                 </div>
               </div>
             </div>
@@ -143,7 +143,7 @@ const IndexPage = ({ data }) => {
               <button className="btn btn-primary btn-block">Context API</button>  
               <button className="btn btn-primary btn-block">Identity API</button>   
               <button className="btn btn-primary btn-block">Product API</button> 
-              <Link to="../developers/apis">Read more about APIs and tools available >> </Link>    
+              <Link to="/apis">Read more about APIs and tools available >> </Link>    
               </div>
             </div>
           </section>

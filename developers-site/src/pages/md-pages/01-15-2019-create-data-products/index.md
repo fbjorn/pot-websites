@@ -1,7 +1,7 @@
 ---
-path: "/getstarted/data-products"
+path: "/guides/data-products"
 date: "2019-01-15T13:30:33.962Z"
-title: "Create data product guide"
+title: "Data product 101"
 
 type: "page"
 ---
@@ -226,8 +226,8 @@ You can always update product configuration and unpublish your data product with
 
 # Create account and get started!
 
-If you are application developer, it might be a good idea to read [Application Development Guide](/getstarted/build-apps) first. 
+If you are application developer, it might be a good idea to read [Application Development Guide](/guides/build-apps) first. 
 
-Digital Twins are fundamental features of the platform, take a look at the [Digital Twin Guide](/getstarted/twins).
+Digital Twins are fundamental features of the platform, take a look at the [Digital Twin Guide](/guides/twins).
 
-Open sandbox is your friend! Isolated environment for testing applications and data product integrations, read more from [Sandbox Guide](/getstarted/sandbox).
+Open sandbox is your friend! Isolated environment for testing applications and data product integrations, read more from [Sandbox Guide](/guides/sandbox).

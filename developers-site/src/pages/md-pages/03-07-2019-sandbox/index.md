@@ -1,5 +1,5 @@
 ---
-path: "/getstarted/sandbox"
+path: "/guides/sandbox"
 date: "2019-01-15T13:30:33.962Z"
 title: "Open Platform of Trust Sandbox"
 type: "page"
@@ -27,8 +27,8 @@ The sandbox APIs and other URLs can be identified with the `*-sandbox.oftrust.ne
 
 Create account and start utilizing the free and open sandbox! 
 
-If you are application developer, it might be a good idea to read [Application Development Guide](/developers/getstarted/build-apps) first. 
+If you are application developer, it might be a good idea to read [Application Development Guide](/guides/build-apps) first. 
 
-If you are integrating data and creating data products, take a look at the [Data Product Guide](/developers/getstarted/data-products). 
+If you are integrating data and creating data products, take a look at the [Data Product Guide](/guides/data-products). 
 
-Digital Twins is fundamental feature of the platform, take a look at the [Digital Twin Guide](/developers/getstarted/twins).
+Digital Twins is fundamental feature of the platform, take a look at the [Digital Twin Guide](/guides/twins).

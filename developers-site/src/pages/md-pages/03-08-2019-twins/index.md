@@ -1,5 +1,5 @@
 ---
-path: "/getstarted/twins"
+path: "/guides/twins"
 date: "2019-01-15T13:30:33.962Z"
 title: "How to manage digital twins"
 type: "page"
