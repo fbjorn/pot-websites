@@ -15,69 +15,51 @@ const IndexPage = ({ data }) => {
       <section className="Home fullwidth page-content">
         <div className="jumbotron jumbotron-fluid"> 
           <div className="container">
-            <h1 className="display-4">Platform of Trust</h1>
-            <p className="lead">Platform of Trust gives access to both rich build environment data and customers.​</p>
+            <h1 className="display-4">Welcome to Platform of Trust</h1>
+            <p className="lead">temporary landing page. Public release June 2019.</p>
+            <p className="lead">More information about Platform of Trust at <a href="platformoftrust.net">platformoftrust.net</a></p>
           </div>
         </div>
-    
+
         <main className="container">
-          <section  className="container row">
-             {data.intro.edges.map(({ node }) => (
-                <div key={node.id}>
-                <h1>{node.frontmatter.title}</h1>
-                <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
+          
+          <section className="container row equal">
+          
+            <div className="col-sm d-flex">
+              <div className="card">
+                <div className="card-header"><h3>MANAGE YOUR DATA</h3></div>
+                <div className="card-body">
+                  <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
                 </div>
-            ))} 
-          </section>
-          <section  className="container row">
-            <h2>Learn why developers and data providers are choosing Platform of Trust</h2>
-            <div className="container row equal">
-              <div className="col-sm d-flex">
-                <div className="card">
-                  <div className="card-header"><h3>USE CASE</h3></div>
-                  <div className="card-body">
-                    <p>Description of use case</p>
-                  </div>
-                  <div className="card-footer">
-                    <Link to="/">Learn more >> </Link>
-                  </div>
+                <div className="card-footer">
+                  <a href="https://myworld.oftrust.net">Go to myworld >> </a>
                 </div>
               </div>
-              <div className="col-sm d-flex">
-                <div className="card">
-                  <div className="card-header"><h3>USE CASE</h3></div>
-                  <div className="card-body">
-                    <p>Description of use case</p>
-                  </div>
-                  <div className="card-footer">
-                    <Link to="/">Learn more >> </Link>
-                  </div>
+            </div>
+            <div className="col-sm d-flex">
+              <div className="card">
+                <div className="card-header"><h3>DEVELOPER TOOLS</h3></div>
+                <div className="card-body">
+                  <p>Read the getting started and build new applications on top of the data products.</p>
+                </div>
+                <div className="card-footer">
+                  <a href="https://developer.oftrust.net">Go to developer portal >></a>
                 </div>
               </div>
-              <div className="col-sm d-flex">
-                <div className="card">
-                  <div className="card-header"><h3>USE CASE</h3></div>
-                  <div className="card-body">
-                    <p>Description of use case</p>
-                  </div>
-                  <div className="card-footer">
-                    <Link to="/">Learn more >> </Link>
-                  </div>
+            </div>
+            <div className="col-sm d-flex">
+              <div className="card">
+                <div className="card-header"><h3>MARKETPLACE FOR DATA AND SERVICES</h3></div>
+                <div className="card-body">
+                  <p>All data exposed by the platform must be harmonised and use standard data models. Get familiar and start using along with Translator component. </p>
+                  
+                </div>
+                <div className="card-footer">
+                <a href="https://marketplace.oftrust.net">Go to marketplace >></a>
                 </div>
               </div>
-            </div> 
-          </section>
-          <section  className="container row">
-            <div className="col">
-              <h2>Start building today</h2>
-              <form>
-                <label htmlFor="signup-2">Sign up for an account today</label>
-                <br />
-                <input type="email" placeholder/>
-                <button type="submit" className="btn btn-primary">Sign up</button>            
-              </form>
-            </div>  
-          </section>
+            </div>
+          </section> 
         </main>
       </section>
     </Layout>

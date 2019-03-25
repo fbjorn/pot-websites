@@ -41,47 +41,50 @@ body
   background-size cover
   background-repeat no-repeat
   background-position center
-header
-  // background-color color__main--darkest
-  // background-color alpha(color__main--darkest, 0.6)
-  background transparent
-.jumbotron
-  // background-color transparent
-  // background-color color__main
-  background-color alpha(color__main, 0.4)
-footer
-  background-color color__main--darkest
-  background-color alpha(color__main--darkest, 0.6)
-
-// Typo-colors
-body
   color $color__helpers--light
-a:link
-  color $color__helpers--light
-a:visited
-  color  darken( $color__helpers--light, 10%)
-a:hover
-  color  darken( $color__helpers--light, 10%)
-a:active
-  color  darken( $color__helpers--light, 20%)
-.card
-  // color $color__helpers--dark
-  border-color color__main--darkest
-  .card-header
+#___gatsby
+  header
+    // background-color color__main--darkest
+    // background-color alpha(color__main--darkest, 0.6)
+    background transparent
+  .jumbotron
+    // background-color transparent
+    // background-color color__main
+    background-color alpha(color__main, 0.4) !important
+  footer
     background-color color__main--darkest
-  .card-body
-    background-color color__main--lightest
-  .card-footer
-    background-color color__main--light
-  // a:link
-  //   color $color__helpers--dark
-  // a:visited
-  //   color  lighten( $color__helpers--dark, 10%)
-  // a:hover
-  //   color  lighten( $color__helpers--dark, 10%)
-  // a:active
-  //   color  lighten( $color__helpers--dark, 20%)
+    background-color alpha(color__main--darkest, 0.6)
+
+  // Typo-colors
+  *
+    color $color__helpers--light
   
-pre, code
-  background #333
-  color white
+  a:link
+    color $color__helpers--light
+  a:visited
+    color  darken( $color__helpers--light, 10%)
+  a:hover
+    color  darken( $color__helpers--light, 10%)
+  a:active
+    color  darken( $color__helpers--light, 20%)
+  .card
+    // color $color__helpers--dark
+    border-color color__main--darkest
+    .card-header
+      background-color color__main--darkest
+    .card-body
+      background-color color__main--lightest
+    .card-footer
+      background-color color__main--light
+    // a:link
+    //   color $color__helpers--dark
+    // a:visited
+    //   color  lighten( $color__helpers--dark, 10%)
+    // a:hover
+    //   color  lighten( $color__helpers--dark, 10%)
+    // a:active
+    //   color  lighten( $color__helpers--dark, 20%)
+    
+  pre, code
+    background #333
+    color white

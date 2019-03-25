@@ -6,6 +6,8 @@ import Layout from '../components/layout'
 // import Image from '../components/image'
 import SEO from '../components/seo'
 
+import EndToEnd from "../images/end-to-end-dx.png"
+
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/global.css'
 
@@ -35,7 +37,7 @@ const IndexPage = ({ data }) => {
           <section  className="container">
             <h2>End to End developer eXperience</h2>  
             <p>An overview of the processes included in the End-to-end Developer eXperience</p>
-            <img src="end-to-end-dx.png"/>
+            <img src={EndToEnd} className="logo__header" alt="End-to-end user experience illustration" />
             <p>From below you'll find getting started guides for the processes. </p>    
           </section>
           

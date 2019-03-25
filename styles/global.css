@@ -43,46 +43,47 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  color: #f0f0f0;
 }
-header {
+#___gatsby header {
   background: transparent;
 }
-.jumbotron {
-  background-color: rgba(121,85,255,0.4);
+#___gatsby .jumbotron {
+  background-color: rgba(121,85,255,0.4) !important;
 }
-footer {
+#___gatsby footer {
   background-color: #382288;
   background-color: rgba(56,34,136,0.6);
 }
-body {
+#___gatsby * {
   color: #f0f0f0;
 }
-a:link {
+#___gatsby a:link {
   color: #f0f0f0;
 }
-a:visited {
+#___gatsby a:visited {
   color: #d8d8d8;
 }
-a:hover {
+#___gatsby a:hover {
   color: #d8d8d8;
 }
-a:active {
+#___gatsby a:active {
   color: #c0c0c0;
 }
-.card {
+#___gatsby .card {
   border-color: #382288;
 }
-.card .card-header {
+#___gatsby .card .card-header {
   background-color: #382288;
 }
-.card .card-body {
+#___gatsby .card .card-body {
   background-color: #af99ff;
 }
-.card .card-footer {
+#___gatsby .card .card-footer {
   background-color: #7c58ff;
 }
-pre,
-code {
+#___gatsby pre,
+#___gatsby code {
   background: #333;
   color: #fff;
 }
@@ -124,7 +125,11 @@ code {
 html {
   font-size: 100%;
 }
-body {
+body,
+* {
+  font-family: 'Fira Sans', sans-serif;
+}
+#___gatsby * {
   font-family: 'Fira Sans', sans-serif;
 }
 .logo__header {
@@ -145,19 +150,19 @@ section:not(.page-content) {
 .jumbotron {
   padding: 8rem 0;
 }
-.card {
+#___gatsby .card {
   margin: 1rem 0.5rem 1rem 0;
   width: 100%;
   border-width: 1rem;
   border-style: solid;
   border-radius: 0;
 }
-.card .card-header {
+#___gatsby .card .card-header {
   border-radius: 0;
 }
-.card .card-body {
+#___gatsby .card .card-body {
   border-radius: 0;
 }
-.card .card-footer {
+#___gatsby .card .card-footer {
   border-radius: 0;
 }

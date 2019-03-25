@@ -37,15 +37,53 @@
 .color__helpers--success.color__block {
   background-color: #97d129;
 }
-header {
-  background-color: #5e33ff;
+body {
+  background-color: #af99ff;
+  background-image: url("./platformoftrust-bgtesti-v2-2019-03-21.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #f0f0f0;
 }
-.jumbotron {
-  background-color: #7955ff;
+#___gatsby header {
+  background: transparent;
 }
-main {
-  background-color: #8666ff;
+#___gatsby .jumbotron {
+  background-color: rgba(121,85,255,0.4) !important;
 }
-footer {
-  background-color: #5e33ff;
+#___gatsby footer {
+  background-color: #382288;
+  background-color: rgba(56,34,136,0.6);
+}
+#___gatsby body {
+  color: #f0f0f0;
+}
+#___gatsby a:link {
+  color: #f0f0f0;
+}
+#___gatsby a:visited {
+  color: #d8d8d8;
+}
+#___gatsby a:hover {
+  color: #d8d8d8;
+}
+#___gatsby a:active {
+  color: #c0c0c0;
+}
+#___gatsby .card {
+  border-color: #382288;
+}
+#___gatsby .card .card-header {
+  background-color: #382288;
+}
+#___gatsby .card .card-body {
+  background-color: #af99ff;
+}
+#___gatsby .card .card-footer {
+  background-color: #7c58ff;
+}
+#___gatsby pre,
+#___gatsby code {
+  background: #333;
+  color: #fff;
 }
