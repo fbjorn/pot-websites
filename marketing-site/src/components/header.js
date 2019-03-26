@@ -1,21 +1,54 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+// import { Navbar, Nav, NavDropdown, Form, FormControl, Button  } from 'react-bootstrap';
 
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
 
-const Header = ({ siteTitle }) => (
-  <header className="Header">
-    <nav className="navbar navbar-expand-lg navbar-dark">
-      <Link className="navbar-brand" to="#">
-        <img src={Logo} className="logo__header" alt="Logo" />
-      </Link>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapsed: true,
+      dropdown: false
+    };
+  }
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
+  componentWillMount() {
+    this.setState({
+      collapsed: !this.state.collapsed,
+      dropdown: false
+    });
+  }
+
+  componentDidUpdate(prevProps) {
+    console.log("Updated")
+  }
+
+  toggleNavbar = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+      dropdown: false
+    });
+  }
+  toggleDropdown = () => {  this.setState({ dropdown: !this.state.dropdown }); }
+
+  render() {
+    const classMobileMenu = 'navbar-collapse' + (this.state.collapsed ? 'collapse' : '')
+    const classDropdownMenu = `dropdown-menu ${this.state.dropdown ? 'show' : ''}` 
+    const { collapsed, dropdown } = this.state
+    return (
+      <header className="Header">
+        <nav className="navbar navbar-expand-lg navbar-dark">
+          <Link className="navbar-brand" to="http://localhost:8001/">
+            <img src={Logo} className="logo__header" alt="Logo" />
+          </Link>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleNavbar}>
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className={classMobileMenu} id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             <Link className="nav-link" to="/">Home</Link>
           </li>
@@ -23,66 +56,55 @@ const Header = ({ siteTitle }) => (
             <a className="nav-link" href="http://builder-staging.oftrust.net/">My World</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link disabled" href="#">Market Place</a>
+            <a className="nav-link disabled" href="https://www.platformoftrust.net/">Market Place</a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item activedropdown">
             <a className="nav-link" href="https://developer.oftrust.net/">For developers</a>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/pricing">Pricing</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/news">News</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/events">Events</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link disabled" to="#">About us</Link>
-          </li>
-        </ul>
-        <form className="form-inline my-2 my-lg-0">
-          <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-          <button className="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <ul className="nav navbar navbar-right">
-          {/* <li><Link to="#"><span className="glyphicon glyphicon-user"></span> Sign Up </Link></li> */}
-          <li>
-            <button className="btn btn-primary my-2 my-sm-0">
-              <a className="nav-link" href="https://login.oftrust.net/">Login</a>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  // <div
-  //   style={{
-  //     background: `rebeccapurple`,
-  //     marginBottom: `1.45rem`,
-  //   }}
-  // >
-  //   <div
-  //     style={{
-  //       margin: `0 auto`,
-  //       maxWidth: 960,
-  //       padding: `1.45rem 1.0875rem`,
-  //     }}
-  //   >
-  //     <h1 style={{ margin: 0 }}>
-  //       <Link
-  //         to="/"
-  //         style={{
-  //           color: `white`,
-  //           textDecoration: `none`,
-  //         }}
-  //       >
-  //         {siteTitle}
-  //       </Link>
-  //     </h1>
-  //   </div>
-  // </div>
-)
+            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={this.toggleDropdown}  style={{ display: 'inline-block' }} ></a>
+                <div className={classDropdownMenu} aria-labelledby="navbarDropdownMenuLink">
+                  <ul>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/use-cases">Use Cases</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/apis">APIs</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/blogs">Blogs</Link>
+                    </li> 
+                    </ul>  
+                </div>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/pricing">Pricing</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/news">News</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/events">Events</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link disabled" to="http://localhost:8001/">About us</Link>
+              </li>
+            </ul>
+            <form className="form-inline my-2 my-lg-0">
+              <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+              <button className="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <ul className="nav navbar navbar-right">
+              <li>
+                <button className="btn btn-primary">
+                  <a className="nav-link" href="https://login.oftrust.net/">Login</a>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav> 
+      </header>
+    )
+  }
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
