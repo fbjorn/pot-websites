@@ -166,3 +166,6 @@ section:not(.page-content) {
 #___gatsby .card .card-footer {
   border-radius: 0;
 }
+footer {
+  clip-path: url("#clipPathSVG");
+}
