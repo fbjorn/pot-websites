@@ -40,11 +40,6 @@
         "path": "/blogs/problem-to-solve"
     },
     {
-        "componentChunkName": "component---cache-dev-404-page-js",
-        "jsonName": "dev-404-page-5f9",
-        "path": "/dev-404-page/"
-    },
-    {
         "componentChunkName": "component---src-pages-developers-rel-2-js",
         "jsonName": "developers-rel-2-103",
         "path": "/developers.rel2/"
@@ -55,59 +50,44 @@
         "path": "/developers/"
     },
     {
-        "componentChunkName": "component---src-templates-page-template-js",
-        "jsonName": "developers-getstarted-build-apps-91d",
-        "path": "/developers/getstarted/build-apps"
-    },
-    {
-        "componentChunkName": "component---src-templates-page-template-js",
-        "jsonName": "developers-getstarted-data-models-f57",
-        "path": "/developers/getstarted/data-models"
-    },
-    {
-        "componentChunkName": "component---src-templates-page-template-js",
-        "jsonName": "developers-getstarted-data-products-9d9",
-        "path": "/developers/getstarted/data-products"
-    },
-    {
-        "componentChunkName": "component---src-templates-page-template-js",
-        "jsonName": "developers-getstarted-sandbox-a6f",
-        "path": "/developers/getstarted/sandbox"
-    },
-    {
-        "componentChunkName": "component---src-templates-page-template-js",
-        "jsonName": "developers-getstarted-twins-cbf",
-        "path": "/developers/getstarted/twins"
-    },
-    {
         "componentChunkName": "component---src-templates-blog-template-js",
         "jsonName": "events-apidays-2019-092",
         "path": "/events/apidays-2019"
     },
     {
-        "componentChunkName": "component---src-templates-page-template-js",
-        "jsonName": "getstarted-build-apps-cd1",
-        "path": "/getstarted/build-apps"
+        "componentChunkName": "component---src-pages-guides-js",
+        "jsonName": "guides-6ee",
+        "path": "/guides/"
     },
     {
         "componentChunkName": "component---src-templates-page-template-js",
-        "jsonName": "getstarted-data-models-9d2",
-        "path": "/getstarted/data-models"
+        "jsonName": "guides-build-apps-868",
+        "path": "/guides/build-apps"
     },
     {
         "componentChunkName": "component---src-templates-page-template-js",
-        "jsonName": "getstarted-data-products-aa4",
-        "path": "/getstarted/data-products"
+        "jsonName": "guides-data-models-6f7",
+        "path": "/guides/data-models"
     },
     {
         "componentChunkName": "component---src-templates-page-template-js",
-        "jsonName": "getstarted-sandbox-60e",
-        "path": "/getstarted/sandbox"
+        "jsonName": "guides-data-products-a32",
+        "path": "/guides/data-products"
     },
     {
         "componentChunkName": "component---src-templates-page-template-js",
-        "jsonName": "getstarted-twins-718",
-        "path": "/getstarted/twins"
+        "jsonName": "guides-sandbox-322",
+        "path": "/guides/sandbox"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "guides-translator-5a7",
+        "path": "/guides/translator"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "guides-twins-215",
+        "path": "/guides/twins"
     },
     {
         "componentChunkName": "component---src-pages-page-2-js",
