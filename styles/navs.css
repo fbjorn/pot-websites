@@ -1,0 +1,7 @@
+footer .sitemap ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+footer .sitemap ul li {
+  padding: 0.2rem 0;
+}
