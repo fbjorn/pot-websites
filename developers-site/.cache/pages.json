@@ -1,0 +1,132 @@
+[
+    {
+        "componentChunkName": "component---src-pages-index-js",
+        "jsonName": "index",
+        "path": "/"
+    },
+    {
+        "componentChunkName": "component---src-pages-404-js",
+        "jsonName": "404-html-516",
+        "path": "/404.html"
+    },
+    {
+        "componentChunkName": "component---src-pages-404-js",
+        "jsonName": "404-22d",
+        "path": "/404/"
+    },
+    {
+        "componentChunkName": "component---src-pages-apis-js",
+        "jsonName": "apis-150",
+        "path": "/apis/"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-template-js",
+        "jsonName": "blog-test-gui-a6c",
+        "path": "/blog/test-gui"
+    },
+    {
+        "componentChunkName": "component---src-pages-blogs-js",
+        "jsonName": "blogs-75d",
+        "path": "/blogs/"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-template-js",
+        "jsonName": "blogs-low-loc-developer-experience-862",
+        "path": "/blogs/low-loc-developer-experience"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-template-js",
+        "jsonName": "blogs-problem-to-solve-b6f",
+        "path": "/blogs/problem-to-solve"
+    },
+    {
+        "componentChunkName": "component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page-5f9",
+        "path": "/dev-404-page/"
+    },
+    {
+        "componentChunkName": "component---src-pages-developers-rel-2-js",
+        "jsonName": "developers-rel-2-103",
+        "path": "/developers.rel2/"
+    },
+    {
+        "componentChunkName": "component---src-pages-developers-js",
+        "jsonName": "developers-f00",
+        "path": "/developers/"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "developers-getstarted-build-apps-91d",
+        "path": "/developers/getstarted/build-apps"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "developers-getstarted-data-models-f57",
+        "path": "/developers/getstarted/data-models"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "developers-getstarted-data-products-9d9",
+        "path": "/developers/getstarted/data-products"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "developers-getstarted-sandbox-a6f",
+        "path": "/developers/getstarted/sandbox"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "developers-getstarted-twins-cbf",
+        "path": "/developers/getstarted/twins"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-template-js",
+        "jsonName": "events-apidays-2019-092",
+        "path": "/events/apidays-2019"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "getstarted-build-apps-cd1",
+        "path": "/getstarted/build-apps"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "getstarted-data-models-9d2",
+        "path": "/getstarted/data-models"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "getstarted-data-products-aa4",
+        "path": "/getstarted/data-products"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "getstarted-sandbox-60e",
+        "path": "/getstarted/sandbox"
+    },
+    {
+        "componentChunkName": "component---src-templates-page-template-js",
+        "jsonName": "getstarted-twins-718",
+        "path": "/getstarted/twins"
+    },
+    {
+        "componentChunkName": "component---src-pages-page-2-js",
+        "jsonName": "page-2-fbc",
+        "path": "/page-2/"
+    },
+    {
+        "componentChunkName": "component---src-pages-use-cases-js",
+        "jsonName": "use-cases-7e2",
+        "path": "/use-cases/"
+    },
+    {
+        "componentChunkName": "component---src-templates-usecase-template-js",
+        "jsonName": "use-cases-build-application-a39",
+        "path": "/use-cases/build-application"
+    },
+    {
+        "componentChunkName": "component---src-templates-usecase-template-js",
+        "jsonName": "use-cases-data-product-acc",
+        "path": "/use-cases/data-product"
+    }
+]
