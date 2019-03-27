@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
         <main className="container">
 
           <section  className="container">
-            <h2>End to End developer eXperience</h2>  
+            <h2>From Data Products to Applications</h2>  
             <p>An overview of the processes included in the End-to-end Developer eXperience</p>
             <img src={EndToEnd} className="logo__header" alt="End-to-end user experience illustration" />
             <p>From below you'll find getting started guides for the processes. </p>    
