@@ -40,6 +40,11 @@
         "path": "/blogs/problem-to-solve"
     },
     {
+        "componentChunkName": "component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page-5f9",
+        "path": "/dev-404-page/"
+    },
+    {
         "componentChunkName": "component---src-pages-developers-rel-2-js",
         "jsonName": "developers-rel-2-103",
         "path": "/developers.rel2/"
