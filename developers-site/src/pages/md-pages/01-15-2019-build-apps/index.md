@@ -21,7 +21,12 @@ To be able to use PoT at maximum, you must be logged in as a PoT user. Right now
 Firstly you need to create oauth client for your application. Thus the users of your application can log in to PoT. It is neccessary for sending requests to protected API endpoints.
 
 You also should be able to do it only from [World of Trust](http://world.oftrust.net)
-UI. After registration of your application in PoT, you will get `Client ID`, `Client Secret` and `Access Tokens`. NOTE! These values are crucial and shown only once, so you should save them immediately. Your application will use `Client ID`, `Client Secret` and `Access Tokens` in variuos requests to PoT.
+UI. After registration of your application in PoT, you will get 
+* `Client ID`, 
+* `Client Secret` and 
+* `Access Tokens`. 
+
+NOTE! These values are crucial and shown only once, so you should save them immediately. Your application will use `Client ID`, `Client Secret` and `Access Tokens` in variuos requests to PoT.
 
 # 2. Implement User authorization
 
