@@ -45,16 +45,21 @@ const IndexPage = ({ data }) => {
           <section className="container row equal">
           
             <div className="col-sm d-flex">
+            <Link to="/guides/data-products">
               <div className="card">
-                <div className="card-header"><h3>CREATE DATA PRODUCTS</h3></div>
-                <div className="card-body">
-                  <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
-                </div>
-                <div className="card-footer">
-                  <Link to="/guides/data-products">Learn more >> </Link>
-                </div>
+                
+                  <div className="card-header"><h3>CREATE DATA PRODUCTS</h3></div>
+                  <div className="card-body">
+                    <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
+                  </div>
+                  <div className="card-footer">
+                    <p>Learn more >> </p>
+                  </div>
+               
               </div>
+              </Link>
             </div>
+            
             <div className="col-sm d-flex">
               <div className="card">
                 <div className="card-header"><h3>BUILD APPS</h3></div>
