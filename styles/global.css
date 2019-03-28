@@ -169,3 +169,22 @@ section:not(.page-content) {
 footer {
   clip-path: url("#clipPathSVG");
 }
+footer .some-link {
+  display: inline-block;
+  width: 32px;
+  margin-right: 0.4rem;
+}
+footer .some-link .some-icon {
+  width: 100%;
+}
+footer .sitemap ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+footer .sitemap ul li {
+  padding: 0;
+  margin-bottom: 0;
+}
+footer .sitemap ul li .nav-link {
+  padding: 0.2em 0;
+}
