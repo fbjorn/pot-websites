@@ -38,7 +38,8 @@ Set in Github for:
 
 ## FrontEnd with JAM Gatsby/GraphQL React 
 
-* Clone repository to local machine with ``INSTALLING MIGHT LEAD PROBLEMS WITH SYMLINKS! These will be removed asap.``
+* ``INSTALLING MIGHT LEAD PROBLEMS WITH SYMLINKS! These will be removed asap.``
+* Clone repository to local machine with 
 * ``git clone git@github.com:PlatformOfTrust/developer.oftrust.net.git``
 * ``cd developer-site or marketing-site``
 * ``npm install``
