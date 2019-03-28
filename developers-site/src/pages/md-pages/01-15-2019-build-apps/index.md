@@ -7,7 +7,12 @@ type: "page"
 
 # Purpose
 
-With this guide you'll learn how to build apps which utilize Platform of Trust authentication and data products of various data providers. You'll also use sandbox environment in application testing.  
+Aim is that with help of this guide any developer with moderate amount of skills is able to create "hello digital twin" kind of app which uses one data product in sandbox environment. 
+
+You'll learn 
+* how to build apps which utilize Platform of Trust authentication and 
+* data products of various data providers. In the example we use one data product.  
+* how to use sandbox environment in application testing.  
 
 To go through the guide, you'll need around 10-15 minutes of time. 
 
