@@ -1,0 +1,89 @@
+.color__main.color__block {
+  background-color: #7955ff;
+}
+.color__main--darkest.color__block {
+  background-color: #4311ff;
+}
+.color__main--dark.color__block {
+  background-color: #5e33ff;
+}
+.color__main--medium.color__block {
+  background-color: #7955ff;
+}
+.color__main--light.color__block {
+  background-color: #8666ff;
+}
+.color__main--lightest.color__block {
+  background-color: #9477ff;
+}
+.color__helpers--dark.color__block {
+  background-color: #0a0a0a;
+}
+.color__helpers--light.color__block {
+  background-color: #f0f0f0;
+}
+.color__helpers--light.color__block p {
+  color: #0a0a0a;
+}
+.color__helpers--alert.color__block {
+  background-color: #fb634d;
+}
+.color__helpers--notice.color__block {
+  background-color: #f7c500;
+}
+.color__helpers--notice.color__block p {
+  color: #0a0a0a;
+}
+.color__helpers--success.color__block {
+  background-color: #97d129;
+}
+body {
+  background-color: #af99ff;
+  background-image: url("./platformoftrust-bgtesti-v2-2019-03-21.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #f0f0f0;
+}
+#___gatsby header {
+  background: transparent;
+}
+#___gatsby .jumbotron {
+  background-color: rgba(121,85,255,0.4) !important;
+}
+#___gatsby footer {
+  background-color: #382288;
+  background-color: rgba(56,34,136,0.6);
+}
+#___gatsby body {
+  color: #f0f0f0;
+}
+#___gatsby a:link {
+  color: #f0f0f0;
+}
+#___gatsby a:visited {
+  color: #d8d8d8;
+}
+#___gatsby a:hover {
+  color: #d8d8d8;
+}
+#___gatsby a:active {
+  color: #c0c0c0;
+}
+#___gatsby .card {
+  border-color: #382288;
+}
+#___gatsby .card .card-header {
+  background-color: #382288;
+}
+#___gatsby .card .card-body {
+  background-color: #af99ff;
+}
+#___gatsby .card .card-footer {
+  background-color: #7c58ff;
+}
+#___gatsby pre,
+#___gatsby code {
+  background: #333;
+  color: #fff;
+}

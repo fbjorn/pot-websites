@@ -1,0 +1,190 @@
+.color__main.color__block {
+  background-color: #7955ff;
+}
+.color__main--darkest.color__block {
+  background-color: #4311ff;
+}
+.color__main--dark.color__block {
+  background-color: #5e33ff;
+}
+.color__main--medium.color__block {
+  background-color: #7955ff;
+}
+.color__main--light.color__block {
+  background-color: #8666ff;
+}
+.color__main--lightest.color__block {
+  background-color: #9477ff;
+}
+.color__helpers--dark.color__block {
+  background-color: #0a0a0a;
+}
+.color__helpers--light.color__block {
+  background-color: #f0f0f0;
+}
+.color__helpers--light.color__block p {
+  color: #0a0a0a;
+}
+.color__helpers--alert.color__block {
+  background-color: #fb634d;
+}
+.color__helpers--notice.color__block {
+  background-color: #f7c500;
+}
+.color__helpers--notice.color__block p {
+  color: #0a0a0a;
+}
+.color__helpers--success.color__block {
+  background-color: #97d129;
+}
+body {
+  background-color: #af99ff;
+  background-image: url("./platformoftrust-bgtesti-v2-2019-03-21.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #f0f0f0;
+}
+#___gatsby header {
+  background: transparent;
+}
+#___gatsby .jumbotron {
+  background-color: rgba(121,85,255,0.4) !important;
+}
+#___gatsby footer {
+  background-color: #382288;
+  background-color: rgba(56,34,136,0.6);
+}
+#___gatsby * {
+  color: #f0f0f0;
+}
+#___gatsby a:link {
+  color: #f0f0f0;
+}
+#___gatsby a:visited {
+  color: #d8d8d8;
+}
+#___gatsby a:hover {
+  color: #d8d8d8;
+}
+#___gatsby a:active {
+  color: #c0c0c0;
+}
+#___gatsby .card {
+  border-color: #382288;
+}
+#___gatsby .card .card-header {
+  background-color: #382288;
+}
+#___gatsby .card .card-body {
+  background-color: #af99ff;
+}
+#___gatsby .card .card-footer {
+  background-color: #7c58ff;
+}
+#___gatsby pre,
+#___gatsby code {
+  background: #333;
+  color: #fff;
+}
+.btn-primary,
+[class$=primary] {
+  background-color: #382288 !important;
+  border-color: #4311ff !important;
+}
+.btn-primary:hover,
+[class$=primary]:hover {
+  background-color: #4311ff !important;
+  border-color: #4311ff !important;
+}
+.btn-primary:focus,
+[class$=primary]:focus {
+  background-color: #4311ff !important;
+  border-color: #4311ff !important;
+  box-shadow: 0 0 0 0.2rem #382288 !important;
+}
+.btn-primary:active,
+[class$=primary]:active {
+  box-shadow: 0 0 0 0.2rem #382288 !important;
+}
+.navbar-collapse .activedropdown {
+  position: relative;
+}
+.navbar-collapse .activedropdown a:link {
+  display: inline-block;
+}
+.navbar-collapse .activedropdown .dropdown-menu.show {
+  top: 2rem;
+  background-color: #af99ff;
+}
+.navbar-collapse .activedropdown .dropdown-menu.show ul {
+  margin-left: 0.4rem;
+  list-style: none;
+}
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+html {
+  font-size: 100%;
+}
+body,
+* {
+  font-family: 'Fira Sans', sans-serif;
+}
+#___gatsby * {
+  font-family: 'Fira Sans', sans-serif;
+}
+.logo__header {
+  width: 15rem;
+  margin-bottom: 0;
+}
+@media (max-width) {
+  .logo__header {
+    max-width: 40vw;
+  }
+}
+section:not(.page-content) {
+  padding-top: 2rem;
+  padding-top: 3vw;
+  padding-bottom: 2rem;
+  padding-bottom: 3vw;
+}
+.jumbotron {
+  padding: 8rem 0;
+}
+#___gatsby .card {
+  margin: 1rem 0.5rem 1rem 0;
+  width: 100%;
+  border-width: 1rem;
+  border-style: solid;
+  border-radius: 0;
+}
+#___gatsby .card .card-header {
+  border-radius: 0;
+}
+#___gatsby .card .card-body {
+  border-radius: 0;
+}
+#___gatsby .card .card-footer {
+  border-radius: 0;
+}
+footer {
+  clip-path: url("#clipPathSVG");
+}
+footer .some-link {
+  display: inline-block;
+  width: 32px;
+  margin-right: 0.4rem;
+}
+footer .some-link .some-icon {
+  width: 100%;
+}
+footer .sitemap ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+footer .sitemap ul li {
+  padding: 0;
+  margin-bottom: 0;
+}
+footer .sitemap ul li .nav-link {
+  padding: 0.2em 0;
+}
