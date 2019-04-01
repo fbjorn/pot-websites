@@ -9,11 +9,11 @@ import Github from "../images/github.png"
 import Linkedin from "../images/linkedin.png"
 
 const Footer = () => (
-  <footer className="page-footer footer font-small pt-4" >
+  <footer className="page-footer footer font-small pt-4 mt-5" >
 
     <svg width="0" height="0">
       <clipPath id="clipPathSVG" clipPathUnits="objectBoundingBox">
-        <polygon points="0, 1, 0.05, 0, 0.95, 0, 1, 1"/>
+        <polygon points="0, 1, 0.1, 0, 0.90, 0, 1, 1"/>
       </clipPath>
     </svg>
 

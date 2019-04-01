@@ -1,0 +1,12 @@
+header,
+.page-content,
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+}
+section:not(.page-content) {
+  padding-top: 2rem;
+  padding-top: 3vw;
+  padding-bottom: 2rem;
+  padding-bottom: 3vw;
+}
