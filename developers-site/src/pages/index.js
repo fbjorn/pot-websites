@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
         <main className="container">
 
           <section  className="container">
-            <h2>End to End developer eXperience</h2>  
+            <h2>From Data Products to Applications</h2>  
             <p>An overview of the processes included in the End-to-end Developer eXperience</p>
             <img src={EndToEnd} className="logo__header" alt="End-to-end user experience illustration" />
             <p>From below you'll find getting started guides for the processes. </p>    
@@ -45,16 +45,21 @@ const IndexPage = ({ data }) => {
           <section className="container row equal">
           
             <div className="col-sm d-flex">
+            <Link to="/guides/data-products">
               <div className="card">
-                <div className="card-header"><h3>CREATE DATA PRODUCTS</h3></div>
-                <div className="card-body">
-                  <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
-                </div>
-                <div className="card-footer">
-                  <Link to="/guides/data-products">Learn more >> </Link>
-                </div>
+                
+                  <div className="card-header"><h3>CREATE DATA PRODUCTS</h3></div>
+                  <div className="card-body">
+                    <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
+                  </div>
+                  <div className="card-footer">
+                    <p>Learn more >> </p>
+                  </div>
+               
               </div>
+              </Link>
             </div>
+            
             <div className="col-sm d-flex">
               <div className="card">
                 <div className="card-header"><h3>BUILD APPS</h3></div>

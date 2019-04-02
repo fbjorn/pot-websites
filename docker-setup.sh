@@ -21,12 +21,12 @@ adduser -D -g www www
 cp -r /src/nginx/* /etc/nginx
 
 # Build the contents to be published
-cd /src/gatsby
+cd /src/developers-site
 npm install
 npm run build
 
 # Publish everything necessary
-cd /src/gatsby/public/
+cd /src/developers-site/public/
 cp -r . /var/www/
 cp -r /src/cmsadmin /var/www/
 
