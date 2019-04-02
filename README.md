@@ -36,16 +36,15 @@ Set in Github for:
 * beta
 * MVP (end of March 2019)
 
-## FrontEnd with JAM Gatsby/GraphQL React 
+## FrontEnds with Gatsby/GraphQL React 
 
-* ``INSTALLING MIGHT LEAD PROBLEMS WITH SYMLINKS! These will be removed asap.``
 * Clone repository to local machine with 
-* ``git clone git@github.com:PlatformOfTrust/developer.oftrust.net.git``
+* ``git clone git@github.com:PlatformOfTrust/pot-websites.git``
 * ``cd developer-site or marketing-site``
 * ``npm install``
 * ``npm install --global gatsby-cli``
-* ``gatsby develop``
-* Open in browser localhost:8000
+* ``gatsby develop -o -p 8000``
+* Site will open in browser localhost:8000, use -p to change port
 
 ## CMS 
 Netlify CMS is used for content creation (GUI). All content is stored in Github as markup files. Netlify GUI requires Github account and is run from files in /cmsadmin. Netlify configuration is in same folder as config.yml
