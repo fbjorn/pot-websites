@@ -1,3 +1,30 @@
+@require 'variables.styl'
+
+breakpoint = $mobi-footer-breakpoint
+
+#___gatsby
 footer
-  // clip-path: polygon(0% 100%, 5% 0%, 90% 0%, 100% 100%);
-  clip-path: url(#clipPathSVG);
+  @media(max-width breakpoint)
+    .footer-logo
+      width 80%
+      img.logo__footer
+        margin -1rem 0 -1rem -3rem
+    .footer-contact
+      width 80%
+      text-align left
+      padding 0 0 2rem 2rem
+  @media(max-width ($pad-breakpoint - 1))
+    .footer-somelinks
+      position absolute
+      width 20%
+      right 0
+    nav.some-links
+      display flex
+      flex-direction column
+      align-items flex-end
+     
+  @media(min-width breakpoint) 
+    clip-path: url(#clipPathSVG);
+    // clip-path: polygon(0% 100%, 5% 0%, 90% 0%, 100% 100%);
+    .footer-logo
+      margin-top -1rem

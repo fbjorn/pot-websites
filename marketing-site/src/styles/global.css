@@ -473,14 +473,14 @@ footer .some-link .some-icon {
     opacity: 0;
   }
   #___gatsby label[data-function*='swipe'] {
-    position: absolute;
-    top: 1rem;
+    position: fixed;
+    top: 2rem;
     left: 0;
     z-index: 1;
     display: block;
     font-size: 3rem;
     cursor: pointer;
-    transform: translateX(calc(100vw - 68px));
+    transform: translateX(calc(100vw - 34px)) rotate(90deg);
     transition: transform 0.3s;
     z-index: 110;
   }

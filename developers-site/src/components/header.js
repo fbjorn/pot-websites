@@ -3,108 +3,105 @@ import PropTypes from 'prop-types'
 import React from 'react'
 // import { Navbar, Nav, NavDropdown, Form, FormControl, Button  } from 'react-bootstrap';
 
+import MenuFooter from './MenuFooter'
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      collapsed: true,
-      dropdown: false
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     collapsed: true,
+  //     dropdown: false
+  //   };
+  // }
 
-  componentWillMount() {
-    this.setState({
-      collapsed: !this.state.collapsed,
-      dropdown: false
-    });
-  }
+  // componentWillMount() {
+  //   this.setState({
+  //     collapsed: !this.state.collapsed,
+  //     dropdown: false
+  //   });
+  // }
 
-  componentDidUpdate(prevProps) {
-    console.log("Updated")
-  }
+  // componentDidUpdate(prevProps) {
+  //   console.log("Updated")
+  // }
 
-  toggleNavbar = () => {
-    this.setState({
-      collapsed: !this.state.collapsed,
-      dropdown: false
-    });
-  }
-  toggleDropdown = () => {  this.setState({ dropdown: !this.state.dropdown }); }
+  // toggleNavbar = () => {
+  //   this.setState({
+  //     collapsed: !this.state.collapsed,
+  //     dropdown: false
+  //   });
+  // }
+  // toggleDropdown = () => {  this.setState({ dropdown: !this.state.dropdown }); }
 
   render() {
-    const classMobileMenu = 'navbar-collapse' + (this.state.collapsed ? 'collapse' : '')
-    const classDropdownMenu = `dropdown-menu ${this.state.dropdown ? 'show' : ''}` 
-    const { collapsed, dropdown } = this.state
+    // const classMobileMenu = 'navbar-collapse' + (this.state.collapsed ? 'collapse' : '')
+    // const classDropdownMenu = `dropdown-menu ${this.state.dropdown ? 'show' : ''}` 
+    // const { collapsed, dropdown } = this.state
     return (
-      <header className="Header">
-        <nav className="navbar navbar-expand-lg navbar-dark">
-          <Link className="navbar-brand" to="http://localhost:8001/">
+      <header className="wrapper">
+        <div className="logo">
+          <Link className="navbar-brand" to="/">
             <img src={Logo} className="logo__header" alt="Logo" />
           </Link>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleNavbar}>
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className={classMobileMenu} id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="https://www.platformoftrust.net/">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="http://builder-staging.oftrust.net/">My World</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" href="http://localhost:8001/">Market Place</a>
-              </li>
-              <li className="nav-item activedropdown">
-                <Link className="nav-link" to="/"  style={{ display: 'inline-block' }} >For developers</Link>
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick={this.toggleDropdown}  style={{ display: 'inline-block' }} ></a>
-                <div className={classDropdownMenu} aria-labelledby="navbarDropdownMenuLink">
-                  <ul>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/use-cases">Use Cases</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/apis">APIs</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/blogs">Blogs</Link>
-                    </li> 
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/guides">Guides</Link>
-                    </li> 
-                    </ul>  
+        </div>
+        <input id="swipe" data-function="swipe" type="checkbox" />
+        <label data-function="swipe" htmlFor="swipe">...</label>
+        <nav className="menus">
+            <nav className="apps"> 
+              <Link className="nav-link active" to="/">Platform of Trust</Link>
+              <a className="nav-link" href="http://builder-staging.oftrust.net/">Rule data</a>
+              <a className="nav-link" href="https://developer.oftrust.net/">Hack data</a>
+            </nav>
+            {/* <nav className="site"> 
+              <a className="active" href="#">Pricing plans</a>
+              <a href="#">News</a>
+              <a href="#">Events</a>
+              <a href="#">Team</a>
+            </nav> */}
+            {/* <nav className="tools">
+                <div className="hex-wrapper">
+                    <div className="reveal">
+                        <p>Login</p>
+                    </div>
+                    <div className="hexagon"><span></span><span></span><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/sign-in-light.svg" alt="Login" /></div>
                 </div>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/pricing">Pricing</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/news">News</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/events">Events</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link disabled" to="http://localhost:8001/">About us</Link>
-              </li>
-            </ul>
-            <form className="form-inline my-2 my-lg-0">
-              <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            <ul className="nav navbar navbar-right">
-              <li>
-                <button className="btn btn-primary">
-                  <a className="nav-link" href="https://login.oftrust.net/">Login</a>
-                </button>
-              </li>
-            </ul>
-          </div>
+                <div className="hex-wrapper">
+                    <div className="reveal-hex">
+                        <div className="flip-box">
+                            <div className="flip-box-inner">
+                                <div className="flip-box-front">
+                                    <div className="hexagon"><span></span><span></span></div>
+                                </div>
+                                <div className="flip-box-back">
+                                    <div className="hexagon blue"><span></span><span></span>
+                                        <p className="language"> <a href="#">FI </a><span>| </span><a href="#">EN</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="hexagon"><span></span><span></span><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/globe-light.svg" alt="Language" /></div>
+                </div>
+                <div className="hex-wrapper">
+                    <div className="reveal">
+                        <p>Settings</p>
+                    </div>
+                    <div className="hexagon"><span></span><span></span><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/cog-light.svg" alt="Login" /></div>
+                </div>
+                <div className="hex-wrapper">
+                    <div className="reveal">
+                        <div className="search-wrapper"><input type="text" placeholder="Search site..." /></div>
+                    </div>
+                    <div className="hexagon"><span></span><span></span><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/search-light.svg" alt="Search" /></div>
+                </div>
+            </nav>*/}
+            {/* <nav className="some"><a href="#">Facebook</a><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="#">GitHub</a></nav> */}
+            <div className="menu-footer">
+              <MenuFooter />
+            </div>
         </nav> 
-      </header>
+    </header>
     )
   }
 }

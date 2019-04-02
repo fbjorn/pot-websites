@@ -1,63 +1,28 @@
-// Colors
-$color__main = #7955ff 
-// rgb(121, 85, 255) Pantone: 2088 (C/M);  CMYK: c58, m60, y0, k0
-$color__helpers--dark = rgb(10, 10, 10); 
-// #F0F0F0
-$color__helpers--light = rgb(240, 240, 240);
-$color__helpers--alert = rgb(251, 99, 77); 
-// #fb634d // cmyk 0 76 71 0
-$color__helpers--notice = rgb(247, 197, 0);  
-// #f7c500 // cmyk 0 0.2 1 0.03?
-$color__helpers--success = rgb(151, 209, 41); 
-// #97cb29 // cmyk 46 0 100 0
+@require 'variables.styl'
 
-color__main = $color__main
-color__main--darkest = darken( desaturate( $color__main, 40%), 50%) 
-color__main--dark = darken( $color__main, 20%)
-color__main--medium = darken( $color__main, 0%)
-color__main--light = lighten( $color__main, 2%)
-color__main--lightest = lighten( $color__main, 40%)
-
-.color__main.color__block { background-color: $color__main; }
-.color__main--darkest.color__block { background-color: darken( $color__main, 20%); }
-.color__main--dark.color__block { background-color: darken( $color__main, 10%); }
-.color__main--medium.color__block { background-color: darken( $color__main, 0%); }
-.color__main--light.color__block { background-color: lighten( $color__main, 10%); }
-.color__main--lightest.color__block { background-color: lighten( $color__main, 20%); }
-
-.color__helpers--dark.color__block { background-color: $color__helpers--dark; }
-.color__helpers--light.color__block { 
-  background-color: $color__helpers--light; 
-  p { color: $color__helpers--dark; }
-}
-.color__helpers--alert.color__block { background-color: $color__helpers--alert; }
-.color__helpers--notice.color__block { background-color: $color__helpers--notice; p { color: $color__helpers--dark; }}
-.color__helpers--success.color__block { background-color: $color__helpers--success; }
+$color__main = #7955ff
+$color__helpers--dark = #141414 
+$color__helpers--light = rgb(240, 240, 240)
+$color__helpers--alert = rgb(251, 99, 77) 
+$color__helpers--notice = rgb(247, 197, 0)  
+$color__helpers--success = rgb(151, 209, 41) 
+$color__main--darkest = #372873
+$color__main--dark = #583eb9
+$color__main--medium = #7955ff
+$color__main--light = #9176fe
+$color__main--lightest = #a897fe
 
 // sections
 body
-  background-color color__main--lightest
+  background-color $color__main--lightest
   background-image url(./platformoftrust-bgtesti-v2-2019-03-21.svg)
   background-size cover
   background-repeat no-repeat
   background-position center
   color $color__helpers--light
 #___gatsby
-  header
-    // background-color color__main--darkest
-    // background-color alpha(color__main--darkest, 0.6)
-    background transparent
-  .jumbotron
-    // background-color transparent
-    // background-color color__main
-    background-color alpha(color__main, 0.4) !important
-  footer
-    background-color color__main--darkest
-    background-color alpha(color__main--darkest, 0.6)
-
+  
   // Typo-colors
-  *
-    color $color__helpers--light
   
   a:link
     color $color__helpers--light
@@ -67,24 +32,64 @@ body
     color  darken( $color__helpers--light, 10%)
   a:active
     color  darken( $color__helpers--light, 20%)
-  .card
-    // color $color__helpers--dark
-    border-color color__main--darkest
-    .card-header
-      background-color color__main--darkest
-    .card-body
-      background-color color__main--lightest
-    .card-footer
-      background-color color__main--light
-    // a:link
-    //   color $color__helpers--dark
-    // a:visited
-    //   color  lighten( $color__helpers--dark, 10%)
-    // a:hover
-    //   color  lighten( $color__helpers--dark, 10%)
-    // a:active
-    //   color  lighten( $color__helpers--dark, 20%)
-    
   pre, code
     background #333
     color white
+  
+  // Section colors   
+  header
+    background transparent
+    .menus
+      @media (max-width $mobi-navi-breakpoint)
+        color $color__main
+        a.nav-link
+          color $color__main
+        
+  .jumbotron
+    background-color alpha($color__main, 0.4) !important
+  .page-content
+    background-color $color__helpers--light
+    *
+      color $color__helpers--dark
+    h1 
+      color $color__main
+    a:link
+      color $color__main--medium
+    a:visited
+      color  $color__main--dark
+    a:hover
+      color  $color__main--dark
+    a:active
+      color  $color__main--dark
+  footer
+    background-color $color__main--darkest
+    background-color alpha($color__main--darkest, 0.6)
+  .menu-footer
+    background-color $color__main--darkest
+    
+
+  // Components colors
+  .card
+    // color $color__helpers--dark
+    border-color $color__main
+    *
+      color $color__helpers--light
+    .card-header
+      background-color $color__main
+    .card-body
+      background-color $helpers--light
+      p 
+        color $color__main--darkest
+      // background-color $color__main--lightest
+    .card-footer
+      background-color $color__main--light
+      a:link
+        color $color__helpers--dark
+      a:visited
+        color  lighten( $color__helpers--dark, 10%)
+      a:hover
+        color  lighten( $color__helpers--dark, 10%)
+      a:active
+        color  lighten( $color__helpers--dark, 20%)
+    
+  

@@ -8,14 +8,8 @@ import Twitter from "../images/twitter-square-brands.svg"
 import Github from "../images/github-square-brands.svg"
 import Linkedin from "../images/linkedin-square-brands.svg"
 
-const Footer = () => (
-  <footer className="page-footer footer font-small pt-4 mt-5" >
-
-    <svg width="0" height="0">
-      <clipPath id="clipPathSVG" clipPathUnits="objectBoundingBox">
-        <polygon points="0, 1, 0.1, 0, 0.90, 0, 1, 1"/>
-      </clipPath>
-    </svg>
+const MenuFooter = () => (
+  <footer className="menu-footer footer font-small pt-3" >
 
     <div className="container-fluid text-center text-md-left">
       <div className="row">
@@ -38,7 +32,7 @@ const Footer = () => (
 
         </div>
         <div className="footer-somelinks col-3 col-lg-3 mb-md-0 mb-3 text-right">
-          <nav className="some-links mt-4">
+          <nav className="some-links">
             <a href="https://www.facebook.com/platformoftrust" className="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
             <a href="https://twitter.com/PlatformOfTrust" className="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>
             <a href="https://www.linkedin.com/company/platform-of-trust/" className="some-link github"><img src={Github} className="some-icon" alt="Github" /></a>
@@ -89,4 +83,4 @@ const Footer = () => (
   </footer>
 )
 
-export default Footer
+export default MenuFooter

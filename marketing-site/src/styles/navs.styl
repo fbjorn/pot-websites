@@ -36,12 +36,12 @@ breakpoint = $mobi-navi-breakpoint
       position absolute
       opacity 0
     
-    $right = calc(100vw - 68px)
+    $right = calc(100vw - 34px)
     label[data-function*='swipe']
-      position absolute
+      position fixed
       // width 10%
       // border 1px solid
-      top 1rem
+      top 2rem
       // left auto
       // right 1rem
       left 0
@@ -50,7 +50,7 @@ breakpoint = $mobi-navi-breakpoint
       display block
       font-size 3rem
       cursor pointer
-      transform translateX($right)
+      transform translateX($right) rotate(90deg)
       transition transform .3s
       z-index 110
     

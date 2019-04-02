@@ -1,3 +1,23 @@
-pre, code
-  background #333
-  color white
+@require 'variables.styl'
+@require 'colors.styl'
+
+#___gatsby, #___gatsby .page-content
+  pre
+    background #333
+    color white
+    code
+      background transparent
+      color white
+      font-size 20px
+      font-weight 300
+      line-height 1.9
+      letter-spacing 1px
+  code
+    display inline-block
+    padding 0.2em 0.4em
+    margin 0 0.2em
+    // font-style italic
+    background $color__main--medium
+    color white
+    font-weight 600
+    letter-spacing 1px
