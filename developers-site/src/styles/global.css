@@ -131,6 +131,7 @@ body {
   list-style: none;
 }
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700");
 html {
   font-size: 100%;
 }
@@ -165,8 +166,9 @@ body {
   line-height: 22.6px;
 }
 #___gatsby code {
+  font-family: 'Fira Mono', Courier, monospace;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.9;
 }
 #___gatsby li {
@@ -903,9 +905,7 @@ footer .some-link .some-icon {
   background: transparent;
   color: #fff;
   font-size: 20px;
-  font-weight: 300;
-  line-height: 1.9;
-  letter-spacing: 1px;
+  font-weight: 400;
 }
 #___gatsby code,
 #___gatsby .page-content code {
