@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
         <div className="row equal">
           <div className="col-md-9 offset-1">
             <h1 className="display-4">Welcome to Platform of Trust</h1>
-            <p className="lead">temporary landing page. Public release June 2019.</p>
+            <p className="lead">Temporary landing page. Public release June 2019.</p>
             <p className="lead">More information about Platform of Trust at <a href="https://www.platformoftrust.net/">platformoftrust.net</a></p>
           </div>
         </div>
