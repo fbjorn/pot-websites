@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <div className="row equal pt-5 pb-5">
-          <div className="col-sm-10 col-md-4 d-flex offset-1">
+          <div className="col-sm-10 col-md-4 d-flex offset-sm-1">
             <div className="card">
               <div className="card-header"><h3>MANAGE YOUR DATA</h3></div>
               <div className="card-body">
@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="col-sm-10 col-md-4 d-flex offset-1">          
+          <div className="col-sm-10 col-md-4 d-flex offset-sm-1">          
             <div className="card">
               <div className="card-header"><h3>DEVELOPER TOOLS</h3></div>
               <div className="card-body">

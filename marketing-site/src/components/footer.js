@@ -3,10 +3,10 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
-import Facebook from "../images/facebook.svg"
-import Twitter from "../images/twitter.svg"
-import Github from "../images/github.png"
-import Linkedin from "../images/linkedin.png"
+import Facebook from "../images/facebook-square-brands.svg"
+import Twitter from "../images/twitter-square-brands.svg"
+import Github from "../images/github-square-brands.svg"
+import Linkedin from "../images/linkedin-square-brands.svg"
 
 const Footer = () => (
   <footer className="page-footer footer font-small pt-4 mt-5" >
@@ -20,25 +20,33 @@ const Footer = () => (
     <div className="container-fluid text-center text-md-left">
       <div className="row">
       
-        <div className="col-md-3 offset-md-1">
+        <div className="col-md-2 offset-md-1">
           <img src={Logo} className="logo__footer" alt="Logo" />
         </div>
 
-        <div className="col-md-3 mt-md-0 mt-3">
+        <div className="col-md-5 mt-md-0 mt-3">
 
           <h5 className="text-uppercase mb-3">Platform of Trust Oy</h5>
           <p>VAT number: FI29800052</p>
-          <p><a href="https://www.tilaajavastuu.fi/en/data-protection/">Data protection</a></p>
-          <nav className="some-links mt-4">
-            <a href="#" class="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
-            <a href="#" class="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>
-            <a href="#" class="some-link github"><img src={Github} className="some-icon" alt="Github" /></a>
-            <a href="#" class="some-link linkedin"><img src={Linkedin} className="some-icon" alt="Linkedin" /></a>
-          </nav>
+          <p><a href="https://www.tilaajavastuu.fi/en/data-protection/">Data protection statement</a></p>
+          {/* <nav className="some-links mt-4">
+            <a href="#" className="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
+            <a href="#" className="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>
+            <a href="#" className="some-link github"><img src={Github} className="some-icon" alt="Github" /></a>
+            <a href="#" className="some-link linkedin"><img src={Linkedin} className="some-icon" alt="Linkedin" /></a>
+          </nav> */}
 
         </div>
+        <div className="somelinks col-md-2 mb-md-0 mb-3">
+          <nav className="some-links mt-4">
+            <a href="#" className="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
+            <a href="#" className="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>
+            <a href="#" className="some-link github"><img src={Github} className="some-icon" alt="Github" /></a>
+            <a href="#" className="some-link linkedin"><img src={Linkedin} className="some-icon" alt="Linkedin" /></a>
+          </nav>
+        </div>
 
-        <nav className="sitemap col-md-2 mb-md-0 mb-3">
+        {/* <nav className="sitemap col-md-2 mb-md-0 mb-3">
 
           <h5 className="text-uppercase">Pages</h5>
           <ul className="list-unstyled">
@@ -73,7 +81,7 @@ const Footer = () => (
               <a className="nav-link" href="http://developer.oftrust.net/">Developer portal</a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
       </div>
 

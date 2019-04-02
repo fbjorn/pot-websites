@@ -1,5 +1,5 @@
 $color__main = #7955ff
-$color__helpers--dark = rgb(10, 10, 10) 
+$color__helpers--dark = #141414 
 $color__helpers--light = rgb(240, 240, 240)
 $color__helpers--alert = rgb(251, 99, 77) 
 $color__helpers--notice = rgb(247, 197, 0)  
@@ -19,22 +19,7 @@ body
   background-position center
   color $color__helpers--light
 #___gatsby
-  header
-    // background-color $color__main--darkest
-    // background-color alpha($color__main--darkest, 0.6)
-    background transparent
-  .jumbotron
-    // background-color transparent
-    // background-color $color__main
-    background-color alpha($color__main, 0.4) !important
-  .page-content
-    background-color $color__helpers--light
-    *
-      color $color__helpers--dark
-  footer
-    background-color $color__main--darkest
-    background-color alpha($color__main--darkest, 0.6)
-
+  
   // Typo-colors
   *
     color $color__helpers--light
@@ -47,6 +32,41 @@ body
     color  darken( $color__helpers--light, 10%)
   a:active
     color  darken( $color__helpers--light, 20%)
+  pre, code
+    background #333
+    color white
+  
+  // Section colors   
+  header
+    background transparent
+    .menus
+      @media (max-width 676px)
+        color $color__main
+        a.nav-link
+          color $color__main
+        
+  .jumbotron
+    background-color alpha($color__main, 0.4) !important
+  .page-content
+    background-color $color__helpers--light
+    *
+      color $color__helpers--dark
+    h1 
+      color $color__main
+    a:link
+      color $color__main--medium
+    a:visited
+      color  $color__main--dark
+    a:hover
+      color  $color__main--dark
+    a:active
+      color  $color__main--dark
+  footer
+    background-color $color__main--darkest
+    background-color alpha($color__main--darkest, 0.6)
+    
+
+  // Components colors
   .card
     // color $color__helpers--dark
     border-color $color__main
@@ -61,15 +81,13 @@ body
       // background-color $color__main--lightest
     .card-footer
       background-color $color__main--light
-    // a:link
-    //   color $color__helpers--dark
-    // a:visited
-    //   color  lighten( $color__helpers--dark, 10%)
-    // a:hover
-    //   color  lighten( $color__helpers--dark, 10%)
-    // a:active
-    //   color  lighten( $color__helpers--dark, 20%)
+      a:link
+        color $color__helpers--dark
+      a:visited
+        color  lighten( $color__helpers--dark, 10%)
+      a:hover
+        color  lighten( $color__helpers--dark, 10%)
+      a:active
+        color  lighten( $color__helpers--dark, 20%)
     
-  pre, code
-    background #333
-    color white
+  

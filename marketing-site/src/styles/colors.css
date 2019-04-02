@@ -1,44 +1,5 @@
-.color__main.color__block {
-  background-color: #7955ff;
-}
-.color__main--darkest.color__block {
-  background-color: #4311ff;
-}
-.color__main--dark.color__block {
-  background-color: #5e33ff;
-}
-.color__main--medium.color__block {
-  background-color: #7955ff;
-}
-.color__main--light.color__block {
-  background-color: #8666ff;
-}
-.color__main--lightest.color__block {
-  background-color: #9477ff;
-}
-.color__helpers--dark.color__block {
-  background-color: #0a0a0a;
-}
-.color__helpers--light.color__block {
-  background-color: #f0f0f0;
-}
-.color__helpers--light.color__block p {
-  color: #0a0a0a;
-}
-.color__helpers--alert.color__block {
-  background-color: #fb634d;
-}
-.color__helpers--notice.color__block {
-  background-color: #f7c500;
-}
-.color__helpers--notice.color__block p {
-  color: #0a0a0a;
-}
-.color__helpers--success.color__block {
-  background-color: #97d129;
-}
 body {
-  background-color: #af99ff;
+  background-color: #a897fe;
   background-image: url("./platformoftrust-bgtesti-v2-2019-03-21.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,11 +12,29 @@ body {
 #___gatsby .jumbotron {
   background-color: rgba(121,85,255,0.4) !important;
 }
-#___gatsby footer {
-  background-color: #382288;
-  background-color: rgba(56,34,136,0.6);
+#___gatsby .page-content {
+  background-color: #f0f0f0;
 }
-#___gatsby body {
+#___gatsby .page-content * {
+  color: #0a0a0a;
+}
+#___gatsby .page-content a:link {
+  color: $color__helpers--darkest;
+}
+#___gatsby .page-content a:visited {
+  color: $color__helpers--darkest;
+}
+#___gatsby .page-content a:hover {
+  color: $color__helpers--darkest;
+}
+#___gatsby .page-content a:active {
+  color: $color__helpers--darkest;
+}
+#___gatsby footer {
+  background-color: #372873;
+  background-color: rgba(55,40,115,0.6);
+}
+#___gatsby * {
   color: #f0f0f0;
 }
 #___gatsby a:link {
@@ -71,16 +50,22 @@ body {
   color: #c0c0c0;
 }
 #___gatsby .card {
-  border-color: #382288;
+  border-color: #7955ff;
+}
+#___gatsby .card * {
+  color: #f0f0f0;
 }
 #___gatsby .card .card-header {
-  background-color: #382288;
+  background-color: #7955ff;
 }
 #___gatsby .card .card-body {
-  background-color: #af99ff;
+  background-color: $helpers--light;
+}
+#___gatsby .card .card-body p {
+  color: #372873;
 }
 #___gatsby .card .card-footer {
-  background-color: #7c58ff;
+  background-color: #9176fe;
 }
 #___gatsby pre,
 #___gatsby code {

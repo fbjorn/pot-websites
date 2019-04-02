@@ -45,12 +45,12 @@ class Header extends React.Component {
           </Link>
         </div>
         <input id="swipe" data-function="swipe" type="checkbox" />
-        <label data-function="swipe" for="swipe">...</label>
+        <label data-function="swipe" htmlFor="swipe">...</label>
         <nav className="menus">
             <nav className="apps"> 
-              <Link className="nav-link" to="/">Platform of Trust</Link>
+              <Link className="nav-link active" to="/">Platform of Trust</Link>
               <a className="nav-link" href="http://builder-staging.oftrust.net/">Rule data</a>
-              <a className="nav-link" href="https://developer.oftrust.net/">Developer portal</a>
+              <a className="nav-link" href="https://developer.oftrust.net/">Hack data</a>
             </nav>
             {/* <nav className="site"> 
               <a className="active" href="#">Pricing plans</a>
