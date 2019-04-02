@@ -1,7 +1,7 @@
 {
     "workbench.colorCustomizations": {
-        "titleBar.activeBackground": "#790c29",
-        "titleBar.inactiveBackground": "#FF2C70CC"
+        "titleBar.activeBackground": "#372873",
+        "titleBar.inactiveBackground": "#583eb9"
     },
     "raml.previewTheme": "light",
     "editor.tabSize": 2,
