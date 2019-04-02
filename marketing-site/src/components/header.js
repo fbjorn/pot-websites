@@ -3,40 +3,41 @@ import PropTypes from 'prop-types'
 import React from 'react'
 // import { Navbar, Nav, NavDropdown, Form, FormControl, Button  } from 'react-bootstrap';
 
+import MenuFooter from './MenuFooter'
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      collapsed: true,
-      dropdown: false
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     collapsed: true,
+  //     dropdown: false
+  //   };
+  // }
 
-  componentWillMount() {
-    this.setState({
-      collapsed: !this.state.collapsed,
-      dropdown: false
-    });
-  }
+  // componentWillMount() {
+  //   this.setState({
+  //     collapsed: !this.state.collapsed,
+  //     dropdown: false
+  //   });
+  // }
 
-  componentDidUpdate(prevProps) {
-    console.log("Updated")
-  }
+  // componentDidUpdate(prevProps) {
+  //   console.log("Updated")
+  // }
 
-  toggleNavbar = () => {
-    this.setState({
-      collapsed: !this.state.collapsed,
-      dropdown: false
-    });
-  }
-  toggleDropdown = () => {  this.setState({ dropdown: !this.state.dropdown }); }
+  // toggleNavbar = () => {
+  //   this.setState({
+  //     collapsed: !this.state.collapsed,
+  //     dropdown: false
+  //   });
+  // }
+  // toggleDropdown = () => {  this.setState({ dropdown: !this.state.dropdown }); }
 
   render() {
-    const classMobileMenu = 'navbar-collapse' + (this.state.collapsed ? 'collapse' : '')
-    const classDropdownMenu = `dropdown-menu ${this.state.dropdown ? 'show' : ''}` 
-    const { collapsed, dropdown } = this.state
+    // const classMobileMenu = 'navbar-collapse' + (this.state.collapsed ? 'collapse' : '')
+    // const classDropdownMenu = `dropdown-menu ${this.state.dropdown ? 'show' : ''}` 
+    // const { collapsed, dropdown } = this.state
     return (
       <header className="wrapper">
         <div className="logo">
@@ -96,6 +97,9 @@ class Header extends React.Component {
                 </div>
             </nav>*/}
             {/* <nav className="some"><a href="#">Facebook</a><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="#">GitHub</a></nav> */}
+            <div className="menu-footer">
+              <MenuFooter />
+            </div>
         </nav> 
     </header>
     )

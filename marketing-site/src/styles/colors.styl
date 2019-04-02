@@ -1,3 +1,5 @@
+@require 'variables.styl'
+
 $color__main = #7955ff
 $color__helpers--dark = #141414 
 $color__helpers--light = rgb(240, 240, 240)
@@ -40,7 +42,7 @@ body
   header
     background transparent
     .menus
-      @media (max-width 676px)
+      @media (max-width $mobi-navi-breakpoint)
         color $color__main
         a.nav-link
           color $color__main
@@ -64,6 +66,8 @@ body
   footer
     background-color $color__main--darkest
     background-color alpha($color__main--darkest, 0.6)
+  .menu-footer
+    background-color $color__main--darkest
     
 
   // Components colors

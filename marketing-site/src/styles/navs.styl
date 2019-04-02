@@ -1,6 +1,7 @@
+@require 'variables.styl'
 @require 'colors.styl'
 
-breakpoint = 820px
+breakpoint = $mobi-navi-breakpoint 
 
 #___gatsby
   @media(min-width breakpoint)
@@ -16,7 +17,7 @@ breakpoint = 820px
       display none
 
      
-  @media(max-width breakpoint)
+  @media(max-width breakpoint - 1px)
       
     header.wrapper
       display flex
@@ -56,10 +57,12 @@ breakpoint = 820px
     $left = calc(10vw + 32px)
     input[data-function*='swipe']:checked
       & ~ label[data-function*='swipe']
+        position fixed
         color $color__main
         transform translateX($left)
       & ~ .menus     
         transform translate3d(0%, 0px, 0px)
+        box-shadow -1.5rem 0 1.5rem 0 rgba(0,0,0,0.4) 
             
     nav.menus
       transform translate3d(102%, 0px, 0px)
@@ -85,8 +88,8 @@ breakpoint = 820px
       margin-left -1rem
         
   nav.apps
-    @media(max-width breakpoint)
-      flex 2
+    @media(max-width breakpoint - 1px)
+      flex 4
       order 3
       // display flex
       // flex-direction column
@@ -147,7 +150,7 @@ breakpoint = 820px
           border-bottom 6px dotted $color__main--lightest
           border-radius 0%
   nav.some
-    @media(max-width breakpoint)
+    @media(max-width breakpoint - 1px)
       flex 2
       order 4
       display flex
@@ -165,7 +168,7 @@ breakpoint = 820px
       right 1rem
        
   nav.site
-    @media(max-width breakpoint)
+    @media(max-width breakpoint - 1px)
       flex 2
       order 2
       display flex
@@ -197,7 +200,7 @@ breakpoint = 820px
         border-radius 0%
       
   nav.tools
-    @media(max-width breakpoint)
+    @media(max-width breakpoint - 1px)
       flex 1
       order 1
       display flex
@@ -377,6 +380,12 @@ breakpoint = 820px
         color: white;
         transform: rotateY(180deg);
       }
+      
+  .menu-footer
+    flex 1
+    order 5
+    @media (min-width $mobi-navi-breakpoint)
+      display none
 
   footer
     .sitemap

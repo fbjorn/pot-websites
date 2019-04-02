@@ -1,3 +1,5 @@
+@require 'variables.styl'
+
 // Typography
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700');
 // $base-font-size = 62.5%;
@@ -28,6 +30,11 @@ body
   footer
     a:link
       text-decoration underline
+    @media( max-width $mobi-navi-breakpoint )
+      h5, p, a:link
+        font-size 20px
+        line-height 20px
+        margin-bottom 0
 
 
 // i, em { @extend .italic; }
