@@ -196,7 +196,10 @@ body {
 #___gatsby h6 {
   line-height: 1.05em;
 }
-#___gatsby p {
+#___gatsby p,
+#___gatsby a,
+#___gatsby label,
+#___gatsby input {
   font-weight: 400;
   font-size: 27px;
   line-height: 1.125em;
@@ -270,7 +273,10 @@ body {
 }
 @media only screen and (max-width: 1000px) {
   p,
-  li {
+  li,
+  a,
+  label,
+  input {
     font-size: 2.7vw;
   }
   h1 {
@@ -300,7 +306,10 @@ body {
 }
 @media only screen and (max-width: 667px) {
   p,
-  li {
+  li,
+  a,
+  label,
+  input {
     font-size: 18px;
   }
   h1 {
@@ -330,7 +339,10 @@ body {
 }
 @media only screen and (max-width: 640px) {
   p,
-  li {
+  li,
+  a,
+  label,
+  input {
     font-size: 15px;
   }
   h1 {
@@ -384,7 +396,7 @@ header,
   width: auto;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0;
+  padding: 2rem;
 }
 @media (max-width: 960px) {
   header,
@@ -403,20 +415,29 @@ footer {
 #___gatsby .card {
   margin: 1rem;
   width: 100%;
-  border-width: 0.8rem;
+  background-color: #7955ff;
+  border-width: 8px;
   border-style: solid;
   border-radius: 0;
 }
 #___gatsby .card .card-header {
+  border-width: 0;
   border-radius: 0;
 }
 #___gatsby .card .card-header h3 {
   font-size: 1rem;
 }
 #___gatsby .card .card-body {
+  background-color: #f0f0f0;
+  border-width: 0;
   border-radius: 0;
 }
+#___gatsby .card .card-body + a:link {
+  text-decoration: none;
+}
 #___gatsby .card .card-footer {
+  padding-top: 1em;
+  border-width: 0;
   border-radius: 0;
 }
 @media (min-width: 576px) {
@@ -901,7 +922,9 @@ footer .some-link .some-icon {
   color: #fff;
 }
 #___gatsby pre code,
-#___gatsby .page-content pre code {
+#___gatsby .page-content pre code,
+#___gatsby pre code span,
+#___gatsby .page-content pre code span {
   background: transparent;
   color: #fff;
   font-size: 20px;
@@ -916,4 +939,29 @@ footer .some-link .some-icon {
   color: #fff;
   font-weight: 600;
   letter-spacing: 1px;
+}
+#___gatsby .button,
+#___gatsby .page-content .button,
+#___gatsby button.btn,
+#___gatsby .page-content button.btn,
+#___gatsby .btn,
+#___gatsby .page-content .btn {
+  padding: 0.6em 1.4em;
+  margin: 0 1em 1em 0;
+  border-radius: 1em;
+}
+#___gatsby .btn-clipboard,
+#___gatsby .page-content .btn-clipboard {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 10;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  font-size: 75%;
+  color: #eee;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0.25rem;
 }
