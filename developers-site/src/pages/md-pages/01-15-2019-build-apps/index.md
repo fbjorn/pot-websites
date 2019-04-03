@@ -48,14 +48,6 @@ state=eyJkIjogeyJyIjogImh0dHA6Ly9idWlsZGVyLmxvY2Fs....SZkZWQifQ==
 ```
 
 Once browser gets this response, it should open url in the same browser's tab. User will be presented to login portal page where they can sign in or sign up. 
-<<<<<<< HEAD
-
-# 3. Implement code exchange endpoint
-
-When the user has logged in into PoT system. Login portal will send `code` and `state` to `redirect_uri` that you have spicified in previous step and when you created oauth client. This endpoint needs to be implemented on a side of your application. So that you can exchange code for `authorization token`with another request to login portal API. 
-
-`POST https://login.oftrust.net/api/exchangeToken`:
-=======
 
 # 3. Implement code exchange endpoint
 
@@ -71,25 +63,7 @@ When the user has logged in into PoT system. Login portal will send `code` and `
 'code': <code you get from login portal's request>,
 'state': <state you get from login portal's request>
 ```
->>>>>>> 497a28b92b048d65534022c04951fe70fc8e2a08
 
-On success you should validate state. After that we recommend to write authorization token in client's cookie with HTTP response including following header:
-
-```
-Set-Cookie: 
-Authorization="Bearer eyJ0eXAiOiJKV1OiJSU....ZuQ_gi6eLHOFhZi8xaChtg"; 
-HttpOnly; Max-Age=86400; 
-SameSite=Strict; Secure
-```
-'client_secret': <YOU_GET_IT_IN_STEP_"Register oauth client">,
-'client_id': <YOU_GET_IT_IN_STEP_"Register oauth client">,
-'redirect_uri': <TO_VALIDATE_URI (BTW do we validate it both in auhorization and exchange token steps?)>,
-'grant_type': 'authorization_code', // MUST BE
-'code': <code you get from login portal's request>,
-'state': <state you get from login portal's request>
-```
-
-<<<<<<< HEAD
 On success you should validate state. After that we recommend to write authorization token in client's cookie with HTTP response including following header:
 
 ```
@@ -155,62 +129,4 @@ E.g. `parameters` can be something like this
 
 # Test in sandbox
 # Deploy and publish
-=======
-Pay attention to `HttpOnly`, `SameSite=Strict` and `Secure`.
 
-And redirect user to desired location with another header in the very same response:
-
-`Location: <URL where cookie with authorization token will be written>`
-
-## Sending request to PoT API
-
-For certain requests you need to pass authorization token as a header `Auhorization` to PoT API.
-
-```
-GET https://login.oftrust.net/api/me
-GET <oftrust_api_url>/identities
-
-Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1N...5LCJzdWIiOiJmZDlaChtg"`
-```
-
-# 4. Select Data product to use
-
-In order to be able to fetch data products one of our data products providers you need to know in advance: `product_code` and `parameters` that will be processed by data provider's system. In addition to that you need to specify ``Client ID`, `Client Secret` and `Access Tokens`, which you get when created `oauth client` in previous steps of this guide.
-
-`POST <Broker_API_URL>/fetch_data_product`
-
-Headers
-
-```
-'X-Pot-App': <Client ID>
-'X-Pot-Signature': <HMAC-SHA256(Access Tokens, request body)> 
-'X-Pot-Token': <Auhtorization token NOTE! exclude "Bearer:" part> #optional
-```
-
-Body
-
-```
-{
-    'timestamp': <RFC-3339 Timestamp>,
-    'productCode': <Product code e.g. "business-identity-test">,
-    'parameters': <set of predefined parameters to pass to data provider>
-}
-```
-
-E.g. `parameters` can be something like this
-
-```
-{
-    "businessId": "0831312-4"
-}
-```
-
-## How to list data products? 
-
-## How to search for specific data products? 
-
-
-# Test in sandbox
-# Deploy and publish
-
->>>>>>> 497a28b92b048d65534022c04951fe70fc8e2a08

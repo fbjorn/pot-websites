@@ -114,41 +114,22 @@ breakpoint = $mobi-navi-breakpoint
       a.nav-link 
         position relative
         display inline-block
-        &:after
-          content ""
-          position absolute
-          width 0%
-          height 0px
-          left 50%
-          bottom -16px
-          background $color__main--light
-          border-radius 10%
-          transition all 0.3s ease-in
+        padding 0
+        padding-bottom 0.4em
+        margin 0.9em 0.9em 0.5rem
+        border-bottom 3px dotted $color__main--dark
+        border-radius 5%
+        transition all 0.3s ease-in 
         &:hover
           text-shadow 0px 0px 2px alpha($color__helpers--light, 0.4)
-          &:after
-            content ""
-            position absolute
-            width 100%
-            height 0px
-            left 0
-            bottom -16px
-            background transparent
-            border-bottom 6px dotted $color__main--light
-            border-radius 0%
-      .active
-        position relative
-        font-weight 600
-        &:after
-          content ""
-          position absolute
-          width 100%
-          height 0px
-          left 0
-          bottom -16px
-          background transparent
-          border-bottom 6px dotted $color__main--lightest
-          border-radius 0%
+          border-bottom 3px dotted $color__main--light
+          border-radius 0
+        &.active
+          font-weight 700
+          border-bottom 3px dotted $color__main--lightest
+          border-radius 0
+          
+  
   nav.some
     @media(max-width breakpoint - 1px)
       flex 2
@@ -182,22 +163,26 @@ breakpoint = $mobi-navi-breakpoint
       
     @media(min-width breakpoint)
       display inline-block
+      margin-right 0
+      margin-left auto
       vertical-align middle
       font-size 2rem
-      a
+      a.nav-link
         display inline-block
+        padding 0
         padding-bottom 0.2em
-        border-bottom 0.3em dotted alpha($color__helpers--light, 0)
-        border-radius 50%
+        margin 1em 0 0 0.5em
+        border-bottom 0.2em dotted alpha($color__helpers--light, 0)
+        border-radius 3%
         transition all 0.3s
-      a:hover
-        // font-weight 600
-        text-shadow 0px 0px 3px alpha($color__helpers--light, 0.8)
-        border-bottom 0.3em dotted alpha($color__helpers--light, 0.2)
-        border-radius 0%
-      a.active
-        border-bottom 0.3em dotted $color__helpers--light
-        border-radius 0%
+        &:hover
+          // font-weight 600
+          text-shadow 0px 0px 2px alpha($color__main--lightest, 0.8)
+          border-bottom 0.2em dotted alpha($color__helpers--light, 0.6)
+          border-radius 0%
+        &.active
+          border-bottom 0.2em dotted $color__helpers--light
+          border-radius 0%
       
   nav.tools
     @media(max-width breakpoint - 1px)

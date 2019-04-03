@@ -49,16 +49,31 @@ class Header extends React.Component {
         <label data-function="swipe" htmlFor="swipe">...</label>
         <nav className="menus">
             <nav className="apps"> 
-              <Link className="nav-link active" to="/">Platform of Trust</Link>
+              <Link className="nav-link" to="/">Platform of Trust</Link>
               <a className="nav-link" href="http://builder-staging.oftrust.net/">Rule data</a>
-              <a className="nav-link" href="https://developer.oftrust.net/">Hack data</a>
+              <a className="nav-link active" href="https://developer.oftrust.net/">Hack data</a>
             </nav>
-            {/* <nav className="site"> 
-              <a className="active" href="#">Pricing plans</a>
-              <a href="#">News</a>
-              <a href="#">Events</a>
-              <a href="#">Team</a>
-            </nav> */}
+            <nav className="site"> 
+            <Link className="nav-link active" to="/">Hack data</Link>
+              <Link className="nav-link" to="/use-cases">Use Cases</Link>
+              <Link className="nav-link" to="/apis">APIs</Link>
+              <Link className="nav-link" to="/blogs">Blogs</Link>
+              <Link className="nav-link" to="/guides">Guides</Link>
+            </nav>
+            {/* <ul>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/use-cases">Use Cases</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/apis">APIs</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/blogs">Blogs</Link>
+                    </li> 
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/guides">Guides</Link>
+                    </li> 
+                    </ul> */}
             {/* <nav className="tools">
                 <div className="hex-wrapper">
                     <div className="reveal">

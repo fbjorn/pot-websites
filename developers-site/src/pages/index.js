@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
             <div className="">
               <h2>From Data Products to Applications</h2>  
               <p>An overview of the processes included in the End-to-end Developer eXperience</p>
-              <img src={EndToEnd} className="logo__header" alt="End-to-end user experience illustration" />
+              <img src={EndToEnd} className="img__article--full" alt="End-to-end user experience illustration" />
               <p>From below you'll find getting started guides for the processes. </p>
             </div>    
           </section>
@@ -60,7 +60,7 @@ const IndexPage = ({ data }) => {
                   </div>
                   <Link to="/guides/data-products">
                     <div className="card-footer">
-                      <p>Learn more >> </p>
+                      <p>Learn more </p>
                     </div>
                   </Link>
                 </div> 
@@ -74,7 +74,7 @@ const IndexPage = ({ data }) => {
                   </div>
                   <Link to="/guides/build-apps">
                     <div className="card-footer">
-                      <p>Learn more >></p>
+                      <p>Learn more</p>
                     </div>
                   </Link>
                 </div>
@@ -89,7 +89,7 @@ const IndexPage = ({ data }) => {
                   </div>
                   <Link to="/guides/data-models">
                     <div className="card-footer">
-                      <p>Learn more >></p>
+                      <p>Learn more</p>
                     </div>
                   </Link>
                 </div>
@@ -107,7 +107,7 @@ const IndexPage = ({ data }) => {
                   </div>
                   <Link to="/guides/translator">
                     <div className="card-footer">
-                      <p>Learn more >></p>
+                      <p>Learn more</p>
                     </div>
                   </Link>
                 </div>
@@ -121,7 +121,7 @@ const IndexPage = ({ data }) => {
                   </div>
                   <Link to="/guides/twins">
                     <div className="card-footer">
-                      <p>Learn more >></p>
+                      <p>Learn more</p>
                     </div>
                   </Link>
                 </div>
@@ -135,7 +135,7 @@ const IndexPage = ({ data }) => {
                   </div>
                   <Link to="/guides/sandbox">
                     <div className="card-footer">
-                      <p>Learn more >></p>
+                      <p>Learn more</p>
                     </div>
                   </Link>
                 </div>
@@ -144,9 +144,11 @@ const IndexPage = ({ data }) => {
 
             <div className="outro">
               <p>We are creating more guides on various topics. We also welcome community driven guides. Checkout how to contribute and see full list of guides.</p>
-              <div>
-                <button type="submit" className="btn btn-primary">Full list of guides! (/guides)</button>
-              </div>
+              <Link className="nav-link__btn" to="/guides">Full list of guides! </Link>
+              {/* Use buttons as controls, not links
+              <button type="submit" className="btn btn-primary">
+                <Link className="nav-link__btn" to="/guides">Full list of guides! </Link>
+              </button> */}
             </div>
 
           </section>
@@ -181,7 +183,7 @@ const IndexPage = ({ data }) => {
                 <button className="btn btn-primary btn-block">Context API</button>  
                 <button className="btn btn-primary btn-block">Identity API</button>   
                 <button className="btn btn-primary btn-block">Product API</button> 
-                <Link to="/apis">Read more about APIs and tools available >> </Link>    
+                <Link to="/apis">Read more about APIs and tools available </Link>                   
               </div>
             </div>
           </section>
@@ -193,8 +195,10 @@ const IndexPage = ({ data }) => {
                 building great apps and data products. </p>
                 
             <p>Take a deep dive into API documentation including code examples for Python, Node.js, Java and shell (curl)</p>
-              
-            <button type="submit" className="btn btn-primary mt-3">Visit the API docs!</button>
+
+            <Link to="/apis">Visit the API docs! </Link>  
+            {/* Use buttons as controls, not links
+            <button type="submit" className="btn btn-primary mt-3">Visit the API docs!</button> */}
           </section>
         
           <section className="use-cases container">
@@ -211,7 +215,7 @@ const IndexPage = ({ data }) => {
                   </div>
                   <Link to="/use-cases/data-product">
                     <div className="card-footer">
-                      <p>Learn more >> </p>
+                      <p>Learn more </p>
                     </div>
                   </Link>
                 </div>
@@ -224,7 +228,7 @@ const IndexPage = ({ data }) => {
                   </div>
                   <Link to="/use-cases/build-application">
                     <div className="card-footer">
-                      <p>Learn more >> </p>
+                      <p>Learn more </p>
                     </div>
                   </Link>
                 </div>
@@ -236,7 +240,7 @@ const IndexPage = ({ data }) => {
             <div className="intro">
               <h2>Stay informed and participate</h2>  
               <p>Our daily communication is based on Slack and mailing list. Subscibe now and stay informed!</p>
-              <a href="https://www.platformoftrust.net/set-subscription">Subscribe >> </a>
+              <a href="https://www.platformoftrust.net/set-subscription">Subscribe </a>
             </div>
           </section>
 
@@ -244,12 +248,16 @@ const IndexPage = ({ data }) => {
             <div className="row">
               <div className="col">
                 <h2>Start building today</h2>
+                
                 <form>
-                  <label htmlFor="signup-2">Sign up for an account today</label>
-                  <br />
-                  <input type="email" placeholder="Email" />
-                  <button type="submit" className="btn btn-primary">Sign up</button>            
+                  <div className="form-group input-submit">
+                    <label htmlFor="signupEmail">Email address</label>
+                    <input type="email" className="form-control" id="signupEmail" aria-describedby="emailHelp" placeholder="name@domain" />
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
                 </form>
+                
               </div> 
             </div>
           </section>
