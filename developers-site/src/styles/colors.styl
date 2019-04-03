@@ -20,7 +20,8 @@ body
   background-repeat no-repeat
   background-position center
   color $color__helpers--light
-#___gatsby
+  
+#___gatsby, #___gatsby .page-content
   
   // Typo-colors
   
@@ -34,6 +35,12 @@ body
     color  darken( $color__helpers--light, 20%)
   pre, code
     background #333
+    color white
+    code, code span
+      background transparent
+      color white
+  code
+    background $color__main--medium
     color white
   
   // Section colors   
@@ -73,6 +80,14 @@ body
     
 
   // Components colors
+  .blog-post-preview, .blog-post-content
+    p 
+      color white
+      
+  .blog-post
+    *
+      color white
+      
   .card
     // color $color__helpers--dark
     border-color $color__main
@@ -95,5 +110,7 @@ body
         color  lighten( $color__helpers--dark, 10%)
       a:active
         color  lighten( $color__helpers--dark, 20%)
+        
+
     
   
