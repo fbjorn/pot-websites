@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => {
 
             <div className="cards row equal">
 
-              <div className="col-sm d-flex">
+              <div className="col-md d-flex">
                 <div className="card">
                   <div className="card-header">
                     <h3>CREATE DATA PRODUCTS</h3>
@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => {
                 </div> 
               </div>
               
-              <div className="col-sm d-flex">
+              <div className="col-md d-flex">
                 <div className="card">
                   <div className="card-header"><h3>BUILD APPS</h3></div>
                   <div className="card-body">
@@ -80,7 +80,7 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
 
-              <div className="col-sm d-flex">
+              <div className="col-md d-flex">
                 <div className="card">
                   <div className="card-header"><h3>USE STANDARD DATA MODELS</h3></div>
                   <div className="card-body">
@@ -99,7 +99,7 @@ const IndexPage = ({ data }) => {
           
             <div className="cards row equal">
 
-              <div className="col-sm d-flex">
+              <div className="col-md d-flex">
                 <div className="card">
                   <div className="card-header"><h3>SETUP TRANSLATOR</h3></div>
                   <div className="card-body">
@@ -113,7 +113,7 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
 
-              <div className="col-sm d-flex">
+              <div className="col-md d-flex">
                 <div className="card">
                   <div className="card-header"><h3>MANAGE DIGITAL TWINS</h3></div>
                   <div className="card-body">
@@ -127,7 +127,7 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
 
-              <div className="col-sm d-flex">
+              <div className="col-md d-flex">
                 <div className="card">
                   <div className="card-header"><h3>USE SANDBOX</h3></div>
                   <div className="card-body">
@@ -207,7 +207,7 @@ const IndexPage = ({ data }) => {
             </div>
               
             <div className="cards row equal">
-              <div className="col-sm d-flex">
+              <div className="col-md d-flex">
                 <div className="card">
                   <div className="card-header"><h3>DATA PRODUCT USE CASE</h3></div>
                   <div className="card-body">
@@ -220,7 +220,7 @@ const IndexPage = ({ data }) => {
                   </Link>
                 </div>
               </div>
-              <div className="col-sm d-flex">
+              <div className="col-md d-flex">
                 <div className="card">
                   <div className="card-header"><h3>APP USE CASE</h3></div>
                   <div className="card-body">

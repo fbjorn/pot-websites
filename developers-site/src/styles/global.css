@@ -520,6 +520,12 @@ body {
     margin: 0 1rem;
   }
 }
+@media (max-width: 960px) {
+  #___gatsby .page-content,
+  #___gatsby .page-content .page-content {
+    padding: 1rem 0;
+  }
+}
 #___gatsby footer,
 #___gatsby .page-content footer {
   max-width: 1200px;
@@ -529,7 +535,11 @@ body {
 .jumbotron {
   padding: 8rem 0;
 }
+#___gatsby #api-descriptions.cards .col-md.d-flex {
+  flex-basis: 50%;
+}
 #___gatsby .card {
+  display: flex;
   margin: 1rem;
   width: 100%;
   background-color: #7955ff;
@@ -1061,6 +1071,7 @@ footer .some-link .some-icon {
 #___gatsby .page-content .form-group.input-submit button {
   display: inline-block;
   width: 33%;
+  padding: 0.4em 1.4em;
   margin: 0;
   vertical-align: baseline;
   border-radius: 0 2em 2em 0;

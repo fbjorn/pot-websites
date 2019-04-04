@@ -13,46 +13,55 @@ const ApisPage = ({ data }) => {
     console.log(data)
     return (
         <Layout>
-            <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-            <section className="Home fullwidth page-content">
-                <div className="jumbotron jumbotron-fluid"> 
-                    <div id="introduction" className="container">
-                        {data.intro.edges.map(({ node }) => (
-                            <div key={node.id}>
-                            <h1>{node.frontmatter.title}</h1>
-                            <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
-                            </div>
-                        ))}  
-                    </div>
-                </div>
-            </section>
-            <main className="container">
-                <section className="container row equal">
-                    <h3>Platform Authentication and APIs</h3>
-                    <div id="api-descriptions" className="card-columns">
-                        {data.ApiDescs.edges.map(({ node }) => (
-                            <div id="login-api-description" className="card" key={node.id}>
-                                <div className="card-header"><h3>{node.frontmatter.title}</h3></div>
-                                <div className="card-body">
-                                    <div  className="container">
-                                        <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
+            <SEO title="Home" keywords={[`Platform of Trust`, `APIs`]} />
+            <section className="APIs page-content">
+                <main className="container">
+
+                    <section className="intro container"> 
+                        <div id="introduction" className="container">
+                            {data.intro.edges.map(({ node }) => (
+                                <div key={node.id}>
+                                <h1>{node.frontmatter.title}</h1>
+                                <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
+                                </div>
+                            ))}  
+                        </div>
+                    </section>
+                
+                    <section className="guides container">
+                    
+                        <div className="intro">
+                            <h3>Platform Authentication and APIs</h3>
+                        </div>
+                        
+                        <div id="api-descriptions" className="card-columns cards row equal">
+                            {data.ApiDescs.edges.map(({ node }) => (
+                                <div className="col-md-6 d-flex" key={node.id}>
+                                    <div className="card">
+                                        <div className="card-header">
+                                            <h3>{node.frontmatter.title}</h3>
+                                        </div>
+                                        <div className="card-body">
+                                            <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}  
-                    </div>
-                </section> 
-                <section id="libraries" className="container">
-                    <div id="introduction" className="container">
-                        {data.libraries.edges.map(({ node }) => (
-                            <div key={node.id}>
-                            <h1>{node.frontmatter.title}</h1>
-                            <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
-                            </div>
-                        ))}  
-                    </div>
-                </section>
-            </main>
+                            ))}  
+                        </div>
+                    </section> 
+
+                    <section id="libraries" className="container">
+                        <div id="introduction" className="container">
+                            {data.libraries.edges.map(({ node }) => (
+                                <div key={node.id}>
+                                <h1>{node.frontmatter.title}</h1>
+                                <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
+                                </div>
+                            ))}  
+                        </div>
+                    </section>
+                </main>
+            </section>
         </Layout>
     )
 }
