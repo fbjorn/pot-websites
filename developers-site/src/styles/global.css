@@ -1013,8 +1013,9 @@ footer .some-link .some-icon {
   padding: 0;
   margin-bottom: 0;
 }
-#___gatsby footer .sitemap ul li .nav-link {
+#___gatsby footer .nav-link {
   padding: 0.2em 0;
+  margin: 0;
 }
 #___gatsby pre code,
 #___gatsby .page-content pre code,

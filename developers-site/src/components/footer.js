@@ -29,6 +29,7 @@ const Footer = () => (
           <h5 className="mb-md-3">Platform of Trust Oy</h5>
           <p>VAT number: FI29800052</p>
           <p><a href="https://www.tilaajavastuu.fi/en/data-protection/">Data protection statement</a></p>
+          <p><Link className="nav-link" to="/tietosuojaseloste">Tietosuojaseloste</Link></p>
           {/* <nav className="some-links mt-4">
             <a href="#" className="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
             <a href="#" className="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>
