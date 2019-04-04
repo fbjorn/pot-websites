@@ -51,8 +51,8 @@ breakpoint = $mobi-navi-breakpoint
       display block
       font-size 3rem
       cursor pointer
-      transform translateX($right) rotate(90deg)
-      transition transform .3s
+      transform translate($right, 0) rotate(90deg)
+      transition transform .3s ease-in
       z-index 110
     
     $left = calc(10vw + 32px)
@@ -60,7 +60,7 @@ breakpoint = $mobi-navi-breakpoint
       & ~ label[data-function*='swipe']
         position fixed
         color $color__main
-        transform translateX($left)
+        transform translate($left, -2rem) rotate(0deg)
       & ~ .menus     
         transform translate3d(0%, 0px, 0px)
         box-shadow -1.5rem 0 1.5rem 0 rgba(0,0,0,0.4) 
@@ -101,6 +101,8 @@ breakpoint = $mobi-navi-breakpoint
         display block
         font-size 1.4rem
         text-decoration none
+        &.active
+          font-weight 700
       
     @media(min-width breakpoint)
       position absolute
@@ -156,10 +158,11 @@ breakpoint = $mobi-navi-breakpoint
       display flex
       flex-direction column
       padding 2rem
-      padding-top 110px
+      padding-top 60px
       margin-bottom 4rem
       a, a:visited
         flex 1
+        padding-left 0
         display block
         font-size 2rem
         text-decoration none

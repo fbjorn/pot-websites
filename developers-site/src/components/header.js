@@ -6,6 +6,11 @@ import React from 'react'
 import MenuFooter from './MenuFooter'
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
 
+const activeStyles = {
+  borderBottom: '0.2em dotted rgb(240, 240, 240)',
+  borderRadius: '0%'
+}
+
 class Header extends React.Component {
   // constructor(props) {
   //   super(props);
@@ -49,16 +54,16 @@ class Header extends React.Component {
         <label data-function="swipe" htmlFor="swipe">...</label>
         <nav className="menus">
             <nav className="apps"> 
-              <Link className="nav-link" to="/">Platform of Trust</Link>
+              <a className="nav-link" href="http://preview.oftrust.net/">Platform of Trust</a>
               <a className="nav-link" href="http://builder-staging.oftrust.net/">Rule data</a>
               <a className="nav-link active" href="https://developer.oftrust.net/">Hack data</a>
             </nav>
             <nav className="site"> 
-            <Link className="nav-link active" to="/">Hack data</Link>
-              <Link className="nav-link" to="/use-cases">Use Cases</Link>
-              <Link className="nav-link" to="/apis">APIs</Link>
-              <Link className="nav-link" to="/blogs">Blogs</Link>
-              <Link className="nav-link" to="/guides">Guides</Link>
+            <Link className="nav-link" to="/" activeStyle={activeStyles}>Hack data</Link>
+              <Link className="nav-link" to="/use-cases" activeStyle={activeStyles}>Use Cases</Link>
+              <Link className="nav-link" to="/apis" activeStyle={activeStyles}>APIs</Link>
+              <Link className="nav-link" to="/blogs" activeStyle={activeStyles}>Blogs</Link>
+              <Link className="nav-link" to="/guides" activeStyle={activeStyles}>Guides</Link>
             </nav>
             {/* <ul>
                     <li className="nav-item">

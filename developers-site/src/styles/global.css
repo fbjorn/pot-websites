@@ -666,14 +666,14 @@ footer .some-link .some-icon {
     display: block;
     font-size: 3rem;
     cursor: pointer;
-    transform: translateX(calc(100vw - 34px)) rotate(90deg);
-    transition: transform 0.3s;
+    transform: translate(calc(100vw - 34px), 0) rotate(90deg);
+    transition: transform 0.3s ease-in;
     z-index: 110;
   }
   #___gatsby input[data-function*='swipe']:checked ~ label[data-function*='swipe'] {
     position: fixed;
     color: #7955ff;
-    transform: translateX(calc(10vw + 32px));
+    transform: translate(calc(10vw + 32px), -2rem) rotate(0deg);
   }
   #___gatsby input[data-function*='swipe']:checked ~ .menus {
     transform: translate3d(0%, 0px, 0px);
@@ -716,6 +716,10 @@ footer .some-link .some-icon {
     display: block;
     font-size: 1.4rem;
     text-decoration: none;
+  }
+  #___gatsby nav.apps a.nav-link.active,
+  #___gatsby nav.apps a.nav-link:visited.active {
+    font-weight: 700;
   }
 }
 @media (min-width: 820px) {
@@ -782,12 +786,13 @@ footer .some-link .some-icon {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    padding-top: 110px;
+    padding-top: 60px;
     margin-bottom: 4rem;
   }
   #___gatsby nav.site a,
   #___gatsby nav.site a:visited {
     flex: 1;
+    padding-left: 0;
     display: block;
     font-size: 2rem;
     text-decoration: none;
