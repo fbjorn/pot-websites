@@ -1124,6 +1124,7 @@ footer .some-link .some-icon {
     border: 16px solid transparent;
     transform: translate(calc(100vw - 70px), 0) rotate(90deg);
     transition: transform 0.3s ease-in;
+    outline: none;
     z-index: 110;
   }
   #___gatsby label[data-function*='swipe'] svg {
