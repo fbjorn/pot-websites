@@ -1,0 +1,46 @@
+@require 'variables.styl'
+@require 'colors.styl'
+
+$right = calc(100vw - 70px)
+breakpoint = $mobi-navi-breakpoint 
+
+#___gatsby
+  @media(min-width breakpoint)
+    input[data-function*='swipe'], label[data-function*='swipe']
+      display none
+      
+  @media(max-width breakpoint - 1px)
+    label[data-function*='swipe']
+      position fixed
+      display block
+      box-sizing content-box
+      overflow hidden
+      cursor pointer
+      top 2rem
+      left 0
+      width 40px
+      height 40px
+      border 16px solid transparent
+      transform translate($right, 0) rotate(90deg)
+      transition transform .3s ease-in
+      z-index 110
+      svg
+        margin auto
+        rect
+          fill $color__main
+        path
+          fill white
+    
+    $left = calc(10vw + 10px)
+    input[data-function*='swipe']:checked
+      & ~ label[data-function*='swipe']
+        position fixed
+        transform translate($left, -2rem) rotate(0deg)
+        svg
+          rect
+            fill white
+          path
+            fill $color__main
+      & ~ .menus     
+        transform translate3d(0%, 0px, 0px)
+        box-shadow -1.5rem 0 1.5rem 0 rgba(0,0,0,0.4) 
