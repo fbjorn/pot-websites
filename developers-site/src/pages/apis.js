@@ -42,7 +42,7 @@ const ApisPage = ({ data }) => {
                                             <h3>{node.frontmatter.title}</h3>
                                         </div>
                                         <div className="card-body">
-                                            <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
+                                            <div className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
                                         </div>
                                     </div>
                                 </div>
