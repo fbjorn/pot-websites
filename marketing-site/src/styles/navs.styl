@@ -36,6 +36,7 @@ breakpoint = $mobi-navi-breakpoint
       position absolute
       opacity 0
     
+    /*    
     $right = calc(100vw - 34px)
     label[data-function*='swipe']
       position fixed
@@ -46,12 +47,13 @@ breakpoint = $mobi-navi-breakpoint
       // right 1rem
       left 0
       // margin-left 54px
+      color $color__helpers--light
       z-index 1
       display block
       font-size 3rem
       cursor pointer
-      transform translateX($right) rotate(90deg)
-      transition transform .3s
+      transform translate($right, 0) rotate(90deg)
+      transition transform .3s ease-in
       z-index 110
     
     $left = calc(10vw + 32px)
@@ -59,10 +61,10 @@ breakpoint = $mobi-navi-breakpoint
       & ~ label[data-function*='swipe']
         position fixed
         color $color__main
-        transform translateX($left)
+        transform translate($left, -2rem) rotate(0deg)
       & ~ .menus     
         transform translate3d(0%, 0px, 0px)
-        box-shadow -1.5rem 0 1.5rem 0 rgba(0,0,0,0.4) 
+        box-shadow -1.5rem 0 1.5rem 0 rgba(0,0,0,0.4) */
             
     nav.menus
       transform translate3d(102%, 0px, 0px)
@@ -100,6 +102,8 @@ breakpoint = $mobi-navi-breakpoint
         display block
         font-size 1.4rem
         text-decoration none
+        &.active
+          font-weight 700
       
     @media(min-width breakpoint)
       position absolute
@@ -114,41 +118,22 @@ breakpoint = $mobi-navi-breakpoint
       a.nav-link 
         position relative
         display inline-block
-        &:after
-          content ""
-          position absolute
-          width 0%
-          height 0px
-          left 50%
-          bottom -16px
-          background $color__main--light
-          border-radius 10%
-          transition all 0.3s ease-in
+        padding 0
+        padding-bottom 0.4em
+        margin 0.9em 0.9em 0.5rem
+        border-bottom 3px dotted $color__main--dark
+        border-radius 5%
+        transition all 0.3s ease-in 
         &:hover
           text-shadow 0px 0px 2px alpha($color__helpers--light, 0.4)
-          &:after
-            content ""
-            position absolute
-            width 100%
-            height 0px
-            left 0
-            bottom -16px
-            background transparent
-            border-bottom 6px dotted $color__main--light
-            border-radius 0%
-      .active
-        position relative
-        font-weight 600
-        &:after
-          content ""
-          position absolute
-          width 100%
-          height 0px
-          left 0
-          bottom -16px
-          background transparent
-          border-bottom 6px dotted $color__main--lightest
-          border-radius 0%
+          border-bottom 3px dotted $color__main--light
+          border-radius 0
+        &.active
+          font-weight 700
+          border-bottom 3px dotted $color__main--lightest
+          border-radius 0
+          
+  
   nav.some
     @media(max-width breakpoint - 1px)
       flex 2
@@ -174,30 +159,37 @@ breakpoint = $mobi-navi-breakpoint
       display flex
       flex-direction column
       padding 2rem
+      padding-top 60px
+      margin-bottom 4rem
       a, a:visited
         flex 1
+        padding-left 0
         display block
         font-size 2rem
         text-decoration none
       
     @media(min-width breakpoint)
       display inline-block
+      margin-right 0
+      margin-left auto
       vertical-align middle
       font-size 2rem
-      a
+      a.nav-link
         display inline-block
+        padding 0
         padding-bottom 0.2em
-        border-bottom 0.3em dotted alpha($color__helpers--light, 0)
-        border-radius 50%
+        margin 1em 0 0 0.5em
+        border-bottom 0.2em dotted alpha($color__helpers--light, 0)
+        border-radius 3%
         transition all 0.3s
-      a:hover
-        // font-weight 600
-        text-shadow 0px 0px 3px alpha($color__helpers--light, 0.8)
-        border-bottom 0.3em dotted alpha($color__helpers--light, 0.2)
-        border-radius 0%
-      a.active
-        border-bottom 0.3em dotted $color__helpers--light
-        border-radius 0%
+        &:hover
+          // font-weight 600
+          text-shadow 0px 0px 2px alpha($color__main--lightest, 0.8)
+          border-bottom 0.2em dotted alpha($color__helpers--light, 0.6)
+          border-radius 0%
+        &.active
+          border-bottom 0.2em dotted $color__helpers--light
+          border-radius 0%
       
   nav.tools
     @media(max-width breakpoint - 1px)
@@ -395,6 +387,7 @@ breakpoint = $mobi-navi-breakpoint
         li
           padding 0
           margin-bottom 0
-          .nav-link 
-            padding 0.2em 0
+    .nav-link 
+      padding 0.2em 0
+      margin 0
         

@@ -494,6 +494,19 @@ body {
     margin-bottom: 0;
   }
 }
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25%;
+  margin: auto;
+}
+@media (max-width: 819px) {
+  .logo {
+    width: 47%;
+    margin-top: -1rem;
+    margin-left: -1rem;
+  }
+}
 .logo__header {
   width: 15rem;
   margin-bottom: 0;
@@ -564,6 +577,7 @@ body {
 }
 #___gatsby .card .card-footer {
   padding-top: 1em;
+  padding-bottom: 1em;
   border-width: 0;
   border-radius: 0;
 }
@@ -656,28 +670,6 @@ footer .some-link .some-icon {
   #___gatsby input[data-function*='swipe'] {
     position: absolute;
     opacity: 0;
-  }
-  #___gatsby label[data-function*='swipe'] {
-    position: fixed;
-    top: 2rem;
-    left: 0;
-    color: #f0f0f0;
-    z-index: 1;
-    display: block;
-    font-size: 3rem;
-    cursor: pointer;
-    transform: translate(calc(100vw - 34px), 0) rotate(90deg);
-    transition: transform 0.3s ease-in;
-    z-index: 110;
-  }
-  #___gatsby input[data-function*='swipe']:checked ~ label[data-function*='swipe'] {
-    position: fixed;
-    color: #7955ff;
-    transform: translate(calc(10vw + 32px), -2rem) rotate(0deg);
-  }
-  #___gatsby input[data-function*='swipe']:checked ~ .menus {
-    transform: translate3d(0%, 0px, 0px);
-    box-shadow: -1.5rem 0 1.5rem 0 rgba(0,0,0,0.4);
   }
   #___gatsby nav.menus {
     transform: translate3d(102%, 0px, 0px);
@@ -1108,4 +1100,50 @@ footer .some-link .some-icon {
 #___gatsby .blog-post picture,
 #___gatsby .blog-post img {
   margin: 2rem 0;
+}
+@media (min-width: 820px) {
+  #___gatsby input[data-function*='swipe'],
+  #___gatsby label[data-function*='swipe'] {
+    display: none;
+  }
+}
+@media (max-width: 819px) {
+  #___gatsby label[data-function*='swipe'] {
+    position: fixed;
+    display: block;
+    box-sizing: content-box;
+    overflow: hidden;
+    cursor: pointer;
+    top: 2rem;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 16px solid transparent;
+    transform: translate(calc(100vw - 70px), 0) rotate(90deg);
+    transition: transform 0.3s ease-in;
+    z-index: 110;
+  }
+  #___gatsby label[data-function*='swipe'] svg {
+    margin: auto;
+  }
+  #___gatsby label[data-function*='swipe'] svg rect {
+    fill: #7955ff;
+  }
+  #___gatsby label[data-function*='swipe'] svg path {
+    fill: #fff;
+  }
+  #___gatsby input[data-function*='swipe']:checked ~ label[data-function*='swipe'] {
+    position: fixed;
+    transform: translate(calc(10vw + 10px), -2rem) rotate(0deg);
+  }
+  #___gatsby input[data-function*='swipe']:checked ~ label[data-function*='swipe'] svg rect {
+    fill: #fff;
+  }
+  #___gatsby input[data-function*='swipe']:checked ~ label[data-function*='swipe'] svg path {
+    fill: #7955ff;
+  }
+  #___gatsby input[data-function*='swipe']:checked ~ .menus {
+    transform: translate3d(0%, 0px, 0px);
+    box-shadow: -1.5rem 0 1.5rem 0 rgba(0,0,0,0.4);
+  }
 }

@@ -13,8 +13,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" keywords={[`Platform of Trust`]} />
       <main className="home page-content container pt-5 mb-5">
-        <div className="row equal">
-          <div className="col-md-9 offset-1">
+        <div className="intro row-fluid pr-5">
+          <div className="col-md-9 offset-sm-1">
             <h1 className="display-4">Welcome to Platform of Trust</h1>
             <p className="lead">Temporary landing page. Public release June 2019.</p>
             <p className="lead">More information about Platform of Trust at <a href="https://www.platformoftrust.net/">platformoftrust.net</a></p>
@@ -27,9 +27,11 @@ const IndexPage = ({ data }) => {
               <div className="card-body">
                 <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
               </div>
-              <div className="card-footer">
-                <a href="https://myworld.oftrust.net">Go to myworld >> </a>
-              </div>
+              <a href="https://world.oftrust.net">
+                <div className="card-footer">
+                  Go to myworld >> 
+                </div>
+              </a>
             </div>
           </div>
           <div className="col-sm-10 col-md-4 d-flex offset-sm-1">          
@@ -38,9 +40,11 @@ const IndexPage = ({ data }) => {
               <div className="card-body">
                 <p>Read the getting started and build new applications on top of the data products.</p>
               </div>
-              <div className="card-footer">
-                <a href="https://developer.oftrust.net">Go to developer portal >></a>
-              </div>
+              <a href="https://developer.oftrust.net">
+                <div className="card-footer">
+                  Go to developer portal >>
+                </div>
+                </a>
             </div>
           </div>
           {/* <div className="col-sm d-flex">
