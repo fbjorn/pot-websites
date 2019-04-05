@@ -706,7 +706,7 @@ footer .some-link .some-icon {
   #___gatsby nav.apps a.nav-link:visited {
     flex: 1;
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-decoration: none;
   }
   #___gatsby nav.apps a.nav-link.active,
@@ -786,7 +786,7 @@ footer .some-link .some-icon {
     flex: 1;
     padding-left: 0;
     display: block;
-    font-size: 2rem;
+    font-size: 1.4rem;
     text-decoration: none;
   }
 }
