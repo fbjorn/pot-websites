@@ -282,7 +282,8 @@ body {
 #___gatsby p,
 #___gatsby a,
 #___gatsby label,
-#___gatsby input {
+#___gatsby input,
+#___gatsby button {
   font-weight: 400;
   font-size: 27px;
   line-height: 1.125em;
@@ -360,7 +361,8 @@ body {
   #___gatsby li,
   #___gatsby a,
   #___gatsby label,
-  #___gatsby input {
+  #___gatsby input,
+  #___gatsby button {
     font-size: 2.7vw;
   }
   #___gatsby h1,
@@ -401,7 +403,8 @@ body {
   #___gatsby li,
   #___gatsby a,
   #___gatsby label,
-  #___gatsby input {
+  #___gatsby input,
+  #___gatsby button {
     font-size: 18px;
   }
   #___gatsby h1,
@@ -442,7 +445,8 @@ body {
   #___gatsby li,
   #___gatsby a,
   #___gatsby label,
-  #___gatsby input {
+  #___gatsby input,
+  #___gatsby button {
     font-size: 15px;
   }
   #___gatsby h1,
@@ -1068,11 +1072,10 @@ footer .some-link .some-icon {
 #___gatsby .page-content .form-group.input-submit button {
   display: inline-block;
   width: 33%;
-  padding: 0.4em 1.4em;
+  padding: 0.4em 1em;
   margin: 0;
   vertical-align: baseline;
   border-radius: 0 2em 2em 0;
-  font-size: 27px;
 }
 #___gatsby .form-group.input-submit small.form-text,
 #___gatsby .page-content .form-group.input-submit small.form-text {

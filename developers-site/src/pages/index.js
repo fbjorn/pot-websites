@@ -23,9 +23,17 @@ const IndexPage = ({ data }) => {
               <h1 className="display-4">Build trusted products</h1>
               <p className="lead">Platform of Trust gives access to both rich build environment data and customers.​</p>
               <div className="set">
-                <form>
+                {/* <form>
                   <input type="email" placeholder="Email" />
                   <button type="submit" className="btn btn-primary">Sign up</button>            
+                </form> */}
+                <form>
+                  <div className="form-group input-submit">
+                    <label htmlFor="signupEmail1">Email address</label>
+                    <input type="email" className="form-control" id="signupEmail1" aria-describedby="emailHelp" placeholder="name@domain" />
+                    <button type="submit" className="btn btn-primary">Sign up</button>
+                    <small id="emailHelp1" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
                 </form>
               </div> 
               <p><a href="https://docs.oftrust.net">View API documentation</a></p>
@@ -153,7 +161,7 @@ const IndexPage = ({ data }) => {
 
           </section>
 
-          <section className="apis container">
+          {/* <section className="apis container">
             <div className="intro">
               <h2>Get started with the Platform of Trust APIs in minutes</h2>
               <p>Try out the most commonly used APIs instantly. Just select API, preferred code example and hit "run". The response with headers is printed below.</p>
@@ -186,7 +194,7 @@ const IndexPage = ({ data }) => {
                 <Link to="/apis">Read more about APIs and tools available </Link>                   
               </div>
             </div>
-          </section>
+          </section> */}
 
           <section className="love container">
             <h2>We love developers</h2>  
