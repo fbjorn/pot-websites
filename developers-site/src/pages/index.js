@@ -22,11 +22,8 @@ const IndexPage = ({ data }) => {
             <div className="">
               <h1 className="display-4">Build trusted products</h1>
               <p className="lead">Platform of Trust gives access to both rich build environment data and customers.​</p>
-              <div className="set">
-                {/* <form>
-                  <input type="email" placeholder="Email" />
-                  <button type="submit" className="btn btn-primary">Sign up</button>            
-                </form> */}
+
+              {/* <div className="set">
                 <form>
                   <div className="form-group input-submit">
                     <label htmlFor="signupEmail1">Email address</label>
@@ -35,7 +32,8 @@ const IndexPage = ({ data }) => {
                     <small id="emailHelp1" className="form-text text-muted">We'll never share your email with anyone else.</small>
                   </div>
                 </form>
-              </div> 
+              </div>  */}
+
               <p><a href="https://docs.oftrust.net">View API documentation</a></p>
               <p><Link to="/apis">View APIs</Link></p>
             </div>
@@ -252,7 +250,7 @@ const IndexPage = ({ data }) => {
             </div>
           </section>
 
-          <section  className="sign-up container">
+          {/* <section  className="sign-up container">
             <div className="row">
               <div className="col">
                 <h2>Start building today</h2>
@@ -268,7 +266,7 @@ const IndexPage = ({ data }) => {
                 
               </div> 
             </div>
-          </section>
+          </section> */}
 
         </main>
       </section>
