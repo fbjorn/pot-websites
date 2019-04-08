@@ -104,6 +104,16 @@ body {
 #___gatsby .page-content .menu-footer {
   background-color: #372873;
 }
+#___gatsby .menu-footer h5,
+#___gatsby .page-content .menu-footer h5 {
+  color: #fff;
+}
+#___gatsby .blog-post-preview,
+#___gatsby .page-content .blog-post-preview,
+#___gatsby .blog-post-content,
+#___gatsby .page-content .blog-post-content {
+  color: #fff;
+}
 #___gatsby .blog-post-preview p,
 #___gatsby .page-content .blog-post-preview p,
 #___gatsby .blog-post-content p,
@@ -129,7 +139,22 @@ body {
 #___gatsby .card .card-body,
 #___gatsby .page-content .card .card-body {
   background-color: $helpers--light;
+  color: #372873;
 }
+#___gatsby .card .card-body *,
+#___gatsby .page-content .card .card-body *,
+#___gatsby .card .card-body h1,
+#___gatsby .page-content .card .card-body h1,
+#___gatsby .card .card-body h2,
+#___gatsby .page-content .card .card-body h2,
+#___gatsby .card .card-body h3,
+#___gatsby .page-content .card .card-body h3,
+#___gatsby .card .card-body h4,
+#___gatsby .page-content .card .card-body h4,
+#___gatsby .card .card-body h5,
+#___gatsby .page-content .card .card-body h5,
+#___gatsby .card .card-body h6,
+#___gatsby .page-content .card .card-body h6,
 #___gatsby .card .card-body p,
 #___gatsby .page-content .card .card-body p {
   color: #372873;

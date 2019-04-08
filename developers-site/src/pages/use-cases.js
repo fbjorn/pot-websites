@@ -10,8 +10,8 @@ import Layout from '../components/layout'
 export default function UseCases({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
-    <Layout className="use-cases">
-      <section className="use-case">
+    <Layout>
+      {/* <section className="use-case">
         {posts
           // .filter(post => post.node.frontmatter.title.length > 0)
           // .filter(post => post.node.frontmatter.type === "usecase")
@@ -29,7 +29,35 @@ export default function UseCases({ data }) {
                 </div>
             );
           })}
-        </section>
+        </section> */}
+
+        <section className="use-cases container">
+                    
+          <div className="intro">
+              <h3>Platform Authentication and APIs</h3>
+          </div>
+          
+          <div id="api-descriptions" className="cards row equal">
+              {posts.map(({ node: post }) => (
+                  <div className="col-md-6 d-flex" key={post.id}>
+                      <div className="card">
+                          <div className="card-header">
+                              <h3>{post.frontmatter.title}</h3>
+                          </div>
+                          <div className="card-body blog-post-preview">
+                            <div className="content-fragment" dangerouslySetInnerHTML={{ __html: post.html }} />
+                          </div>
+                          <Link to={post.frontmatter.path}>
+                            <div className="card-footer">
+                              <p>Read more </p>
+                            </div>
+                          </Link>
+                      </div>
+                  </div>
+              ))}  
+          </div>
+
+      </section> 
     </Layout>
   );
 }
@@ -43,6 +71,7 @@ export const pageQuery = graphql`
         node {
           excerpt(pruneLength: 250)
           id
+          html
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
