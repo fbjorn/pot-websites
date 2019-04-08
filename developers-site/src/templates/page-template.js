@@ -12,7 +12,7 @@ export default function Template({
   return (
     <Layout>
         <article className="page-container">
-            <Helmet title={`CodeStack - ${post.frontmatter.title}`} />
+            <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} />
             <div className="pagepost">
                 <h1>{post.frontmatter.title}</h1>
                 {post.frontmatter.image && <Img fluid={post.frontmatter.image.childImageSharp.fluid} />}
