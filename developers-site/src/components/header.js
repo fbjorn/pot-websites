@@ -60,11 +60,11 @@ class Header extends React.Component {
         <nav className="menus">
             <nav className="apps"> 
               <a className="nav-link" href="http://preview.oftrust.net/">Platform of Trust</a>
-              <a className="nav-link" href="http://builder-staging.oftrust.net/">Rule data</a>
-              <Link className="nav-link active" to="/">Hack data</Link>
+              <a className="nav-link" href="http://world.oftrust.net/">MyWorld</a>
+              <Link className="nav-link active" to="/">Developer portal</Link>
             </nav>
             <nav className="site"> 
-            <Link className="nav-link" to="/" activeStyle={activeStyles}>Hack data</Link>
+              <Link className="nav-link" to="/" activeStyle={activeStyles}>Developer Portal</Link>
               <Link className="nav-link" to="/use-cases" activeStyle={activeStyles}>Use Cases</Link>
               <Link className="nav-link" to="/apis" activeStyle={activeStyles}>APIs</Link>
               <Link className="nav-link" to="/blogs" activeStyle={activeStyles}>Blogs</Link>
