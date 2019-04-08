@@ -5,15 +5,21 @@ import { graphql } from "gatsby"
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 
+// import HexPic from "../images/cityscape-2008177.jpg"
+// import HexPic from "../images/oslo-698674.jpg"
+// import HexPic from "../images/light-933712.jpg"
+// import HexPic from "../images/harbour-city-3928590.jpg"
+// import HexPic from "../images/light-painting-2083213.jpg"
+// import HexPic from "../images/tunnel-of-light-2080714.jpg"
+// import HexPic from "../images/switzerland-2051446.jpg"
+// import HexPic from "../images/sparks-265850.jpg"
+import HexPic from "../images/radio-1948002.jpg"
+// import HexPic from "../images/hong-kong-1990268.jpg"
+
+
 const styles = {
   hex: {
     transform: 'rotate(-5deg)'
-  },
-  poly: {
-    width: '100%',
-    fill: '#9176fe',
-    stroke: 'none',
-    strokeWidth: '0'
   }
 }
 
@@ -26,7 +32,12 @@ export default function Blogs({ data }) {
         <section className="intro row">
           <div className="side-content col-md-4">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1" style={styles.hex}>
-              <polygon style={styles.poly}  points="148,183.138438763306 52,183.138438763306 4,100 52,16.8615612366939 148,16.8615612366939 196,99.9999999999999 148,183.138438763306" />
+              <defs>
+                <pattern id="pattern1" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                  <image height="1" width="1" preserveAspectRatio="none" xlinkHref={HexPic} />
+                </pattern>
+              </defs>
+              <polygon points="148,183.138438763306 52,183.138438763306 4,100 52,16.8615612366939 148,16.8615612366939 196,99.9999999999999 148,183.138438763306" fill="url(#pattern1)" />
             </svg>
           </div>
           <div className="posts col-md-8">
