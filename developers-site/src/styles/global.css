@@ -498,25 +498,25 @@ body {
     margin-bottom: 0;
   }
 }
-.logo {
+#___gatsby .logo {
   display: inline-block;
   vertical-align: middle;
   width: 25%;
   margin: auto;
 }
 @media (max-width: 819px) {
-  .logo {
+  #___gatsby .logo {
     width: 47%;
     margin-top: -1rem;
     margin-left: -1rem;
   }
 }
-.logo__header {
+#___gatsby .logo__header {
   width: 15rem;
   margin-bottom: 0;
 }
 @media (max-width) {
-  .logo__header {
+  #___gatsby .logo__header {
     max-width: 40vw;
   }
 }
@@ -684,19 +684,6 @@ footer .some-link .some-icon {
     margin-left: 10%;
     height: 100%;
     transition: all 0.3s;
-  }
-}
-#___gatsby .logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 25%;
-  margin: auto;
-}
-@media (max-width: 676px) {
-  #___gatsby .logo {
-    width: 47%;
-    margin-top: -1rem;
-    margin-left: -1rem;
   }
 }
 @media (max-width: 819px) {
