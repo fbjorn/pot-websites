@@ -574,9 +574,6 @@ body {
   border-width: 0;
   border-radius: 0;
 }
-#___gatsby .card .card-header h3 {
-  font-size: 1rem;
-}
 #___gatsby .card .card-body {
   background-color: #f0f0f0;
   border-width: 0;
