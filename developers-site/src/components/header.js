@@ -65,7 +65,7 @@ class Header extends React.Component {
             </nav>
             <nav className="site"> 
               <Link className="nav-link" to="/" activeStyle={activeStyles}>Developer Portal</Link>
-              <Link className="nav-link" to="/use-cases" activeStyle={activeStyles}>Use Cases</Link>
+              {/* <Link className="nav-link" to="/use-cases" activeStyle={activeStyles}>Use Cases</Link> */}
               <Link className="nav-link" to="/apis" activeStyle={activeStyles}>APIs</Link>
               <Link className="nav-link" to="/blogs" activeStyle={activeStyles}>Blogs</Link>
               <Link className="nav-link" to="/guides" activeStyle={activeStyles}>Guides</Link>
