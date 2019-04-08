@@ -5,7 +5,7 @@ title: "Build apps"
 type: "page"
 ---
 
-# Purpose
+## Purpose
 
 Aim is that with help of this guide any developer with moderate amount of skills is able to create "hello digital twin" kind of app which uses one data product in sandbox environment. 
 
@@ -16,7 +16,7 @@ You'll learn
 
 To go through the guide, you'll need around 10-15 minutes of time. 
 
-# 1. Before you start to code...
+## 1. Before you start to code...
 
 ### 1.1. Register yourself as a user of PoT platform
 To be able to use PoT at maximum, you must be logged in as a PoT user. Right now, you are able to do it only via [World of Trust ](http://world.oftrust.net).
@@ -33,7 +33,7 @@ UI. After registration of your application in PoT, you will get
 
 NOTE! These values are crucial and shown only once, so you should save them immediately. Your application will use `Client ID`, `Client Secret` and `Access Tokens` in variuos requests to PoT.
 
-# 2. Implement User authorization
+## 2. Implement User authorization
 
 Users of your app must be logged in to PoT in order to perform most of useful requests. We have implemented oauth2 flow into PoT, so you only need to have at least 2 following steps done:
 
@@ -49,7 +49,7 @@ state=eyJkIjogeyJyIjogImh0dHA6Ly9idWlsZGVyLmxvY2Fs....SZkZWQifQ==
 
 Once browser gets this response, it should open url in the same browser's tab. User will be presented to login portal page where they can sign in or sign up. 
 
-# 3. Implement code exchange endpoint
+## 3. Implement code exchange endpoint
 
 When the user has logged in into PoT system. Login portal will send `code` and `state` to `redirect_uri` that you have spicified in previous step and when you created oauth client. This endpoint needs to be implemented on a side of your application. So that you can exchange code for `authorization token`with another request to login portal API. 
 
@@ -90,7 +90,7 @@ GET <oftrust_api_url>/identities
 Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1N...5LCJzdWIiOiJmZDlaChtg"`
 ```
 
-# 4. Select Data product to use
+## 4. Select Data product to use
 
 In order to be able to fetch data products one of our data products providers you need to know in advance: `product_code` and `parameters` that will be processed by data provider's system. In addition to that you need to specify ``Client ID`, `Client Secret` and `Access Tokens`, which you get when created `oauth client` in previous steps of this guide.
 
@@ -127,6 +127,6 @@ E.g. `parameters` can be something like this
 ## How to search for specific data products? 
 
 
-# Test in sandbox
-# Deploy and publish
+## Test in sandbox
+## Deploy and publish
 

@@ -12,18 +12,20 @@ export default function Template({
   const post = data.markdownRemark; 
   return (
     <Layout>
-        <SEO title={`${post.frontmatter.title}`} keywords={[`Platform of trust`, `developers`, 'blogs']} />
-        <article className="page-container">
-            {/* <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} /> */}
-            <div className="pagepost">
-                <h1>{post.frontmatter.title}</h1>
-                {post.frontmatter.image && <Img fluid={post.frontmatter.image.childImageSharp.fluid} />}
-                <div
-                className="page-post-content"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-                />
-            </div>
-        </article>
+        <SEO title={`${post.frontmatter.title}`} keywords={[`Platform of trust`, `developers`, 'guide']} />
+        <main className="page-content container dark-bg">
+            <article className="page-container">
+                {/* <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} /> */}
+                <div className="pagepost">
+                    <h1>{post.frontmatter.title}</h1>
+                    {post.frontmatter.image && <Img fluid={post.frontmatter.image.childImageSharp.fluid} />}
+                    <div
+                    className="page-post-content"
+                    dangerouslySetInnerHTML={{ __html: post.html }}
+                    />
+                </div>
+            </article>
+        </main>
     </Layout>
   );
 }
