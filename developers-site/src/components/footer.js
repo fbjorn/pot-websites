@@ -42,8 +42,8 @@ const Footer = () => (
           <nav className="some-links mt-4">
             <a href="https://www.facebook.com/platformoftrust" className="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
             <a href="https://twitter.com/PlatformOfTrust" className="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>
-            <a href="https://www.linkedin.com/company/platform-of-trust/" className="some-link github"><img src={Github} className="some-icon" alt="Github" /></a>
-            <a href="https://github.com/PlatformOfTrust/" className="some-link linkedin"><img src={Linkedin} className="some-icon" alt="Linkedin" /></a>
+            <a href="https://www.linkedin.com/company/platform-of-trust/" className="some-link github"><img src={Linkedin} className="some-icon" alt="Github" /></a>
+            <a href="https://github.com/PlatformOfTrust/" className="some-link linkedin"><img src={Github} className="some-icon" alt="Linkedin" /></a>
           </nav>
         </div>
 
