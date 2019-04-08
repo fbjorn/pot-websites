@@ -26,9 +26,9 @@ body
     font-size 42px 
     font-weight 400
     line-height 44px
-  h2
+  h2, h2 a
     margin-top 1em
-  h3, h4, h5, h6,
+  h3, h4, h5, h6, h3 a, h4 a, h5 a, h6 a
     margin-top 0.5em
   p 
     font-size 20px 
@@ -62,7 +62,7 @@ body
     font-weight 600
   
   /* SHARED PROPERTIES */
-  p, h1, h1 a, h2, h3, h4, h5, h6 
+  p, h1, h1 a, h2, h3, h4, h5, h6, h1 a, h2, a, h3 a, h4 a, h5 a, h6 a 
     margin-bottom 0.5em
   
   h1, h1 a, h2, h3, h4, h5, h6 
@@ -70,12 +70,15 @@ body
     // color #7955ff
   
   /* SPECIFIC PROPERTIES */
-  p, a, label, input, button 
+  p, label, input, button 
     font-weight 400 
     font-size 27px 
     line-height 1.125em 
     color #141414
   
+  a
+    font-size inherit
+    
   li 
     font-weight 400 
     font-size 27px 
