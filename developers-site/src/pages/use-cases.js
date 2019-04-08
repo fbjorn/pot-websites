@@ -11,26 +11,7 @@ export default function UseCases({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
     <Layout>
-      {/* <section className="use-case">
-        {posts
-          // .filter(post => post.node.frontmatter.title.length > 0)
-          // .filter(post => post.node.frontmatter.type === "usecase")
-          .map(({ node: post }) => {
-            return (
-                <div className="usecase-preview card" key={post.id}>
-                  <h1 className="card-header" >
-                    <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-                  </h1>
-                  <div className="card-body">
-                  <h2>{post.frontmatter.date}</h2>
-                  <p>{post.excerpt}</p>
-                  <Link to={post.frontmatter.path}>Read More...</Link>
-                  </div>
-                </div>
-            );
-          })}
-        </section> */}
-
+      <main className="page-content container dark-bg">
         <section className="use-cases container">
                     
           <div className="intro">
@@ -57,7 +38,8 @@ export default function UseCases({ data }) {
               ))}  
           </div>
 
-      </section> 
+        </section> 
+      </main>
     </Layout>
   );
 }

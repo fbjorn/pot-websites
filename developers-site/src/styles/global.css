@@ -539,6 +539,10 @@ body {
     margin: 0 1rem;
   }
 }
+#___gatsby .page-content,
+#___gatsby .page-content .page-content {
+  min-height: 55vh;
+}
 @media (max-width: 960px) {
   #___gatsby .page-content,
   #___gatsby .page-content .page-content {
