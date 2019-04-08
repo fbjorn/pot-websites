@@ -92,7 +92,7 @@ Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1N...5LCJzdWIiOiJmZDlaChtg
 
 ## 4. Select Data product to use
 
-In order to be able to fetch data products one of our data products providers you need to know in advance: `product_code` and `parameters` that will be processed by data provider's system. In addition to that you need to specify ``Client ID`, `Client Secret` and `Access Tokens`, which you get when created `oauth client` in previous steps of this guide.
+In order to be able to fetch data products one of our data products providers you need to know in advance: `product_code` and `parameters` that will be processed by data provider's system. In addition to that you need to specify `Client ID`, `Client Secret` and `Access Tokens`, which you get when created `oauth client` in previous steps of this guide.
 
 `POST <Broker_API_URL>/fetch_data_product`
 
