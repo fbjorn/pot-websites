@@ -34,7 +34,7 @@ const ApisPage = ({ data }) => {
                             <h3>Platform Authentication and APIs</h3>
                         </div>
                         
-                        <div id="api-descriptions" className="card-columns cards row equal">
+                        <div id="api-descriptions" className="cards row equal">
                             {data.ApiDescs.edges.map(({ node }) => (
                                 <div className="col-md-6 d-flex" key={node.id}>
                                     <div className="card">
