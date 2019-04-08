@@ -2,6 +2,7 @@ import React from "react"
 import Link from "gatsby-link"
 import { graphql } from "gatsby"
 // import Helmet from "react-helmet"
+import SEO from '../components/seo'
 
 import Layout from '../components/layout'
 
@@ -11,6 +12,7 @@ export default function Blogs({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
     <Layout className="blog-posts">
+     <SEO title="Blogs" keywords={[`Platform of trust`, `developers`, 'blogs']} />
       <section className="posts">
         {posts
           // .filter(post => post.node.frontmatter.title.length > 0)

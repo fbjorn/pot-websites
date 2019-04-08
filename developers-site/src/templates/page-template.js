@@ -1,7 +1,8 @@
 import React from "react";
-import Helmet from "react-helmet";
+// import Helmet from "react-helmet";
 import Img from 'gatsby-image';
 import { graphql } from "gatsby";
+import SEO from '../components/seo'
 
 import Layout from '../components/layout'
 
@@ -11,8 +12,9 @@ export default function Template({
   const post = data.markdownRemark; 
   return (
     <Layout>
+        <SEO title={`${post.frontmatter.title}`} keywords={[`Platform of trust`, `developers`, 'blogs']} />
         <article className="page-container">
-            <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} />
+            {/* <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} /> */}
             <div className="pagepost">
                 <h1>{post.frontmatter.title}</h1>
                 {post.frontmatter.image && <Img fluid={post.frontmatter.image.childImageSharp.fluid} />}

@@ -14,7 +14,7 @@ import '../styles/global.css'
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Platform of Trust Developers" keywords={[`Platform of trust`, `developers`, 'foo']} />
+      <SEO title="Developer Portal" keywords={[`Platform of trust`, `developers`]} />
       <section className="Home page-content">
         <main className="main container">
 
