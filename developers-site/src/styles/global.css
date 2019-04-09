@@ -702,6 +702,8 @@ footer .some-link .some-icon {
     display: block;
     font-size: 1.2rem;
     text-decoration: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   #___gatsby nav.apps a.nav-link.active,
   #___gatsby nav.apps a.nav-link:visited.active {
@@ -747,7 +749,7 @@ footer .some-link .some-icon {
     order: 4;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem;
     align-items: flex-end;
   }
   #___gatsby nav.some a,
@@ -782,6 +784,8 @@ footer .some-link .some-icon {
     display: block;
     font-size: 1.4rem;
     text-decoration: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 @media (min-width: 820px) {
@@ -1005,6 +1009,10 @@ footer .some-link .some-icon {
   #___gatsby .menu-footer {
     display: none;
   }
+}
+#___gatsby .menu-footer .footer-somelinks img.some-icon {
+  padding: 0;
+  margin: 0;
 }
 #___gatsby footer .sitemap ul {
   margin-left: 0;

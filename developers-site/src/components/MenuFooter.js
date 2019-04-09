@@ -32,7 +32,7 @@ const MenuFooter = () => (
 
         </div>
         <div className="footer-somelinks col-3 col-lg-3 mb-md-0 mb-3 text-right">
-          <nav className="some-links mt-4">
+          <nav className="some-links mt-0">
             <a href="https://www.facebook.com/platformoftrust" className="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
             <a href="https://twitter.com/PlatformOfTrust" className="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>
             <a href="https://www.linkedin.com/company/platform-of-trust/" className="some-link github"><img src={Linkedin} className="some-icon" alt="Github" /></a>
