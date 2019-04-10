@@ -1,12 +1,14 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
-ENV LC_ALL=C.UTF-8
-ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8 \
+    LANG=C.UTF-8
 
 ADD . /src
 WORKDIR /src
 
-RUN apk add --update --no-cache --virtual build-dependencies \
+RUN apk update \
+ && apk upgrade \
+ && apk add --virtual build-dependencies \
     nodejs \
     npm \
     build-base \
@@ -17,10 +19,11 @@ RUN apk add --update --no-cache --virtual build-dependencies \
     libtool \
     nasm \
     util-linux \
- && apk add --no-cache nginx \
+ && apk add nginx \
  && chmod +x docker-*.sh \
  && ./docker-setup.sh \
- && apk del build-dependencies
+ && apk del build-dependencies \
+ && rm -rf /var/cache/apk/*
 
 EXPOSE 8080
 ENTRYPOINT ["./docker-entrypoint.sh"]
