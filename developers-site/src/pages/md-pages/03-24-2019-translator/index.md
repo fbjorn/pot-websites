@@ -14,6 +14,11 @@ Platform of Trust Data Broker, as well as the headers.
 
 Below is a Python example on verifying the headers and the signature:
 
+Please note that if you're using a framework, such as Bottle, the
+headers work using whichever case you want, but if you're not using a
+framework, you need to lowercase the header name in the request, e.g.
+`'X-Pot-Signature'.lower()` to make the validation pass.
+
 ```python
 import base64
 import json
