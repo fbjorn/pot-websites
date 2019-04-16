@@ -20,6 +20,7 @@ RUN apk update \
     nasm \
     util-linux \
  && apk add nginx \
+    openssl \
  && chmod +x docker-*.sh \
  && ./docker-setup.sh \
  && apk del build-dependencies \
