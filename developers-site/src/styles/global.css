@@ -488,9 +488,6 @@ body {
   font-size: 12px;
   font-weight: 500;
 }
-#___gatsby footer a:link {
-  text-decoration: underline;
-}
 @media (min-width: 820px) {
   #___gatsby footer h5,
   #___gatsby footer p,
@@ -633,15 +630,15 @@ body {
     margin-top: -1rem;
   }
 }
-footer .some-link {
+#___gatsby footer a.some-link {
   display: inline-block;
   width: 32px;
   margin-right: 0.4rem;
 }
-footer .some-link img {
+#___gatsby footer a.some-link img {
   margin-bottom: 0.4rem;
 }
-footer .some-link .some-icon {
+#___gatsby footer a.some-link .some-icon {
   width: 100%;
 }
 @media (min-width: 820px) {
@@ -1149,4 +1146,24 @@ footer .some-link .some-icon {
     transform: translate3d(0%, 0px, 0px);
     box-shadow: -1.5rem 0 1.5rem 0 rgba(0,0,0,0.4);
   }
+}
+#___gatsby a:link,
+#___gatsby .page-content a:link,
+#___gatsby a:visited,
+#___gatsby .page-content a:visited {
+  text-decoration: underline dotted;
+}
+#___gatsby nav.site a:link,
+#___gatsby .page-content nav.site a:link,
+#___gatsby nav.apps a:link,
+#___gatsby .page-content nav.apps a:link,
+#___gatsby nav.some a:link,
+#___gatsby .page-content nav.some a:link,
+#___gatsby nav.site a:visited,
+#___gatsby .page-content nav.site a:visited,
+#___gatsby nav.apps a:visited,
+#___gatsby .page-content nav.apps a:visited,
+#___gatsby nav.some a:visited,
+#___gatsby .page-content nav.some a:visited {
+  text-decoration: none;
 }
