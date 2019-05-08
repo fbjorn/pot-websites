@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+#___gatsby .hero {
+  display: block;
+  width: 90vw;
+  margin: 28.8675vw auto 0 0vw;
+  white-space: nowrap;
+}
+#___gatsby .hero #hex1 {
+  width: calc(($size + 180px));
+  height: calc(($size + 180px));
+  transform: translate(50%, -28.6%);
+  z-index: 10;
+}
+#___gatsby .hero #hex1 .hex-content {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/radio-1948002_640.jpg");
+  background-position: right;
+}
+#___gatsby .hero #hex2 {
+  width: 50vw;
+  height: 50vw;
+}
+#___gatsby .hero .hexagon-wrapper {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+#___gatsby .hero .hex-bg {
+  height: calc(100% * 0.57735);
+  width: 100%;
+  display: inline-block;
+  z-index: 9;
+}
+#___gatsby .hero .hex-bg:before,
+#___gatsby .hero .hex-bg:after {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(60deg);
+  z-index: -1;
+}
+#___gatsby .hero .hex-bg:after {
+  left: 0;
+  transform: rotateZ(-60deg);
+}
+#___gatsby .hero .hex-bg,
+#___gatsby .hero .hex-bg:before,
+#___gatsby .hero .hex-bg:after {
+  background-color: transparent;
+}
+#___gatsby .hero .hex-shadow .hex-bg,
+#___gatsby .hero .hex-shadow .hex-bg:before,
+#___gatsby .hero .hex-shadow .hex-bg:after {
+  font-size: 1rem;
+  box-shadow: 0px 0px 4em 0em rgba(0,0,0,0.3);
+}
+#___gatsby .hero .hex-content {
+  position: absolute;
+  top: -14.433775vw;
+  left: 0;
+  width: 50vw;
+  height: 57.73505vw;
+  padding: calc(100% * 0.57735 / 2) 1em 0 calc(50% + 1em);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 1.2vw;
+  color: #fff;
+  background-color: #48368f;
+  background: linear-gradient(45deg, rgba(121,85,255,0.65) 0%, rgba(121,85,255,0.65) 1%, #48368f 100%);
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: url("#hex-clip");
+  z-index: 1;
+}
+#___gatsby .hero h1 {
+  font-size: 2.2vw;
+  line-height: 1.2;
+}
+#___gatsby .hero p,
+#___gatsby .hero span {
+  font-size: 0.3vw;
+}

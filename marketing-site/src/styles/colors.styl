@@ -21,14 +21,14 @@ body
   background-position center
   color $color__helpers--light
   
-#___gatsby, #___gatsby .page-content
+#___gatsby
   
   // Typo-colors
   
   a:link
-    color $color__helpers--light
+    color white
   a:visited
-    color  darken( $color__helpers--light, 10%)
+    color  darken( white, 4%)
   a:hover
     color  darken( $color__helpers--light, 10%)
   a:active
@@ -55,7 +55,12 @@ body
   .jumbotron
     background-color alpha($color__main, 0.4) !important
   .page-content
-    background-color $color__helpers--light
+    background-color transparent // $color__helpers--light
+    &.dark-bg
+      background-color alpha($color__main--darkest, 0.8)
+      *, h1, h2, h3, h4, h5, h6, p, a:link, a:visited 
+        color $color__helpers--light
+      
     *
       color $color__helpers--dark
     h1 
@@ -102,7 +107,7 @@ body
     .card-body
       background-color $helpers--light
       color $color__main--darkest
-      p 
+      *, h1, h2, h3, h4, h5, h6, p 
         color $color__main--darkest
       // background-color $color__main--lightest
     .card-footer

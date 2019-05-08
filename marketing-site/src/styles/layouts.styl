@@ -1,4 +1,4 @@
-$content-width = 960px
+$content-width = 1240px
 
 #___gatsby, #___gatsby .page-content
   header, .page-content
@@ -10,6 +10,8 @@ $content-width = 960px
       margin 0 1rem
       
   .page-content
+    min-height 55vh
+    // redo calc(100vh - header - footer)
     @media (max-width $content-width)
       padding 1rem 0
     
