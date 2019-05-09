@@ -524,11 +524,11 @@ body {
 #___gatsby .page-content,
 #___gatsby .page-content .page-content {
   width: auto;
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 2rem;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1440px) {
   #___gatsby header,
   #___gatsby .page-content header,
   #___gatsby .page-content,
@@ -540,7 +540,7 @@ body {
 #___gatsby .page-content .page-content {
   min-height: 55vh;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1440px) {
   #___gatsby .page-content,
   #___gatsby .page-content .page-content {
     padding: 1rem 0;
@@ -548,19 +548,19 @@ body {
 }
 #___gatsby footer,
 #___gatsby .page-content footer {
-  max-width: 1550px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0;
 }
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
 #___gatsby .hero {
   display: block;
-  width: 90vw;
-  margin: 25.98075vw 10vw 0 -10vw;
+  width: 900px;
+  margin: 259.8075px 10vw 0 -10vw;
 }
 #___gatsby .hero #hex1 {
-  width: 45vw;
-  height: 45vw;
+  width: 450px;
+  height: 450px;
   transform: translate(50%, -28.6%);
   z-index: 10;
 }
@@ -569,8 +569,8 @@ body {
   background-position: right;
 }
 #___gatsby .hero #hex2 {
-  width: 45vw;
-  height: 45vw;
+  width: 450px;
+  height: 450px;
 }
 #___gatsby .hero .hexagon-wrapper {
   text-align: center;
@@ -611,10 +611,10 @@ body {
 }
 #___gatsby .hero .hex-content {
   position: absolute;
-  top: -12.9903975vw;
+  top: -129.903975px;
   left: 0;
-  width: 45vw;
-  height: 51.961545vw;
+  width: 450px;
+  height: 519.61545px;
   padding: calc(100% * 0.57735 / 2) 1em 0 calc(50% + 1em);
   box-sizing: border-box;
   text-align: left;
@@ -629,12 +629,50 @@ body {
   z-index: 1;
 }
 #___gatsby .hero h1 {
-  font-size: 2.2vw;
+  margin: 0 0 0 -1rem;
+  color: #fff;
+  font-size: 1.75rem;
   line-height: 1.2;
 }
-#___gatsby .hero p,
-#___gatsby .hero span {
-  font-size: 0.3vw;
+#___gatsby .hero h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #fff;
+}
+#___gatsby .hero .meta {
+  font-size: 70%;
+  margin-bottom: 0.2em;
+}
+#___gatsby .hero .meta .type,
+#___gatsby .hero .meta .date {
+  color: #fff;
+  margin: 0 0.2em;
+  font-weight: 400;
+}
+#___gatsby .hero .meta .icon {
+  margin-right: 0.4em;
+  font-size: 0.8rem;
+}
+#___gatsby .hero .meta .icon.icon-blog svg path {
+  color: #00c6ff;
+}
+#___gatsby .hero .meta .icon.icon-news svg path {
+  color: #fb634d;
+}
+#___gatsby .hero .meta .icon.icon-article svg path {
+  color: #f7c500;
+}
+#___gatsby .hero .excerpt {
+  padding-bottom: 0.4em;
+  border-bottom: 1px dotted #fff;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 300;
+}
+#___gatsby .hero a.go-to-link {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
 }
 #___gatsby #api-descriptions.cards .col-md.d-flex {
   flex-basis: 50%;

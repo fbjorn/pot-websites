@@ -1,0 +1,2 @@
+@fortawesome:registry=https://npm.fontawesome.com/
+//npm.fontawesome.com/:_authToken=FE210781-4E13-4E83-86D7-E98575FE37E3

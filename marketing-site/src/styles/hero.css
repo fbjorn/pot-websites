@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
 #___gatsby .hero {
   display: block;
-  width: 90vw;
-  margin: 28.8675vw auto 0 0vw;
-  white-space: nowrap;
+  width: 900px;
+  margin: 259.8075px 10vw 0 -10vw;
 }
 #___gatsby .hero #hex1 {
-  width: calc(($size + 180px));
-  height: calc(($size + 180px));
+  width: 450px;
+  height: 450px;
   transform: translate(50%, -28.6%);
   z-index: 10;
 }
@@ -16,8 +15,8 @@
   background-position: right;
 }
 #___gatsby .hero #hex2 {
-  width: 50vw;
-  height: 50vw;
+  width: 450px;
+  height: 450px;
 }
 #___gatsby .hero .hexagon-wrapper {
   text-align: center;
@@ -58,10 +57,10 @@
 }
 #___gatsby .hero .hex-content {
   position: absolute;
-  top: -14.433775vw;
+  top: -129.903975px;
   left: 0;
-  width: 50vw;
-  height: 57.73505vw;
+  width: 450px;
+  height: 519.61545px;
   padding: calc(100% * 0.57735 / 2) 1em 0 calc(50% + 1em);
   box-sizing: border-box;
   text-align: left;
@@ -76,10 +75,27 @@
   z-index: 1;
 }
 #___gatsby .hero h1 {
-  font-size: 2.2vw;
+  margin: 0 0 0 -1rem;
+  color: #fff;
+  font-size: 1.75rem;
   line-height: 1.2;
+}
+#___gatsby .hero h2 {
+  font-size: 1rem;
+  color: #fff;
 }
 #___gatsby .hero p,
 #___gatsby .hero span {
-  font-size: 0.3vw;
+  font-size: 1rem;
+  color: #fff;
+}
+#___gatsby .hero .meta {
+  font-size: 80%;
+}
+#___gatsby .hero .icon {
+  margin-right: 0.4em;
+  font-size: 0.8rem;
+}
+#___gatsby .hero .icon .icon-blog svg path {
+  color: #fff;
 }

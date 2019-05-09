@@ -8,11 +8,11 @@ import Hero from '../components/hero'
 const rel2 = () => (
   <Layout>
       <SEO title="Home" keywords={[`Platform of Trust`]} />
-      <main className="home">
-        <div className="hero-row">
-
+      <main className="home page-content container">
+        <div className="row">
+          <div className="col-md-8">
             <Hero />
-
+          </div>
         </div>
         {/* <div className="intro row-fluid pr-5">
           <div className="col-md-9 offset-sm-1">

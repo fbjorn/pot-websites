@@ -2,9 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHexagon } from '@fortawesome/pro-solid-svg-icons'
+
 import Header from './header'
 import Footer from './footer'
 import './layout.css'
+
+library.add(faHexagon)
 
 const Layout = ({ children }) => (
   <StaticQuery

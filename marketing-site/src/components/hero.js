@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'gatsby'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Hero = () => (
   <div className="hero">
@@ -17,7 +20,43 @@ const Hero = () => (
     </div>
     <div id="hex2" className="hexagon-wrapper">
       <span className="hex-bg"></span>
-      <span className="hex-content">Foobar Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, optio? Ratione mollitia dignissimos quibusdam maiores, odit saepe illum delectus.</span>
+      <div className="hex-content">
+        <h2>Latest News</h2>
+
+        <p className="meta">
+          <span className="icon icon-blog">
+            <FontAwesomeIcon icon="hexagon" />
+          </span>
+          <span className="type">Blog</span>
+          <span className="date">January 19, 2019</span>
+        </p>
+        <p className="excerpt">
+          Ratione mollitia dignissimos quibusdam maioresdelectus...
+        </p>
+
+        <p className="meta">
+          <span className="icon icon-news">
+            <FontAwesomeIcon icon="hexagon" />
+          </span>
+          <span className="type">News</span>
+          <span className="date">February 19, 2019</span>
+        </p>
+        <p className="excerpt">
+          Foobar Lorem ipsum dolordipisicing elit...
+        </p>
+
+        <p className="meta">
+          <span className="icon icon-article">
+            <FontAwesomeIcon icon="hexagon" />
+          </span>
+          <span className="type">Article</span>
+          <span className="date">January 19, 2019</span>
+        </p>
+        <p className="excerpt">
+          Foobar Lorem ipsum dolor sit amet, optio...
+        </p>
+        <Link to="/" className="go-to-link">Go to news</Link>
+      </div>
     </div>
   </div>
 )
