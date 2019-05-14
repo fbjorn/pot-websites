@@ -51,6 +51,18 @@ body {
 #___gatsby .page-content {
   background-color: transparent;
 }
+#___gatsby .page-content *,
+#___gatsby .page-content h1,
+#___gatsby .page-content h2,
+#___gatsby .page-content h3,
+#___gatsby .page-content h4,
+#___gatsby .page-content h5,
+#___gatsby .page-content h6,
+#___gatsby .page-content p,
+#___gatsby .page-content a:link,
+#___gatsby .page-content a:visited {
+  color: #f0f0f0;
+}
 #___gatsby .page-content.dark-bg {
   background-color: rgba(55,40,115,0.8);
 }
@@ -1476,4 +1488,23 @@ body {
 #___gatsby footer .nav-link {
   padding: 0.2em 0;
   margin: 0;
+}
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+#___gatsby .hex-blurb .content-wrapper {
+  padding-top: 115.4701%;
+  background: #fff;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: url("#hex-clip");
+}
+#___gatsby .hex-blurb .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#___gatsby .hex-blurb .content * {
+  color: #7955ff;
 }
