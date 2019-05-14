@@ -6,6 +6,6 @@ type: "content"
 section: "api-descriptions"
 status: "published"
 ---
-The Product API provides means to manage products provided by PoT core. The product defines the URL to the translator, as well as a product code to use when requesting data from the translator.
+TThe calendar API provides means to create calendar entries to identities. You can e.g. create an event for a housing company identity, a reservation to a room identity, or just a regular calendar entry to any identity you want.
 
 [Documentation](https://docs.oftrust.net/#calendar-api)
