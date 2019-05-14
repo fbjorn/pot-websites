@@ -4,14 +4,18 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Hero from '../components/hero'
+import Featured from '../components/featured'
 
 const rel2 = () => (
   <Layout>
       <SEO title="Home" keywords={[`Platform of Trust`]} />
       <main className="home page-content container">
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-xl-8">
             <Hero />
+          </div>
+          <div className="col-xl-4">
+            <Featured />
           </div>
         </div>
         {/* <div className="intro row-fluid pr-5">

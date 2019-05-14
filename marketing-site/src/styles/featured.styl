@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@require 'variables.styl'
+@require 'colors.styl'
+
+bg-img = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/hong-kong-1990268_640.jpg"
+// bg-img = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/radio-1948002_640.jpg"
+// hong-kong-1990268_640
+
+$magic = 0.577350
+$magicTwo = 1.154701
+
+$size = 175px // 30vw
+$width = $size
+$height = $width * $magicTwo
+$apothem = $width / 2
+$edge = $width * $magic
+$triangle = ( $height - $edge ) / 2
+
+$content-height = 60px // $edge - 2rem
+
+$size--illu = $size * 2 //45vw //180px //40vw
+$width--illu = $size--illu 
+$height--illu = $width--illu * $magicTwo
+$apothem--illu = $width--illu / 2
+$edge--illu = $width--illu * $magic
+$triangle--illu = ( $height--illu - $edge--illu ) / 2
+
+#___gatsby .featured
+  text-align right
+  // display block
+  // width 900px
+  // margin $edge 10vw 0 -10vw 
+     
+  .featured-illustration
+    position absolute
+    top $triangle--illu
+    right 6%
+    width $width--illu
+    height $width--illu
+    // transform translate(50%, -28.6%)
+    z-index 0
+    @media (max-width 1200px)
+      right 30px // $edge--illu
+    &.hexagon-wrapper
+      text-align center
+      // position relative
+      display inline-block
+    .hex-content
+      background-image url(bg-img)
+      background-position left
+      background-size cover
+    .hex-bg
+      height calc(100% * 0.57735)
+      width 100%
+      display inline-block
+      z-index 9
+      &:before, &:after
+        position absolute
+        top 0
+        right 0% // calc((100% / 2) - ((100% * 0.57735) / 2))
+        height inherit
+        width inherit
+        content ''
+        transform rotateZ(60deg)
+        z-index -1
+      &:after
+        left 0
+        transform rotateZ(-60deg)
+        
+    .hex-bg, .hex-bg:before, .hex-bg:after
+        background-color transparent
+        
+    &.hex-shadow
+      .hex-bg, .hex-bg:before, .hex-bg:after
+        font-size 1rem
+        box-shadow  0px 0px 4em 0em rgba(0,0,0,0.3)
+      
+    .hex-content
+      position absolute
+      top $triangle--illu * -1 // size * -0.32 // -32px
+      left 0
+      width $width--illu
+      height $height--illu
+      padding calc(100% * 0.57735 / 2) 1em 0 calc(50% + 1em)
+      box-sizing border-box
+      text-align left
+      font-size 1.2vw
+      color white
+      // background-color #48368f
+      // background linear-gradient(45deg, rgba(121,85,255,0.65) 0%,rgba(121,85,255,0.65) 1%,rgba(72,54,143,1) 100%)
+      // background-size cover
+      // background-position center
+      -webkit-clip-path polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+      clip-path url("#hex-clip") 
+      z-index 1
+      
+    h1
+      margin 0 0 0 -1rem
+      color white
+      font-size 1.75rem // 28px //2.2vw
+      line-height 1.2
+    h2 
+      margin-top 0
+      font-size 1.6rem
+      color white
+    
+    .meta
+      font-size 70%
+      margin-bottom 0.2em
+      .type, .date
+        color white
+        margin 0 0.2em
+        font-weight 400
+      .icon
+        margin-right 0.4em
+        font-size 0.8rem
+        &.icon-blog svg path
+          color $color__helpers--ok
+        &.icon-news svg path
+          color $color__helpers--alert
+        &.icon-article svg path
+          color $color__helpers--notice
+    .excerpt
+      padding-bottom 0.4em
+      border-bottom 1px dotted white
+      font-size 1rem // 0.3vw
+      color white
+      font-weight 300
+    a.go-to-link
+      font-size 1rem
+      color white   
+      text-decoration none 
+
+  .featured-contents
+    margin-top $edge--illu
+    transform translate(($edge--illu * -0.5), 6%)
+    z-index 10
+    .featured-case
+      width $size
+      height $size
+      // transform translate(($edge * -1), 6%)
+      transform translate(0, 14%)
+      transition transform 0.5s 0.2s ease-out
+      will-change transform
+      z-index 10
+      // &:hover
+      //   transform translate(50%, -28.6%)
+      .hex-content
+        // background-image url(bg-img)
+        background $color__helpers--light 
+        h3, p, span
+          color $color__main--medium
+      
+    .featured-event
+      width $size
+      height $size
+      transform translate(50%, 100%)
+      .hex-content
+        background $color__main--darkest 
+        // background linear-gradient(45deg, rgba(121,85,255,0.65) 0%,rgba(121,85,255,0.65) 1%,rgba(72,54,143,1) 100%)
+        h3, p, span
+          color $color__helpers--light 
+
+    .hexagon-wrapper
+      text-align center
+      position relative
+      display inline-block
+      cursor pointer
+      
+    .hex-content
+      position absolute
+      top $triangle * -1 // size * -0.32 // -32px
+      left 0
+      width $width
+      height $height
+      padding calc( 100% * 0.57735 / 2 ) 1em 0 1em
+      box-sizing border-box
+      text-align left
+      font-size 1rem // 1.6vw
+      background-size cover
+      background-position center
+      -webkit-clip-path polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+      clip-path url("#hex-clip") 
+      z-index 1
+      .content-wrapper
+        position relative
+        height $edge
+        // padding-bottom 1rem
+        // border 1px solid black
+        // overflow hidden
+        h3
+          font-size 1rem
+          margin-bottom 0
+        p
+          box-sizing border-box
+          height 3.1em // $content-height
+          overflow hidden
+          // padding-bottom 1rem
+          font-size 18px // 170%
+          font-weight 700
+          // &:first-line 
+          //   color red
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          display: block;
+          line-height 1.1 // edge / 3 //1em; /* a */
+          // max-height $content-height
+        .read-more
+          position absolute
+          bottom 0.4rem // 1.4vw //1rem
