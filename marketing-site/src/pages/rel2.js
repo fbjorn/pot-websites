@@ -50,7 +50,7 @@ const rel2 = () => (
         </div>
         <div  className="row">
           <div className="hex-blurb col">
-            <HexBlurb title="foo" icon="hexagon" />
+            <HexBlurb title="foo" icon="hexagon" color="blue" primary />
           </div>
           
           <div className="hex-blurb col">

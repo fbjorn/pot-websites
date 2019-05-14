@@ -1,25 +1,38 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+const Hex = styled.div`
+  background: white;
+  padding-top: 115.4701%;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: url("#hex-clip");
+`
+const HexContent = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  && * {
+    color: ${props => props.color ? props.color : "black"}
+  }
+`
+
+
 const HexBlurb = (props) => (
-  <div className="hex-col">
-    <svg height="0" width="0" viewBox="0 0 500 500" >
-      <defs>
-          <clipPath id="hex-clip" clipPathUnits="objectBoundingBox">
-            <polygon fill="none" points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
-          </clipPath>
-      </defs>
-    </svg>
-    <div className="content-wrapper">
-      <div className="content">
+    <Hex className="content-wrapper">
+      <HexContent className="content" color={props.color} >
         <FontAwesomeIcon icon={props.icon} />
         <h4>{props.title}</h4>
         <p>{props.content}</p>
-      </div>>
-    </div>
-  </div>
+      </HexContent>>
+    </Hex>
+
 )
 
 export default HexBlurb
