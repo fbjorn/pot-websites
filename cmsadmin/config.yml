@@ -1,6 +1,9 @@
 backend:
   name: "github"
-  repo: "PlatformOfTrust/website"
+  repo: "$WEBSITE_REPO"
+  branch: "master"
+  base_url: "$WEBSITE_ROOT"
+  auth_endpoint: "$AUTH_ENDPOINT"
 publish_mode: "editorial_workflow"
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
