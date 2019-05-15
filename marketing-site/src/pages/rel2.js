@@ -7,6 +7,8 @@ import Hero from '../components/hero'
 import Featured from '../components/featured'
 import HexBlurb from '../components/hexBlurb'
 
+import { colors } from '../Theme.js'
+
 const rel2 = () => (
   <Layout>
       <SEO title="Home" keywords={[`Platform of Trust`]} />
@@ -33,48 +35,39 @@ const rel2 = () => (
           </div>
           <div className="col-md-6">
             <h3>
-              Ratione mollitia dignissimos quibusdam maioresdelectus.
+              Your business creates exponential amounts of data that you could use to make smarter decisions and more profitable business.
             </h3>
           </div>
           <div className="col-md-6">
             <p className="benefit">
-              Ratione mollitia dignissimos quibusdam maioresdelectus.
+              Skip the costly and time-consuming part where you build integrations and try the make the data move
             </p>
             <p className="benefit">
-              Ratione mollitia dignissimos quibusdam maioresdelectus.
+              Jump right to the part where you start using that data and turning it into revenue
             </p>
           </div>
           <div className="col-12">
-            <h3>Platform mollitia dignissimos quibusdam maioresdelectus:</h3>
+            <h3>Platform of Trust is a data linking platform with built-in trust capabilities that makes you’re your data flow easily, with marginal of cost while you rule your data:</h3>
           </div>
         </div>
         <div  className="row">
+
           <div className="hex-blurb col">
-            <HexBlurb title="foo" icon="hexagon" color="blue" primary />
+            <HexBlurb title="Create better and smarter buildings and cities" icon="draftingCompass" textColor={colors.main} />
           </div>
           
           <div className="hex-blurb col">
-            <div className="content-wrapper">
-              <div className="content">
-                <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-              </div>>
-            </div>
+            <HexBlurb title="Improve the productivity of any daily processes" icon="badge" textColor={colors.main} />
           </div>
+
           <div className="hex-blurb col">
-            <div className="content-wrapper">
-              <div className="content">
-                <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-              </div>>
-            </div>
+            <HexBlurb title="Earn with new services and innovative business models" icon="draftingCompass" textColor={colors.main} />
           </div>
+
           <div className="hex-blurb col">
-            <div className="content-wrapper">
-              <div className="content">
-                <h4>Save mollitia dignissimos quibusdam maioresdelectus:</h4>
- 
-</div>           </div>
+            <HexBlurb title="Save on time, energy and material costs" icon="piggyBank" textColor={colors.main} />
           </div>
-          </div>
+        </div>
         <div  className="row">
           <div className="col-12">
             <h2>What if you <strong>used</strong> your data?</h2>
@@ -102,35 +95,51 @@ const rel2 = () => (
           </div>
 
           <div className="col-12">
-            <h2>Herea are the toos we offer:</h2>
+            <h2>Here are the tools we offer:</h2>
           </div>
 
           <div className="hex-col col-3">
-            <h4>Market place</h4>
+            {/* <h4>Developer portal</h4> */}
+            <HexBlurb title="Developer portal" icon="terminal" textColor="white" bgColor="black" />
           </div>
-          <div className="hex-col col-9">
-            <h3>Sell & Buy</h3>
+          <div className="hex-col col-4">
+            <h3>Hack data</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Our developer portal has all the tools and data you need in order to create new solutions and services. This portal has been built from the point of view of a developer in order to create the best possible DX.
             </p>
           </div>
-          <div className="hex-col col-3">
-            <h4>Market place</h4>
+          <div className="col-3"> 
+            <Link to="/">
+              <button type="button" className="btn btn-outline-primary"> Join the party </button>
+            </Link>
           </div>
-          <div className="hex-col col-9">
-            <h3>Sell & Buy</h3>
+          <div className="hex-col col-2  offset-1">
+            <HexBlurb title="My World" icon="terminal" textColor="white" bgColor={colors.mainDark} />
+          </div>
+          <div className="hex-col col-4">
+            <h3>Rule data (coming soon)</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            My world is a visualisation tool where you can manage your data in a digital twin, see where it comes from and where it links to.
             </p>
           </div>
-          <div className="hex-col col-3">
-            <h4>Market place</h4>
+          <div className="col-3"> 
+            <Link to="/">
+              <button type="button" className="btn btn-outline-primary" disabled> coming soon </button>
+            </Link>
           </div>
-          <div className="hex-col col-9">
-            <h3>Sell & Buy</h3>
+          <div className="hex-col col-3  offset-2">
+            <HexBlurb title="Market place" icon="terminal" textColor={colors.main} />
+          </div>
+          <div className="hex-col col-4">
+            <h3>Sell &amp; Buy (future feature)</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Make your data earn. We are creating a marketplace for data products and applications where you can offer your data for others to utilise or a ready-made service or application for others to buy. You define the pricing, we take care of contracts and licensing. Automatically.
             </p>
+          </div>
+          <div className="col-3"> 
+            <Link to="/">
+              <button type="button" className="btn btn-outline-primary"> future feature </button>
+            </Link>
           </div>
 
           <div className="col-12">
@@ -163,16 +172,7 @@ const rel2 = () => (
           </div>
 
           <p>
-            <span className="partner">Kojamo Oy</span>
-            <span className="partner">Kojamo Oy</span>
-            <span className="partner">Kojamo Oy</span>
-            <span className="partner">Kojamo Oy</span>
-            <span className="partner">Kojamo Oy</span>
-            <span className="partner">Kojamo Oy</span>
-            <span className="partner">Kojamo Oy</span>
-            <span className="partner">Kojamo Oy</span>
-            <span className="partner">Kojamo Oy</span>
-            <span className="partner">Kojamo Oy</span>
+          <p>Kojamo Oyj  &middot;  Keskinäinen työeläkevakuutusyhtiö Varma  &middot;  Tampereen Tilapalvelut Oy, GSP Group Oy  &middot;  Hämeen ammattikorkeakoulu HAMK  &middot;  Forum Virium Helsinki  &middot;  Honkio Oy  &middot;  Cozify Oy  &middot; Flexitila / Joustotoimisto Oy  &middot;  Metropolia Ammattikorkeakoulu  &middot;  Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy  &middot;  Tieto Oyj  &middot;  Granlund Oy  &middot;  Digital Living International Oy  &middot;  Tunninen Oy Finland  &middot;  Teknologian tutkimuskeskus VTT Oy  &middot;  Helsingin seudun opiskelija-asuntosäätiö sr (Hoas).</p>
           </p>
 
         </div>

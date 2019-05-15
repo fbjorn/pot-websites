@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Hex = styled.div`
-  background: white;
+  background: ${props => props.bgColor ? props.bgColor : "white"};
   padding-top: 115.4701%;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: url("#hex-clip");
@@ -19,14 +19,14 @@ const HexContent = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   && * {
-    color: ${props => props.color ? props.color : "black"}
+    color: ${props => props.textColor ? props.textColor : "black"}
   }
 `
 
 
 const HexBlurb = (props) => (
-    <Hex className="content-wrapper">
-      <HexContent className="content" color={props.color} >
+    <Hex className="content-wrapper" bgColor={props.bgColor}>
+      <HexContent className="content" textColor={props.textColor} >
         <FontAwesomeIcon icon={props.icon} />
         <h4>{props.title}</h4>
         <p>{props.content}</p>
