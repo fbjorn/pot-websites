@@ -12,3 +12,7 @@ export const colors = {
   mainLight: '#9176fe',
   mainLightest: '#a897fe',
 }
+
+export const variables = {
+  pageWidth: '1440px',
+}

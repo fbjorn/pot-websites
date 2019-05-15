@@ -2,16 +2,25 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import styled from 'styled-components'
+
+import { variables, colors } from '../Theme.js'
+
+const StyledFeatured = styled.div`
+@media (max-width: 992px) {
+  transform: translate(-25%, -40%);
+}
+`
 
 const Featured = () => (
-  <div className="featured">
-    <svg height="0" width="0" viewBox="0 0 500 500" >
+  <StyledFeatured className="featured">
+    {/* <svg height="0" width="0" viewBox="0 0 500 500" >
       <defs>
           <clipPath id="hex-clip" clipPathUnits="objectBoundingBox">
             <polygon fill="none" points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
           </clipPath>
       </defs>
-    </svg>
+    </svg> */}
 
     <div className="featured-illustration hexagon-wrapper hex-shadow">
       <span className="hex-bg" />
@@ -51,7 +60,7 @@ const Featured = () => (
       <span className="hex-content"></span>
     </div> */}
 
-  </div>
+  </StyledFeatured>
 )
 
 export default Featured

@@ -1,10 +1,21 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import FeaturedNews from './featuredNews'
+
+import { variables, colors } from '../Theme.js'
+
+const StyledHero = styled.div`
+@media (max-width: 768px) {
+  &&& { display: none; }
+}
+`
+
 
 const Hero = () => (
-  <div className="hero">
+  <StyledHero className="hero">
     <svg height="0" width="0" viewBox="0 0 500 500" >
       <defs>
           <clipPath id="hex-clip" clipPathUnits="objectBoundingBox">
@@ -18,7 +29,8 @@ const Hero = () => (
         <h1>Create better living environment and make smarter business decisions with flowing data</h1>
       </span>
     </div>
-    <div id="hex2" className="hexagon-wrapper">
+    <FeaturedNews />
+    {/* <div className="featured-news hexagon-wrapper">
       <span className="hex-bg"></span>
       <div className="hex-content">
         <h2>Latest News</h2>
@@ -57,8 +69,8 @@ const Hero = () => (
         </p>
         <Link to="/" className="go-to-link">Go to news</Link>
       </div>
-    </div>
-  </div>
+    </div> */}
+  </StyledHero>
 )
 
 export default Hero

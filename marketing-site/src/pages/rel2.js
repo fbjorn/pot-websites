@@ -6,6 +6,8 @@ import SEO from '../components/seo'
 import Hero from '../components/hero'
 import Featured from '../components/featured'
 import HexBlurb from '../components/hexBlurb'
+import ToolsIntro from '../components/toolsIntro'
+import PricingCard from '../components/pricingCard'
 
 import { colors } from '../Theme.js'
 
@@ -38,13 +40,26 @@ const rel2 = () => (
               Your business creates exponential amounts of data that you could use to make smarter decisions and more profitable business.
             </h3>
           </div>
-          <div className="col-md-6">
-            <p className="benefit">
-              Skip the costly and time-consuming part where you build integrations and try the make the data move
-            </p>
-            <p className="benefit">
-              Jump right to the part where you start using that data and turning it into revenue
-            </p>
+          <div className="col-md-3">
+            <ul>
+              <li className="benefit">
+                Skip the costly and time-consuming part where you build integrations and try the make the data move
+              </li>
+              <li className="benefit">
+                Jump right to the part where you start using that data and turning it into revenue
+              </li>
+            </ul>
+          </div>
+          <div className="col-md-3">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">Card title</h5>
+              <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" className="card-link">Card link</a>
+              <a href="#" className="card-link">Another link</a>
+            </div>
+          </div>
           </div>
           <div className="col-12">
             <h3>Platform of Trust is a data linking platform with built-in trust capabilities that makes you’re your data flow easily, with marginal of cost while you rule your data:</h3>
@@ -94,59 +109,26 @@ const rel2 = () => (
             <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
           </div>
 
-          <div className="col-12">
-            <h2>Here are the tools we offer:</h2>
-          </div>
-
-          <div className="hex-col col-3">
-            {/* <h4>Developer portal</h4> */}
-            <HexBlurb title="Developer portal" icon="terminal" textColor="white" bgColor="black" />
-          </div>
-          <div className="hex-col col-4">
-            <h3>Hack data</h3>
-            <p>
-            Our developer portal has all the tools and data you need in order to create new solutions and services. This portal has been built from the point of view of a developer in order to create the best possible DX.
-            </p>
-          </div>
-          <div className="col-3"> 
-            <Link to="/">
-              <button type="button" className="btn btn-outline-primary"> Join the party </button>
-            </Link>
-          </div>
-          <div className="hex-col col-2  offset-1">
-            <HexBlurb title="My World" icon="globe-stand" textColor="white" bgColor={colors.mainDark} />
-          </div>
-          <div className="hex-col col-4">
-            <h3>Rule data (coming soon)</h3>
-            <p>
-            My world is a visualisation tool where you can manage your data in a digital twin, see where it comes from and where it links to.
-            </p>
-          </div>
-          <div className="col-3"> 
-            <Link to="/">
-              <button type="button" className="btn btn-outline-primary" disabled> coming soon </button>
-            </Link>
-          </div>
-          <div className="hex-col col-3  offset-2">
-            <HexBlurb title="Market place" icon="shopping-bag" textColor={colors.main} />
-          </div>
-          <div className="hex-col col-4">
-            <h3>Sell &amp; Buy (future feature)</h3>
-            <p>
-              Make your data earn. We are creating a marketplace for data products and applications where you can offer your data for others to utilise or a ready-made service or application for others to buy. You define the pricing, we take care of contracts and licensing. Automatically.
-            </p>
-          </div>
-          <div className="col-3"> 
-            <Link to="/">
-              <button type="button" className="btn btn-outline-primary"> future feature </button>
-            </Link>
-          </div>
+          <ToolsIntro />
 
           <div className="col-12">
             <h2>Enjoy the benefits:</h2>
           </div>
 
-          <div className="price-card col-3">
+          <div className="col-md-3">
+            <PricingCard />          
+          </div>
+          <div className="col-md-3">
+            <PricingCard />          
+          </div>
+          <div className="col-md-3">
+            <PricingCard />          
+          </div>
+          <div className="col-md-3">
+            <PricingCard />          
+          </div>
+          
+          {/* <div className="price-card col-3">
             <h2 className="data-number">214587€</h2>
             <img src="https://via.placeholder.com/150" />
             <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
@@ -160,12 +142,7 @@ const rel2 = () => (
             <h2 className="data-number">214587€</h2>
             <img src="https://via.placeholder.com/150" />
             <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-          </div>
-          <div className="price-card col-3">
-            <h2 className="data-number">214587€</h2>
-            <img src="https://via.placeholder.com/150" />
-            <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-          </div>
+          </div> */}
 
           <div className="col-12">
             <h3>Enjoy the benefits:</h3>

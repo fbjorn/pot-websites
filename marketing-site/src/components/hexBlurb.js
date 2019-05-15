@@ -13,6 +13,7 @@ const Hex = styled.div`
 `
 const HexContent = styled.div`
   position: absolute;
+  width: 85%;
   top: 0;
   left: 0;
   top: 50%;
@@ -22,18 +23,20 @@ const HexContent = styled.div`
   && * {
     color: ${props => props.textColor ? props.textColor : "black"}
   }
+  
+  // h5 {
+  //   @media (max-width: 992px){
+  //     display: none;
+  //   }
+  // }
 `
 
-
 const HexBlurb = (props) => {
-  // const icon: IconLookup = { prefix: 'fal', iconName: 'utensils' }
   return (
     <Hex className="content-wrapper" bgColor={props.bgColor}>
       <HexContent className="content" textColor={props.textColor} >
-        {/* <FontAwesomeIcon icon={props.icon} /> */}
-        {/* <FontAwesomeIcon icon={[`fal, ${props.icon}`]} /> */}
-        <FontAwesomeIcon icon={['fal', `${props.icon}`]} />
-        <h4>{props.title}</h4>
+        <FontAwesomeIcon icon={['fal', `${props.icon}`]} size="3x" />
+        <h5>{props.title}</h5>
         <p>{props.content}</p>
       </HexContent>>
     </Hex>
