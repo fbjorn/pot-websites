@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { graphql } from 'gatsby' 
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import Hero from '../components/hero'
-import Featured from '../components/featured'
-import HexBlurb from '../components/hexBlurb'
-import ToolsIntro from '../components/toolsIntro'
-import PricingCard from '../components/pricingCard'
+import Layout from '../components/Layout'
+import SEO from '../components/Seo'
+import Hero from '../components/Hero'
+import Featured from '../components/Featured'
+import HexBlurb from '../components/HexBlurb'
+import ToolsIntro from '../components/ToolsIntro'
+import PricingCard from '../components/PricingCard'
 
 import { colors } from '../Theme.js'
 
-const rel2 = () => (
+const rel2 = ({ data }) => (
   <Layout>
       <SEO title="Home" keywords={[`Platform of Trust`]} />
       <svg height="0" width="0" viewBox="0 0 500 500" >
@@ -22,6 +23,18 @@ const rel2 = () => (
         </defs>
       </svg>
       <main className="home page-content container">
+
+
+        <div className="test">
+          <h1 className="test">TESTING</h1>
+          {/* {data.intro.edges.map(({ node }) => (
+            <div key={node.id}>
+              <h1>{node.frontmatter.title}</h1>
+              <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
+            </div>
+          ))}  */}
+        </div>
+
         <div className="row">
           <div className="col-xl-8">
             <Hero />
@@ -149,7 +162,7 @@ const rel2 = () => (
           </div>
 
           <p>
-          <p>Kojamo Oyj  &middot;  Keskinäinen työeläkevakuutusyhtiö Varma  &middot;  Tampereen Tilapalvelut Oy, GSP Group Oy  &middot;  Hämeen ammattikorkeakoulu HAMK  &middot;  Forum Virium Helsinki  &middot;  Honkio Oy  &middot;  Cozify Oy  &middot; Flexitila / Joustotoimisto Oy  &middot;  Metropolia Ammattikorkeakoulu  &middot;  Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy  &middot;  Tieto Oyj  &middot;  Granlund Oy  &middot;  Digital Living International Oy  &middot;  Tunninen Oy Finland  &middot;  Teknologian tutkimuskeskus VTT Oy  &middot;  Helsingin seudun opiskelija-asuntosäätiö sr (Hoas).</p>
+          Kojamo Oyj  &middot;  Keskinäinen työeläkevakuutusyhtiö Varma  &middot;  Tampereen Tilapalvelut Oy, GSP Group Oy  &middot;  Hämeen ammattikorkeakoulu HAMK  &middot;  Forum Virium Helsinki  &middot;  Honkio Oy  &middot;  Cozify Oy  &middot; Flexitila / Joustotoimisto Oy  &middot;  Metropolia Ammattikorkeakoulu  &middot;  Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy  &middot;  Tieto Oyj  &middot;  Granlund Oy  &middot;  Digital Living International Oy  &middot;  Tunninen Oy Finland  &middot;  Teknologian tutkimuskeskus VTT Oy  &middot;  Helsingin seudun opiskelija-asuntosäätiö sr (Hoas).
           </p>
 
         </div>
@@ -206,25 +219,25 @@ const rel2 = () => (
 )
 
 export const query = graphql`
-query {
+  query {
     intro: allMarkdownRemark(filter: {
-        frontmatter: {
-        path: {eq: "/index#introduction"}, 
-        section: {eq: "introduction"}
-        }}) {
-            totalCount
-            edges {
-            node {
-                id
-                html
-                frontmatter {
-                    title
-                    path
-                    }
-                }
+      frontmatter: {
+      path: {eq: "/index#introduction"}, 
+      section: {eq: "introduction"}
+      }}) {
+        totalCount
+        edges {
+        node {
+          id
+          html
+          frontmatter {
+              title
+              path
             }
+          }
         }
-}
+      }
+  }
 `
 
 export default rel2

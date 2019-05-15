@@ -187,195 +187,167 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#___gatsby p,
-#___gatsby h1,
-#___gatsby h1 a,
-#___gatsby h2,
-#___gatsby h3,
-#___gatsby h4,
-#___gatsby h5,
-#___gatsby h6,
-#___gatsby a,
-#___gatsby h3 a,
-#___gatsby h4 a,
-#___gatsby h5 a,
-#___gatsby h6 a {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: FiraSans;
   margin-bottom: 0.5em;
 }
-#___gatsby h1,
-#___gatsby h1 a,
-#___gatsby h2,
-#___gatsby h3,
-#___gatsby h4,
-#___gatsby h5,
-#___gatsby h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.05em;
+  color: #7955ff;
 }
-#___gatsby a {
-  font-size: inherit;
-}
-#___gatsby li {
+p {
   font-weight: 400;
   font-size: 27px;
   line-height: 1.125em;
   color: #141414;
 }
-#___gatsby code {
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 1.9em;
-  letter-spacing: 1px;
-}
-#___gatsby h1,
-#___gatsby h1 a {
+h1 {
   font-weight: 400;
   font-size: 63px;
-  line-height: 1.125em;
   letter-spacing: 0.01em;
 }
-#___gatsby h2 {
+h2 {
   font-weight: 400;
   font-size: 48px;
-  line-height: 1.125em;
   letter-spacing: 0.01em;
 }
-#___gatsby h3 {
+h3 {
   font-weight: 500;
   font-size: 36px;
-  line-height: 1.125em;
   letter-spacing: 0.02em;
 }
-#___gatsby h4 {
+h4 {
   font-weight: 500;
   font-size: 30px;
-  line-height: 1.125em;
   letter-spacing: 0.02em;
 }
-#___gatsby h5 {
+h5 {
   font-weight: 600;
   font-size: 27px;
-  line-height: 1.125em;
   letter-spacing: 0.03em;
 }
-#___gatsby h6 {
+h6 {
   font-weight: 500;
   font-size: 24px;
-  line-height: 1.125em;
   letter-spacing: 0.03em;
 }
-#___gatsby .megaheadline {
+.megaheadline {
+  font-family: FiraSans;
   font-weight: 200;
   font-size: 108px;
   line-height: 0.95em;
 }
-#___gatsby .post-meta {
+.post-meta {
+  font-family: FiraSans;
   font-weight: 400;
   font-size: 15px;
   line-height: 1em;
   color: #7955ff;
   margin-bottom: 1em;
 }
-#___gatsby .blockquote {
+.blockquote {
+  font-family: FiraSans;
   font-weight: 400;
   font-style: italic;
   font-size: 27px;
   line-height: 1.125em;
 }
-@media (max-width: 667px) {
-  #___gatsby p,
-  #___gatsby li,
-  #___gatsby a,
-  #___gatsby label,
-  #___gatsby input,
-  #___gatsby button {
+@media only screen and (max-width: 1000px) {
+  p {
+    font-size: 2.7vw;
+  }
+  h1 {
+    font-size: 6.3vw;
+  }
+  h2 {
+    font-size: 4.8vw;
+  }
+  h3 {
+    font-size: 3.6vw;
+  }
+  h4 {
+    font-size: 3vw;
+  }
+  h5 {
+    font-size: 2.7vw;
+  }
+  h6 {
+    font-size: 2.4vw;
+  }
+  .megaheadline {
+    font-size: 10.8vw;
+  }
+  .blockquote {
+    font-size: 2.7vw;
+  }
+}
+@media only screen and (max-width: 667px) {
+  p {
     font-size: 18px;
   }
-  #___gatsby h1,
-  #___gatsby h1 a {
+  h1 {
     font-size: 42px;
   }
-  #___gatsby h2 {
+  h2 {
     font-size: 36px;
   }
-  #___gatsby h3 {
+  h3 {
     font-size: 24px;
   }
-  #___gatsby h4 {
+  h4 {
     font-size: 20px;
   }
-  #___gatsby h5 {
+  h5 {
     font-size: 18px;
   }
-  #___gatsby h6 {
+  h6 {
     font-size: 16px;
   }
-  #___gatsby code {
+  .megaheadline {
+    font-size: 72px;
+  }
+  .blockquote {
     font-size: 18px;
   }
-  #___gatsby pre code,
-  #___gatsby pre code span {
-    font-size: 18px;
-  }
 }
-#___gatsby .megaheadline {
-  font-size: 72px;
-}
-#___gatsby .blockquote {
-  font-size: 18px;
-}
-@media (max-width: 640px) {
-  #___gatsby p,
-  #___gatsby li,
-  #___gatsby a,
-  #___gatsby label,
-  #___gatsby input,
-  #___gatsby button {
+@media only screen and (max-width: 640px) {
+  p {
     font-size: 15px;
   }
-  #___gatsby h1,
-  #___gatsby h1 a {
+  h1 {
     font-size: 34px;
   }
-  #___gatsby h2 {
+  h2 {
     font-size: 29px;
   }
-  #___gatsby h3 {
+  h3 {
     font-size: 19px;
   }
-  #___gatsby h4 {
+  h4 {
     font-size: 16px;
   }
-  #___gatsby h5 {
+  h5 {
     font-size: 15px;
   }
-  #___gatsby h6 {
+  h6 {
     font-size: 13px;
   }
-  #___gatsby code {
-    font-size: 14px;
-  }
-  #___gatsby pre code,
-  #___gatsby pre code span {
-    font-size: 14px;
-  }
-  #___gatsby .megaheadline {
+  .megaheadline {
     font-size: 58px;
   }
-  #___gatsby .blockquote {
+  .blockquote {
     font-size: 15px;
-  }
-}
-#___gatsby nav.apps a {
-  font-size: 12px;
-  font-weight: 500;
-}
-@media (min-width: 820px) {
-  #___gatsby footer h5,
-  #___gatsby footer p,
-  #___gatsby footer a:link {
-    font-size: 20px;
-    line-height: 20px;
-    margin-bottom: 0;
   }
 }
 #___gatsby .logo {
@@ -774,13 +746,13 @@ body {
   width: 900px;
   margin: 259.8075px 10vw 0 -10vw;
 }
-.hero #hex1 {
+.hero #herohex {
   width: 450px;
   height: 450px;
   transform: translate(50%, -28.6%);
   z-index: 10;
 }
-.hero #hex1 .hex-content {
+.hero #herohex .hex-content {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/radio-1948002_640.jpg");
   background-position: right;
 }

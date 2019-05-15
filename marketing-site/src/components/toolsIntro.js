@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import HexBlurb from './hexBlurb'
-import CustomButton from './customButton'
+import HexBlurb from './HexBlurb'
+import CustomButton from './CustomButton'
 
 import { variables, colors } from '../Theme.js'
 

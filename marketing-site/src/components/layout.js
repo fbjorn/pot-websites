@@ -13,9 +13,9 @@ import { faDraftingCompass } from '@fortawesome/pro-solid-svg-icons'
 import { faBadge } from '@fortawesome/pro-light-svg-icons'
 import { fal } from '@fortawesome/pro-light-svg-icons'
 
-import Header from './header'
-import Footer from './footer'
-import './layout.css'
+import Header from './Header'
+import Footer from './Footer'
+import './Layout.css'
 
 library.add(fal, faHexagon)
 // icon({prefix: 'fal', iconName: 'draftingCompass'})
