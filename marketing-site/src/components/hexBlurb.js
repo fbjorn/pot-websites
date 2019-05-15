@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { IconLookup } from '@fortawesome/fontawesome-svg-core'
 
 const Hex = styled.div`
   background: ${props => props.bgColor ? props.bgColor : "white"};
@@ -24,15 +25,18 @@ const HexContent = styled.div`
 `
 
 
-const HexBlurb = (props) => (
+const HexBlurb = (props) => {
+  // const icon: IconLookup = { prefix: 'fal', iconName: 'utensils' }
+  return (
     <Hex className="content-wrapper" bgColor={props.bgColor}>
       <HexContent className="content" textColor={props.textColor} >
-        <FontAwesomeIcon icon={props.icon} />
+        {/* <FontAwesomeIcon icon={props.icon} /> */}
+        {/* <FontAwesomeIcon icon={[`fal, ${props.icon}`]} /> */}
+        <FontAwesomeIcon icon={['fal', `${props.icon}`]} />
         <h4>{props.title}</h4>
         <p>{props.content}</p>
       </HexContent>>
     </Hex>
-
-)
+)}
 
 export default HexBlurb

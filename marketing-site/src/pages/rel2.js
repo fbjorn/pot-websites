@@ -53,7 +53,7 @@ const rel2 = () => (
         <div  className="row">
 
           <div className="hex-blurb col">
-            <HexBlurb title="Create better and smarter buildings and cities" icon="draftingCompass" textColor={colors.main} />
+            <HexBlurb title="Create better and smarter buildings and cities" icon="drafting-compass" textColor={colors.main} />
           </div>
           
           <div className="hex-blurb col">
@@ -61,11 +61,11 @@ const rel2 = () => (
           </div>
 
           <div className="hex-blurb col">
-            <HexBlurb title="Earn with new services and innovative business models" icon="draftingCompass" textColor={colors.main} />
+            <HexBlurb title="Earn with new services and innovative business models" icon="sack" textColor={colors.main} />
           </div>
 
           <div className="hex-blurb col">
-            <HexBlurb title="Save on time, energy and material costs" icon="piggyBank" textColor={colors.main} />
+            <HexBlurb title="Save on time, energy and material costs" icon="piggy-bank" textColor={colors.main} />
           </div>
         </div>
         <div  className="row">
@@ -114,7 +114,7 @@ const rel2 = () => (
             </Link>
           </div>
           <div className="hex-col col-2  offset-1">
-            <HexBlurb title="My World" icon="terminal" textColor="white" bgColor={colors.mainDark} />
+            <HexBlurb title="My World" icon="globe-stand" textColor="white" bgColor={colors.mainDark} />
           </div>
           <div className="hex-col col-4">
             <h3>Rule data (coming soon)</h3>
@@ -128,7 +128,7 @@ const rel2 = () => (
             </Link>
           </div>
           <div className="hex-col col-3  offset-2">
-            <HexBlurb title="Market place" icon="terminal" textColor={colors.main} />
+            <HexBlurb title="Market place" icon="shopping-bag" textColor={colors.main} />
           </div>
           <div className="hex-col col-4">
             <h3>Sell &amp; Buy (future feature)</h3>
