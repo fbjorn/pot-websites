@@ -180,12 +180,13 @@ html {
 body {
   font-family: 'Fira Sans', sans-serif;
 }
-#___gatsby * {
+* {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
   line-height: 1.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+/* SHARED PROPERTIES */
 }
 p,
 h1,
@@ -372,35 +373,28 @@ h6 {
     max-width: 40vw;
   }
 }
-#___gatsby header,
-#___gatsby .page-content header,
-#___gatsby .page-content,
-#___gatsby .page-content .page-content {
+.page-content header,
+.page-content .page-content {
   width: auto;
   max-width: 1440px;
   margin: 0 auto;
   padding: 2rem;
 }
 @media (max-width: 1440px) {
-  #___gatsby header,
-  #___gatsby .page-content header,
-  #___gatsby .page-content,
-  #___gatsby .page-content .page-content {
+  .page-content header,
+  .page-content .page-content {
     margin: 0 1rem;
   }
 }
-#___gatsby .page-content,
-#___gatsby .page-content .page-content {
+.page-content .page-content {
   min-height: 55vh;
 }
 @media (max-width: 1440px) {
-  #___gatsby .page-content,
-  #___gatsby .page-content .page-content {
+  .page-content .page-content {
     padding: 1rem 0;
   }
 }
-#___gatsby footer,
-#___gatsby .page-content footer {
+.page-content footer {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0;

@@ -9,6 +9,7 @@ import Featured from '../components/Featured'
 import HexBlurb from '../components/HexBlurb'
 import ToolsIntro from '../components/ToolsIntro'
 import PricingCard from '../components/PricingCard'
+import PricingCards from '../components/PricingCards'
 
 import { colors } from '../Theme.js'
 
@@ -126,20 +127,9 @@ const IndexPage = ({ data }) => (
 
           <div className="col-12">
             <h2>Enjoy the benefits:</h2>
+            <PricingCards />      
           </div>
 
-          <div className="col-md-3">
-            <PricingCard />          
-          </div>
-          <div className="col-md-3">
-            <PricingCard />          
-          </div>
-          <div className="col-md-3">
-            <PricingCard />          
-          </div>
-          <div className="col-md-3">
-            <PricingCard />          
-          </div>
           
           {/* <div className="price-card col-3">
             <h2 className="data-number">214587€</h2>
