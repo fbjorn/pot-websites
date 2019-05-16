@@ -40,6 +40,7 @@ const FeaturedNews = ({ data }) => (
                 date(formatString: "dddd DD MMMM YYYY")
                 tags
                 status
+                type
               }
               excerpt(
                 format: PLAIN
@@ -49,6 +50,7 @@ const FeaturedNews = ({ data }) => (
             }
           }
         }
+      }
     `}
     render={data => (
       <StyledNews className="featured-news hexagon-wrapper">
@@ -57,45 +59,24 @@ const FeaturedNews = ({ data }) => (
           <h2>Latest News</h2>
 
           {data.news.edges.map(({ node }) => (
-              <div 
-                key={node.id} 
-                className="content-fragment" 
-                dangerouslySetInnerHTML={{ __html: node.html }} 
-              />
-            ))}
+            <div key={node.id}>
+              {/* <h1>{node.frontmatter.title}</h1> */}
+              {/* <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} /> */}
 
-          <p className="meta">
-            <span className="icon icon-blog">
-              <FontAwesomeIcon icon="hexagon" />
-            </span>
-            <span className="type">Blog</span>
-            <span className="date">January 19, 2019</span>
-          </p>
-          <p className="excerpt">
-            Ratione mollitia dignissimos quibusdam maioresdelectus...
-          </p>
+              <p className="meta">
+                <span className="icon icon-blog">
+                  <FontAwesomeIcon icon="hexagon" />
+                </span>
+                <span className="type">{ node.frontmatter.type }</span>
+                <span className="date">{ node.frontmatter.date }</span>
+              </p>
+              <p className="title-excerpt">
+                { node.frontmatter.title }
+              </p>
 
-          <p className="meta">
-            <span className="icon icon-news">
-              <FontAwesomeIcon icon="hexagon" />
-            </span>
-            <span className="type">News</span>
-            <span className="date">February 19, 2019</span>
-          </p>
-          <p className="excerpt">
-            Foobar Lorem ipsum dolordipisicing elit...
-          </p>
+            </div>
+          ))}
 
-          <p className="meta">
-            <span className="icon icon-article">
-              <FontAwesomeIcon icon="hexagon" />
-            </span>
-            <span className="type">Article</span>
-            <span className="date">January 19, 2019</span>
-          </p>
-          <p className="excerpt">
-            Foobar Lorem ipsum dolor sit amet, optio...
-          </p>
           <Link to="/" className="go-to-link">Go to news</Link>
         </div>
       </StyledNews>

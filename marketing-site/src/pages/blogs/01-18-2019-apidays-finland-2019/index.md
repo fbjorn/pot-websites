@@ -4,7 +4,9 @@ date: "2019-01-18T13:30:33.962Z"
 title: "Meet Platform of Trust at APIDays Finland 2019"
 image: ./apidays-venue.png
 type: "blog"
+subtype: "news"
 tags: ['javascript','react','gatsby']
+lang: "en-GB"
 status: "draft"
 ---
 # Why attend?

@@ -849,7 +849,7 @@ h6 {
 .hero .meta .icon.icon-article svg path {
   color: #f7c500;
 }
-.hero .excerpt {
+.hero .title-excerpt {
   padding-bottom: 0.4em;
   border-bottom: 1px dotted #fff;
   font-size: 1rem;

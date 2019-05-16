@@ -43,7 +43,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "clean": "rm -rf .cache"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-pro": "^5.8.2",
