@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { variables, colors } from '../Theme.js'
+import { colors, device } from '../Theme.js'
+import Check from '../images/check-circle.svg'
+import CustomButton from './CustomButton'
 
 export const componentColors = {
   freemium: `${colors.mainDark}`,
@@ -14,34 +15,53 @@ export const componentColors = {
 
 const StyledCard = styled.article`
 flex: 1;
-margin: 0 0.5rem;
+margin: 0 0.5rem 1rem;
 background: white;
-&:first-child { margin-left: 0; }
-&:last-child { margin-right: 0; }
+@media ${device.laptop} {
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
+}
 
 header {
+  box-sizing: border-box;
   padding: 1rem;
+  margin: 0;
   background: ${props => componentColors[props.color]};
   * { color: white; }
-  h1 { font-size: 1.6rem; }
+  h1 { 
+    font-size: 1.6rem; 
+    margin: 0.5em 0 0;
+  }
+  button {
+    float: right;
+  }
 }
 
 main {
+  position: relative;
   padding: 1rem;
-  * { 
-    font-size: 1rem;
-    font-weight: 500; 
-  }
+  * { font-size: 1rem; }
   ul { list-style: none; }
+  li {
+    position: relative;
+    font-weight: 500; 
+    &:before {
+      content: url(${Check});
+      position: absolute;
+      display: block;
+      width: 1em;
+      left: -1.5em;
+    }
+  }
 }
 `;
-
 
 const pricingCard = (props) => {
   return (
     <StyledCard color={props.color} > 
       <header>
         <FontAwesomeIcon icon={['fal', `${props.icon}`]} size="3x" />
+        <CustomButton label="Get Started!" />
         <h1>{props.name}:<br />
         {props.price}</h1>
       </header>

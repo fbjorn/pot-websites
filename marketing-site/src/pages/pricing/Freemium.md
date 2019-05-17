@@ -1,6 +1,5 @@
 ---
 title: Freemium
-date: 2019-01-26T07:00:10.683Z
 path: /pricing/freemium
 section: content
 type: pricing

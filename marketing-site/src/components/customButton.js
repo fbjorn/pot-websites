@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 
-import { variables, colors } from '../Theme.js'
+import { colors } from '../Theme.js'
 
 const StyledButton = styled.button`
 background: transparent;

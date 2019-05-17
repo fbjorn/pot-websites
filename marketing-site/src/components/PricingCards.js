@@ -9,15 +9,11 @@ import { device } from '../Theme.js'
 const StyledPricingCards = styled.section`
 display: flex;
 flex-direction: column;
-// justify-content: space-between;
 width: 100%;
 margin: 0;
-border: 1px solid;
 @media ${device.laptop} {
   flex-direction: row;
   padding: 0;
-  &:first-child { border: 10px solid red; }
-  // &:first-child { margin-right: 0; }
 }
 `
 
@@ -35,7 +31,6 @@ const PricingCards = ({ data }) => (
               id
               frontmatter {
                 title
-                date(formatString: "MMMM DD, YYYY")
                 path
                 type
                 order

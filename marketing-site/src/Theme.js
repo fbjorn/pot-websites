@@ -8,6 +8,7 @@ export const colors = {
   notice: 'rgb(247, 197, 0)',
   success: 'rgb(151, 209, 41)',
   mainDarkest: '#372873',
+  mainDarker: '#49378f',
   mainDark: '#583eb9',
   mainLight: '#9176fe',
   mainLightest: '#a897fe',

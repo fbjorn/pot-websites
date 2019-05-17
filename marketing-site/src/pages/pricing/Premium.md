@@ -1,6 +1,5 @@
 ---
 title: Premium
-date: 2019-01-26T07:00:10.683Z
 path: /pricing/premium
 type: pricing
 order: 4

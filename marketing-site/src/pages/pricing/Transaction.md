@@ -1,6 +1,5 @@
 ---
 title: Transaction
-date: 2019-01-26T07:00:10.683Z
 path: /pricing/transaction
 section: content
 type: pricing

@@ -8,8 +8,9 @@ import Hero from '../components/Hero'
 import Featured from '../components/Featured'
 import HexBlurb from '../components/HexBlurb'
 import ToolsIntro from '../components/ToolsIntro'
-import PricingCard from '../components/PricingCard'
 import PricingCards from '../components/PricingCards'
+import SavedVizs from '../components/SavedVizs'
+import NewsletterCTA from '../components/NewsletterCTA'
 
 import { colors } from '../Theme.js'
 
@@ -24,18 +25,15 @@ const IndexPage = ({ data }) => (
         </defs>
       </svg>
       <main className="home page-content container">
-
-
-        <div className="test">
+        {/*<div className="test">
           <h1 className="test">TESTING</h1>
-          {/* {data.intro.edges.map(({ node }) => (
+           {data.intro.edges.map(({ node }) => (
             <div key={node.id}>
               <h1>{node.frontmatter.title}</h1>
               <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
             </div>
-          ))}  */}
-        </div>
-
+          ))}  
+        </div>*/}
         <div className="row">
           <div className="col-xl-8">
             <Hero />
@@ -65,15 +63,16 @@ const IndexPage = ({ data }) => (
             </ul>
           </div>
           <div className="col-md-3">
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" className="card-link">Card link</a>
-              <a href="#" className="card-link">Another link</a>
-            </div>
-          </div>
+            <NewsletterCTA />
+            {/* <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" className="card-link">Card link</a>
+                <a href="#" className="card-link">Another link</a>
+              </div>
+            </div> */}
           </div>
           <div className="col-12">
             <h3>Platform of Trust is a data linking platform with built-in trust capabilities that makes you’re your data flow easily, with marginal of cost while you rule your data:</h3>
@@ -102,26 +101,7 @@ const IndexPage = ({ data }) => (
             <h2>What if you <strong>used</strong> your data?</h2>
           </div>
 
-          <div className="viz-col col-3">
-            <h2 className="data-number">214587€</h2>
-            <img src="https://via.placeholder.com/150" />
-            <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-          </div>
-          <div className="viz-col col-3">
-            <h2 className="data-number">214587€</h2>
-            <img src="https://via.placeholder.com/150" />
-            <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-          </div>
-          <div className="viz-col col-3">
-            <h2 className="data-number">214587€</h2>
-            <img src="https://via.placeholder.com/150" />
-            <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-          </div>
-          <div className="viz-col col-3">
-            <h2 className="data-number">214587€</h2>
-            <img src="https://via.placeholder.com/150" />
-            <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-          </div>
+          <SavedVizs />
 
           <ToolsIntro />
 
@@ -147,13 +127,9 @@ const IndexPage = ({ data }) => (
             <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
           </div> */}
 
-          <div className="col-12">
-            <h3>Enjoy the benefits:</h3>
-          </div>
-
           <p>
           Kojamo Oyj  &middot;  Keskinäinen työeläkevakuutusyhtiö Varma  &middot;  Tampereen Tilapalvelut Oy, GSP Group Oy  &middot;  Hämeen ammattikorkeakoulu HAMK  &middot;  Forum Virium Helsinki  &middot;  Honkio Oy  &middot;  Cozify Oy  &middot; Flexitila / Joustotoimisto Oy  &middot;  Metropolia Ammattikorkeakoulu  &middot;  Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy  &middot;  Tieto Oyj  &middot;  Granlund Oy  &middot;  Digital Living International Oy  &middot;  Tunninen Oy Finland  &middot;  Teknologian tutkimuskeskus VTT Oy  &middot;  Helsingin seudun opiskelija-asuntosäätiö sr (Hoas).
-          </p>
+          </p> 
 
         </div>
 
