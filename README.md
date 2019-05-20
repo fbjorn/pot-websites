@@ -43,7 +43,7 @@ Create file `.npmrc` and add lines:
 @fortawesome:registry=https://npm.fontawesome.com/
 //npm.fontawesome.com/:_authToken=YOUR_TOKEN_HERE
 ```
-* ``npm install --save-dev @fortawesome/fontawesome-pro
+* ``npm install --save-dev @fortawesome/fontawesome-pro``
 * ``npm install``
 * ``npm install --global gatsby-cli``
 * ``gatsby develop -o -p 8000``
