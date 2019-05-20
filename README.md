@@ -36,15 +36,13 @@ Portal is one stop shop to Platform of Trust.
 * ``git clone git@github.com:PlatformOfTrust/pot-websites.git``
 * ``git checkout rel2`` 
 * ``cd marketing-site``
-* 
+* Create file `.npmrc` and add lines: 
 
-Create file `.npmrc` and add lines: 
 ```
 @fortawesome:registry=https://npm.fontawesome.com/
 //npm.fontawesome.com/:_authToken=YOUR_TOKEN_HERE
 ```
 * ``npm install --save-dev @fortawesome/fontawesome-pro``
-* ``npm install``
 * ``npm install --global gatsby-cli``
 * ``gatsby develop -o -p 8000``
 * Site will open in browser localhost:8000, use -p to change port
