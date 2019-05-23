@@ -15,7 +15,7 @@ const Footer = () => (
       <clipPath id="clipPathSVG" clipPathUnits="objectBoundingBox">
         <polygon points="0, 1, 0.1, 0, 0.90, 0, 1, 1"/>
       </clipPath>
-    </svg>
+    </svg> 
 
     <div className="container-fluid text-center text-md-left">
       <div className="row">
