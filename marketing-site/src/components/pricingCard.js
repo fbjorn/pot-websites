@@ -45,6 +45,7 @@ main {
   li {
     position: relative;
     font-weight: 500; 
+    color: ${colors.main};
     &:before {
       content: url(${Check});
       position: absolute;
@@ -53,6 +54,7 @@ main {
       left: -1.5em;
     }
   }
+  p, strong { color: ${colors.main}; }
 }
 `;
 

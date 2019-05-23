@@ -16,10 +16,11 @@ $color__main--lightest = #a897fe
 // sections
 body
   background-color $color__main--lightest
-  background-image url(./platformoftrust-bgtesti-v2-2019-03-21.svg)
+  // background-image url(./platformoftrust-bgtesti-v2-2019-03-21.svg)
+  background-image url(./bg-repeat.svg)
   background-size cover
   background-repeat no-repeat
-  background-position center
+  background-position top
   color $color__helpers--light
   
 // #___gatsby
@@ -57,7 +58,7 @@ header
   background-color alpha($color__main, 0.4) !important
 .page-content
   background-color transparent // $color__helpers--light
-  *, h1, h2, h3, h4, h5, h6, p, a:link, a:visited 
+  *, h1, h2, h3, h4, h5, h6, p, ul, li, strong, a:link, a:visited 
       color $color__helpers--light
   &.dark-bg
     background-color alpha($color__main--darkest, 0.8)

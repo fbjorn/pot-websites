@@ -7,8 +7,8 @@ import styled from 'styled-components'
 import { variables, colors } from '../Theme.js'
 
 const StyledFeatured = styled.div`
-@media (max-width: 992px) {
-  transform: translate(-25%, -40%);
+@media (max-width: 768px) {
+  &&& { display: none; }
 }
 `
 

@@ -7,7 +7,7 @@ type: "blog" # All "News" are blogs to separate them from real pages made with M
 subtype: "article" # "blog" / "news" / "press-realease" etc.
 tags: ['Sport Venue Oy','KnowUr.Biz®','Data'] # Any string, can be used in search / "related content"
 lang: "en-GB" # ISO Lang attr
-status: "published" # "published" / "draft" / "pending" / "Archived"
+status: "published" # "published" / "draft" / "pending" / "archived"
 ---
 
 Knowledge management, or making data-based business decisions, is a hot topic, and now services are starting to emerge that make it easy to exploit data quickly. The collaboration between Platform of Trust and Sport Venue is a step towards more efficient processes and improved services for end users.

@@ -38,7 +38,7 @@ const Hero = ({ data }) => (
       }
     `}
     render={data => (
-      <div className="hero">
+      <StyledHero className="hero">
         <svg height="0" width="0" viewBox="0 0 500 500" >
           <defs>
               <clipPath id="hex-clip" clipPathUnits="objectBoundingBox">
@@ -61,7 +61,7 @@ const Hero = ({ data }) => (
           </span>
         </div>
         <FeaturedNews />
-      </div>
+      </StyledHero>
     )}
   />
 )

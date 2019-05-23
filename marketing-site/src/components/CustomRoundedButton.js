@@ -4,13 +4,12 @@ import styled, { css } from 'styled-components'
 import { colors } from '../Theme.js'
 
 const StyledButton = styled.button`
-// background: transparent;
-background: ${ props => props.color ? colors[props.color] : "transparent" };
-border-radius: 3px;
-border: 2px solid ${colors.light};
+background: ${ props => props.color ? colors[props.color] : colors.alert };
+border-radius: 3rem;
 color: ${colors.main};
 margin: 0.5em 1em;
 padding: 0.25em 1em;
+box-shadow: 0 0 0.2rem ${colors.mainDark};
 transition: all 0.1s ease-out;
 outline: none;
 
@@ -51,7 +50,7 @@ ${props => props.disabled && css`
 
 `;
 
-const CustomButton = (props) => {
+const CustomRoundedButton = (props) => {
   return (
     <StyledButton 
       type="button" 
@@ -65,4 +64,4 @@ const CustomButton = (props) => {
     </StyledButton>
 )}
 
-export default CustomButton
+export default CustomRoundedButton

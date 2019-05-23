@@ -44,10 +44,12 @@ class Header extends React.Component {
               <a className="nav-link" href="https://developer.oftrust.net/">Developer portal</a>
             </nav>
             <nav className="site"> 
-              <Link className="nav-link" to="/rel2" activeStyle={activeStyles}>Pricing plans</Link>
-              <Link className="nav-link" to="/" activeStyle={activeStyles}>News</Link>
-              <Link className="nav-link" to="/" activeStyle={activeStyles}>Events</Link>
-              <Link className="nav-link" to="/" activeStyle={activeStyles}>Team</Link>
+              <Link className="nav-link" to="/pricing" activeStyle={activeStyles}>Pricing</Link>
+              <Link className="nav-link" to="/use-cases" activeStyle={activeStyles}>Cases</Link>
+              <Link className="nav-link" to="/news" activeStyle={activeStyles}>News</Link>
+              <Link className="nav-link" to="/events" activeStyle={activeStyles}>Events</Link>
+              <Link className="nav-link" to="/about" activeStyle={activeStyles}>About</Link>
+              <Link className="nav-link" to="/caontact" activeStyle={activeStyles}>Contact</Link>
             </nav> 
             {/* <nav className="tools" style={styles.tools}>
                 <div className="hex-wrapper">
