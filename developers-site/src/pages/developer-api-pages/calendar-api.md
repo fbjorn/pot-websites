@@ -25,7 +25,7 @@ The calendar API provides means to create calendar entries to identities. You ca
 * Calendar entries can have carbon copy recipients similar to email. A notification about the entry will be sent to these users.
 
 ##Limitations
-* No patch method.
+* No PATCH method.
 * Not CORS enabled - requires authorization header.
 * You can add only one calendar event at a time. 
 
