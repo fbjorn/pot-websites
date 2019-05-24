@@ -497,28 +497,6 @@ body {
     margin-bottom: 0;
   }
 }
-#___gatsby .logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 25%;
-  margin: auto;
-}
-@media (max-width: 819px) {
-  #___gatsby .logo {
-    width: 47%;
-    margin-top: -1rem;
-    margin-left: -1rem;
-  }
-}
-#___gatsby .logo__header {
-  width: 15rem;
-  margin-bottom: 0;
-}
-@media (max-width) {
-  #___gatsby .logo__header {
-    max-width: 40vw;
-  }
-}
 #___gatsby header,
 #___gatsby .page-content header,
 #___gatsby .page-content,
@@ -551,6 +529,28 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
+}
+#___gatsby .logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25%;
+  margin: auto;
+}
+@media (max-width: 819px) {
+  #___gatsby .logo {
+    width: 47%;
+    margin-top: -1rem;
+    margin-left: -1rem;
+  }
+}
+#___gatsby .logo__header {
+  width: 15rem;
+  margin-bottom: 0;
+}
+@media (max-width) {
+  #___gatsby .logo__header {
+    max-width: 40vw;
+  }
 }
 .jumbotron {
   padding: 8rem 0;

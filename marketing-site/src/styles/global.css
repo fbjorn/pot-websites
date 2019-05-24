@@ -425,53 +425,6 @@ body {
 #___gatsby .blog-post img {
   margin: 2rem 0;
 }
-#___gatsby #api-descriptions.cards .col-md.d-flex {
-  flex-basis: 50%;
-}
-#___gatsby .card {
-  display: flex;
-  margin: 1rem;
-  width: 100%;
-  background-color: #7955ff;
-  border-width: 8px;
-  border-style: solid;
-  border-radius: 0;
-}
-#___gatsby .card .card-header {
-  border-width: 0;
-  border-radius: 0;
-}
-#___gatsby .card .card-body {
-  background-color: #f0f0f0;
-  border-width: 0;
-  border-radius: 0;
-}
-#___gatsby .card .card-body + a:link {
-  text-decoration: none;
-}
-#___gatsby .card .card-footer {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-width: 0;
-  border-radius: 0;
-}
-@media (min-width: 576px) {
-  #___gatsby .card {
-    margin: 1rem 0rem 1rem 0;
-  }
-}
-#___gatsby pre code,
-#___gatsby .page-content pre code,
-#___gatsby pre code span,
-#___gatsby .page-content pre code span {
-  background: transparent;
-}
-#___gatsby code,
-#___gatsby .page-content code {
-  display: inline-block;
-  padding: 0.2em 0.4em;
-  margin: 0 0.4em;
-}
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
 #___gatsby .featured {
   text-align: right;

@@ -37,6 +37,7 @@ const FeaturedNews = ({ data }) => (
               html
               frontmatter {
                 title
+                path
                 date(formatString: "dddd DD MMMM YYYY")
                 tags
                 status
@@ -59,22 +60,20 @@ const FeaturedNews = ({ data }) => (
           <h2>Latest News</h2>
 
           {data.news.edges.map(({ node }) => (
-            <div key={node.id}>
-              {/* <h1>{node.frontmatter.title}</h1> */}
-              {/* <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} /> */}
-
-              <p className="meta">
-                <span className="icon icon-blog">
-                  <FontAwesomeIcon icon="hexagon" />
-                </span>
-                <span className="type">{ node.frontmatter.type }</span>
-                <span className="date">{ node.frontmatter.date }</span>
-              </p>
-              <p className="title-excerpt">
-                { node.frontmatter.title }
-              </p>
-
-            </div>
+            <Link to={ node.frontmatter.path }>
+              <div key={node.id}>
+                <p className="meta">
+                  <span className="icon icon-blog">
+                    <FontAwesomeIcon icon="hexagon" />
+                  </span>
+                  <span className="type">{ node.frontmatter.type }</span>
+                  <span className="date">{ node.frontmatter.date }</span>
+                </p>
+                <p className="title-excerpt">
+                  { node.frontmatter.title }
+                </p>
+              </div>
+            </Link>
           ))}
 
           <Link to="/" className="go-to-link">Go to news</Link>

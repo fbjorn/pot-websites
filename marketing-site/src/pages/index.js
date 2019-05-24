@@ -64,6 +64,7 @@ const IndexPage = ({ data }) => (
           </div>
           <div className="col-md-3">
             <NewsletterCTA />
+            
             {/* <div className="card">
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
