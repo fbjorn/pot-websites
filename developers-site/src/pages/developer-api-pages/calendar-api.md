@@ -33,3 +33,5 @@ The calendar API provides means to create calendar entries to identities. You ca
 [RAML Specs (zip)](https://docs.oftrust.net/specs/raml/calendar-api.zip)
 
 [Open API Specs (json)](https://docs.oftrust.net/specs/oas/calendar-api.json)
+
+[API Documentation](https://docs.oftrust.net/#calendar-api)
