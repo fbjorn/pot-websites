@@ -11,38 +11,18 @@ const activeStyles = {
   borderRadius: '0%'
 }
 
+const styles = {
+  tools: {
+    position: 'absolute',
+    top: 0,
+    right: '5vw',
+    border: '10px solid red',
+  }
+}
+
 class Header extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     collapsed: true,
-  //     dropdown: false
-  //   };
-  // }
-
-  // componentWillMount() {
-  //   this.setState({
-  //     collapsed: !this.state.collapsed,
-  //     dropdown: false
-  //   });
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   console.log("Updated")
-  // }
-
-  // toggleNavbar = () => {
-  //   this.setState({
-  //     collapsed: !this.state.collapsed,
-  //     dropdown: false
-  //   });
-  // }
-  // toggleDropdown = () => {  this.setState({ dropdown: !this.state.dropdown }); }
 
   render() {
-    // const classMobileMenu = 'navbar-collapse' + (this.state.collapsed ? 'collapse' : '')
-    // const classDropdownMenu = `dropdown-menu ${this.state.dropdown ? 'show' : ''}` 
-    // const { collapsed, dropdown } = this.state
     return (
       <header className="wrapper">
         <div className="logo">
@@ -63,13 +43,13 @@ class Header extends React.Component {
               <a className="nav-link" href="https://world.oftrust.net/">MyWorld</a>
               <a className="nav-link" href="https://developer.oftrust.net/">Developer portal</a>
             </nav>
-            {/* <nav className="site"> 
-              <a className="active" href="#">Pricing plans</a>
-              <a href="#">News</a>
-              <a href="#">Events</a>
-              <a href="#">Team</a>
-            </nav> */}
-            {/* <nav className="tools">
+            <nav className="site"> 
+              <Link className="nav-link" to="/rel2" activeStyle={activeStyles}>Pricing plans</Link>
+              <Link className="nav-link" to="/" activeStyle={activeStyles}>News</Link>
+              <Link className="nav-link" to="/" activeStyle={activeStyles}>Events</Link>
+              <Link className="nav-link" to="/" activeStyle={activeStyles}>Team</Link>
+            </nav> 
+            {/* <nav className="tools" style={styles.tools}>
                 <div className="hex-wrapper">
                     <div className="reveal">
                         <p>Login</p>
@@ -105,8 +85,7 @@ class Header extends React.Component {
                     </div>
                     <div className="hexagon"><span></span><span></span><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/search-light.svg" alt="Search" /></div>
                 </div>
-            </nav>*/}
-            {/* <nav className="some"><a href="#">Facebook</a><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="#">GitHub</a></nav> */}
+            </nav> */}
             <div className="menu-footer">
               <MenuFooter />
             </div>

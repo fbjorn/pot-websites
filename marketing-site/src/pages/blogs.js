@@ -3,7 +3,7 @@ import Link from "gatsby-link"
 import { graphql } from "gatsby"
 // import Helmet from "react-helmet"
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 import '../styles/blog-listing.css'
 

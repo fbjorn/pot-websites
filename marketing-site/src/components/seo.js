@@ -52,8 +52,9 @@ function SEO({ description, lang, meta, keywords, title }) {
               { rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: "114x114", href: `${appleTouch114}` },
               { rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: "120x120", href: `${appleTouch120}` },
               { rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: "144x144", href: `${appleTouch144}` },
-              { rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: "152x152", href: `${appleTouch152}` }
+              { rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: "152x152", href: `${appleTouch152}` },
             ]}
+
             meta={[
               {
                 name: `description`,

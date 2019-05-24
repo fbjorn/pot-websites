@@ -12,7 +12,7 @@ export default function Template({
   const post = data.markdownRemark; 
   return (
     <Layout>
-        <SEO title={`${post.frontmatter.title}`}keywords={[`Platform of trust`, `developers`, 'blogs']} />
+      <SEO title={`${post.frontmatter.title}`}keywords={[`Platform of trust`, `developers`, 'blogs']} />
         {/* <Link to="/blogs">&larr; Back to Blogs</Link> */}
         <main className="page-content container dark-bg">
             <article className="blog-post-container">

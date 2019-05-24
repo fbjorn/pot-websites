@@ -13,6 +13,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-121413138-1",
+      },
+    },
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -21,7 +27,6 @@ module.exports = {
         name: 'pages',
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -42,6 +47,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          "gatsby-remark-embed-runkit",
           {
             resolve: `gatsby-remark-images`,
             options: {

@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+#___gatsby .hero {
+  display: block;
+  width: 900px;
+  margin: 259.8075px 10vw 0 -10vw;
+}
+#___gatsby .hero #hex1 {
+  width: 450px;
+  height: 450px;
+  transform: translate(50%, -28.6%);
+  z-index: 10;
+}
+#___gatsby .hero #hex1 .hex-content {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/radio-1948002_640.jpg");
+  background-position: right;
+}
+#___gatsby .hero #hex2 {
+  width: 450px;
+  height: 450px;
+}
+#___gatsby .hero .hexagon-wrapper {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+#___gatsby .hero .hex-bg {
+  height: calc(100% * 0.57735);
+  width: 100%;
+  display: inline-block;
+  z-index: 9;
+}
+#___gatsby .hero .hex-bg:before,
+#___gatsby .hero .hex-bg:after {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(60deg);
+  z-index: -1;
+}
+#___gatsby .hero .hex-bg:after {
+  left: 0;
+  transform: rotateZ(-60deg);
+}
+#___gatsby .hero .hex-bg,
+#___gatsby .hero .hex-bg:before,
+#___gatsby .hero .hex-bg:after {
+  background-color: transparent;
+}
+#___gatsby .hero .hex-shadow .hex-bg,
+#___gatsby .hero .hex-shadow .hex-bg:before,
+#___gatsby .hero .hex-shadow .hex-bg:after {
+  font-size: 1rem;
+  box-shadow: 0px 0px 4em 0em rgba(0,0,0,0.3);
+}
+#___gatsby .hero .hex-content {
+  position: absolute;
+  top: -129.903975px;
+  left: 0;
+  width: 450px;
+  height: 519.61545px;
+  padding: calc(100% * 0.57735 / 2) 1em 0 calc(50% + 1em);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 1.2vw;
+  color: #fff;
+  background-color: #48368f;
+  background: linear-gradient(45deg, rgba(121,85,255,0.65) 0%, rgba(121,85,255,0.65) 1%, #48368f 100%);
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: url("#hex-clip");
+  z-index: 1;
+}
+#___gatsby .hero h1 {
+  margin: 0 0 0 -1rem;
+  color: #fff;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+#___gatsby .hero h2 {
+  font-size: 1rem;
+  color: #fff;
+}
+#___gatsby .hero p,
+#___gatsby .hero span {
+  font-size: 1rem;
+  color: #fff;
+}
+#___gatsby .hero .meta {
+  font-size: 80%;
+}
+#___gatsby .hero .icon {
+  margin-right: 0.4em;
+  font-size: 0.8rem;
+}
+#___gatsby .hero .icon .icon-blog svg path {
+  color: #fff;
+}

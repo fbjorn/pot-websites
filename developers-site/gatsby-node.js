@@ -12,6 +12,7 @@ exports.createPages = ({ actions, graphql }) => {
     const blogTemplate = path.resolve(`src/templates/blog-template.js`);
     const pageTemplate = path.resolve(`src/templates/page-template.js`);
     const usecaseTemplate = path.resolve(`src/templates/usecase-template.js`);
+    const apiTemplate = path.resolve(`src/templates/api-template.js`);
     return graphql(`
     {
         blogs: allMarkdownRemark(
@@ -68,6 +69,29 @@ exports.createPages = ({ actions, graphql }) => {
                 }
             }
         }
+        apis: allMarkdownRemark(
+            filter: { frontmatter: { type: { eq: "api" } } }
+            sort: { order: DESC, fields: [frontmatter___date] }
+        ) {
+            edges {
+                node {
+                    excerpt(pruneLength: 250)
+                    html
+                    id
+                    frontmatter {
+                        title
+                        date(formatString: "MMMM DD, YYYY")
+                        path
+                        type
+                        documentation
+                        version
+                        modified
+                        runkit
+                        uptime
+                    }
+                }
+            }
+        }
     }
     `).then(result => {
         if (result.errors) {
@@ -94,6 +118,14 @@ exports.createPages = ({ actions, graphql }) => {
             createPage({
                 path: node.frontmatter.path,
                 component: usecaseTemplate,
+                context: {} // additional data can be passed via context
+            });
+        });
+
+        result.data.apis.edges.forEach(({ node }) => {
+            createPage({
+                path: node.frontmatter.path,
+                component: apiTemplate,
                 context: {} // additional data can be passed via context
             });
         });
