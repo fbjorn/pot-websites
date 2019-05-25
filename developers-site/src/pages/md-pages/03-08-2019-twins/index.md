@@ -15,8 +15,6 @@ type: "page"
 
 # Lets get started!
 
-Structure of the guide
-
 In the end we'll have a simple digital twin with following structure
 
 ```
@@ -24,8 +22,19 @@ Building
   \- Floor
      \- Room
         \- Device
+```
+
+The guide contains following steps:
+
+* [Create building](#create-building)
+* [Create floor and attach to building](#create-floor-and-attach-to-building)
+* [Create room and attach to Floor](#create-room-and-attach-to-floor)
+* [Create device and attach to room](#create-device-and-attach-to-room)
+
 
 ## Create Building
+
+Building in this case is the root of our Digital Twin. To create a building you need to use Identity REST API.   
 
 ```
 curl -X POST https://api-sandbox.oftrust.net/identities/v1/ \
