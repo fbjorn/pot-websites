@@ -1,12 +1,37 @@
 ---
 path: "/guides/twins"
 date: "2019-01-15T13:30:33.962Z"
-title: "How to manage digital twins"
+title: "How to create simple Digital Twin with APIs"
 type: "page"
 ---
 
 
-From Pirkka.....
+# Learning objectives
+
+* How to use Identity API to create Digital Twin
+* How to use standard data models and ontologies with Digital Twins
+
+
+
+# Lets get started!
+
+Structure of the guide
+
+## Create Building
+
+
+## Create floor and attach to Building
+
+
+## Create room and attach to floor
+
+
+## Create device and attach to room
+
+
+
+## Simple Digital Twin is done
+
 
 # Create account and get started!
 
