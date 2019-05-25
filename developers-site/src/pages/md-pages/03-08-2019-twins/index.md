@@ -17,6 +17,14 @@ type: "page"
 
 Structure of the guide
 
+In the end we'll have a simple digital twin with following structure
+
+```
+Building
+  \- Floor
+     \- Room
+        \- Device
+
 ## Create Building
 
 ```
@@ -60,6 +68,28 @@ code here
 
 ## Create room and attach to floor
 
+
+Create a room with Identity REST API. 
+
+```
+curl -X POST https://api-sandbox.oftrust.net/identities/v1/ \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer REPLACE_WITH_YOUR_TOKEN" \
+-d '{
+    "context": "https://standards.oftrust.net/contexts/identity-room.jsonld",
+    "type": "Room",
+    "name": "Reception",
+    "data": {
+        "description": "Reception of the Platform of Trust company headquarters in Tampere."
+    }
+}'
+```
+
+Attach it to the floor we created before. The attaching is done by linking the objects with Identity REST API. 
+
+```
+code here
+```
 
 ## Create device and attach to room
 
