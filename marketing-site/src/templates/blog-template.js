@@ -124,15 +124,16 @@ export default function Template({
                 <FontAwesomeIcon icon={['fal', 'share-alt']} color="white" size="1x" />
                 Come on, share this piece. You know you want to. 
                 <FontAwesomeIcon icon={['fal', 'arrow-right']} color="white" size="1x" />
-                <FontAwesomeIcon icon={['fab', 'facebook-square']} color="white" size="1x" />
-                <div>
-<Link
-  href={`https://twitter.com/intent/tweet/?text=${post.frontmatter.title}
-  &url=https://mariohernandez.io${post.frontmatter.path}%2F&via=imariohernandez`}>
-  // Optional icon
-  <span>div on Twitter</span>
-</Link>
-</div>
+
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=https://preview.oftrust.net${post.frontmatter.path}`} target="_blank"  rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={['fab', 'facebook-square']} color="white" size="1x" />
+                </a> 
+                <a href={`https://twitter.com/intent/tweet/?text=${post.frontmatter.title}&url=https://preview.oftrust.net${post.frontmatter.path}%2F&via=PlatformOfTrust`}  target="_blank"  rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={['fab', 'twitter-square']} color="white" size="1x" />
+                </a>
+                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=https://preview.oftrust.net${post.frontmatter.path}&title=${post.frontmatter.title}&source=${post.frontmatter.title}`}target="_blank"  rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={['fab', 'linkedin']} color="white" size="1x" />
+                </a>
               </p>
             </div>
           </div>
