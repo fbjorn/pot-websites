@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { Global, css } from "@emotion/core"
-import styled from "@emotion/styled"
+import styled from '@emotion/styled'
 
 import { icon, library, config } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,13 +11,14 @@ import { faTerminal } from '@fortawesome/pro-solid-svg-icons'
 import { faPiggyBank } from '@fortawesome/pro-light-svg-icons'
 import { faDraftingCompass } from '@fortawesome/pro-solid-svg-icons'
 import { faBadge } from '@fortawesome/pro-light-svg-icons'
+import { faArrowLeft } from '@fortawesome/pro-light-svg-icons'
 import { fal } from '@fortawesome/pro-light-svg-icons'
 
 import Header from './Header'
 import Footer from './Footer'
 import './Layout.css'
 
-library.add(fal, faHexagon)
+library.add(fal, faHexagon, faBadge)
 // icon({prefix: 'fal', iconName: 'draftingCompass'})
 
 const Wrapper = styled("div")`

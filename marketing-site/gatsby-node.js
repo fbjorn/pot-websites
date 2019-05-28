@@ -29,6 +29,9 @@ exports.createPages = ({ actions, graphql }) => {
                         date(formatString: "MMMM DD, YYYY")
                         path
                         type
+                        author
+                        pictext
+                        subtype
                     }
                 }
             }
