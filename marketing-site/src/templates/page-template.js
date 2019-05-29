@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import Img from 'gatsby-image';
 import { graphql } from "gatsby";
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 export default function Template({
   data 

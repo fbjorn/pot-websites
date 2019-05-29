@@ -1,5 +1,3 @@
-import { Link } from 'gatsby'
-// import PropTypes from 'prop-types'
 import React from 'react'
 
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
@@ -45,46 +43,7 @@ const Footer = () => (
             <a href="https://github.com/PlatformOfTrust/" className="some-link linkedin"><img src={Github} className="some-icon" alt="Linkedin" /></a>
           </nav>
         </div>
-
-        {/* <nav className="sitemap col-md-2 mb-md-0 mb-3">
-
-          <h5 className="text-uppercase">Pages</h5>
-          <ul className="list-unstyled">
-            <li>
-              <Link className="nav-link" to="/pricing">Pricing plans</Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/news">News</Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/events">Events</Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/Team">Team</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <nav className="sitemap col-md-2 mb-md-0 mb-3">
-          <h5 className="text-uppercase">Services</h5>
-          <ul className="list-unstyled">
-            <li>
-              <a className="nav-link" href="http://preview.oftrust.net">Platform of Trust</a>
-            </li>
-            <li>
-              <a className="nav-link" href="http://market.oftrust.net/">Market place</a>
-            </li>
-            <li>
-              <a className="nav-link" href="http://world.oftrust.net/">My World</a>
-            </li>
-            <li>
-              <a className="nav-link" href="http://developer.oftrust.net/">Developer portal</a>
-            </li>
-          </ul>
-        </nav> */}
-
       </div>
-
     </div>
   </footer>
 )

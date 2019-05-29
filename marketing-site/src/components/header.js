@@ -1,24 +1,9 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-// import { Navbar, Nav, NavDropdown, Form, FormControl, Button  } from 'react-bootstrap';
 
-import MenuFooter from './MenuFooter'
+import MenuFooter from './menufooter'
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
-
-const activeStyles = {
-  borderBottom: '0.2em dotted rgb(240, 240, 240)',
-  borderRadius: '0%'
-}
-
-const styles = {
-  tools: {
-    position: 'absolute',
-    top: 0,
-    right: '5vw',
-    border: '10px solid red',
-  }
-}
 
 class Header extends React.Component {
 
@@ -40,52 +25,8 @@ class Header extends React.Component {
         <nav className="menus">
             <nav className="apps"> 
               <Link className="nav-link active" to="/">Platform of Trust</Link>
-              {/* <a className="nav-link" href="https://world.oftrust.net/">MyWorld</a> */}
               <a className="nav-link" href="https://developer.oftrust.net/">Developer portal</a>
             </nav>
-            {/* <nav className="site"> 
-              <Link className="nav-link" to="/rel2" activeStyle={activeStyles}>Pricing plans</Link>
-              <Link className="nav-link" to="/" activeStyle={activeStyles}>News</Link>
-              <Link className="nav-link" to="/" activeStyle={activeStyles}>Events</Link>
-              <Link className="nav-link" to="/" activeStyle={activeStyles}>Team</Link>
-            </nav>  */}
-            {/* <nav className="tools" style={styles.tools}>
-                <div className="hex-wrapper">
-                    <div className="reveal">
-                        <p>Login</p>
-                    </div>
-                    <div className="hexagon"><span></span><span></span><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/sign-in-light.svg" alt="Login" /></div>
-                </div>
-                <div className="hex-wrapper">
-                    <div className="reveal-hex">
-                        <div className="flip-box">
-                            <div className="flip-box-inner">
-                                <div className="flip-box-front">
-                                    <div className="hexagon"><span></span><span></span></div>
-                                </div>
-                                <div className="flip-box-back">
-                                    <div className="hexagon blue"><span></span><span></span>
-                                        <p className="language"> <a href="#">FI </a><span>| </span><a href="#">EN</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="hexagon"><span></span><span></span><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/globe-light.svg" alt="Language" /></div>
-                </div>
-                <div className="hex-wrapper">
-                    <div className="reveal">
-                        <p>Settings</p>
-                    </div>
-                    <div className="hexagon"><span></span><span></span><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/cog-light.svg" alt="Login" /></div>
-                </div>
-                <div className="hex-wrapper">
-                    <div className="reveal">
-                        <div className="search-wrapper"><input type="text" placeholder="Search site..." /></div>
-                    </div>
-                    <div className="hexagon"><span></span><span></span><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15581/search-light.svg" alt="Search" /></div>
-                </div>
-            </nav> */}
             <div className="menu-footer">
               <MenuFooter />
             </div>

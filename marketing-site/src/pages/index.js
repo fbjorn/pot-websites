@@ -1,15 +1,13 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
-// import Image from '../components/image'
 import SEO from '../components/seo'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/global.css'
 import '../styles/temp-index.css'
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`Platform of Trust`]} />
@@ -48,44 +46,10 @@ const IndexPage = ({ data }) => {
                 </a>
             </div>
           </div>
-          {/* <div className="col-sm d-flex">
-            <div className="card">
-              <div className="card-header"><h3>MARKETPLACE FOR DATA AND SERVICES</h3></div>
-              <div className="card-body">
-                <p>All data exposed by the platform must be harmonised and use standard data models. Get familiar and start using along with Translator component. </p>
-                
-              </div>
-              <div className="card-footer">
-              <a href="https://marketplace.oftrust.net">Go to marketplace >></a>
-              </div>
-            </div>
-          </div> */}
         </div> 
       </main>
     </Layout>
   )
 }
-
-export const query = graphql`
-query {
-    intro: allMarkdownRemark(filter: {
-        frontmatter: {
-        path: {eq: "/index#introduction"}, 
-        section: {eq: "introduction"}
-        }}) {
-            totalCount
-            edges {
-            node {
-                id
-                html
-                frontmatter {
-                    title
-                    path
-                    }
-                }
-            }
-        }
-}
-`
 
 export default IndexPage
