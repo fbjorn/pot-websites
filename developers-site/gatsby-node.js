@@ -83,6 +83,11 @@ exports.createPages = ({ actions, graphql }) => {
                         date(formatString: "MMMM DD, YYYY")
                         path
                         type
+                        documentation
+                        version
+                        modified
+                        runkit
+                        uptime
                     }
                 }
             }

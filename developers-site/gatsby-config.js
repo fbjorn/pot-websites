@@ -27,7 +27,6 @@ module.exports = {
         name: 'pages',
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -48,6 +47,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          "gatsby-remark-embed-runkit",
           {
             resolve: `gatsby-remark-images`,
             options: {
