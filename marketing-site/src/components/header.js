@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import MenuFooter from './menufooter'
+import MenuFooter from './menufoot'
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
 
 class Header extends React.Component {
