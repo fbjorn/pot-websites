@@ -155,7 +155,7 @@ export default function Template({
           <div className="row">
             <div className="col col-3 offset-1">
               <p>
-                <Link to="/">
+                <Link to="/blogs">
                   <FontAwesomeIcon icon={['fal', 'arrow-left']} color="white" size="1x" />
                   Previous article 
                 </Link>
@@ -172,7 +172,7 @@ export default function Template({
 
             <div className="col col-3">
               <p>
-                <Link to="/">
+                <Link to="/blogs">
                   Next article 
                   <FontAwesomeIcon icon={['fal', 'arrow-right']} color="white" size="1x" />
                 </Link>
