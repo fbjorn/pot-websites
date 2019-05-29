@@ -4,9 +4,6 @@ import Img from 'gatsby-image';
 import { graphql, Link } from "gatsby";
 import styled from 'styled-components'
 
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -74,6 +71,22 @@ const StyledPostFooter = styled.div`
     &.fa-arrow-right { margin-left: 1rem; }
   }
 `
+const StyledBlogFooter = styled.div`
+  &&& { max-width: ${variables.pageWidth} }
+  padding: 2rem 0;
+  background: ${colors.mainDarker};
+  border-top: 2px dotted white;
+  // .col { border: 1px solid; }
+  .col:nth-of-type(2) { text-align: center; }
+  .col:nth-of-type(3) { text-align: right; }
+  p { color: white; }
+  svg { 
+    // margin-right: 1rem;
+    vertical-align: middle; 
+    // &.fa-hexagon { transform: rotate(90deg); }
+    // &.fa-arrow-right { margin-left: 1rem; }
+  }
+`
 
 export default function Template({
   data, location 
@@ -114,7 +127,7 @@ export default function Template({
             <div className="col-10 offset-1">
               <p>
                 <FontAwesomeIcon icon={['fa', 'hexagon']} color="white" size="4x" />
-                Author: {post.frontmatter.author} 
+                Author {post.frontmatter.author} 
               </p>
             </div>
           </div>
@@ -138,6 +151,35 @@ export default function Template({
             </div>
           </div>
         </StyledPostFooter>
+        <StyledBlogFooter>
+          <div className="row">
+            <div className="col col-3 offset-1">
+              <p>
+                <Link to="/">
+                  <FontAwesomeIcon icon={['fal', 'arrow-left']} color="white" size="1x" />
+                  Previous article 
+                </Link>
+              </p>
+            </div>
+
+            <div className="col col-4">
+              <p>
+                <Link to="/blogs">
+                  Back to news
+                </Link>
+              </p>
+            </div>
+
+            <div className="col col-3">
+              <p>
+                <Link to="/">
+                  Next article 
+                  <FontAwesomeIcon icon={['fal', 'arrow-right']} color="white" size="1x" />
+                </Link>
+              </p>
+            </div>
+          </div>
+        </StyledBlogFooter>
       </StyledBlog>
     </Layout>
   );
