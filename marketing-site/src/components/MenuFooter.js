@@ -11,17 +11,13 @@ const MenuFooter = () => (
 
     <div className="container-fluid text-center text-md-left">
       <div className="row">
-      
         <div className="footer-logo col-md-3 offset-md-1">
           <img src={Logo} className="logo__footer" alt="Logo" />
         </div>
-
         <div className="footer-contact col-md-4 mt-md-0 mt-3">
-
           <h5 className="mb-md-3">Platform of Trust Oy</h5>
           <p>VAT number: FI29800052</p>
           <p><a href="https://www.tilaajavastuu.fi/en/data-protection/">Data protection statement</a></p>
-
         </div>
         <div className="footer-somelinks col-3 col-lg-3 mb-md-0 mb-3 text-right">
           <nav className="some-links mt-4">
@@ -32,7 +28,6 @@ const MenuFooter = () => (
           </nav>
         </div>
       </div>
-
     </div>
   </footer>
 )
