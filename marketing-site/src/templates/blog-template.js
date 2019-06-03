@@ -4,7 +4,6 @@ import Img from 'gatsby-image';
 import { graphql, Link } from "gatsby";
 import styled from 'styled-components'
 
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Layout from '../components/Layout'

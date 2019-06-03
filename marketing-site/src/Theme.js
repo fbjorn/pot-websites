@@ -7,6 +7,7 @@ export const colors = {
   alert: 'rgb(251, 99, 77)',
   notice: 'rgb(247, 197, 0)',
   success: 'rgb(151, 209, 41)',
+  tomato: 'rgb(252,88,107)',
   mainDarkest: '#372873',
   mainDarker: '#49378f',
   mainDark: '#583eb9',
