@@ -1,13 +1,31 @@
 module.exports = {
   siteMetadata: {
     title: `Platform of Trust `,
+    siteUrl: 'https://preview.oftrust.net',
     description: `Platform of trust helps to create better built environments by providing ​data one can trust on.​`,
     author: `mika@eqsign.fi`,
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-social-cards`,
+          // ...
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        // stylesProvider: {
+        //   injectFirst: true,
+        // },
+      },
+    },
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

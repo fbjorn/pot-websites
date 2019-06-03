@@ -37,11 +37,11 @@ NOTE! These values are crucial and shown only once, so you should save them imme
 
 Users of your app must be logged in to PoT in order to perform most of useful requests. We have implemented oauth2 flow into PoT, so you only need to have at least 2 following steps done:
 
-Generate authorization link. Initiate authorization flow by sending request from a browser to your application backend `GET /authorize`. This should generate state and return redirection URL to login portal with necessary parameters `state` is base64 encoded string to validate later, `grant_type` is `code`, `response_type` is `authorization`, `redirect_uri` is where to login portal will send `code` and `state` for validation and token exchange: 
+Generate authorization link. Initiate authorization flow by sending request from a browser to your application backend `GET /authorize`. This should generate state and return redirection URL to login portal with necessary parameters `state` is base64 encoded string to validate later, `grant_type` is `authorization_code`, `response_type` is `code`, `redirect_uri` is where to login portal will send `code` and `state` for validation and token exchange: 
 
 ```
 https://login.oftrust.net/? \
-grant_type=authorization&response_type=code& \
+grant_type=authorization_code&response_type=code& \
 redirect_uri=https://login.oftrust.net/api/exchangeToken& \
 client_id=37e278c6-1af9-4537-b92d-af8609b6e1e7& \
 state=eyJkIjogeyJyIjogImh0dHA6Ly9idWlsZGVyLmxvY2Fs....SZkZWQifQ==

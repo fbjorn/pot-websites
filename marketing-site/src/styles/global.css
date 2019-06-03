@@ -836,24 +836,16 @@ body {
 #___gatsby footer a.some-link .some-icon {
   width: 100%;
 }
-#___gatsby a:link,
-#___gatsby .page-content a:link,
-#___gatsby a:visited,
-#___gatsby .page-content a:visited {
+a:link,
+a:visited {
   text-decoration: underline dotted;
 }
-#___gatsby nav.site a:link,
-#___gatsby .page-content nav.site a:link,
-#___gatsby nav.apps a:link,
-#___gatsby .page-content nav.apps a:link,
-#___gatsby nav.some a:link,
-#___gatsby .page-content nav.some a:link,
-#___gatsby nav.site a:visited,
-#___gatsby .page-content nav.site a:visited,
-#___gatsby nav.apps a:visited,
-#___gatsby .page-content nav.apps a:visited,
-#___gatsby nav.some a:visited,
-#___gatsby .page-content nav.some a:visited {
+nav.site a:link,
+nav.apps a:link,
+nav.some a:link,
+nav.site a:visited,
+nav.apps a:visited,
+nav.some a:visited {
   text-decoration: none;
 }
 @media (min-width: 820px) {
