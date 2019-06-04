@@ -49,7 +49,7 @@ class Header extends React.Component {
               <Link className="nav-link" to="/news" activeStyle={activeStyles}>News</Link>
               <Link className="nav-link" to="/events" activeStyle={activeStyles}>Events</Link>
               <Link className="nav-link" to="/about" activeStyle={activeStyles}>About</Link>
-              <Link className="nav-link" to="/caontact" activeStyle={activeStyles}>Contact</Link>
+              <Link className="nav-link" to="/contact" activeStyle={activeStyles}>Contact</Link>
             </nav> 
             {/* <nav className="tools" style={styles.tools}>
                 <div className="hex-wrapper">
