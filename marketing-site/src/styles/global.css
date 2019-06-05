@@ -133,7 +133,7 @@ footer p {
   background-color: #7955ff;
 }
 .card .card-body {
-  background-color: $helpers--light;
+  background-color: #fff;
   color: #372873;
 }
 .card .card-body *,

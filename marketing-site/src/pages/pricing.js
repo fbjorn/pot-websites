@@ -1,10 +1,9 @@
 import React from "react"
-import Link from "gatsby-link"
 import { graphql } from "gatsby"
 import styled from 'styled-components'
 
 import PricingCard from '../components/PricingCard'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import CustomRoundedButton from '../components/CustomRoundedButton'
 
 import { device } from '../Theme.js'
