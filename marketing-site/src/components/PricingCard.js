@@ -7,10 +7,10 @@ import Check from '../images/check-circle.svg'
 import CustomButton from './CustomButton'
 
 export const componentColors = {
-  freemium: `${colors.mainDark}`,
-  transaction: `${colors.ok}`,
-  standard: `${colors.success}`,
-  premium: `${colors.notice}`,
+  freemium: `${colors.ok}`,
+  transaction: `${colors.success}`,
+  standard: `${colors.notice}`,
+  premium: `${colors.mainDark}`,
 }
 
 const StyledCard = styled.article`
@@ -31,6 +31,7 @@ header {
   h1 { 
     font-size: 1.6rem; 
     margin: 0.5em 0 0;
+    color: white;
   }
   button {
     float: right;
@@ -63,7 +64,7 @@ const pricingCard = (props) => {
     <StyledCard color={props.color} > 
       <header>
         <FontAwesomeIcon icon={['fal', `${props.icon}`]} size="3x" />
-        <CustomButton label="Get Started!" />
+        {/* <CustomButton label="Get Started!" /> */}
         <h1>{props.name}:<br />
         {props.price}</h1>
       </header>

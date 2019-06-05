@@ -16,5 +16,3 @@ tags: ['Platform of Trust','contact', 'CEO','Toni', 'Luhti']
 lang: "en-GB" 
 status: "published" 
 ---
-
-Foo

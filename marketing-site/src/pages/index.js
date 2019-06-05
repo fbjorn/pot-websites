@@ -1,5 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby' 
+import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -12,9 +14,21 @@ import PricingCards from '../components/PricingCards'
 import SavedVizs from '../components/SavedVizs'
 import NewsletterCTA from '../components/NewsletterCTA'
 
+
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/global.css'
 import { colors } from '../Theme.js'
+
+const StyledBenefits = styled.ul`
+  font-size: 1.4rem;
+  list-style: none;
+  li { margin-bottom: 1em; }
+  svg {
+    position: absolute;
+    margin-left: -1.2em;
+    path { color: white; }
+  }
+`
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -55,14 +69,16 @@ const IndexPage = ({ data }) => (
             </h3>
           </div>
           <div className="col-md-3">
-            <ul>
+            <StyledBenefits>
               <li className="benefit">
+                <FontAwesomeIcon icon={['fal', `check-circle`]} size="1x" />
                 Skip the costly and time-consuming part where you build integrations and try the make the data move
               </li>
               <li className="benefit">
+                <FontAwesomeIcon icon={['fal', `check-circle`]} size="1x" />
                 Jump right to the part where you start using that data and turning it into revenue
               </li>
-            </ul>
+            </StyledBenefits>
           </div>
           <div className="col-md-3">
             <NewsletterCTA />

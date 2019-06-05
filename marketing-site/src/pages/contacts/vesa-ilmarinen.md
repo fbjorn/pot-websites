@@ -16,5 +16,3 @@ tags: ['Platform of Trust','contact', 'CIO','Vesa', 'Ilmarinen']
 lang: "en-GB" 
 status: "published" 
 ---
-
-Foo

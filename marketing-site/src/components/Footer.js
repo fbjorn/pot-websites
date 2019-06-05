@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "gatsby-link"
 
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
 import Facebook from "../images/facebook-square-brands.svg"
@@ -18,24 +19,39 @@ const Footer = () => (
     <div className="container-fluid text-center text-md-left">
       <div className="row">
       
-        <div className="footer-logo col-md-3 offset-md-1">
+        <div className="footer-logo col-md-2 offset-md-1">
           <img src={Logo} className="logo__footer" alt="Logo" />
         </div>
 
-        <div className="footer-contact col-md-4 mt-md-0 mt-3">
+        <div className="footer-contact col-md-2 mt-md-0 mt-3">
 
           <h5 className="mb-md-3">Platform of Trust Oy</h5>
           <p>VAT number: FI29800052</p>
           <p><a href="https://www.tilaajavastuu.fi/en/data-protection/">Data protection statement</a></p>
-          {/* <nav className="some-links mt-4">
-            <a href="#" className="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
-            <a href="#" className="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>
-            <a href="#" className="some-link github"><img src={Github} className="some-icon" alt="Github" /></a>
-            <a href="#" className="some-link linkedin"><img src={Linkedin} className="some-icon" alt="Linkedin" /></a>
-          </nav> */}
-
         </div>
-        <div className="footer-somelinks col-3 col-lg-3 mb-md-0 mb-3 text-right">
+
+        <div className="col-md-1">
+          <Link to="/pricing">Pricing</Link><br />
+          <Link to="/cases">Cases</Link><br />
+          <Link to="/news">News</Link><br />
+        </div>
+
+        <div className="col-md-1">
+          <Link to="/events">Events</Link><br />
+          <Link to="/about">About</Link><br />
+          <Link to="/contact">Contact</Link><br />
+        </div>
+
+        <div className="col-md-1">
+          <Link to="/faq">FAQ</Link><br />
+          <Link to="/logos">Logos</Link><br />
+        </div>
+
+        <div className="col-md-1">
+          <Link to="/">Login</Link><br />
+        </div>
+
+        <div className="footer-somelinks col-2 col-lg-1 mb-md-0 mb-3 text-right">
           <nav className="some-links mt-4">
             <a href="https://www.facebook.com/platformoftrust" className="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
             <a href="https://twitter.com/PlatformOfTrust" className="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>

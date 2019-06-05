@@ -27,9 +27,12 @@ const StyledHeader = styled.header`
   h1 { 
     margin-top: 0.4em; 
     color: white;
+    text-align: left;
+    width: 100%;
   }
 `
 const StyledMeta = styled.div`
+  // display: block;
   text-transform: capitalize;
   * { margin-right: 0.5em; }
   svg { 
@@ -100,7 +103,7 @@ export default function Template({
             <Link to="/blogs"><FontAwesomeIcon icon={['fal', 'arrow-left']} /> Back to news</Link>
             <h1>{post.frontmatter.title}</h1>
             <StyledMeta>
-            <FontAwesomeIcon icon={['fa', 'hexagon']} color="blue" />
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color="blue" />
               <span>{post.frontmatter.subtype}</span>
               <span>{post.frontmatter.author}</span>
               <span>{post.frontmatter.date}</span>
