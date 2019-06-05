@@ -29,10 +29,10 @@ const Location = (props) => {
     <StyledLocation className="location col-12 col-md-6 col-lg-4">
       <div className="content">
         <img src={Map}  alt="Map" />
-        <h3>{props.nam}</h3>
-        <p>Tarvonsalmenkatu 17 B</p>
-        <p>00260 Espoo</p>
-        <p>Finland</p>
+        <h3>{props.name}</h3>
+        <p>{props.streetAddress}</p>
+        <p>{props.postalCode} {props.addressRegion}</p>
+        <p>{props.addressCountry}</p>
       </div>
     </StyledLocation>  
 )}

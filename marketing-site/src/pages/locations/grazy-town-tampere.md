@@ -16,5 +16,3 @@ tags: ['Platform of Trust','location', 'Office','Tampere', 'co-working']
 lang: "en-GB" 
 status: "published" 
 ---
-
-Foo

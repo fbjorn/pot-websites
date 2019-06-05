@@ -17,5 +17,3 @@ tags: ['Platform of Trust','location', 'office','co-working', 'helsinki']
 lang: "en-GB" 
 status: "published" 
 ---
-
-Foo

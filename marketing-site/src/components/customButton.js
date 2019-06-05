@@ -55,7 +55,7 @@ const CustomButton = (props) => {
   return (
     <StyledButton 
       type="button" 
-      className="btn" 
+      className="custom-button" 
       primary={props.primary} 
       disabled={props.disabled}
       color={props.color}

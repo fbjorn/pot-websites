@@ -4,8 +4,6 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
-import { variables, colors } from '../Theme.js'
-
 const StyledNews = styled.div`
 @media (max-width: 768px) {
   &&& { display: none; }
@@ -60,11 +58,12 @@ const FeaturedNews = ({ data }) => (
           <h2>Latest News</h2>
 
           {data.news.edges.map(({ node }) => (
-            <Link to={ node.frontmatter.path }>
-              <div key={node.id}>
+            <Link to={ node.frontmatter.path } key={node.id}>
+              <div>
                 <p className="meta">
                   <span className="icon icon-blog">
-                    <FontAwesomeIcon icon="hexagon" />
+                    {/* <FontAwesomeIcon icon="hexagon" /> */}
+                    <FontAwesomeIcon icon={['fal', 'hexagon']} size="1x" />
                   </span>
                   <span className="type">{ node.frontmatter.type }</span>
                   <span className="date">{ node.frontmatter.date }</span>
