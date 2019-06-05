@@ -1,6 +1,6 @@
 ---
 path: "/contacts/toni-luhti" 
-type: "blog" 
+type: "contact" 
 subtype: "contact" 
 order: 1
 

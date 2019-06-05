@@ -1,6 +1,6 @@
 ---
 path: "/locations/suomen-tilaajavastuu" 
-type: "blog" 
+type: "office" 
 subtype: "location" 
 order: 3
 

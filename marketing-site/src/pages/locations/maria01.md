@@ -1,6 +1,6 @@
 ---
 path: "/locations/maria01" 
-type: "blog" 
+type: "office" 
 subtype: "location" 
 order: 1
 

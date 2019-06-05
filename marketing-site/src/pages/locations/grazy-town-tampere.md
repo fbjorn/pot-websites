@@ -1,6 +1,6 @@
 ---
 path: "/locations/grazy-town-tampere" 
-type: "blog" 
+type: "office" 
 subtype: "location" 
 order: 2
 name: "Grazy Town Tampere"

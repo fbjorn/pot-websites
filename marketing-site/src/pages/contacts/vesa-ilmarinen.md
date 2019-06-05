@@ -1,6 +1,6 @@
 ---
 path: "/contacts/vesa-ilmarinen" 
-type: "blog" 
+type: "contact" 
 subtype: "contact"
 order: 2
 
