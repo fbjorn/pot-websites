@@ -11,6 +11,8 @@ import PricingCards from '../components/PricingCards'
 import SavedVizs from '../components/SavedVizs'
 import NewsletterCTA from '../components/NewsletterCTA'
 
+import 'bootstrap/dist/css/bootstrap.css'
+import '../styles/global.css'
 import { colors } from '../Theme.js'
 
 const IndexPage = ({ data }) => (
