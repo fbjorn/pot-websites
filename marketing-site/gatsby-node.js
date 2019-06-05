@@ -30,6 +30,7 @@ exports.createPages = ({ actions, graphql }) => {
                         path
                         type
                         author
+                        pic
                         pictext
                         subtype
                     }
