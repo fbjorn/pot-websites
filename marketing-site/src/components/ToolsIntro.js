@@ -3,12 +3,12 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import HexBlurb from './HexBlurb'
-import CustomButton from './CustomButton'
+import CustomRoundedButton from './CustomRoundedButton'
 
 import { variables, colors } from '../Theme.js'
 
 const ToolsSection = styled.div`
-  max-width: ${variables.pageWidth};
+  &&& { max-width: ${variables.pageWidth}; }
   width: 100%;
   @media (min-width: 992px) {
     .row:nth-of-type(2) { transform: translateY(25%) }
@@ -38,7 +38,7 @@ const ToolsIntro = (props) => {
         </div>
         <div className="col-3 col-lg-2"> 
           <Link to="/">
-            <CustomButton label="Join the party" primary />
+            <CustomRoundedButton label="Join the party" />
           </Link>
         </div>
       </div>
@@ -55,7 +55,7 @@ const ToolsIntro = (props) => {
         </div>
         <div className="col-3 col-lg-2"> 
           <Link to="/">
-            <CustomButton label="Coming soon" primary disabled />
+            <CustomRoundedButton label="Coming soon" primary disabled />
           </Link>
         </div>
       </div>
@@ -72,7 +72,7 @@ const ToolsIntro = (props) => {
         </div>
         <div className="col-3 col-lg-2"> 
           <Link to="/">
-            <CustomButton label="Future feature" primary disabled />
+            <CustomRoundedButton label="Future feature" primary disabled />
           </Link>
         </div>
       </div>

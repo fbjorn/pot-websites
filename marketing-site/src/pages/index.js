@@ -6,6 +6,7 @@ import SEO from '../components/seo'
 import Hero from '../components/Hero'
 import Featured from '../components/Featured'
 import HexBlurb from '../components/HexBlurb'
+import CustomRoundedButton from '../components/CustomRoundedButton'
 import ToolsIntro from '../components/ToolsIntro'
 import PricingCards from '../components/PricingCards'
 import SavedVizs from '../components/SavedVizs'
@@ -44,7 +45,7 @@ const IndexPage = ({ data }) => (
           </div>
         </div>
 
-        <div className="row">
+        <div className="row mt-3">
           <div className="col-12">
             <h2>What if you <strong>used</strong> your data?</h2>
           </div>
@@ -66,11 +67,12 @@ const IndexPage = ({ data }) => (
           <div className="col-md-3">
             <NewsletterCTA />
           </div>
-          <div className="col-12">
+          <div className="col-12 mt-5">
             <h3>Platform of Trust is a data linking platform with built-in trust capabilities that makes you’re your data flow easily, with marginal of cost while you rule your data:</h3>
           </div>
         </div>
-        <div  className="row">
+
+        <div  className="row mt-3 mb-5">
 
           <div className="hex-blurb col">
             <HexBlurb title="Create better and smarter buildings and cities" icon="drafting-compass" textColor={colors.main} />
@@ -88,90 +90,46 @@ const IndexPage = ({ data }) => (
             <HexBlurb title="Save on time, energy and material costs" icon="piggy-bank" textColor={colors.main} />
           </div>
         </div>
-        <div  className="row">
+
+        <div className="row mt-5">
           <div className="col-12">
             <h2>What if you <strong>used</strong> your data?</h2>
           </div>
+        </div>
 
+        <div className="row mt-5">
           <SavedVizs />
+        </div>
 
+        <div className="row mt-5">
           <ToolsIntro />
-
+        </div>
+        
+        <div className="row mt-5">
           <div className="col-12">
-            <h2>Enjoy the benefits:</h2>
+            <h2 className="mb-5">Enjoy the benefits:</h2>
             <PricingCards />      
           </div>
-
-          
-          {/* <div className="price-card col-3">
-            <h2 className="data-number">214587€</h2>
-            <img src="https://via.placeholder.com/150" />
-            <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-          </div>
-          <div className="price-card col-3">
-            <h2 className="data-number">214587€</h2>
-            <img src="https://via.placeholder.com/150" />
-            <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-          </div>
-          <div className="price-card col-3">
-            <h2 className="data-number">214587€</h2>
-            <img src="https://via.placeholder.com/150" />
-            <h4>Ratione mollitia dignissimos quibusdam maioresdelectus:</h4>
-          </div> */}
-
-          <p>
-          Kojamo Oyj  &middot;  Keskinäinen työeläkevakuutusyhtiö Varma  &middot;  Tampereen Tilapalvelut Oy, GSP Group Oy  &middot;  Hämeen ammattikorkeakoulu HAMK  &middot;  Forum Virium Helsinki  &middot;  Honkio Oy  &middot;  Cozify Oy  &middot; Flexitila / Joustotoimisto Oy  &middot;  Metropolia Ammattikorkeakoulu  &middot;  Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy  &middot;  Tieto Oyj  &middot;  Granlund Oy  &middot;  Digital Living International Oy  &middot;  Tunninen Oy Finland  &middot;  Teknologian tutkimuskeskus VTT Oy  &middot;  Helsingin seudun opiskelija-asuntosäätiö sr (Hoas).
-          </p> 
-
         </div>
-
-        {/* <div className="intro row-fluid pr-5">
-          <div className="col-md-9 offset-sm-1">
-            <h1 className="display-4">Welcome to Platform of Trust</h1>
-            <p className="lead">Temporary landing page. Public release June 2019.</p>
-            <p className="lead">More information about Platform of Trust at <a href="https://www.platformoftrust.net/">platformoftrust.net</a></p>
+        
+        <div className="row">
+          <div className="col-lg-4 text-left">
+            <CustomRoundedButton label="Book online presentation"/>
+          </div>
+          <div className="col-lg-2 offset-md-6 text-right">
+            <CustomRoundedButton label="Get started"/>
           </div>
         </div>
-        <div className="row equal pt-5 pb-5">
-          <div className="col-sm-10 col-md-4 d-flex offset-sm-1">
-            <div className="card">
-              <div className="card-header"><h3>MANAGE YOUR DATA</h3></div>
-              <div className="card-body">
-                <p>Check out getting started package and add new data products with integrations for other developers to consume</p>
-              </div>
-              <a href="https://world.oftrust.net">
-                <div className="card-footer">
-                  Go to myworld >> 
-                </div>
-              </a>
-            </div>
+        
+        <div className="row mt-5">
+          <div className="col-12">
+            <h2>These smart companies and organizations are already using Platform of Trust:</h2>
+            <p>
+              Kojamo Oyj  &middot;  Keskinäinen työeläkevakuutusyhtiö Varma  &middot;  Tampereen Tilapalvelut Oy, GSP Group Oy  &middot;  Hämeen ammattikorkeakoulu HAMK  &middot;  Forum Virium Helsinki  &middot;  Honkio Oy  &middot;  Cozify Oy  &middot; Flexitila / Joustotoimisto Oy  &middot;  Metropolia Ammattikorkeakoulu  &middot;  Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy  &middot;  Tieto Oyj  &middot;  Granlund Oy  &middot;  Digital Living International Oy  &middot;  Tunninen Oy Finland  &middot;  Teknologian tutkimuskeskus VTT Oy  &middot;  Helsingin seudun opiskelija-asuntosäätiö sr (Hoas).
+            </p> 
+            <CustomRoundedButton className="ml-0" label="become reseller"/>
           </div>
-          <div className="col-sm-10 col-md-4 d-flex offset-sm-1">          
-            <div className="card">
-              <div className="card-header"><h3>DEVELOPER TOOLS</h3></div>
-              <div className="card-body">
-                <p>Read the getting started and build new applications on top of the data products.</p>
-              </div>
-              <a href="https://developer.oftrust.net">
-                <div className="card-footer">
-                  Go to developer portal >>
-                </div>
-                </a>
-            </div>
-          </div> */}
-          {/* <div className="col-sm d-flex">
-            <div className="card">
-              <div className="card-header"><h3>MARKETPLACE FOR DATA AND SERVICES</h3></div>
-              <div className="card-body">
-                <p>All data exposed by the platform must be harmonised and use standard data models. Get familiar and start using along with Translator component. </p>
-                
-              </div>
-              <div className="card-footer">
-              <a href="https://marketplace.oftrust.net">Go to marketplace >></a>
-              </div>
-            </div>
-          </div> 
-        </div> */}
+        </div>
       </main>
     </Layout>
 )

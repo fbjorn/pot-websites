@@ -6,8 +6,8 @@ import { colors } from '../Theme.js'
 const StyledButton = styled.button`
   &&& { background: ${ props => props.bgColor ? colors[props.bgColor] : colors.alert }; }
   border-radius: 3rem;
-  &&& { color: ${ props => props.textColor ? colors[props.textColor] : colors.alert }; }
-  margin: 0.5em 1em;
+  &&& { color: ${ props => props.textColor ? colors[props.textColor] : colors.light }; }
+  // margin: 0.5em 1em;
   padding: 0.25em 1em;
   box-shadow: 0 0 0.2rem ${colors.mainDark};
   transition: all 0.1s ease-out;
@@ -43,7 +43,8 @@ const StyledButton = styled.button`
   `}
 
   ${props => props.disabled && css`
-    &&& { background: transparent; }
+    // &&& { background: transparent; }
+    &&& { background: ${colors.main}; }
     color: ${colors.mainDark};
     border: 2px solid ${colors.mainDark};
   `}

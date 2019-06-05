@@ -62,8 +62,8 @@ const FeaturedNews = ({ data }) => (
               <div>
                 <p className="meta">
                   <span className="icon icon-blog">
-                    {/* <FontAwesomeIcon icon="hexagon" /> */}
-                    <FontAwesomeIcon icon={['fal', 'hexagon']} size="1x" />
+                    <FontAwesomeIcon icon="hexagon" />
+                    {/* <FontAwesomeIcon icon={['fas', 'hexagon']} size="1x" /> */}
                   </span>
                   <span className="type">{ node.frontmatter.type }</span>
                   <span className="date">{ node.frontmatter.date }</span>

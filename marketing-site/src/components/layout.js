@@ -8,7 +8,7 @@ import Helmet from 'react-helmet'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faHexagon } from '@fortawesome/pro-solid-svg-icons'
+import { faHexagon } from '@fortawesome/pro-solid-svg-icons'
 // import { faTerminal } from '@fortawesome/pro-solid-svg-icons'
 // import { faPiggyBank } from '@fortawesome/pro-light-svg-icons'
 // import { faDraftingCompass } from '@fortawesome/pro-solid-svg-icons'
@@ -21,7 +21,7 @@ import Header from './Header'
 import Footer from './Footer'
 import './Layout.css'
 
-library.add( fal, fab )
+library.add( fal, fab, faHexagon )
 // icon({prefix: 'fal', iconName: 'draftingCompass'})
 
 const Wrapper = styled("div")`
