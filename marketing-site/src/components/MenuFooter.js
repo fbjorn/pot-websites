@@ -1,5 +1,3 @@
-import { Link } from 'gatsby'
-// import PropTypes from 'prop-types'
 import React from 'react'
 
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"

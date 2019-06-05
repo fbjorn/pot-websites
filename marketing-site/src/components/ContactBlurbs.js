@@ -4,8 +4,6 @@ import styled from 'styled-components'
 
 import ContactBlurb from './ContactBlurb'
 
-import { device } from '../Theme.js'
-
 const StyledContactBlurbs = styled.section`
 
 `

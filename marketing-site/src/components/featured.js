@@ -1,10 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
-
-import { variables, colors } from '../Theme.js'
 
 const StyledFeatured = styled.div`
 @media (max-width: 768px) {

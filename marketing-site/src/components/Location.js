@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { colors, device } from '../Theme.js'
+import { colors } from '../Theme.js'
 import Map from "../images/map.jpg"
 
 const StyledLocation = styled.article`

@@ -1,11 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from "gatsby-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { colors, device } from '../Theme.js'
-import Check from '../images/check-circle.svg'
-import HexIcon from '../components/hexIcon'
+import { colors } from '../Theme.js'
 import CustomImage from "../components/CustomImage"
 
 

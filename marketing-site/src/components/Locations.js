@@ -4,8 +4,6 @@ import styled from 'styled-components'
 
 import Location from './Location'
 
-import { device } from '../Theme.js'
-
 const StyledLocations = styled.section`
 
 `

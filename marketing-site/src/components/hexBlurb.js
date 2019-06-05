@@ -1,9 +1,7 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { IconLookup } from '@fortawesome/fontawesome-svg-core'
 
 const Hex = styled.div`
   background: ${props => props.bgColor ? props.bgColor : "white"};

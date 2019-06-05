@@ -1,7 +1,6 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-// import { Navbar, Nav, NavDropdown, Form, FormControl, Button  } from 'react-bootstrap';
 
 import MenuFooter from './MenuFooter'
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
@@ -9,15 +8,6 @@ import Logo from "../images/platformoftrust-wide-white-rgb.svg"
 const activeStyles = {
   borderBottom: '0.2em dotted rgb(240, 240, 240)',
   borderRadius: '0%'
-}
-
-const styles = {
-  tools: {
-    position: 'absolute',
-    top: 0,
-    right: '5vw',
-    border: '10px solid red',
-  }
 }
 
 class Header extends React.Component {

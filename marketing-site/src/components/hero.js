@@ -2,17 +2,13 @@ import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import FeaturedNews from './FeaturedNews'
-
-import { variables, colors } from '../Theme.js'
 
 const StyledHero = styled.div`
 @media (max-width: 768px) {
   &&& { display: none; }
 }
 `
-
 
 const Hero = ({ data }) => (
   <StaticQuery

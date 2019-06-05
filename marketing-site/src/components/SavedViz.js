@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { colors, device } from '../Theme.js'
-import Check from '../images/check-circle.svg'
 import Viz1 from '../images/viz1.jpg'
 import Viz2 from '../images/viz2.jpg'
 import Viz3 from '../images/viz3.jpg'
