@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 // import Bio from '../components/Bio'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 // import { rhythm } from '../utils/typography'
 
 class blogList extends React.Component {

@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import { colors, device, variables } from '../Theme.js'
 
 const StyledBlog = styled.article`
