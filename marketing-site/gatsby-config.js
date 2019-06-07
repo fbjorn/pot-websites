@@ -74,6 +74,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-source-hubspot',
+      options: {
+        key: '5c1263ec-7b42-44b0-b511-d4677ab3d08c'
+      }
+    }
     // {
     //   resolve: `gatsby-source-wordpress`,
     //   options: {
