@@ -93,7 +93,7 @@ const StyledHexImage = styled.div`
 `
 
 export default function Events({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
+  const { edges: posts } = data.allMdx;
   return (
     <Layout className="blog-posts">
       <StyledSection className="posts-listing">
@@ -173,7 +173,7 @@ export default function Events({ data }) {
 }
 export const pageQuery = graphql`
   query eventsQuery {
-    allMarkdownRemark(
+    allMdx(
       filter: { frontmatter: { type: { eq: "event" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
