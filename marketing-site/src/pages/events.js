@@ -92,7 +92,7 @@ const StyledHexImage = styled.div`
   clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
 `
 
-export default function News({ data }) {
+export default function Events({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
     <Layout className="blog-posts">
@@ -116,7 +116,7 @@ export default function News({ data }) {
           
         </StyledTools>
         <StyledBlogs className="posts">
-          <h1>News</h1>
+          <h1>Events</h1>
         
         {posts
           // .filter(post => post.node.frontmatter.title.length > 0)
@@ -172,9 +172,9 @@ export default function News({ data }) {
   );
 }
 export const pageQuery = graphql`
-  query newsQuery {
+  query eventsQuery {
     allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "blog" } } }
+      filter: { frontmatter: { type: { eq: "event" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

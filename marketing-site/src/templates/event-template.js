@@ -188,7 +188,7 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query blogPostByPath($path: String!) {
+  query eventPostByPath($path: String!) {
     markdownRemark(
         frontmatter: { path: { eq: $path } }
     ) {
