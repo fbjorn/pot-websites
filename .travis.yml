@@ -4,6 +4,7 @@ services:
 
 # BE CAREFUL: There is a risk of outputting real credentials to logs here!
 before_install:
+ - ./travis-validation.sh
  - echo "$DOCKER_PASSWORD" | docker login -u="$DOCKER_USERNAME" --password-stdin
  - docker build -t platformoftrust/website:$TRAVIS_BUILD_NUMBER .
 
