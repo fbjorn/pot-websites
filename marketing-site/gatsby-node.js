@@ -37,7 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
                 }
             }
         }
-        allMdx(
+        events: allMdx(
             filter: { frontmatter: { type: { eq: "event" } } }
             sort: { order: DESC, fields: [frontmatter___date] }
         ) {
@@ -109,7 +109,7 @@ exports.createPages = ({ actions, graphql }) => {
             });
         });
         
-        result.data.allMdx.edges.forEach(({ node }) => {
+        result.data.events.edges.forEach(({ node }) => {
             createPage({
                 path: node.frontmatter.path,
                 component: eventTemplate,

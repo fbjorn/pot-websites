@@ -8,7 +8,6 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Layout from '../components/layout'
-import CustomImage from "../components/CustomImage"
 import { colors, device, variables } from '../Theme.js'
 
 const StyledBlog = styled.article`
@@ -91,22 +90,6 @@ const StyledBlogFooter = styled.div`
     // &.fa-arrow-right { margin-left: 1rem; }
   }
 `
-const StyledPostContent = styled.section`
-  .event { display: flex; flex-direction: column;  }
-  .left { flex: 1; order: 2; }
-  .right { flex: 2; order: 1; }
-  @media ${device.laptop} {
-    .event { flex-direction: row; }
-    .left { flex: 1; order: 1; }
-    .right { flex: 2; order: 2; }
-  }
-`
-const StyledCustomImage = styled.div`
-  max-width: 250px;
-  margin-bottom: 2rem;
-  transform: translateX(-1rem) rotate(10deg) scale(0.9);
-  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
-`
 
 export default function Template({
   data, location 
@@ -136,17 +119,9 @@ export default function Template({
             <p>{post.frontmatter.pictext}</p> 
           </StyledCaption>
           <div className="row">
-            <div className="col-3 offset-1">
-              <StyledCustomImage>
-                <CustomImage filename={post.frontmatter.pic} alt="Platform of Trust event illustration" />
-                {post.frontmatter.pic}
-              </StyledCustomImage>
-            </div>
-          </div>
-          <div className="row">
-            <StyledPostContent className="blog-post-content col-10 offset-1 pt-5">
+            <div className="blog-post-content col-10 offset-1 pt-5">
               <MDXRenderer >{data.mdx.code.body}</MDXRenderer>
-            </StyledPostContent>
+            </div>
           </div>
         </StyledPost>
         <StyledPostFooter className="container">
@@ -213,7 +188,7 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query eventPostByPath($path: String!) {
+  query casePostByPath($path: String!) {
     mdx(
         frontmatter: { path: { eq: $path } }
     ) {
@@ -224,7 +199,6 @@ export const pageQuery = graphql`
         subtype
         author
         pictext
-        pic
         image {
           childImageSharp { 
             fluid(maxWidth: 1440) {
