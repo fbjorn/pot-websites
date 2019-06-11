@@ -4,7 +4,7 @@ date: "2019-05-16T13:45:33.962Z"
 title: "Towards smoother and simpler knowledge management"
 image: "./pic.jpg" # Featured image shown on page and listings. Save in same folder. Don't use svg.
 pictext: "This is kuvateksti"
-type: "blog" # All "News" are blogs to separate them from real pages made with MarkDown, so that they appear in blog listings etc.
+type: "news" # All "News" are blogs to separate them from real pages made with MarkDown, so that they appear in blog listings etc.
 subtype: "article" # "blog" / "news" / "press-realease" etc.
 tags: ['Sport Venue Oy','KnowUr.Biz®','Data'] # Any string, can be used in search / "related content"
 lang: "en-GB" # ISO Lang attr

@@ -1,8 +1,8 @@
-import React from "react";
-import Helmet from "react-helmet";
-import Img from 'gatsby-image';
-import { graphql, Link } from "gatsby";
-import MDXRenderer from "gatsby-mdx/mdx-renderer";
+import React from "react"
+import Helmet from "react-helmet"
+import Img from 'gatsby-image'
+import { graphql, Link } from "gatsby"
+import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -94,14 +94,14 @@ const StyledBlogFooter = styled.div`
 export default function Template({
   data, location 
 }) {
-  const post = data.mdx; 
+  const post = data.mxd; 
   return (
     <Layout pathname={location.pathname}>
       <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} />
       <StyledBlog>
         <StyledHeader className="container">
           <div className="row">
-            <Link to="/events"><FontAwesomeIcon icon={['fal', 'arrow-left']} /> Back to events</Link>
+            <Link to="/blogs"><FontAwesomeIcon icon={['fal', 'arrow-left']} /> Back to news</Link>
             <h1>{post.frontmatter.title}</h1>
             <StyledMeta>
               <FontAwesomeIcon icon={['fa', 'hexagon']} color="blue" />
@@ -119,9 +119,11 @@ export default function Template({
             <p>{post.frontmatter.pictext}</p> 
           </StyledCaption>
           <div className="row">
-            <div className="blog-post-content col-10 offset-1 pt-5">
-              <MDXRenderer >{data.mdx.code.body}</MDXRenderer>
-            </div>
+            {/* <div
+            className="blog-post-content col-10 offset-1 pt-5"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            /> */}
+            <MDXRenderer >{data.mdx.code.body}</MDXRenderer>
           </div>
         </StyledPost>
         <StyledPostFooter className="container">
@@ -188,7 +190,7 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query casePostByPath($path: String!) {
+  query casesPostByPath($path: String!) {
     mdx(
         frontmatter: { path: { eq: $path } }
     ) {

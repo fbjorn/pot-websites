@@ -11,6 +11,7 @@ exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
     const blogTemplate = path.resolve(`src/templates/blog-template.js`);
     const newsTemplate = path.resolve(`src/templates/news-template.js`);
+    const caseTemplate = path.resolve(`src/templates/case-template.js`);
     const eventTemplate = path.resolve(`src/templates/event-template.js`);
     const pageTemplate = path.resolve(`src/templates/page-template.js`);
     const pricingTemplate = path.resolve(`src/templates/pricing-template.js`);
@@ -60,7 +61,28 @@ exports.createPages = ({ actions, graphql }) => {
             }
         }
         news: allMdx(
-            filter: { frontmatter: { type: { eq: "event" } } }
+            filter: { frontmatter: { type: { eq: "news" } } }
+            sort: { order: DESC, fields: [frontmatter___date] }
+        ) {
+            edges {
+                node {
+                    excerpt(pruneLength: 250)
+                    id
+                    frontmatter {
+                        title
+                        date(formatString: "MMMM DD, YYYY")
+                        path
+                        type
+                        author
+                        pic
+                        pictext
+                        subtype
+                    }
+                }
+            }
+        }
+        case: allMdx(
+            filter: { frontmatter: { type: { eq: "case" } } }
             sort: { order: DESC, fields: [frontmatter___date] }
         ) {
             edges {
@@ -143,6 +165,14 @@ exports.createPages = ({ actions, graphql }) => {
             createPage({
                 path: node.frontmatter.path,
                 component: newsTemplate,
+                context: {} // additional data can be passed via context
+            });
+        });
+
+        result.data.case.edges.forEach(({ node }) => {
+            createPage({
+                path: node.frontmatter.path,
+                component: caseTemplate,
                 context: {} // additional data can be passed via context
             });
         });

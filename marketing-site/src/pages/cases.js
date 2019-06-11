@@ -92,7 +92,7 @@ const StyledHexImage = styled.div`
   clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
 `
 
-export default function News({ data }) {
+export default function Cases({ data }) {
   const { edges: posts } = data.allMdx;
   return (
     <Layout className="blog-posts">
@@ -172,9 +172,9 @@ export default function News({ data }) {
   );
 }
 export const pageQuery = graphql`
-  query newsQuery {
+  query caseQuery {
     allMdx(
-      filter: { frontmatter: { type: { eq: "blog" } } }
+      filter: { frontmatter: { type: { eq: "case" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
