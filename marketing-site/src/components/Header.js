@@ -1,6 +1,6 @@
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Link } from 'gatsby'
 
 import MenuFooter from './MenuFooter'
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
@@ -35,7 +35,7 @@ class Header extends React.Component {
             </nav>
             <nav className="site"> 
               <Link className="nav-link" to="/pricing" activeStyle={activeStyles}>Pricing</Link>
-              <Link className="nav-link" to="/use-cases" activeStyle={activeStyles}>Cases</Link>
+              <Link className="nav-link" to="/cases" activeStyle={activeStyles}>Cases</Link>
               <Link className="nav-link" to="/news" activeStyle={activeStyles}>News</Link>
               <Link className="nav-link" to="/events" activeStyle={activeStyles}>Events</Link>
               <Link className="nav-link" to="/about" activeStyle={activeStyles}>About</Link>

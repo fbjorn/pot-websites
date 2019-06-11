@@ -92,7 +92,7 @@ const StyledHexImage = styled.div`
   clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
 `
 
-export default function Events({ data }) {
+export default function Cases({ data }) {
   const { edges: posts } = data.allMdx;
   return (
     <Layout className="blog-posts">
@@ -103,20 +103,16 @@ export default function Events({ data }) {
           </StyledSelector>
           <StyledSelector className="tool-block blocks">
             <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
-            <span>Blogs</span>
+            <span>Business</span>
           </StyledSelector>
           <StyledSelector className="tool-block press-releases">
             <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
-            <span>Press releases</span>
-          </StyledSelector>
-          <StyledSelector className="tool-block articles">
-            <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.notice } />
-            <span>Articles</span>
+            <span>Tech</span>
           </StyledSelector>
           
         </StyledTools>
         <StyledBlogs className="posts">
-          <h1>Events</h1>
+          <h1>Cases</h1>
         
         {posts
           // .filter(post => post.node.frontmatter.title.length > 0)
@@ -172,9 +168,9 @@ export default function Events({ data }) {
   );
 }
 export const pageQuery = graphql`
-  query eventsQuery {
+  query caseQuery {
     allMdx(
-      filter: { frontmatter: { type: { eq: "event" } } }
+      filter: { frontmatter: { type: { eq: "case" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

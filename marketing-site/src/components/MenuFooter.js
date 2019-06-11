@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
 import Facebook from "../images/facebook-square-brands.svg"
@@ -38,12 +39,15 @@ const MenuFooter = () => (
           </nav>
         </div>
 
-        {/* <nav className="sitemap col-md-2 mb-md-0 mb-3">
+         <nav className="sitemap col-md-2 mb-md-0 mb-3">
 
           <h5 className="text-uppercase">Pages</h5>
           <ul className="list-unstyled">
             <li>
               <Link className="nav-link" to="/pricing">Pricing plans</Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/cases">Cases</Link>
             </li>
             <li>
               <Link className="nav-link" to="/news">News</Link>
@@ -52,11 +56,14 @@ const MenuFooter = () => (
               <Link className="nav-link" to="/events">Events</Link>
             </li>
             <li>
-              <Link className="nav-link" to="/Team">Team</Link>
+              <Link className="nav-link" to="/about">About</Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
-
+{/*
         <nav className="sitemap col-md-2 mb-md-0 mb-3">
           <h5 className="text-uppercase">Services</h5>
           <ul className="list-unstyled">

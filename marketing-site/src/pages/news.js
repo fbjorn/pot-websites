@@ -88,12 +88,14 @@ const StyledBlogBlock = styled.article`
 const StyledHexImage = styled.div`
   // max-width: 250px;
   // margin-bottom: 2rem;
+  // width: 100px;
+  // height: 100px;
   transform: translateX(-1rem) rotate(10deg) scale(0.9);
   clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
 `
 
 export default function News({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
+  const { edges: posts } = data.allMdx;
   return (
     <Layout className="blog-posts">
       <StyledSection className="posts-listing">
@@ -173,8 +175,8 @@ export default function News({ data }) {
 }
 export const pageQuery = graphql`
   query newsQuery {
-    allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "blog" } } }
+    allMdx(
+      filter: { frontmatter: { type: { eq: "news" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

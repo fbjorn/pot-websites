@@ -9,6 +9,12 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`]
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -37,6 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        // path: `${__dirname}/src/content`,
         path: `${__dirname}/src/pages`,
         name: 'pages',
       },

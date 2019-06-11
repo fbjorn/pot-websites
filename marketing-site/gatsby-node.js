@@ -10,9 +10,10 @@ const { createFilePath, createFileNode } = require(`gatsby-source-filesystem`)
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
     const blogTemplate = path.resolve(`src/templates/blog-template.js`);
+    const newsTemplate = path.resolve(`src/templates/news-template.js`);
+    const caseTemplate = path.resolve(`src/templates/case-template.js`);
     const eventTemplate = path.resolve(`src/templates/event-template.js`);
     const pageTemplate = path.resolve(`src/templates/page-template.js`);
-    const usecaseTemplate = path.resolve(`src/templates/usecase-template.js`);
     const pricingTemplate = path.resolve(`src/templates/pricing-template.js`);
     return graphql(`
     {
@@ -38,14 +39,56 @@ exports.createPages = ({ actions, graphql }) => {
                 }
             }
         }
-        events: allMarkdownRemark(
+        events: allMdx(
             filter: { frontmatter: { type: { eq: "event" } } }
             sort: { order: DESC, fields: [frontmatter___date] }
         ) {
             edges {
                 node {
                     excerpt(pruneLength: 250)
-                    html
+                    id
+                    frontmatter {
+                        title
+                        date(formatString: "MMMM DD, YYYY")
+                        path
+                        type
+                        author
+                        pic
+                        pictext
+                        subtype
+                    }
+                }
+            }
+        }
+        news: allMdx(
+            filter: { frontmatter: { type: { eq: "news" } } }
+            sort: { order: DESC, fields: [frontmatter___date] }
+        ) {
+            edges {
+                node {
+                    excerpt(pruneLength: 250)
+                    id
+                    frontmatter {
+                        title
+                        date(formatString: "MMMM DD, YYYY")
+                        path
+                        type
+                        author
+                        authorpic
+                        pic
+                        pictext
+                        subtype
+                    }
+                }
+            }
+        }
+        case: allMdx(
+            filter: { frontmatter: { type: { eq: "case" } } }
+            sort: { order: DESC, fields: [frontmatter___date] }
+        ) {
+            edges {
+                node {
+                    excerpt(pruneLength: 250)
                     id
                     frontmatter {
                         title
@@ -62,24 +105,6 @@ exports.createPages = ({ actions, graphql }) => {
         }
         pages: allMarkdownRemark(
             filter: { frontmatter: { type: { eq: "page" } } }
-            sort: { order: DESC, fields: [frontmatter___date] }
-        ) {
-            edges {
-                node {
-                    excerpt(pruneLength: 250)
-                    html
-                    id
-                    frontmatter {
-                        title
-                        date(formatString: "MMMM DD, YYYY")
-                        path
-                        type
-                    }
-                }
-            }
-        }
-        usecases: allMarkdownRemark(
-            filter: { frontmatter: { type: { eq: "usecase" } } }
             sort: { order: DESC, fields: [frontmatter___date] }
         ) {
             edges {
@@ -137,18 +162,26 @@ exports.createPages = ({ actions, graphql }) => {
             });
         });
 
-        result.data.pages.edges.forEach(({ node }) => {
+        result.data.news.edges.forEach(({ node }) => {
             createPage({
                 path: node.frontmatter.path,
-                component: pageTemplate,
+                component: newsTemplate,
                 context: {} // additional data can be passed via context
             });
         });
 
-        result.data.usecases.edges.forEach(({ node }) => {
+        result.data.case.edges.forEach(({ node }) => {
             createPage({
                 path: node.frontmatter.path,
-                component: usecaseTemplate,
+                component: caseTemplate,
+                context: {} // additional data can be passed via context
+            });
+        });
+
+        result.data.pages.edges.forEach(({ node }) => {
+            createPage({
+                path: node.frontmatter.path,
+                component: pageTemplate,
                 context: {} // additional data can be passed via context
             });
         });

@@ -2,7 +2,8 @@
 path: "/blogs/low-loc-developer-experience"
 date: "2019-01-15T13:30:33.962Z"
 title: "Introducing Low LOC developer experience concept"
-image: ./developer-problem.png
+image: "./developer-problem.png"
+pic: "developer-problem.png"
 type: "blog"
 subtype: "blog"
 tags: ['javascript','react','gatsby']
@@ -14,19 +15,19 @@ status: "published"
 Developers as they are traditionally understood are accustomed to use code – they actually breathe and eat code. Platform of Trust utilizes APIs extensively. Platform is built with microservice pattern (with common sense) and APIs fill our internal world. Platform capabilities are exposed with APIs as well. The first public APIs are REST style. Benefits and limitations of GraphQL API is under discussions and in the future we might have GraphQL APIs as well (not a promise). I'll discuss the specific APIs in future articles, but there will be plethora of APIs to manage marketplace, access data from various sources, handle user signup/login and profiles to mention a few.
 
 
-# Specific easy to understand APIs
+## Specific easy to understand APIs
 
 As it was mentioned in previous article (in Finnish), developer experience is one of fundamental elements of our platform. Since platform will expose capabilities with multiple REST APIs we need to put a lot of effort in building the best possible developer experience.
 
 It is claimed that REST style APIs and microservice pattern has taken us to situation where APIs are compact packages and build for rather specific purpose. Thus APIs are pretty easy to understand (why they exist) and how to use them (good documentation is assumed). REST APIs are said to be so easy to consume that anything else is obsolete. I disagree with that when it comes to platforms.
 
-# Problem solving requires multiple APIs
+## Problem solving requires multiple APIs
 
 Yet to consume services and capabilities of any platform developer often needs to utilize multiple APIs. Developer needs to look at each of the APIs and build a logic in which order to use each and resolve the authentication. This is where libraries and ready-made components come into play. I know the title of this article might look odd and sound like marketing bullshit, but there's a solid idea behind it.
 
 <blockquote>We can't afford to lose any of the developers Platform of Trust will attract. Instead the aim is to increase the share of developers in the ecosystem by any means available. </blockquote>
 
-# Lower the barrier even more
+## Lower the barrier even more
 
 Ease of use is a way to make sure that larger proportion of the developers can take advantage of your solution. The amount of developers in major application development platforms show that the cap is around 0,28% (white line in below pic. That amount of the platform "users" as developers are in iOS 0,28%, Facebook 0,20% and Android 0,27%.
 
