@@ -2,8 +2,9 @@
 path: "/events/apidays-2019"
 date: "2019-01-18T13:30:33.962Z"
 title: "Meet Platform of Trust at APIDays Finland 2019"
-image: ./apidays-venue.png
-type: "blog"
+image: "./apidays-venue.png"
+pic: "apidays-venue.png"
+type: "foo"
 subtype: "news"
 tags: ['javascript','react','gatsby']
 lang: "en-GB"
@@ -21,7 +22,7 @@ Banks and FinTech are already experiencing a forced change towards APIs and ecos
 
 This event is not only for those already in the API and platform game or being challenged by recent legal requirements. This event is for sharing information, getting inspiration from customers, competitors and across industries, as well as experts. 
 
-# Time & Place
+## Time & Place
 
 4.-5.6.2019 Helsinki in award winning event center Koskenranta
 Katariina Saksilaisen katu 9 , 00560 Helsinki, Finland

@@ -2,7 +2,8 @@
 path: "/blogs/problem-to-solve"
 date: "2019-01-19T13:30:33.962Z"
 title: "What Problem are we trying to solve with the community?"
-image: ./developer-problem.png
+image: "./developer-problem.png"
+pic: "developer-problem.png"
 type: "blog"
 tags: ['javascript','react','gatsby']
 status: "published"
