@@ -103,20 +103,16 @@ export default function Cases({ data }) {
           </StyledSelector>
           <StyledSelector className="tool-block blocks">
             <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
-            <span>Blogs</span>
+            <span>Business</span>
           </StyledSelector>
           <StyledSelector className="tool-block press-releases">
             <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
-            <span>Press releases</span>
-          </StyledSelector>
-          <StyledSelector className="tool-block articles">
-            <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.notice } />
-            <span>Articles</span>
+            <span>Tech</span>
           </StyledSelector>
           
         </StyledTools>
         <StyledBlogs className="posts">
-          <h1>News</h1>
+          <h1>Cases</h1>
         
         {posts
           // .filter(post => post.node.frontmatter.title.length > 0)
