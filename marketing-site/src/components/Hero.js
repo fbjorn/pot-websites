@@ -1,65 +1,43 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
+import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import styled from 'styled-components'
 
-import FeaturedNews from './FeaturedNews'
+import HexImage from './HexImage'
+
+import { device, variables } from '../Theme.js'
 
 const StyledHero = styled.div`
-@media (max-width: 768px) {
-  &&& { display: none; }
-}
+position: relative;
+border: 1px solid red;
+margin-bottom: 25%;
+`
+const StyledBg =styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+`
+const StyledContent =styled.h1`
+  position: relative;
+  padding: 25% 1rem 25% 50%;
+  color: white;
+  font-size: 1.4rem; 
+  z-index: 2;
+  @media ${device.tablet} { font-size: 3rem; }
+  @media ${device.laptop} { font-size: 2rem; }
 `
 
 const Hero = ({ data }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        intro: allMarkdownRemark(filter: {
-          frontmatter: {
-          # path: {eq: "/index#introduction"}, 
-          section: {eq: "herohex"}
-          }}) {
-            totalCount
-            edges {
-            node {
-              id
-              html
-              frontmatter {
-                  title
-                  path
-                }
-              }
-            }
-          }
-      }
-    `}
-    render={data => (
-      <StyledHero className="hero">
-        <svg height="0" width="0" viewBox="0 0 500 500" >
-          <defs>
-              <clipPath id="hex-clip" clipPathUnits="objectBoundingBox">
-                <polygon fill="none" points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
-              </clipPath>
-          </defs>
-        </svg>
-        <div id="herohex" className="hexagon-wrapper hex-shadow">
-          <span className="hex-bg" />
-          <span className="hex-content">
+  <StyledHero>
+    <StyledBg>
+      <HexImage />
+    </StyledBg>
 
-            {data.intro.edges.map(({ node }) => (
-              <h1 
-                key={node.id} 
-                className="content-fragment" 
-                dangerouslySetInnerHTML={{ __html: node.html }} 
-              />
-            ))} 
-
-          </span>
-        </div>
-        <FeaturedNews />
-      </StyledHero>
-    )}
-  />
+    <StyledContent>
+      Create better living environment and make smarter business decisions with flowing data
+    </StyledContent>
+  </StyledHero>
 )
 
 export default Hero

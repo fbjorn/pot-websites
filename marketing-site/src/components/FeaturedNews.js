@@ -15,10 +15,10 @@ const FeaturedNews = ({ data }) => (
     query={graphql`
       query {
         news: allMarkdownRemark(
-          limit: 3
+          limit: 2
           filter: {
             frontmatter: {
-              type: {eq: "blog"}
+              type: {eq: "news"}
               status: {eq: "published"}
             }
           },
@@ -40,6 +40,7 @@ const FeaturedNews = ({ data }) => (
                 tags
                 status
                 type
+                subtype
               }
               excerpt(
                 format: PLAIN
@@ -52,9 +53,8 @@ const FeaturedNews = ({ data }) => (
       }
     `}
     render={data => (
-      <StyledNews className="featured-news hexagon-wrapper">
-        <span className="hex-bg"></span>
-        <div className="hex-content">
+      <StyledNews>
+        <div>
           <h2>Latest News</h2>
 
           {data.news.edges.map(({ node }) => (

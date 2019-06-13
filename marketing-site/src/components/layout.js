@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 // import { Global, css } from "@emotion/core"
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import Helmet from 'react-helmet'
 
@@ -19,14 +19,25 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 
 import Header from './Header'
 import Footer from './Footer'
+import BgImage from '../images/bg-image.svg'
 import './Layout.css'
 
 library.add( fal, fab, faHexagon )
 // icon({prefix: 'fal', iconName: 'draftingCompass'})
 
-const Wrapper = styled("div")`
-margin: '0 auto',
-paddingTop: 0,
+const StyledSite = styled.section`
+  background-color: #a897fe;
+  background-image: url("${BgImage}");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #f0f0f0;
+`
+
+const StyledWrapper = styled.section`
+  margin: '0 auto';
+  padding-top: 0,
+  &&& {a { color: white }}
 `
 
 const Layout = ({ pathname, children }) => (
@@ -42,25 +53,16 @@ const Layout = ({ pathname, children }) => (
       }
     `}
     render={data => (
-      <>
-        <Helmet title={data.site.siteMetadata.title}>
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:image"
-            content={`${data.site.siteMetadata.siteUrl}${pathname}twitter-card.jpg`}
+      <StyledSite>
+        <Helmet title={data.site.siteMetadata.title}>}
           />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Wrapper
-          // style={{
-          //   margin: `0 auto`,
-          //   paddingTop: 0,
-          // }}
-        >
+        <StyledWrapper>
           {children}
-        </Wrapper>
+        </StyledWrapper>
         <Footer />
-      </>
+      </StyledSite>
     )}
   />
 )
