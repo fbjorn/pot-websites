@@ -11,9 +11,15 @@ import Linkedin from "../images/linkedin-square-brands.svg"
 import { colors, device } from '../Theme.js'
 
 const StyledFooter = styled.footer`
+  max-height: 30px;
   background: ${colors.mainDark};
+  clip-path: url("#footerPathSVG");
   div { padding: 0; }
-  .logo-footer { svg { width: 100%; }}
+  .logo-footer { 
+    opacity: 0.5;
+    max-width: 30%;
+    svg { width: 100%; }
+  }
   .logo-mobile { display: block; }
   .logo-mobile { @media ${device.laptop} { display: none; } }
   .logo-desk { display: none; }
@@ -21,6 +27,7 @@ const StyledFooter = styled.footer`
   .sitemap { display: none; }
   .sitemap { @media ${device.laptop} { display: block; } }
   .footer-contact { 
+    opacity: 0.5;
     text-align: left;
     font-size: 0.6rem; 
     h5 { font-size: 0.8rem; }
@@ -71,8 +78,8 @@ const Footer = () => (
           <Link to="/">Login</Link><br />
         </div>
 
-        <div className="footer-somelinks  col-4 col-lg-1 mb-md-0 mb-3 text-right">
-          <nav className="some-links mt-4">
+        <div className="footer-somelinks  col-4 col-lg-1 text-right">
+          <nav className="some-links">
             <a href="https://www.facebook.com/platformoftrust" className="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
             <a href="https://twitter.com/PlatformOfTrust" className="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>
             <a href="https://www.linkedin.com/company/platform-of-trust/" className="some-link github"><img src={Linkedin} className="some-icon" alt="Github" /></a>
