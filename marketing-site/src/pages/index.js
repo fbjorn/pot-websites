@@ -16,7 +16,6 @@ import NewsletterCTA from '../components/NewsletterCTA'
 import CustomImage from '../components/CustomImage'
 import HexImage from '../components/HexImage'
 import FeaturedNews from '../components/FeaturedNews'
-FeaturedNews
 
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/global.css'
@@ -53,18 +52,13 @@ const IndexPage = ({ data }) => (
             </div>
           ))}  
         </div>*/}
+        
         <div className="row">
-          <div className="col-xl-4">
-            {/* <HexImage /> */}
-            {/* <CustomImage filename="hex-test.svg" alt="foo" /> */}
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xl-5 offset-xl-1">
+          <div className="col-xl-7 offset-xl-1">
             <Hero />
             <FeaturedNews />
           </div>
-          <div className="col-xl-4">
+          <div className="col-xl-3">
             <Featured />
           </div>
         </div>

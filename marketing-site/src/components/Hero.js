@@ -9,8 +9,10 @@ import { device, variables } from '../Theme.js'
 
 const StyledHero = styled.div`
 position: relative;
-border: 1px solid red;
-margin-bottom: 25%;
+padding-top: 77%;
+width: 66.666%;
+// border: 1px solid red;
+z-index: 2;
 `
 const StyledBg =styled.div`
   position: absolute;
@@ -19,8 +21,11 @@ const StyledBg =styled.div`
   z-index: 0;
 `
 const StyledContent =styled.h1`
-  position: relative;
-  padding: 25% 1rem 25% 50%;
+  position: absolute;
+  // padding: 25% 1rem 25% 50%;
+  width: 45%;
+  top: 25%;
+  left: 50%;
   color: white;
   font-size: 1.4rem; 
   z-index: 2;

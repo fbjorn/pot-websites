@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import HexSvg from '../images/hex-test.svg'
 import HexBg from '../images/bg-square2.jpg'
 
 import { colors } from '../Theme.js'
 
 const StyledHexImage = styled.div`
-// background: green;
 height: 100%;
 width: auto;
 svg: { height: 50%; }
@@ -19,7 +17,6 @@ const HexImage = (props) => {
     <StyledHexImage 
       color={props.color}
       > 
-      {/* <img src={HexSvg} alt="foo" /> */}
       
       <svg xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink"  viewBox="0 0 86 100">
         <defs>
