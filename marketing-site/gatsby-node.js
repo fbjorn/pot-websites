@@ -82,7 +82,7 @@ exports.createPages = ({ actions, graphql }) => {
                 }
             }
         }
-        case: allMdx(
+        cases: allMdx(
             filter: { frontmatter: { type: { eq: "case" } } }
             sort: { order: DESC, fields: [frontmatter___date] }
         ) {
@@ -170,7 +170,7 @@ exports.createPages = ({ actions, graphql }) => {
             });
         });
 
-        result.data.case.edges.forEach(({ node }) => {
+        result.data.cases.edges.forEach(({ node }) => {
             createPage({
                 path: node.frontmatter.path,
                 component: caseTemplate,

@@ -16,15 +16,15 @@ export const colors = {
 }
 
 export const variables = {
-  pageWidth: '1440px',
+  pageWidth: '1240px',
 }
 
 const size = {
   mobileS: '320px',
   mobileM: '375px',
-  mobileL: '425px',
+  mobileL: '576px',
   tablet: '768px',
-  laptop: '1024px',
+  laptop: '992px',
   laptopL: '1440px',
   desktop: '2560px'
 }

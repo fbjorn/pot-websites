@@ -22,6 +22,8 @@ import Footer from './Footer'
 import BgImage from '../images/bg-image.svg'
 import './Layout.css'
 
+import { colors } from '../Theme.js'
+
 library.add( fal, fab, faHexagon )
 // icon({prefix: 'fal', iconName: 'draftingCompass'})
 
@@ -37,7 +39,12 @@ const StyledSite = styled.section`
 const StyledWrapper = styled.section`
   margin: '0 auto';
   padding-top: 0,
-  &&& {a { color: white }}
+  &&& {
+    a { color: ${colors.light}; }
+  }
+  &&& {
+    a:hover { color: red; }
+  }
 `
 
 const Layout = ({ pathname, children }) => (

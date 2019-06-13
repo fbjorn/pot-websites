@@ -190,10 +190,9 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query casesPostByPath($path: String!) {
-    mdx(
-        frontmatter: { path: { eq: $path } }
-    ) {
+  query CasePostQuery($id: String) {
+    mdx(id: { eq: $id }) {
+      id
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path

@@ -1,17 +1,17 @@
 import React from 'react'
-import { StaticQuery, graphql } from "gatsby"
-import MDXRenderer from "gatsby-mdx/mdx-renderer"
+// import { StaticQuery, graphql } from "gatsby"
+// import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import styled from 'styled-components'
 
+import HexBg from '../images/bg-square2.jpg'
 import HexImage from './HexImage'
-
-import { device, variables } from '../Theme.js'
+import { device } from '../Theme.js'
 
 const StyledHero = styled.div`
 position: relative;
-padding-top: 77%;
-width: 66.666%;
-// border: 1px solid red;
+padding-top: 100%;
+width: 100%;
+@media ${device.tablet} { width: 66.666%; padding-top: 77%; }
 z-index: 2;
 `
 const StyledBg =styled.div`
@@ -27,16 +27,17 @@ const StyledContent =styled.h1`
   top: 25%;
   left: 50%;
   color: white;
-  font-size: 1.4rem; 
+  font-size: 5vw;
+  // @media ${device.mobileL} { font-size: 1.8rem; }
+  @media ${device.tablet} { font-size: 1.6rem; }
+  @media ${device.laptopL} { font-size: 2rem; }
   z-index: 2;
-  @media ${device.tablet} { font-size: 3rem; }
-  @media ${device.laptop} { font-size: 2rem; }
 `
 
 const Hero = ({ data }) => (
   <StyledHero>
     <StyledBg>
-      <HexImage />
+      <HexImage pic={HexBg}/>
     </StyledBg>
 
     <StyledContent>

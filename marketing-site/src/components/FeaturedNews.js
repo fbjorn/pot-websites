@@ -1,16 +1,18 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from "gatsby"
-
+import { StaticQuery, graphql, Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
 import HexSvg from '../images/hex.svg'
+import { device } from '../Theme.js'
 
 const StyledNews = styled.div`
+  display: none; 
+  @media ${device.tablet} { display: block }
   position: relative;
   background: url(${HexSvg});
   background-size: cover; 
-  margin-top: -58%;
+  margin-top: -57.5%;
   width: 66.6%;
   margin-left: 33.333%;
   padding-top: 77%;
@@ -20,18 +22,21 @@ const StyledNews = styled.div`
   }
 `
 const StyledContent = styled.div`
-  // display: none;
   position: absolute;
   top: 25%;
   width: calc(50% - 2rem);
   left: calc(50% + 1rem);
   a:link { text-decoration: none; }
+  a:hover { color: white; }
   a.go-to-link { text-decoration: 2px dotted; }
+  h2 {
+    @media ${device.tablet} { font-size: 1.6rem; }
+  }
   span {
-    font-size: 1rem;
+    @media ${device.laptop} { font-size: 60% }
+    @media ${device.laptopL} { font-size: 80% }
   }
   .meta {
-    font-size: 80%;
     margin-bottom: 0.2em;
     .type, .date {
       text-transform: capitalize;
@@ -46,12 +51,11 @@ const StyledContent = styled.div`
   .title-excerpt {
     padding-bottom: 0.4em;
     border-bottom: 1px dotted white;
-    font-size: 1.2rem;
     font-weight: 300;
+    font-size: 0.8rem; 
+    @media ${device.laptop} { font-size: 0.8rem; }
+    @media ${device.laptopL} { font-size: 1.2rem; }
   }  
-  @media (max-width: 768px) {
-    // &&& { display: none; }
-  }
 `
 const FeaturedNews = ({ data }) => (
   <StaticQuery

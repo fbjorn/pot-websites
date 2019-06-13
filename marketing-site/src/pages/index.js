@@ -54,11 +54,11 @@ const IndexPage = ({ data }) => (
         </div>*/}
         
         <div className="row">
-          <div className="col-xl-7 offset-xl-1">
+          <div className="col-12 col-sm-10 offset-sm-1 col-lg-7">
             <Hero />
             <FeaturedNews />
           </div>
-          <div className="col-xl-3">
+          <div className="col-9 offset-3 col-sm-6 offset-sm-3 col-lg-3 offset-lg-0">
             <Featured />
           </div>
         </div>
@@ -117,29 +117,29 @@ const IndexPage = ({ data }) => (
           </div>
         </div>
 
-        <div className="row mt-5">
+        {/* <div className="row mt-5">
           <SavedVizs />
-        </div>
+        </div> */}
 
         <div className="row mt-5">
           <ToolsIntro />
         </div>
         
-        <div className="row mt-5">
+        {/* <div className="row mt-5">
           <div className="col-12">
             <h2 className="mb-5">Enjoy the benefits:</h2>
             <PricingCards />      
           </div>
-        </div>
+        </div> */}
         
-        <div className="row">
+        {/* <div className="row">
           <div className="col-lg-4 text-left">
             <CustomRoundedButton label="Book online presentation"/>
           </div>
           <div className="col-lg-2 offset-md-6 text-right">
             <CustomRoundedButton label="Get started"/>
           </div>
-        </div>
+        </div> */}
         
         <div className="row mt-5">
           <div className="col-12">
