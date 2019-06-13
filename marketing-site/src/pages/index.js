@@ -111,11 +111,11 @@ const IndexPage = ({ data }) => (
           </div>
         </div>
 
-        <div className="row mt-5">
+        {/* <div className="row mt-5">
           <div className="col-12">
             <h2>What if you <strong>used</strong> your data?</h2>
           </div>
-        </div>
+        </div> */}
 
         {/* <div className="row mt-5">
           <SavedVizs />
