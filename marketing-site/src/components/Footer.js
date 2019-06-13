@@ -11,13 +11,11 @@ import Linkedin from "../images/linkedin-square-brands.svg"
 import { colors, device } from '../Theme.js'
 
 const StyledFooter = styled.footer`
-  max-height: 30px;
   background: ${colors.mainDark};
   clip-path: url("#footerPathSVG");
-  div { padding: 0; }
+  div { padding: 0 0.5rem 0 0.5rem; }
   .logo-footer { 
     opacity: 0.5;
-    max-width: 30%;
     svg { width: 100%; }
   }
   .logo-mobile { display: block; }
@@ -51,7 +49,7 @@ const Footer = () => (
           <img src={LogoSymbol} className="logo-footer logo-mobile" alt="Logo" />
         </div>
 
-        <div className="footer-contact col-4 col-lg-2 mt-md-0 mt-3">
+        <div className="footer-contact col-4 col-lg-2 mt-md-0 mt-1">
           <h5 className="mb-md-3">Platform of Trust</h5>
           <p>Business ID FI29800052</p>
           {/* <p><a href="https://www.tilaajavastuu.fi/en/data-protection/">Data protection statement</a></p>*/}
