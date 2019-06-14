@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import styled from 'styled-components'
 
-import CustomRoundedButton from '../components/CustomRoundedButton'
+import Video from '../components/Video'
+// import CustomRoundedButton from '../components/CustomRoundedButton'
 import HexIcon from '../components/hexIcon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { colors, device, variables } from '../Theme.js'
@@ -12,7 +13,6 @@ import { colors, device, variables } from '../Theme.js'
 const StyledPage = styled.div`
   width: auto;
   max-width: ${ variables.pageWidthNarrow };
-  min-height: 75vh;
   margin: 0 auto;
   * { color: white }
 `
@@ -28,17 +28,6 @@ const StyledSection = styled.section`
   &&& { max-width: ${ variables.pageWidth } }
   margin: 5rem auto;   
 `
-const StyledVideo = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  @media ${ device.laptop } { width: 70%; }
-  min-height: 30vh;
-  margin: 0 auto 0 0;   
-  background-color: black;
-  h2{ color: ${ colors.white }; }
-`
 
 const About = () => (
   <Layout>
@@ -51,11 +40,16 @@ const About = () => (
       </defs>
     </svg>
     <StyledPage>
-      <h1>About</h1>
-      <StyledGraph>
-        <h2>Graafi</h2> 
-      </StyledGraph>  
+      
+       
       <StyledSection className="container">
+        <div classname="row">
+          <h1>About</h1>
+            
+            <StyledGraph>
+              <h2>Graafi</h2> 
+            </StyledGraph> 
+        </div>
         <div className="row">
           <div className="col-md-6">
             <p>Communally built Platform of Trust is a platform that makes data move between systems and organisations. It makes knowledge-based decisions possible but also creates grounds for new business models with harmonised data. </p>
@@ -84,9 +78,10 @@ const About = () => (
       </StyledSection>
       <StyledSection className="container">
         <h2>Platform of Trust benefits in one minute by CEO Toni Luhti</h2>
-        <StyledVideo>
-          <FontAwesomeIcon icon={['fal', 'play']} size="4x" />
-        </StyledVideo>
+        <Video 
+          videoSrcURL="https://www.youtube.com/embed/sGgt88bkoOA"
+          videoTitle="Start using your data"
+        />
         {/* <Link to="/">
           <CustomRoundedButton label="See our pricing plans" textColor="light" bgColor="tomato" />
         </Link> */}

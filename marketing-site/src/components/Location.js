@@ -16,10 +16,13 @@ const StyledLocation = styled.article`
     opacity: 0.9;
     h3 {
       font-size: 1.2rem;
-      font-weight: 900;
+      font-weight: 500;
+      margin: 1em 0 0 0;
     }
     p {
       font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 0.2rem;
     }
   }
 `

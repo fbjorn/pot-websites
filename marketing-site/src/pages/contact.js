@@ -11,7 +11,8 @@ import { colors, device, variables } from '../Theme.js'
 
 const StyledPage = styled.div`
   width: auto;
-  max-width: ${ variables.pageWidth };
+  max-width: ${ variables.pageWidthNarrow };
+  margin: 0 auto;
   min-height: 75vh;
   margin: 0 auto;
   @media ${ device.laptop } {
@@ -33,6 +34,10 @@ const StyledSection = styled.section`
 const StyledBilling = styled.article`
   border: 2px solid;
   padding: 1rem;
+  p {
+    font-size: 1.7rem;
+    line-height: 1.125;
+  }
 `
 
 const Contact = () => (
