@@ -8,13 +8,12 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Layout from '../components/layout'
+import CustomImage from "../components/CustomImage"
 import { colors, device, variables } from '../Theme.js'
 
 const StyledBlog = styled.article`
-  width: auto;
-  max-width: 1440px;
-  min-height: 75vh;
-  margin: 0 auto;
+  &&& { max-width: ${ variables.pageWidthNarrow } }
+  margin: 0 auto ;
   @media ${device.laptop} {
   }
 `
@@ -48,22 +47,23 @@ const StyledPost = styled.div`
   background: ${colors.mainDarker};
 `
 const StyledCaption = styled.div`
-width: 100%
-position: absolute;
-transform: translateY(-100%);
-background: linear-gradient(to bottom, rgba(0,0,0,0), ${colors.mainDarker} 100%);
-padding: 4rem 10% 0;
-justify-content: flex-end;
-p {
-  max-width: 30%;
-  border-top: 2px dotted white;
-  padding-top: 1em;
-  font-size: 1rem;
-  color: white;
-}
+  width: 100%
+  position: absolute;
+  transform: translateY(-100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0), ${colors.mainDarker} 100%);
+  padding: 4rem 10% 0;
+  justify-content: flex-end;
+  p {
+    max-width: 30%;
+    border-top: 2px dotted white;
+    padding-top: 1em;
+    font-size: 1rem;
+    color: white;
+  }
 `
 const StyledPostFooter = styled.div`
-  &&& { max-width: ${variables.pageWidth} }
+  &&& { max-width: ${ variables.pageWidthNarrow } }
+  margin: 0 auto ;
   padding: 2rem 0;
   background: ${colors.mainDarker};
   p { color: white; }
@@ -90,18 +90,39 @@ const StyledBlogFooter = styled.div`
     // &.fa-arrow-right { margin-left: 1rem; }
   }
 `
+const StyledPostContent = styled.section`
+  .case { display: flex; flex-direction: column;  }
+  .left { flex: 1; order: 2; }
+  .right { flex: 2; order: 1; }
+  @media ${device.laptop} {
+    .case { flex-direction: row; }
+    .left { flex: 1; order: 1; }
+    .right { 
+      flex: 2; 
+      order: 2; 
+      transform: translateY(-20rem);
+      margin-bottom: -20rem;
+    }
+  }
+`
+const StyledCustomImage = styled.div`
+  max-width: 350px;
+  margin-bottom: 0rem;
+  transform: translateX(-1rem) rotate(10deg) scale(1);
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
+`
 
 export default function Template({
   data, location 
 }) {
-  const post = data.mxd; 
+  const post = data.mdx; 
   return (
     <Layout pathname={location.pathname}>
       <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} />
       <StyledBlog>
         <StyledHeader className="container">
           <div className="row">
-            <Link to="/blogs"><FontAwesomeIcon icon={['fal', 'arrow-left']} /> Back to news</Link>
+            <Link to="/news"><FontAwesomeIcon icon={['fal', 'arrow-left']} /> Back to news</Link>
             <h1>{post.frontmatter.title}</h1>
             <StyledMeta>
               <FontAwesomeIcon icon={['fa', 'hexagon']} color="blue" />
@@ -119,18 +140,21 @@ export default function Template({
             <p>{post.frontmatter.pictext}</p> 
           </StyledCaption>
           <div className="row">
-            {/* <div
-            className="blog-post-content col-10 offset-1 pt-5"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            /> */}
-            <MDXRenderer >{data.mdx.code.body}</MDXRenderer>
+            <div className="blog-post-content col-10 offset-1 pt-5" > 
+              <MDXRenderer >{data.mdx.code.body}</MDXRenderer>
+            </div>
           </div>
         </StyledPost>
         <StyledPostFooter className="container">
           <div className="row">
-            <div className="col-10 offset-1">
-              <p>
-                <FontAwesomeIcon icon={['fa', 'hexagon']} color="white" size="4x" />
+            <div className="col-1 offset-1">
+              <StyledCustomImage>
+                <CustomImage filename={post.frontmatter.authorpic} alt={post.frontmatter.author} />
+              </StyledCustomImage>
+            </div>
+            <div className="col-10">
+              <p className="pt-md-5">
+                {/* <FontAwesomeIcon icon={['fa', 'hexagon']} color="white" size="4x" /> */}
                 Author {post.frontmatter.author} 
               </p>
             </div>
@@ -159,7 +183,7 @@ export default function Template({
           <div className="row">
             <div className="col col-3 offset-1">
               <p>
-                <Link to="/blogs">
+                <Link to="/news">
                   <FontAwesomeIcon icon={['fal', 'arrow-left']} color="white" size="1x" />
                   Previous article 
                 </Link>
@@ -168,7 +192,7 @@ export default function Template({
 
             <div className="col col-4">
               <p>
-                <Link to="/blogs">
+                <Link to="/news">
                   Back to news
                 </Link>
               </p>
@@ -176,7 +200,7 @@ export default function Template({
 
             <div className="col col-3">
               <p>
-                <Link to="/blogs">
+                <Link to="/news">
                   Next article 
                   <FontAwesomeIcon icon={['fal', 'arrow-right']} color="white" size="1x" />
                 </Link>
@@ -190,16 +214,19 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query CasePostQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
+  query casPostByPath($path: String!) {
+    mdx(
+        frontmatter: { path: { eq: $path } }
+    ) {
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
         title
         subtype
         author
+        authorpic
         pictext
+        pic
         image {
           childImageSharp { 
             fluid(maxWidth: 1440) {
