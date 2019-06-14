@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
     // `gatsby-plugin-emotion`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-mdx`,
