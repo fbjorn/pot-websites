@@ -75,7 +75,7 @@ const Footer = () => (
         </div> 
 
         <div className="sitemap col-md-1">
-          <Link to="/pricing">Pricing</Link><br />
+          {/* <Link to="/pricing">Pricing</Link><br /> */}
           <Link to="/cases">Cases</Link><br />
           <Link to="/news">News</Link><br />
         </div>

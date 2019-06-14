@@ -43,9 +43,9 @@ const MenuFooter = () => (
 
           <h5 className="text-uppercase">Pages</h5>
           <ul className="list-unstyled">
-            <li>
+            {/* <li>
               <Link className="nav-link" to="/pricing">Pricing plans</Link>
-            </li>
+            </li> */}
             <li>
               <Link className="nav-link" to="/cases">Cases</Link>
             </li>
