@@ -2,14 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import HubspotForm from 'react-hubspot-form'
 
-// import { colors, device } from '../Theme.js'
+import { colors } from '../Theme.js'
 
 const StyledForm = styled.article`
+  background: ${colors.mainDarker};
+  max-width: 34rem;
+  padding: 1rem;
+  box-shadow: 0 0 0.8rem ${colors.mainDarkest};
   * { color: white; }
 }
 `;
 
-const NewsletterForm = (props) => {
+const Contactform = (props) => {
   return (
     <StyledForm> 
       
@@ -24,4 +28,4 @@ const NewsletterForm = (props) => {
     </StyledForm> 
 )}
 
-export default NewsletterForm
+export default Contactform

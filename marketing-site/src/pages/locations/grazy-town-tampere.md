@@ -11,6 +11,8 @@ streetAddress: "Rautatienkatu 21 B"
 postalCode: "33100"
 addressRegion: "Tampere"
 addressCountry: "Finland"
+map: "map-crazytown.jpg"
+googlelink: "https://goo.gl/maps/BFk4Mbikm1hhtFiQ9"
 
 tags: ['Platform of Trust','location', 'Office','Tampere', 'co-working']
 lang: "en-GB" 

@@ -10,7 +10,7 @@ subtype: "article" # "blog" / "news" / "press-realease" etc.
 tags: ['Kojamo'] # Any string, can be used in search / "related content"
 lang: "en-GB" # ISO Lang attr
 author: "Vesa Ilmarinen"
-authorpic: "vesa-ilmarinen.webp"
+authorpic: "vesa-ilmarinen.jpg"
 status: "published" # "published" / "draft" / "pending" / "archived"
 ---
 The services available to residents will change everyday living. The new services will primarily be based on data collected about buildings and their use.

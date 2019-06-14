@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import ContactBlurbs from '../components/ContactBlurbs'
 import Locations from '../components/Locations'
+import ContactForm from '../components/ContactForm'
 
 
 import { colors, device, variables } from '../Theme.js'
@@ -24,7 +25,7 @@ const StyledGraph = styled.div`
   max-width: ${ variables.pageWidth };
   min-height: 30vh;
   margin: 0 auto;   
-  background-color: white;
+  // background-color: white;
   h2{ color: ${ colors.main }; }
 `
 const StyledSection = styled.section`
@@ -39,6 +40,9 @@ const StyledBilling = styled.article`
     line-height: 1.125;
   }
 `
+const StyledPad = styled.div`
+  // margin: 1rem;
+`
 
 const Contact = () => (
   <Layout>
@@ -50,30 +54,32 @@ const Contact = () => (
           </clipPath>
       </defs>
     </svg>
-    <StyledPage>
-      <h1>Contact</h1>
-      <h2>Interested in turning your data in revenue? Let us tell you how.</h2>
-      <StyledGraph>
-        <h2>Lomake</h2> 
-        <h3><q>Upotetaan Hubbarista tai Typeformista [...]</q></h3>
-      </StyledGraph>  
-
-      <StyledSection className="contacts container">
-        <h2>Meet the team</h2>
-        <ContactBlurbs />
-      </StyledSection>
-      <StyledSection className="locations container">
-        <h2>Office locations</h2>
-        <Locations />
-      </StyledSection>
-      <StyledSection className="billing container">
-        <h2>Billing information</h2>
-        <StyledBilling>
-          <p>Business ID FI29800052</p>
-          <p>Operator: OpusCapita Group Oy</p>
-          <p>OVT: 003723273271</p>
-        </StyledBilling>
-      </StyledSection>
+    <StyledPage className="container">
+      <StyledPad>
+        <StyledSection className="contacts container">
+            <h1>Contact</h1>
+            <h2>Interested in turning your data in revenue? Let us tell you how.</h2>
+            <StyledGraph>
+              <ContactForm />
+            </StyledGraph> 
+        </StyledSection>
+        <StyledSection className="contacts container">
+          <h2>Meet the team</h2>
+          <ContactBlurbs />
+        </StyledSection>
+        <StyledSection className="locations container">
+          <h2>Office locations</h2>
+          <Locations />
+        </StyledSection>
+        <StyledSection className="billing container">
+          <h2>Billing information</h2>
+          <StyledBilling>
+            <p>Business ID FI29800052</p>
+            <p>Operator: OpusCapita Group Oy</p>
+            <p>OVT: 003723273271</p>
+          </StyledBilling>
+        </StyledSection>
+      </ StyledPad>
     </StyledPage>
 
   </Layout>

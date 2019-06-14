@@ -6,7 +6,7 @@ order: 2
 
 name: "Vesa Ilmarinen"
 title: "Chief Impact Officer"
-pic: "vesa.jpg" 
+pic: "vesa-ilmarinen.jpg" 
 phone: "+358405086447"
 email: "vesa.ilmarinen@oftrust.net"
 twitter: "https://twitter.com/vesailmarinen"

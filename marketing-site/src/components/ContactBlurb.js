@@ -16,15 +16,25 @@ export const componentColors = {
 const StyledContactBlurb = styled.article`
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+  margin: 1rem
   h2 {
+    display: block;
     font-size: 1.6rem;
     font-weight: 900;
+    min-heigth: 2em;
+    border: 1px solid red;
   }
   p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 0.2em;
   }
   span { margin-right: 0.2em; }
+`
+const StyledName = styled.h2`
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 900;
 `
 const StyledCustomImage = styled.div`
   max-width: 250px;
@@ -42,21 +52,21 @@ const ContactBlurb = (props) => {
       </StyledCustomImage>
       
       <div>
-        <h2>{props.name}</h2>
+        <StyledName>{props.name}</StyledName>
         <p>{props.title}</p>
         <p><a href={`tel:${props.phone}`}>{props.phone}</a></p>
         <p><a href={`mailto:${props.email}`}>{props.email}</a></p>
         <p>
           {props.linkedin && (
             <span>
-              <a href={`mailto:${props.linkedin}`}>
+              <a href={`${props.linkedin}`} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={['fab', 'linkedin']} color="white" size="1x" />
               </a>
             </span>
           )}
           {props.twitter && (
             <span>
-              <a href={`mailto:${props.twitter}`}>
+              <a href={`${props.twitter}`} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={['fab', 'twitter-square']} color="white" size="1x" />
               </a>
             </span>

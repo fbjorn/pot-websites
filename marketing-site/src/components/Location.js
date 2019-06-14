@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { colors } from '../Theme.js'
-import Map from "../images/map.jpg"
+import CustomImage from './CustomImage'
 
 const StyledLocation = styled.article`
   margin-bottom: 1rem;
@@ -31,7 +31,9 @@ const Location = (props) => {
   return (
     <StyledLocation className="location col-12 col-md-6 col-lg-4">
       <div className="content">
-        <img src={Map}  alt="Map" />
+        <a href={`${props.googlelink}`} target="_blank" rel="noopener noreferrer">
+          <CustomImage filename={props.map} alt={props.name} />
+        </a>
         <h3>{props.name}</h3>
         <p>{props.streetAddress}</p>
         <p>{props.postalCode} {props.addressRegion}</p>

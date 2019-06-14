@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Location from './Location'
@@ -31,6 +31,8 @@ const Locations = ({ data }) => (
                 postalCode
                 addressRegion
                 addressCountry
+                map
+                googlelink
               }
             }
           }
@@ -40,7 +42,7 @@ const Locations = ({ data }) => (
     }
     render={data => (
       <StyledLocations className="locations row">
-        {data.pricing.edges.map(({ node }) => (
+        {data.pricing.edges.map(({ node, index }) => (
           <Location
             key={node.id}
             name={ node.frontmatter.name }
@@ -51,6 +53,8 @@ const Locations = ({ data }) => (
             postalCode={ node.frontmatter.postalCode }
             addressRegion={ node.frontmatter.addressRegion }
             addressCountry={ node.frontmatter.addressCountry }
+            map={ node.frontmatter.map }
+            googlelink={ node.frontmatter.googlelink }
           /> 
         ))}
       </StyledLocations>
