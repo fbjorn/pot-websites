@@ -11,11 +11,9 @@ import { colors, device, variables } from '../Theme.js'
 
 const StyledPage = styled.div`
   width: auto;
-  max-width: ${ variables.pageWidth };
+  max-width: ${ variables.pageWidthNarrow };
   min-height: 75vh;
   margin: 0 auto;
-  @media ${ device.laptop } {
-  }
   * { color: white }
 `
 const StyledGraph = styled.div`
@@ -34,7 +32,8 @@ const StyledVideo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
+  @media ${ device.laptop } { width: 70%; }
   min-height: 30vh;
   margin: 0 auto 0 0;   
   background-color: black;
@@ -58,10 +57,10 @@ const About = () => (
       </StyledGraph>  
       <StyledSection className="container">
         <div className="row">
-          <div className="col">
+          <div className="col-md-6">
             <p>Communally built Platform of Trust is a platform that makes data move between systems and organisations. It makes knowledge-based decisions possible but also creates grounds for new business models with harmonised data. </p>
           </div>
-          <div className="col">
+          <div className="col-md-6">
             <p>Platform of Trust differs from other platforms with a built-in trust engine that makes sure both the data and the data producers and users are trustworthy. </p>
           </div>
         </div>
@@ -69,16 +68,16 @@ const About = () => (
       <StyledSection className="container">
         <h2>For whom</h2>
         <div className="row">
-          <div className="col-2">
+          <div className="col-4 col-md-2">
             <HexIcon icon="chart-line" color="main" />
           </div>
-          <div className="col-4">
+          <div className="col-7 col-md-4">
             <p>Any business that is using or planning to use data for business development and new business models.</p>
           </div>
-          <div className="col-2">
+          <div className="col-4 col-md-2">
             <HexIcon icon="terminal" color="main" />
           </div>
-          <div className="col-4">
+          <div className="col-7 col-md-4">
             <p>Developers that long for faster time-to-market and want to experience high-quality developer experience.</p>
           </div>
         </div>
@@ -88,9 +87,9 @@ const About = () => (
         <StyledVideo>
           <FontAwesomeIcon icon={['fal', 'play']} size="4x" />
         </StyledVideo>
-        <Link to="/">
+        {/* <Link to="/">
           <CustomRoundedButton label="See our pricing plans" textColor="light" bgColor="tomato" />
-        </Link>
+        </Link> */}
       </StyledSection>
       <StyledSection className="container">
         <h2>Our partners and customers</h2>

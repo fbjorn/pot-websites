@@ -6,7 +6,7 @@ module.exports = {
     author: `mika@eqsign.fi`,
   },
   plugins: [
-    `gatsby-plugin-emotion`,
+    // `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-mdx`,
