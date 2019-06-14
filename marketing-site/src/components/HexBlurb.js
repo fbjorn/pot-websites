@@ -36,7 +36,7 @@ const HexBlurb = (props) => {
         <FontAwesomeIcon icon={['fal', `${props.icon}`]} size="3x" />
         <h5>{props.title}</h5>
         <p>{props.content}</p>
-      </HexContent>>
+      </HexContent>
     </Hex>
 )}
 
