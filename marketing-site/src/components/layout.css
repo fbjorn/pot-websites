@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700");
 html {
-  font-family: sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }

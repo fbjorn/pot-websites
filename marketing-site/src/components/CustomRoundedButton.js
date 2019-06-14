@@ -5,9 +5,8 @@ import { colors } from '../Theme.js'
 
 const StyledButton = styled.button`
   &&& { background: ${ props => props.bgColor ? colors[props.bgColor] : colors.alert }; }
-  border-radius: 3rem;
   &&& { color: ${ props => props.textColor ? colors[props.textColor] : colors.light }; }
-  // margin: 0.5em 1em;
+  &&& { border-radius: 3rem; }
   padding: 0.25em 1em;
   box-shadow: 0 0 0.2rem ${colors.mainDark};
   transition: all 0.1s ease-out;
@@ -17,22 +16,22 @@ const StyledButton = styled.button`
     cursor: pointer;
     border-radius: 1rem;
     color: ${colors.light};
+    &&& { box-shadow: 0 0 0.4rem ${colors.mainDarker}; }
   }
 
   &:focus {
-    &&& { background: ${colors.light}; }
+    // &&& { background: ${colors.light}; }
     cursor: pointer;
     border-radius: 1rem;
-    color: ${colors.main};
-    outline: none;
-    box-shadow: 0 0 0.2rem ${colors.main};
+    &&& { outline: none; }
+    &&& { box-shadow: 0 0 0.4rem ${colors.mainDarker}; }
   }
 
   &:active {
-    &&& { background: ${colors.light}; }
+    // &&& { background: ${colors.light}; }
     cursor: pointer;
     border-radius: 1rem;
-    color: ${colors.main};
+    box-shadow: inset 0 0 0.2rem ${colors.mainDark};
     outline: none;
   }
 

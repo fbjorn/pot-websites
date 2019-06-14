@@ -27,14 +27,6 @@ html {
 }
 body {
   font-family: 'Fira Sans', sans-serif;
-}
-#___gatsby * {
-  font-family: 'Fira Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-* {
-  font-weight: 400;
   line-height: 1.125em;
 }
 #___gatsby .logo {

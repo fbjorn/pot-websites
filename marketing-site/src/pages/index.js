@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby' 
+import { graphql, Link } from 'gatsby' 
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -19,12 +19,19 @@ import FeaturedNews from '../components/FeaturedNews'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/global.css'
-import { colors } from '../Theme.js'
+import { colors, variables } from '../Theme.js'
 
+const StyledMain = styled.main`
+  &&& { max-width: ${variables.pageWidth} }
+  margin: 0 auto;
+`
 const StyledBenefits = styled.ul`
   font-size: 1.4rem;
   list-style: none;
-  li { margin-bottom: 1em; }
+  li { 
+    margin-bottom: 1em; 
+    line-height: 1.125em
+  }
   svg {
     position: absolute;
     margin-left: -1.2em;
@@ -42,7 +49,7 @@ const IndexPage = ({ data }) => (
             </clipPath>
         </defs>
       </svg>
-      <main className="home page-content container">
+      <StyledMain className="home page-content container">
         {/*<div className="test">
           <h1 className="test">TESTING</h1>
            {data.intro.edges.map(({ node }) => (
@@ -64,15 +71,15 @@ const IndexPage = ({ data }) => (
         </div>
 
         <div className="row mt-3">
-          <div className="col-12">
+          <div className="col-md-10 offset-md-1">
             <h2>What if you <strong>used</strong> your data?</h2>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-10 col-lg-5 offset-md-1 mb-5">
             <h3>
               Your business creates exponential amounts of data that you could use to make smarter decisions and more profitable business.
             </h3>
           </div>
-          <div className="col-md-3">
+          <div className="col-6 offset-md-1 col-lg-3 offset-lg-0">
             <StyledBenefits>
               <li className="benefit">
                 <FontAwesomeIcon icon={['fal', `check-circle`]} size="1x" />
@@ -84,30 +91,36 @@ const IndexPage = ({ data }) => (
               </li>
             </StyledBenefits>
           </div>
-          <div className="col-md-3">
-            <NewsletterCTA />
+          <div className="col-6 col-md-3">
+            <Link to="/newsletter"><CustomRoundedButton label="Signup for news" /></Link>
           </div>
-          <div className="col-12 mt-5">
+        </div>
+
+        <div className="row mt-3">
+          <div className="col-md-10 offset-md-1 mt-5">
             <h3>Platform of Trust is a data linking platform with built-in trust capabilities that makes you’re your data flow easily, with marginal of cost while you rule your data:</h3>
           </div>
         </div>
 
-        <div  className="row mt-3 mb-5">
+        <div className="row mt-3 mb-5">
+          <div className="col-12 col-md-10 offset-md-1 ">
+            <div className="row">
+              <div className="hex-blurb col-6 col-lg-3">
+                <HexBlurb title="Create better and smarter buildings and cities" icon="drafting-compass" textColor={colors.main} />
+              </div>
+              
+              <div className="hex-blurb col-6 col-lg-3">
+                <HexBlurb title="Improve the productivity of any daily processes" icon="badge" textColor={colors.main} />
+              </div>
 
-          <div className="hex-blurb col">
-            <HexBlurb title="Create better and smarter buildings and cities" icon="drafting-compass" textColor={colors.main} />
-          </div>
-          
-          <div className="hex-blurb col">
-            <HexBlurb title="Improve the productivity of any daily processes" icon="badge" textColor={colors.main} />
-          </div>
+              <div className="hex-blurb col-6 col-lg-3">
+                <HexBlurb title="Earn with new services and innovative business models" icon="sack" textColor={colors.main} />
+              </div>
 
-          <div className="hex-blurb col">
-            <HexBlurb title="Earn with new services and innovative business models" icon="sack" textColor={colors.main} />
-          </div>
-
-          <div className="hex-blurb col">
-            <HexBlurb title="Save on time, energy and material costs" icon="piggy-bank" textColor={colors.main} />
+              <div className="hex-blurb col-6 col-lg-3">
+                <HexBlurb title="Save on time, energy and material costs" icon="piggy-bank" textColor={colors.main} />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -142,15 +155,17 @@ const IndexPage = ({ data }) => (
         </div> */}
         
         <div className="row mt-5">
-          <div className="col-12">
+          <div className="col-md-10 offset-md-1 mb-3">
             <h2>These smart companies and organizations are already using Platform of Trust:</h2>
+          </div>
+          <div className="col-10 offset-1">
             <p>
               Kojamo Oyj  &middot;  Keskinäinen työeläkevakuutusyhtiö Varma  &middot;  Tampereen Tilapalvelut Oy, GSP Group Oy  &middot;  Hämeen ammattikorkeakoulu HAMK  &middot;  Forum Virium Helsinki  &middot;  Honkio Oy  &middot;  Cozify Oy  &middot; Flexitila / Joustotoimisto Oy  &middot;  Metropolia Ammattikorkeakoulu  &middot;  Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy  &middot;  Tieto Oyj  &middot;  Granlund Oy  &middot;  Digital Living International Oy  &middot;  Tunninen Oy Finland  &middot;  Teknologian tutkimuskeskus VTT Oy  &middot;  Helsingin seudun opiskelija-asuntosäätiö sr (Hoas).
             </p> 
-            <CustomRoundedButton className="ml-0" label="become reseller"/>
+            {/* <CustomRoundedButton className="ml-0" label="become reseller"/> */}
           </div>
         </div>
-      </main>
+      </StyledMain>
     </Layout>
 )
 

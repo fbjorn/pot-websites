@@ -77,6 +77,7 @@ const StyledPostFooter = styled.div`
 `
 const StyledBlogFooter = styled.div`
   &&& { max-width: ${variables.pageWidth} }
+  margin: 0 auto;
   padding: 2rem 0;
   background: ${colors.mainDarker};
   border-top: 2px dotted white;

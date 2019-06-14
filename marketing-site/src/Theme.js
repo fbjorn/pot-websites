@@ -16,7 +16,7 @@ export const colors = {
 }
 
 export const variables = {
-  pageWidth: '1240px',
+  pageWidth: '1440px',
 }
 
 const size = {
