@@ -11,6 +11,7 @@ exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
     const blogTemplate = path.resolve(`src/templates/blog-template.js`);
     const newsTemplate = path.resolve(`src/templates/news-template.js`);
+    const newsListTemplate = path.resolve(`src/templates/news-list-template.js`);
     const caseTemplate = path.resolve(`src/templates/case-template.js`);
     const eventTemplate = path.resolve(`src/templates/event-template.js`);
     const pageTemplate = path.resolve(`src/templates/page-template.js`);
@@ -161,6 +162,23 @@ exports.createPages = ({ actions, graphql }) => {
                 context: {} // additional data can be passed via context
             });
         });
+        
+        // Create blog-list pages
+        const posts = result.data.news.edges
+        const postsPerPage = 3
+        const numPages = Math.ceil(posts.length / postsPerPage)
+        Array.from({ length: numPages }).forEach((_, i) => {
+          createPage({
+            path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+            component: path.resolve("./src/templates/news-list-template.js"),
+            context: {
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              numPages,
+              currentPage: i + 1,
+            },
+          })
+        })
 
         result.data.news.edges.forEach(({ node }) => {
             createPage({
