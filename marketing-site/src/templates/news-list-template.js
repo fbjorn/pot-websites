@@ -102,23 +102,49 @@ const StyledBlogFooter = styled.div`
   // .col { border: 1px solid; }
   .col:nth-of-type(2) { text-align: center; }
   .col:nth-of-type(3) { text-align: right; }
-  p { color: white; }
+  p { 
+    padding-top: 0.5em;
+    a { color: ${colors.main}; }
+  }
   svg { 
     vertical-align: middle; 
     // &.fa-hexagon { transform: rotate(90deg); }
     &.fa-arrow-left { margin-right: 1rem; }
     &.fa-arrow-right { margin-left: 1rem; }
   }
+  .pagination-number {
+    margin: 0 0.5em;
+    padding: 0.5em;
+    display: inline-block;
+    width: 2.0em;
+    height: 2.0em;
+    background: ${colors.main};
+    border-radius: 50%;
+    &.current {
+      font-weight: 900;
+      background: ${colors.mainDark};
+      border: 2px dotted ${colors.light};
+      padding: 0.6em;
+      width: 2.4em;
+      height: 2.4em;
+    }
+  }
 `
 
-export default class BlogList extends React.Component {
+export default class newsList extends React.Component {
 
   render() {
     const posts = this.props.data.allMdx.edges
-    const numPages = this.props.pageContext.numPages
-    const currentPage = this.props.pageContext.currentPage
-    const nextPage = this.props.pageContext.currentPage + 1
-    const prevPage = currentPage === 2 ? "" : this.props.pageContext.currentPage - 1
+    const { currentPage, numPages } = this.props.pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numPages
+    const prevPage = currentPage - 1 === 1 ? "/news" : `/news/${(currentPage - 1).toString()}`
+    const nextPage = `/news/${(currentPage + 1).toString()}`
+
+    // const numPages = this.props.pageContext.numPages
+    // const currentPage = this.props.pageContext.currentPage
+    // const nextPage = this.props.pageContext.currentPage + 1
+    // const prevPage = currentPage === 2 ? "" : this.props.pageContext.currentPage - 1
     console.log(this.props)
     return (
       <Layout className="blog-posts">
@@ -197,24 +223,32 @@ export default class BlogList extends React.Component {
           <StyledBlogFooter>
             <div className="row">
               <div className="col col-3 offset-1">
-                {currentPage !== 1  && (
+                {!isFirst  && (
                   <p>
-                    <Link to={`/blog/${prevPage}`}>
+                    <Link to={prevPage}>
                       <FontAwesomeIcon icon={['fal', 'arrow-left']} color="white" size="1x" />
-                      Previous news page 
+                      Previous page 
                     </Link>
                   </p>
                 )}
               </div>
 
               <div className="col col-4">
-                
+                {Array.from({ length: numPages }, (_, i) => (
+                  <Link 
+                    className={`pagination-number ${(i + 1) === currentPage ? "current" : ""}`}
+                    key={`pagination-number${i + 1}`} 
+                    to={`/news/${i === 0 ? "" : i + 1}`}
+                  >
+                    {i + 1}
+                  </Link>
+                ))}
               </div>
 
               <div className="col col-3">
-                {currentPage < numPages  && (
+                {!isLast && (
                 <p>
-                  <Link to={`/blog/${nextPage}`}>
+                  <Link to={nextPage}>
                     More news 
                     <FontAwesomeIcon icon={['fal', 'arrow-right']} color="white" size="1x" />
                   </Link>
@@ -230,8 +264,8 @@ export default class BlogList extends React.Component {
   }
 }
 
-export const blogListQuery = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
+export const newsListQuery = graphql`
+  query newsListQuery($skip: Int!, $limit: Int!) {
     allMdx(
       filter: { frontmatter: { type: { eq: "news" } } }
       sort: { fields: [frontmatter___date], order: DESC }
