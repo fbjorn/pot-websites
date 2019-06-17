@@ -14,7 +14,7 @@ export const subtypeColors = {
 }
 
 const StyledSection = styled.article`
-  &&& { max-width: ${ variables.pageWidth } }
+  &&& { max-width: ${ variables.pageWidthNarrow } }
   margin: 5rem auto;
   background: ${ colors.mainDarker }
 `

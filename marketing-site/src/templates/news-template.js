@@ -12,9 +12,7 @@ import Layout from '../components/layout'
 import { colors, device, variables } from '../Theme.js'
 
 const StyledBlog = styled.article`
-  width: auto;
-  max-width: 1440px;
-  min-height: 75vh;
+  &&& { max-width: ${ variables.pageWidthNarrow } }
   margin: 0 auto;
   @media ${device.laptop} {
   }
