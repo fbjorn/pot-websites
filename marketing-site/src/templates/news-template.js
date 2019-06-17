@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, component } from "react"
 import Helmet from "react-helmet"
 import Img from 'gatsby-image'
 import { graphql, Link } from "gatsby"
@@ -104,6 +104,8 @@ export default function Template({
   data, location 
 }) {
   const post = data.mdx; 
+  const [count, setCount] = useState(0);
+
   return (
     <Layout pathname={location.pathname}>
       <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} />
