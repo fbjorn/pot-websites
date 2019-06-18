@@ -190,7 +190,6 @@ export default class newsList extends React.Component {
           </StyledTools>
           <StyledBlogs className="posts">
             <h1>News</h1>
-            selected: {selected}
           {posts
             // .filter(post => post.node.frontmatter.title.length > 0)
             // .filter(post => post.node.frontmatter.subtype === "article")
