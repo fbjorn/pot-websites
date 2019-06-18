@@ -39,7 +39,7 @@ Set in Github for:
 ## FrontEnds with Gatsby/GraphQL React 
 
 * Clone repository to local machine with 
-* ``git clone git@github.com:PlatformOfTrust/pot-websites.git``
+* ``git clone https://github.com/PlatformOfTrust/pot-websites.git``
 * ``cd developer-site or marketing-site``
 * ``npm install``
 * ``npm install --global gatsby-cli``
