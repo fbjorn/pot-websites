@@ -196,7 +196,7 @@ export default class newsList extends React.Component {
             // .filter(post => post.node.frontmatter.subtype === "article")
             .filter(post => filters.includes(post.node.frontmatter.subtype))
             .map(( { node: post }, index ) => {
-              console.log('Index on', index)
+              // console.log('Index on', index)
               // this.setState({items: index})
               items = index + 1
               return (

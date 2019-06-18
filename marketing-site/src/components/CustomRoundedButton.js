@@ -51,7 +51,7 @@ const StyledButton = styled.button`
 `;
 
 const CustomRoundedButton = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <StyledButton 
       type="button" 

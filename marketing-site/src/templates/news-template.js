@@ -1,4 +1,5 @@
-import React, { useState, component } from "react"
+// import React, { useState, component } from "react"
+import React from "react"
 import Helmet from "react-helmet"
 import Img from 'gatsby-image'
 import { graphql, Link } from "gatsby"
@@ -99,10 +100,10 @@ const StyledCustomImage = styled.div`
 `
 
 export default function Template({
-  data, location 
+  data, location, pageContext 
 }) {
   const post = data.mdx; 
-  const [count, setCount] = useState(0);
+  const { next, prev } = pageContext
 
   return (
     <Layout pathname={location.pathname}>
@@ -171,10 +172,13 @@ export default function Template({
           <div className="row">
             <div className="col col-3 offset-1">
               <p>
-                <Link to="/news">
+                {prev && (
+                <Link to={prev.frontmatter.path}>
                   <FontAwesomeIcon icon={['fal', 'arrow-left']} color="white" size="1x" />
-                  Previous article 
+                  Previous article
+                  {prev.frontmatter.title}
                 </Link>
+                )}
               </p>
             </div>
 
@@ -188,10 +192,14 @@ export default function Template({
 
             <div className="col col-3">
               <p>
-                <Link to="/news">
-                  Next article 
+                {next && (
+                <Link to={next.frontmatter.path}>
+                  
+                  Next 
+                  {/* {next.frontmatter.title} */}
                   <FontAwesomeIcon icon={['fal', 'arrow-right']} color="white" size="1x" />
                 </Link>
+                )}
               </p>
             </div>
           </div>
