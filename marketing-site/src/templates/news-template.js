@@ -4,6 +4,7 @@ import Helmet from "react-helmet"
 import Img from 'gatsby-image'
 import { graphql, Link } from "gatsby"
 import MDXRenderer from "gatsby-mdx/mdx-renderer"
+import Disqus from 'gatsby-plugin-disqus'
 import styled from 'styled-components'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -101,6 +102,10 @@ const StyledCustomImage = styled.div`
   transform: translateX(-1rem) rotate(10deg) scale(0.9);
   clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
 `
+const StyledDisqus = styled.div`
+  background: ${colors.mainDarker};
+  padding: 1rem 7%;
+`
 
 export default function Template({
   data, location, pageContext 
@@ -171,6 +176,13 @@ export default function Template({
             </div>
           </div>
         </StyledPostFooter>
+        <StyledDisqus>
+          <Disqus 
+            identifier={location.pathname}
+            title={post.frontmatter.title}
+            url={location.href}
+          />
+        </StyledDisqus>
         <StyledBlogFooter>
           <div className="row">
             <div className="col col-3 offset-1">

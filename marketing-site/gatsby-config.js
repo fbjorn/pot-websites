@@ -89,6 +89,12 @@ module.exports = {
       }
     },
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `oftrust`
+      }
+    },
     // {
     //   resolve: `gatsby-source-wordpress`,
     //   options: {
