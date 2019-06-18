@@ -36,6 +36,7 @@ const IndexPage = ({ data }) => {
 
               <p><a href="https://docs.oftrust.net">View API documentation</a></p>
               <p><Link to="/apis">View APIs</Link></p>
+              <p><Link to="/capabilities">View current capabilities of the platform</Link></p>
             </div>
           </section>
 
