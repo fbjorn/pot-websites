@@ -28,9 +28,12 @@ const StyledTools = styled.nav`
 const StyledSelector = styled.button`
   background: none;
   border: none;
-  outliner: none;
+  outline: none;
   color: white;
-  &.selected { border-bottom: 1px dotted white; }
+  &.selected-filter { 
+    span { border-bottom: 1px dotted white; }
+  }
+  &:focus { outline: none; }
   svg { margin-right: 0.2em; }
 `
 const StyledBlogBlock = styled.article`
@@ -131,53 +134,74 @@ const StyledBlogFooter = styled.div`
   }
 `
 
+let items = null
+
 export default class newsList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filters: [ 'blog', 'article', 'press-release' ],
+      selected: "all",
+      showFooter: true,
+    }
+  }
+
+  handleFiltering = filter => {
+    filter === "all" ? this.setState({ filters: ['blog', 'article', 'press-release'] }) : this.setState({ filters: [filter] })
+    this.setState({ selected: [filter] })
+  }
 
   render() {
+    const { filters, selected, showFooter } = this.state
     const posts = this.props.data.allMdx.edges
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? "/news" : `/news/${(currentPage - 1).toString()}`
     const nextPage = `/news/${(currentPage + 1).toString()}`
+    const limitNews = this.props.pageContext.limit
 
     // const numPages = this.props.pageContext.numPages
     // const currentPage = this.props.pageContext.currentPage
     // const nextPage = this.props.pageContext.currentPage + 1
     // const prevPage = currentPage === 2 ? "" : this.props.pageContext.currentPage - 1
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <Layout className="blog-posts">
       <StyledPad>
         <StyledSection className="posts-listing">
           <StyledTools className="filters">
-            <StyledSelector className="tool-block all selected">
-              <span>All</span>
+            <StyledSelector className={`tool-block all ${ selected[0] === "all" ? "selected-filter" : "" }`}>
+              <span onClick={() => this.handleFiltering("all")}>All</span>
             </StyledSelector>
-            <StyledSelector className="tool-block blocks">
+            <StyledSelector className={`tool-block blog ${ selected[0] === "blog" ? "selected-filter" : "" }`}>
               <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
-              <span>Blogs</span>
+              <span onClick={() => this.handleFiltering("blog")}>Blogs</span>
             </StyledSelector>
-            <StyledSelector className="tool-block press-releases">
+            <StyledSelector className={`tool-block press-release ${ selected[0] === "press-release" ? "selected-filter" : "" }`}>
               <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
-              <span>Press releases</span>
+              <span onClick={() => this.handleFiltering("press-release")}>Press releases</span>
             </StyledSelector>
-            <StyledSelector className="tool-block articles">
+            <StyledSelector className={`tool-block article ${ selected[0] === "article" ? "selected-filter" : "" }`}>
               <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.notice } />
-              <span>Articles</span>
+              <span onClick={() => this.handleFiltering("article")}>Articles</span>
             </StyledSelector>
             
           </StyledTools>
           <StyledBlogs className="posts">
             <h1>News</h1>
-          
+            selected: {selected}
           {posts
             // .filter(post => post.node.frontmatter.title.length > 0)
-            // .filter(post => post.node.frontmatter.type === "blog")
-            .map(({ node: post }) => {
+            // .filter(post => post.node.frontmatter.subtype === "article")
+            .filter(post => filters.includes(post.node.frontmatter.subtype))
+            .map(( { node: post }, index ) => {
+              console.log('Index on', index)
+              // this.setState({items: index})
+              items = index + 1
               return (
-                
                 <StyledBlogBlock className="post-preview" key={post.id} >
+                  {/* {items} */}
                   <div className="featured-image">
                     <Link to={post.frontmatter.path} className="post-link" >
                       <StyledHexImage>
@@ -220,6 +244,8 @@ export default class newsList extends React.Component {
               );
             })}
           </StyledBlogs>
+
+          {(numPages > 1 || !isFirst ) && (
           <StyledBlogFooter>
             <div className="row">
               <div className="col col-3 offset-1">
@@ -234,6 +260,7 @@ export default class newsList extends React.Component {
               </div>
 
               <div className="col col-4">
+                
                 {Array.from({ length: numPages }, (_, i) => (
                   <Link 
                     className={`pagination-number ${(i + 1) === currentPage ? "current" : ""}`}
@@ -257,6 +284,7 @@ export default class newsList extends React.Component {
               </div>
             </div>
           </StyledBlogFooter>
+          )}
         </StyledSection>
       </StyledPad>
     </Layout>
