@@ -1,159 +1,95 @@
 @require 'variables.styl'
 
 // Typography
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700');
-// $base-font-size = 62.5%;
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700')
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700')
+// $base-font-size = 62.5%
 // *=10px in most browsers, if user haven't changed font-settings
 
-$base-font-size = 100%;
+$base-font-size = 100%
 
 html 
-  font-size: $base-font-size; 
+  font-size $base-font-size 
 body 
-  font-family: 'Fira Sans', sans-serif 
+  font-family 'Fira Sans', sans-serif 
+  line-height 1.125em
   
-#___gatsby 
-  * 
-    font-family 'Fira Sans', sans-serif
-    font-weight 400
-    line-height 22.6px
-  h1
-    margin-top 0.5em
-    margin-bottom 10px
-    font-size 42px 
-    font-weight 400
-    line-height 44px
-  p 
-    font-size 20px 
-    font-weight 400
-    line-height 22.6px
+  /* SHARED PROPERTIES */
+  p, h1, h2, h3, h4, h5, h6 {margin-bottom: 0.5em;}
+  h1, h2, h3, h4, h5, h6 {line-height: 1.05em;}
+
+  /* SPECIFIC PROPERTIES */
+  // p {font-weight: 400; font-size: 27px; line-height: 1.125em;}
+  h1 {font-weight: 400; font-size: 63px; letter-spacing: 0.01em;}
+  h2 {font-weight: 400; font-size: 42px; letter-spacing: 0.01em;}
+  h3 {font-weight: 300; font-size: 32px; letter-spacing: 0.02em;}
+  h4 {font-weight: 300; font-size: 30px; letter-spacing: 0.02em;}
+  h5 {font-weight: 300; font-size: 27px; letter-spacing: 0.03em;}
+  h6 {font-weight: 300; font-size: 24px; letter-spacing: 0.03em;}
   
-    /* SHARED PROPERTIES */
-    p, h1, h2, h3, h4, h5, h6 {
-      font-family: Fira+Sans; 
-      margin-bottom: 0.5em;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      line-height: 1.05em; 
-      color: #7955ff;
-    }
-    /* SPECIFIC PROPERTIES */
-    p {
-      font-weight: 400; 
-      font-size: 27px; 
-      line-height: 1.125em; 
-      color: #141414;
-    }
-    h1 {
-      font-weight: 400; 
-      font-size: 63px; 
-      letter-spacing: 0.01em;
-    }
-    h2 {
-      font-weight: 400; 
-      font-size: 48px; 
-      letter-spacing: 0.01em;
-    }
-    h3 {
-      font-weight: 500; 
-      font-size: 36px; 
-      letter-spacing: 0.02em;
-    }
-    h4 {
-      font-weight: 500; 
-      font-size: 30px; 
-      letter-spacing: 0.02em;
-    }
-    h5 {
-      font-weight: 600; 
-      font-size: 27px; 
-      letter-spacing: 0.03em;
-    }
-    h6 {
-      font-weight: 500; 
-      font-size: 24px; 
-      letter-spacing: 0.03em;
-    }
-    .megaheadline {
-      font-family: Fira+Sans; 
-      font-weight: 200; 
-      font-size: 108px; 
-      line-height: 0.95em;}
-    .post-meta {
-      font-family: Fira+Sans; 
-      font-weight: 400; 
-      font-size: 15px; 
-      line-height: 1.0em; 
-      color: #7955ff; 
-      margin-bottom: 1em;}
-    .blockquote {
-      font-family: Fira+Sans; 
-      font-weight: 400; 
-      font-style: italic; 
-      font-size: 27px; 
-      line-height: 1.125em;
-    }
-    /* RESPONSIVE 1000-668px */
-    @media only screen and (max-width: 1000px) {
-      p {font-size: 2.7vw;}
-      h1 {font-size: 6.3vw;}
-      h2 {font-size: 4.8vw;}
-      h3 {font-size: 3.6vw;}
-      h4 {font-size: 3.0vw;}
-      h5 {font-size: 2.7vw;}
-      h6 {font-size: 2.4vw;}
-    .megaheadline {font-size: 10.8vw;}
-    .blockquote {font-size: 2.7vw;}
-    }
-    /* RESPONSIVE 667-640 */
-    @media only screen and (max-width: 667px) {
-      p {font-size: 18px;}
-      h1 {font-size: 42px;}
-      h2 {font-size: 36px;}
-      h3 {font-size: 24px;}
-      h4 {font-size: 20px;}
-      h5 {font-size: 18px;}
-      h6 {font-size: 16px;}
-    .megaheadline {font-size: 72px;}
-    .blockquote {font-size: 18px;}
-    }
-    /* RESPONSIVE SMALLEST 640- (about 80%) */
-    @media only screen and (max-width: 640px) {
-      p {font-size: 15px;}
-      h1 {font-size: 34px;}
-      h2 {font-size: 29px;}
-      h3 {font-size: 19px;}
-      h4 {font-size: 16px;}
-      h5 {font-size: 15px;}
-    h6 {font-size: 13px;}
-    .megaheadline {font-size: 58px;}
-    .blockquote {font-size: 15px;}
-    }
-  // Component typo styles
-  footer
-    a:link
-      text-decoration underline
-    @media( max-width $mobi-navi-breakpoint )
-      h5, p, a:link
-        font-size 20px
-        line-height 20px
-        margin-bottom 0
+/* SHARED PROPERTIES */
+// p, h1, h2, h3, h4, h5, h6 {font-family: Fira+Sans; margin-bottom: 0.5em;}
+// h1, h2, h3, h4, h5, h6 {line-height: 1.05em;}
 
+// /* SPECIFIC PROPERTIES */
+// // p {font-weight: 400; font-size: 27px; line-height: 1.125em;}
+// h1 {font-weight: 400; font-size: 63px; letter-spacing: 0.01em;}
+// h2 {font-weight: 400; font-size: 48px; letter-spacing: 0.01em;}
+// // h3 {font-weight: 300; font-size: 32px; letter-spacing: 0.02em;}
+// h4 {font-weight: 500; font-size: 30px; letter-spacing: 0.02em;}
+// h5 {font-weight: 600; font-size: 27px; letter-spacing: 0.03em;}
+// h6 {font-weight: 500; font-size: 24px; letter-spacing: 0.03em;}
+// #___gatsby 
+//   * 
+//     font-family 'Fira Sans', sans-serif
+//     -webkit-font-smoothing antialiased
+//     -moz-osx-font-smoothing grayscale
 
-// i, em { @extend .italic; }
-// b, strong { @extend .bold; }
+// * 
+//   font-weight 400
+//   line-height 1.125em
+ 
+  
+//   .megaheadline {font-family: Fira+Sans; font-weight: 200; font-size: 108px; line-height: 0.95em;}
+//   .post-meta {font-family: Fira+Sans; font-weight: 400; font-size: 15px; line-height: 1.0em; color: #7955ff; margin-bottom: 1em;}
+//   .blockquote {font-family: Fira+Sans; font-weight: 400; font-style: italic; font-size: 27px; line-height: 1.125em;}
 
-// h1, .h1 { @extend .h1; margin: 1em 0 0.5em; }
-// h2, .h2 { @extend .h2; margin: 1em 0 0.5em; }
-// h3, .h3 { @extend .h3; margin: 1em 0 0.5em; }
-// h4, .h4 { @extend .h4; margin: 1em 0 0.5em; }
-// h5, .h5 { @extend .h5; margin: 1em 0 0.5em; }
-// h6, .h6 { @extend .h6; margin: 1em 0 0.5em; }
+//   /* RESPONSIVE 1000-668px */
+//   @media only screen and (max-width: 1000px) {
+//   p {font-size: 2.7vw;}
+//   h1 {font-size: 6.3vw;}
+//   h2 {font-size: 4.8vw;}
+//   h3 {font-size: 3.6vw;}
+//   h4 {font-size: 3.0vw;}
+//   h5 {font-size: 2.7vw;}
+//   h6 {font-size: 2.4vw;}
+//   .megaheadline {font-size: 10.8vw;}
+//   .blockquote {font-size: 2.7vw;}
+//   }
 
-// p, ul, ol, pre { @extend .block-margins; }
+//   /* RESPONSIVE 667-640 */
+//   @media only screen and (max-width: 667px) {
+//   p {font-size: 18px;}
+//   h1 {font-size: 42px;}
+//   h2 {font-size: 36px;}
+//   h3 {font-size: 24px;}
+//   h4 {font-size: 20px;}
+//   h5 {font-size: 18px;}
+//   h6 {font-size: 16px;}
+//   .megaheadline {font-size: 72px;}
+//   .blockquote {font-size: 18px;}
+//   }
 
-// ul { @extend .unordered-list; }
-// ol { @extend .ordered-list; }
+//   /* RESPONSIVE SMALLEST 640- (about 80%) */
+//   @media only screen and (max-width: 640px) {
+//   p {font-size: 15px;}
+//   h1 {font-size: 34px;}
+//   h2 {font-size: 29px;}
+//   h3 {font-size: 19px;}
+//   h4 {font-size: 16px;}
+//   h5 {font-size: 15px;}
+//   h6 {font-size: 13px;}
+//   .megaheadline {font-size: 58px;}
+//   .blockquote {font-size: 15px;}
 
-// pre, code { @extend .fixed; }
-         
+//   }

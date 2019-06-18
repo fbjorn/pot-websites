@@ -68,5 +68,6 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# Local Dev-settings
+# Local dev settings
 .vscode
+

@@ -20,28 +20,29 @@ Portal is one stop shop to Platform of Trust.
 
 ## Development practices
 
-We use 2 week sprints. New release after each sprint
-
-Epics are included in issues and are tagged with label ``EPIC``
-
-User stories labelled as ``User Story`` 
-
-We use waffle.io in sprint management ([Go to Waffle](https://waffle.io/PlatformOfTrust/developer.oftrust.net)). Waffle is the free and tasty way to plan, track, and organize work in GitHub. Built with everyone on your team in mind, Waffle provides a simple board interface for your GitHub Issues and Pull Requests. 
-
-## Milestones 
-
-Set in Github for: 
-* pre-alpha
-* alpha
-* beta
-* MVP (end of March 2019)
-
 ## FrontEnds with Gatsby/GraphQL React 
 
 * Clone repository to local machine with 
 * ``git clone git@github.com:PlatformOfTrust/pot-websites.git``
 * ``cd developer-site or marketing-site``
 * ``npm install``
+* ``npm install --global gatsby-cli``
+* ``gatsby develop -o -p 8000``
+* Site will open in browser localhost:8000, use -p to change port
+
+## FrontEnd build for rel2 marketing-site 
+
+* Clone repository to local machine with 
+* ``git clone git@github.com:PlatformOfTrust/pot-websites.git``
+* ``git checkout rel2`` 
+* ``cd marketing-site``
+* Create file `.npmrc` and add lines: 
+
+```
+@fortawesome:registry=https://npm.fontawesome.com/
+//npm.fontawesome.com/:_authToken=YOUR_TOKEN_HERE
+```
+* ``npm install --save-dev @fortawesome/fontawesome-pro``
 * ``npm install --global gatsby-cli``
 * ``gatsby develop -o -p 8000``
 * Site will open in browser localhost:8000, use -p to change port

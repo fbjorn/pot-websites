@@ -7,6 +7,7 @@ export const colors = {
   alert: 'rgb(251, 99, 77)',
   notice: 'rgb(247, 197, 0)',
   success: 'rgb(151, 209, 41)',
+  tomato: 'rgb(252,88,107)',
   mainDarkest: '#372873',
   mainDarker: '#49378f',
   mainDark: '#583eb9',
@@ -16,14 +17,15 @@ export const colors = {
 
 export const variables = {
   pageWidth: '1440px',
+  pageWidthNarrow: '1240px',
 }
 
 const size = {
   mobileS: '320px',
   mobileM: '375px',
-  mobileL: '425px',
+  mobileL: '576px',
   tablet: '768px',
-  laptop: '1024px',
+  laptop: '992px',
   laptopL: '1440px',
   desktop: '2560px'
 }

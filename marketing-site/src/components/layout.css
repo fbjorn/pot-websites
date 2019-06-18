@@ -1,17 +1,7 @@
-/* section, article {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1.0875rem 1.45rem;
-}
-
-.fullwidth {
-  max-width: 100%;
-  padding: 0;
-} */
-
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700");
 html {
-  font-family: sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }

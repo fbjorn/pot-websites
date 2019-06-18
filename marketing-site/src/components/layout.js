@@ -1,41 +1,71 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from "@emotion/styled"
+import styled from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
-import Header from './header'
-import Footer from './footer'
-import './layout.css'
+import Helmet from 'react-helmet'
 
-const Wrapper = styled("div")`
-margin: '0 auto',
-paddingTop: 0,
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHexagon } from '@fortawesome/pro-solid-svg-icons'
+import { fal } from '@fortawesome/pro-light-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+import Header from './Header'
+import Footer from './Footer'
+import BgImage from '../images/bg-image.svg'
+// import '../scss/bootstrap.scss'
+// import './Layout.css'
+
+import { colors } from '../Theme.js'
+
+library.add( fal, fab, faHexagon )
+// icon({prefix: 'fal', iconName: 'draftingCompass'})
+
+const GlobalStyle = createGlobalStyle`
+  /* OVERRIDES */
+  &&& { a { color: ${colors.light}; }}
+`
+;
+
+const StyledSite = styled.section`
+  background-color: #a897fe;
+  background-image: url("${BgImage}");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #f0f0f0;
 `
 
-const Layout = ({ children }) => (
+const StyledWrapper = styled.section`
+  margin: '0 auto';
+  padding-top: 0,
+`
+
+const Layout = ({ pathname, children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
             title
+            siteUrl
           }
         }
       }
     `}
     render={data => (
-      <>
+      <StyledSite>
+        <GlobalStyle />
+        <Helmet title={data.site.siteMetadata.title}>}
+          />
+        </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Wrapper
-          // style={{
-          //   margin: `0 auto`,
-          //   paddingTop: 0,
-          // }}
-        >
+        <StyledWrapper>
           {children}
-        </Wrapper>
+        </StyledWrapper>
         <Footer />
-      </>
+      </StyledSite>
     )}
   />
 )
