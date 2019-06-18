@@ -83,12 +83,15 @@ const StyledBlogFooter = styled.div`
   // .col { border: 1px solid; }
   .col:nth-of-type(2) { text-align: center; }
   .col:nth-of-type(3) { text-align: right; }
-  p { color: white; }
+  p { 
+    padding-top: 0.5em;
+    a { color: ${colors.main}; }
+  }
   svg { 
-    // margin-right: 1rem;
     vertical-align: middle; 
     // &.fa-hexagon { transform: rotate(90deg); }
-    // &.fa-arrow-right { margin-left: 1rem; }
+    &.fa-arrow-left { margin-right: 1rem; }
+    &.fa-arrow-right { margin-left: 1rem; }
   }
 `
 const StyledCustomImage = styled.div`
@@ -175,8 +178,8 @@ export default function Template({
                 {prev && (
                 <Link to={prev.frontmatter.path}>
                   <FontAwesomeIcon icon={['fal', 'arrow-left']} color="white" size="1x" />
-                  Previous article
-                  {prev.frontmatter.title}
+                  Previous
+                  {/* {prev.frontmatter.title} */}
                 </Link>
                 )}
               </p>
