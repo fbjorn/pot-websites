@@ -7,8 +7,6 @@ type: "page"
 ---
 This guide will help you create a data product in the Platform of Trust market place for other developers to utilize in applications. 
 
-**Note! Lets use kojamo case data product as exmple. Data MUST be also in Sandbox env since we provide sample API calls to the data as well**
-
 ## Basic conceps
 
 **What is a data product?** 
