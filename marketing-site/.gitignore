@@ -71,3 +71,7 @@ yarn-error.log
 # Local dev settings
 .vscode
 
+# font token
+.npmrc.txt
+
+
