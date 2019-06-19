@@ -4,9 +4,10 @@ import styled, { css } from 'styled-components'
 import { colors } from '../Theme.js'
 
 const StyledButton = styled.button`
-  &&& { background: ${ props => props.bgColor ? colors[props.bgColor] : colors.alert }; }
+  &&& { background: ${ props => props.bgColor ? colors[props.bgColor] : "transparent" }; }
   &&& { color: ${ props => props.textColor ? colors[props.textColor] : colors.light }; }
-  &&& { border-radius: 1rem; }
+  &&& { border: 2px solid ${colors.light}; }
+  &&& { border-radius: 1px; }
   padding: 0.25em 1em;
   box-shadow: 0 0 0.2rem ${colors.mainDark};
   transition: all 0.1s ease-out;

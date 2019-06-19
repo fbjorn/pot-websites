@@ -6,6 +6,7 @@ import styled from 'styled-components'
 
 import CustomImage from "../components/CustomImage"
 import CustomSquareButton from "../components/CustomSquareButton"
+import CustomRoundedButton from '../components/CustomRoundedButton'
 import Layout from '../components/layout'
 import { colors, device, variables } from '../Theme.js'
 
@@ -157,6 +158,7 @@ export default function Cases({ data }) {
                     <div className="excerpt">
                       <Link to={post.frontmatter.path} className="post-link" >
                         <p>{post.excerpt}</p>
+                        <CustomSquareButton label="Read" />
                       </Link>
                     </div>
                   </div>
