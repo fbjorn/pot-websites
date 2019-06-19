@@ -65,8 +65,12 @@ const Footer = () => (
       <div className="row">
       
         <div className="footer-logo col-2 offset-1 ">
-          <img src={Logo} className="logo-footer logo-desk" alt="Logo" />
-          <img src={LogoSymbol} className="logo-footer logo-mobile" alt="Logo" />
+          <Link to="/">
+            <img src={Logo} className="logo-footer logo-desk" alt="Logo" />
+          </Link>
+          <Link to="/">
+            <img src={LogoSymbol} className="logo-footer logo-mobile" alt="Logo" />
+          </Link>
         </div>
 
         <div className="footer-contact col-4 col-lg-4 col-xl-4 mt-md-0 mt-1">

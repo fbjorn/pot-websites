@@ -28,6 +28,10 @@ const StyledSection = styled.section`
   &&& { max-width: ${ variables.pageWidth } }
   margin: 5rem auto;   
 `
+const StyledVideo = styled.section`
+  &&& { max-width: ${ variables.pageWidth } }
+  margin: 5rem auto;   
+`
 
 const About = () => (
   <Layout>
@@ -77,11 +81,13 @@ const About = () => (
         </div>
       </StyledSection>
       <StyledSection className="container">
-        <h2>Platform of Trust benefits in one minute by CEO Toni Luhti</h2>
-        <Video 
-          videoSrcURL="https://www.youtube.com/embed/sGgt88bkoOA"
-          videoTitle="Start using your data"
-        />
+        <StyledVideo>
+          <h2>Platform of Trust benefits in one minute by CEO Toni Luhti</h2>
+          <Video 
+            videoSrcURL="https://www.youtube.com/embed/sGgt88bkoOA"
+            videoTitle="Start using your data"
+          />
+        </StyledVideo>
         {/* <Link to="/">
           <CustomRoundedButton label="See our pricing plans" textColor="light" bgColor="tomato" />
         </Link> */}

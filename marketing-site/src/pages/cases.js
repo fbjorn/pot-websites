@@ -91,79 +91,84 @@ const StyledHexImage = styled.div`
   transform: translateX(-1rem) rotate(10deg) scale(0.9);
   clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
 `
+const StyledPad = styled.div`
+  margin: 1rem;
+`
 
 export default function Cases({ data }) {
   const { edges: posts } = data.allMdx;
   return (
     <Layout className="blog-posts">
-      <StyledSection className="posts-listing">
-        <StyledTools className="filters">
-          <StyledSelector className="tool-block all selected">
-            <span>All</span>
-          </StyledSelector>
-          <StyledSelector className="tool-block blocks">
-            <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
-            <span>Business</span>
-          </StyledSelector>
-          <StyledSelector className="tool-block press-releases">
-            <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
-            <span>Tech</span>
-          </StyledSelector>
+      <StyledPad>
+        <StyledSection className="posts-listing">
+          <StyledTools className="filters">
+            <StyledSelector className="tool-block all selected">
+              <span>All</span>
+            </StyledSelector>
+            <StyledSelector className="tool-block blocks">
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
+              <span>Business</span>
+            </StyledSelector>
+            <StyledSelector className="tool-block press-releases">
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
+              <span>Tech</span>
+            </StyledSelector>
+            
+          </StyledTools>
+          <StyledBlogs className="posts">
+            <h1>Cases</h1>
           
-        </StyledTools>
-        <StyledBlogs className="posts">
-          <h1>Cases</h1>
-        
-        {posts
-          // .filter(post => post.node.frontmatter.title.length > 0)
-          // .filter(post => post.node.frontmatter.type === "blog")
-          .map(({ node: post }) => {
-            return (
-              
-              <StyledBlogBlock className="post-preview" key={post.id} >
-                <div className="featured-image">
-                  <Link to={post.frontmatter.path} className="post-link" >
-                    <StyledHexImage>
-                      <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
-                    </StyledHexImage>
-                  </Link>
-                </div>
-                <div className="post-preview-content">
-                  <div className="title">
-                  <Link to={post.frontmatter.path} className="post-link" >
-                      <h2>{post.frontmatter.title}</h2>
-                  </Link>
-                  </div>
-                  <div className="meta">
-                    <p>
-                      <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
-                      {post.frontmatter.subtype && (
-                        <>
-                        <span>{post.frontmatter.subtype}</span>
-                        <span className="divider">.</span>
-                        </>
-                      )}
-                      {post.frontmatter.author && (
-                        <>
-                      <span>{post.frontmatter.author}</span>
-                      <span className="divider">.</span>
-                        </>
-                      )}
-                      <span>{post.frontmatter.date}</span>
-                    </p>
-                  </div>
-                  <div className="excerpt">
+          {posts
+            // .filter(post => post.node.frontmatter.title.length > 0)
+            // .filter(post => post.node.frontmatter.type === "blog")
+            .map(({ node: post }) => {
+              return (
+                
+                <StyledBlogBlock className="post-preview" key={post.id} >
+                  <div className="featured-image">
                     <Link to={post.frontmatter.path} className="post-link" >
-                      <p>{post.excerpt}</p>
+                      <StyledHexImage>
+                        <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                      </StyledHexImage>
                     </Link>
                   </div>
-                </div>
-              </StyledBlogBlock>
+                  <div className="post-preview-content">
+                    <div className="title">
+                    <Link to={post.frontmatter.path} className="post-link" >
+                        <h2>{post.frontmatter.title}</h2>
+                    </Link>
+                    </div>
+                    <div className="meta">
+                      <p>
+                        <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
+                        {post.frontmatter.subtype && (
+                          <>
+                          <span>{post.frontmatter.subtype}</span>
+                          <span className="divider">.</span>
+                          </>
+                        )}
+                        {post.frontmatter.author && (
+                          <>
+                        <span>{post.frontmatter.author}</span>
+                        <span className="divider">.</span>
+                          </>
+                        )}
+                        <span>{post.frontmatter.date}</span>
+                      </p>
+                    </div>
+                    <div className="excerpt">
+                      <Link to={post.frontmatter.path} className="post-link" >
+                        <p>{post.excerpt}</p>
+                      </Link>
+                    </div>
+                  </div>
+                </StyledBlogBlock>
 
-            );
-          })}
-        </StyledBlogs>
-      </StyledSection>
+              );
+            })}
+          </StyledBlogs>
+        </StyledSection>
+      </StyledPad>
     </Layout>
   );
 }

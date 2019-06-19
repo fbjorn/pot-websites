@@ -22,21 +22,19 @@ const StyledSection = styled.article`
   padding: 10%;
   background: ${ colors.mainDarker }
 `
+const StyledPad = styled.div`
+  margin: 1rem;
+`
 
 const Newsletter = () => (
   <Layout>
     <SEO title="Platform of Trust Contact information" />
-    <svg height="0" width="0" viewBox="0 0 500 500" >
-      <defs>
-          <clipPath id="hex-clip" clipPathUnits="objectBoundingBox">
-            <polygon fill="none" points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
-          </clipPath>
-      </defs>
-    </svg>
     <StyledPage>
-      <StyledSection>
-        <NewsletterForm />
-      </StyledSection>
+      <StyledPad>
+        <StyledSection>
+          <NewsletterForm />
+        </StyledSection>      
+      </StyledPad>
     </StyledPage>
   </Layout>
 )
