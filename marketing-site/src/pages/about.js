@@ -7,8 +7,7 @@ import styled from 'styled-components'
 import Video from '../components/Video'
 // import CustomRoundedButton from '../components/CustomRoundedButton'
 import HexIcon from '../components/hexIcon'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { colors, device, variables } from '../Theme.js'
+import { colors, variables } from '../Theme.js'
 
 const StyledPage = styled.div`
   width: auto;
@@ -30,7 +29,8 @@ const StyledSection = styled.section`
 `
 const StyledVideo = styled.section`
   &&& { max-width: ${ variables.pageWidth } }
-  margin: 5rem auto;   
+  margin: 5rem auto;  
+
 `
 
 const About = () => (

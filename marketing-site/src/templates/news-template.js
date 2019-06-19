@@ -144,13 +144,13 @@ export default function Template({
           </div>
         </StyledPost>
         <StyledPostFooter className="container">
-          {post.frontmatter.subtype === "blog" && (<div className="row">
-            <div className="col-1 offset-1">
-              <StyledCustomImage>
+          {post.frontmatter.author && (<div className="row">
+            {post.frontmatter.subtype === "blog" && (<div className="col-1 offset-1">
+            <StyledCustomImage>
                 <CustomImage filename={post.frontmatter.authorpic} alt={post.frontmatter.author} />
               </StyledCustomImage>
-            </div>
-            <div className="col-10">
+            </div>)}
+            <div className={`col-10 ${post.frontmatter.subtype !== "blog" ? "offset-1" : "" }`} >
               <p className="pt-md-5">
                 {/* <FontAwesomeIcon icon={['fa', 'hexagon']} color="white" size="4x" /> */}
                 Author {post.frontmatter.author} 
