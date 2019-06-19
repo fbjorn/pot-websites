@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import CustomImage from "../components/CustomImage"
 import CustomSquareButton from "../components/CustomSquareButton"
-import CustomRoundedButton from '../components/CustomRoundedButton'
+// import CustomRoundedButton from '../components/CustomRoundedButton'
 import Layout from '../components/layout'
 import { colors, device, variables } from '../Theme.js'
 
@@ -33,9 +33,12 @@ const StyledTools = styled.nav`
 const StyledSelector = styled.button`
   background: none;
   border: none;
-  outliner: none;
+  outline: none;
   color: white;
-  &.selected { border-bottom: 1px dotted white; }
+  &.selected-filter { 
+    span { border-bottom: 1px dotted white; }
+  }
+  &:focus { outline: none; }
   svg { margin-right: 0.2em; }
 `
 const StyledBlogBlock = styled.article`
@@ -100,77 +103,101 @@ const StyledPad = styled.div`
   margin: 1rem;
 `
 
-export default function Cases({ data }) {
-  const { edges: posts } = data.allMdx;
-  return (
-    <Layout className="blog-posts">
-      <StyledPad>
-        <StyledSection className="posts-listing">
+export default class Events extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filters: [ 'blog', 'article', 'press-release', 'business', 'technical' ],
+      selected: "all",
+      showFooter: true,
+    }
+  }
+
+  handleFiltering = filter => {
+    filter === "all" ? this.setState({ filters: ['blog', 'article', 'press-release', 'business', 'technical'] }) : this.setState({ filters: [filter] })
+    this.setState({ selected: [filter] })
+  }
+
+  render() {
+    const { filters, selected  } = this.state
+    const { edges: posts } = this.props.data.allMdx;
+    return (
+      <Layout className="blog-posts">
+        <StyledPad>
+          <StyledSection className="posts-listing">
           <StyledTools className="filters">
-            <StyledSelector className="tool-block all selected">
-              <span>All</span>
-            </StyledSelector>
-            <StyledSelector className="tool-block blocks">
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.success } />
-              <span>Business</span>
-            </StyledSelector>
-            <StyledSelector className="tool-block press-releases">
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.mainLightest } />
-              <span>Technical</span>
-            </StyledSelector>
+                <StyledSelector className={`tool-block all ${ selected[0] === "all" ? "selected-filter" : "" }`}>
+                  <span onClick={() => this.handleFiltering("all")}>All</span>
+                </StyledSelector>
+                {/* <StyledSelector className={`tool-block blog ${ selected[0] === "blog" ? "selected-filter" : "" }`}>
+                  <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
+                  <span onClick={() => this.handleFiltering("blog")}>Blogs</span>
+                </StyledSelector>
+                <StyledSelector className={`tool-block press-release ${ selected[0] === "press-release" ? "selected-filter" : "" }`}>
+                  <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
+                  <span onClick={() => this.handleFiltering("press-release")}>Press releases</span>
+                </StyledSelector> */}
+                <StyledSelector className={`tool-block business ${ selected[0] === "business" ? "selected-filter" : "" }`}>
+                  <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.success } />
+                  <span onClick={() => this.handleFiltering("business")}>Business</span>
+                </StyledSelector>
+                <StyledSelector className={`tool-block article ${ selected[0] === "technical" ? "selected-filter" : "" }`}>
+                  <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.mainLightest } />
+                  <span onClick={() => this.handleFiltering("technical")}>Technical</span>
+                </StyledSelector>
+              </StyledTools>
+            <StyledBlogs className="posts">
+              <h1>Cases</h1>
             
-          </StyledTools>
-          <StyledBlogs className="posts">
-            <h1>Cases</h1>
-          
-          {posts
-            // .filter(post => post.node.frontmatter.title.length > 0)
-            // .filter(post => post.node.frontmatter.type === "blog")
-            .map(({ node: post }) => {
-              return (
-                
-                <StyledBlogBlock className="post-preview" key={post.id} >
-                  <div className="featured-image">
-                    <Link to={post.frontmatter.path} className="post-link" >
-                      <StyledHexImage>
-                        <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
-                      </StyledHexImage>
-                    </Link>
-                  </div>
-                  <div className="post-preview-content">
-                    <div className="title">
-                    <Link to={post.frontmatter.path} className="post-link" >
-                        <h2>{post.frontmatter.title}</h2>
-                    </Link>
-                    </div>
-                    <div className="meta">
-                      <p>
-                        <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
-                        {post.frontmatter.subtype && (
-                          <>
-                          <span>{post.frontmatter.subtype}</span>
-                          <span className="divider">.</span>
-                          </>
-                        )}
-                        <span>{post.frontmatter.date}</span>
-                      </p>
-                    </div>
-                    <div className="excerpt">
+            {posts
+              // .filter(post => post.node.frontmatter.title.length > 0)
+              // .filter(post => post.node.frontmatter.type === "blog")
+              .map(({ node: post }) => {
+                return (
+                  
+                  <StyledBlogBlock className="post-preview" key={post.id} >
+                    <div className="featured-image">
                       <Link to={post.frontmatter.path} className="post-link" >
-                        <p>{post.excerpt}</p>
-                        <CustomSquareButton label="Read" />
+                        <StyledHexImage>
+                          <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                        </StyledHexImage>
                       </Link>
                     </div>
-                  </div>
-                </StyledBlogBlock>
+                    <div className="post-preview-content">
+                      <div className="title">
+                      <Link to={post.frontmatter.path} className="post-link" >
+                          <h2>{post.frontmatter.title}</h2>
+                      </Link>
+                      </div>
+                      <div className="meta">
+                        <p>
+                          <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
+                          {post.frontmatter.subtype && (
+                            <>
+                            <span>{post.frontmatter.subtype}</span>
+                            <span className="divider">.</span>
+                            </>
+                          )}
+                          <span>{post.frontmatter.date}</span>
+                        </p>
+                      </div>
+                      <div className="excerpt">
+                        <Link to={post.frontmatter.path} className="post-link" >
+                          <p>{post.excerpt}</p>
+                          <CustomSquareButton label="Read" />
+                        </Link>
+                      </div>
+                    </div>
+                  </StyledBlogBlock>
 
-              );
-            })}
-          </StyledBlogs>
-        </StyledSection>
-      </StyledPad>
-    </Layout>
-  );
+                );
+              })}
+            </StyledBlogs>
+          </StyledSection>
+        </StyledPad>
+      </Layout>
+    );
+  }
 }
 export const pageQuery = graphql`
   query caseQuery {

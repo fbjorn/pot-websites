@@ -120,27 +120,27 @@ export default class Events extends React.Component {
       <Layout className="blog-posts">
         <StyledPad>
           <StyledSection className="posts-listing">
-          <StyledTools className="filters">
-            <StyledSelector className={`tool-block all ${ selected[0] === "all" ? "selected-filter" : "" }`}>
-              <span onClick={() => this.handleFiltering("all")}>All</span>
-            </StyledSelector>
-            {/* <StyledSelector className={`tool-block blog ${ selected[0] === "blog" ? "selected-filter" : "" }`}>
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
-              <span onClick={() => this.handleFiltering("blog")}>Blogs</span>
-            </StyledSelector>
-            <StyledSelector className={`tool-block press-release ${ selected[0] === "press-release" ? "selected-filter" : "" }`}>
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
-              <span onClick={() => this.handleFiltering("press-release")}>Press releases</span>
-            </StyledSelector> */}
-            <StyledSelector className={`tool-block business ${ selected[0] === "business" ? "selected-filter" : "" }`}>
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.success } />
-              <span onClick={() => this.handleFiltering("business")}>Business</span>
-            </StyledSelector>
-            <StyledSelector className={`tool-block article ${ selected[0] === "technical" ? "selected-filter" : "" }`}>
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.mainLightest } />
-              <span onClick={() => this.handleFiltering("technical")}>Technical</span>
-            </StyledSelector>
-          </StyledTools>
+            <StyledTools className="filters">
+              <StyledSelector className={`tool-block all ${ selected[0] === "all" ? "selected-filter" : "" }`}>
+                <span onClick={() => this.handleFiltering("all")}>All</span>
+              </StyledSelector>
+              {/* <StyledSelector className={`tool-block blog ${ selected[0] === "blog" ? "selected-filter" : "" }`}>
+                <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
+                <span onClick={() => this.handleFiltering("blog")}>Blogs</span>
+              </StyledSelector>
+              <StyledSelector className={`tool-block press-release ${ selected[0] === "press-release" ? "selected-filter" : "" }`}>
+                <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
+                <span onClick={() => this.handleFiltering("press-release")}>Press releases</span>
+              </StyledSelector> */}
+              <StyledSelector className={`tool-block business ${ selected[0] === "business" ? "selected-filter" : "" }`}>
+                <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.success } />
+                <span onClick={() => this.handleFiltering("business")}>Business</span>
+              </StyledSelector>
+              <StyledSelector className={`tool-block article ${ selected[0] === "technical" ? "selected-filter" : "" }`}>
+                <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.mainLightest } />
+                <span onClick={() => this.handleFiltering("technical")}>Technical</span>
+              </StyledSelector>
+            </StyledTools>
             <StyledBlogs className="posts">
               <h1>Events</h1>
             
