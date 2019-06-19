@@ -127,12 +127,12 @@ export default function Template({
           </div>
         </StyledHeader>
         <StyledPost className="container">
-          <div className="row">
+          {/* <div className="row">
             {post.frontmatter.image && <Img fluid={post.frontmatter.image.childImageSharp.fluid} className="col-12" />}
           </div>
           <StyledCaption className="row">
             <p>{post.frontmatter.pictext}</p> 
-          </StyledCaption>
+          </StyledCaption> */}
           <div className="row">
             <div className="col-11 offset-1">
               <h1>{post.frontmatter.title}</h1>
@@ -187,7 +187,7 @@ export default function Template({
             <div className="col col-4">
               <p>
                 <Link to="/events">
-                  Back to news
+                  Back to events
                 </Link>
               </p>
             </div>

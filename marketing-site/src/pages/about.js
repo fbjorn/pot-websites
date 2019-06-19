@@ -69,13 +69,13 @@ const About = () => (
           <div className="col-4 col-md-2">
             <HexIcon icon="chart-line" color="main" />
           </div>
-          <div className="col-7 col-md-4">
+          <div className="col-7 col-md-4 d-flex align-items-center">
             <p>Any business that is using or planning to use data for business development and new business models.</p>
           </div>
           <div className="col-4 col-md-2">
             <HexIcon icon="terminal" color="main" />
           </div>
-          <div className="col-7 col-md-4">
+          <div className="col-7 col-md-4 d-flex align-items-center">
             <p>Developers that long for faster time-to-market and want to experience high-quality developer experience.</p>
           </div>
         </div>

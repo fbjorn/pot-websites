@@ -74,7 +74,7 @@ const Contact = () => (
         <StyledSection className="billing container">
           <h2>Billing information</h2>
           <StyledBilling>
-            <p>Business ID FI29800052</p>
+            <p>Suomen Tilaajavastuu Oy </p>
             <p>Operator: OpusCapita Group Oy</p>
             <p>OVT: 003723273271</p>
           </StyledBilling>
