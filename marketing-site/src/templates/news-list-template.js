@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import CustomImage from "../components/CustomImage"
 import Layout from '../components/layout'
 import CustomRoundedButton from '../components/CustomRoundedButton'
+import CustomSquareButton from "../components/CustomSquareButton"
 import { colors, device, variables } from '../Theme.js'
 
 export const subtypeColors = {
@@ -141,7 +142,7 @@ const StyledBlogFooter = styled.div`
 
 let items = null
 
-export default class newsList extends React.Component {
+export default class NewsList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -195,7 +196,6 @@ export default class newsList extends React.Component {
               <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.mainLightest } />
               <span onClick={() => this.handleFiltering("technical")}>Technical</span>
             </StyledSelector>
-            
           </StyledTools>
           <StyledBlogs className="posts container">
             <div className="row">
@@ -255,6 +255,7 @@ export default class newsList extends React.Component {
                         <div className="excerpt">
                           <Link to={post.frontmatter.path} className="post-link" >
                             <p>{post.excerpt}</p>
+                            <CustomSquareButton label="Read" />
                           </Link>
                         </div>
                       </div>

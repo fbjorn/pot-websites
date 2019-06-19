@@ -165,7 +165,7 @@ exports.createPages = ({ actions, graphql }) => {
         
         // Create news-list pages
         const posts = result.data.news.edges
-        const postsPerPage = 3
+        const postsPerPage = 10
         const numPages = Math.ceil(posts.length / postsPerPage)
         Array.from({ length: numPages }).forEach((_, i) => {
           createPage({
