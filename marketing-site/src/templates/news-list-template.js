@@ -16,13 +16,13 @@ export const subtypeColors = {
 const StyledSection = styled.article`
   &&& { max-width: ${ variables.pageWidthNarrow } }
   margin: 5rem auto;
-  background: ${ colors.mainDarker }
+  // background: ${ colors.mainDarker }
 `
 const StyledBlogs = styled.article`
   padding: 5%;
 `
 const StyledTools = styled.nav`
-  background: ${ colors.mainDarkest }; 
+  // background: ${ colors.mainDarkest }; 
   padding: 0.4rem;
 `
 const StyledSelector = styled.button`
@@ -100,14 +100,14 @@ const StyledBlogFooter = styled.div`
   &&& { max-width: ${variables.pageWidth} }
   margin: 0 auto;
   padding: 2rem 0;
-  background: ${colors.mainDarker};
+  // background: ${colors.mainDarker};
   border-top: 2px dotted white;
   // .col { border: 1px solid; }
   .col:nth-of-type(2) { text-align: center; }
   .col:nth-of-type(3) { text-align: right; }
   p { 
     padding-top: 0.5em;
-    a { color: ${colors.main}; }
+    a { color: ${colors.light}; }
   }
   svg { 
     vertical-align: middle; 
@@ -121,12 +121,13 @@ const StyledBlogFooter = styled.div`
     display: inline-block;
     width: 2.0em;
     height: 2.0em;
-    background: ${colors.main};
+    background: ${colors.mainDark};
     border-radius: 50%;
     &.current {
       font-weight: 900;
-      background: ${colors.mainDark};
-      border: 2px dotted ${colors.light};
+      color: ${colors.main};
+      background: ${colors.light};
+      border: 2px dotted ${colors.main};
       padding: 0.6em;
       width: 2.4em;
       height: 2.4em;

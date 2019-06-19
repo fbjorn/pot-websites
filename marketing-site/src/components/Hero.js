@@ -48,10 +48,6 @@ const Hero = () => (
           node {
             id
             html
-            frontmatter {
-              title
-              path
-            }
           }
         }
       }

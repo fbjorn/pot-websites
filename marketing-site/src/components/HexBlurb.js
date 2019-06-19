@@ -21,12 +21,7 @@ const HexContent = styled.div`
   && * {
     color: ${props => props.textColor ? props.textColor : "black"}
   }
-  
-  // h5 {
-  //   @media (max-width: 992px){
-  //     display: none;
-  //   }
-  // }
+  h5 { padding-top: 1em; }
 `
 
 const HexBlurb = (props) => {

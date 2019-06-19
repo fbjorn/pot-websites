@@ -10,8 +10,6 @@ import Github from "../images/github-square-brands.svg"
 import Linkedin from "../images/linkedin-square-brands.svg"
 import { colors, device, variables } from '../Theme.js'
 
-
-
 const StyledFooter = styled.footer`
   &&& { max-width: 1550px; }
   width: auto;
@@ -110,6 +108,9 @@ const Footer = () => (
             <span className="keep-together">
               <a href="https://www.linkedin.com/company/platform-of-trust/" className="some-link github"><img src={Linkedin} className="some-icon" alt="Github" /></a>
               <a href="https://github.com/PlatformOfTrust/" className="some-link linkedin"><img src={Github} className="some-icon" alt="Linkedin" /></a>
+            </span>
+            <span className="keep-together">
+              <a href="https://www.youtube.com/channel/UCSHXKYHxBCl_hXdBZU_A-gg" className="some-link youtube"><img src={Linkedin} className="some-icon" alt="Youtube" /></a>
             </span>
           </nav>
         </div>

@@ -16,13 +16,13 @@ export const subtypeColors = {
 const StyledSection = styled.article`
   &&& { max-width: ${ variables.pageWidthNarrow } }
   margin: 5rem auto;
-  background: ${ colors.mainDarker }
+  // background: ${ colors.mainDarker }
 `
 const StyledBlogs = styled.article`
   padding: 5%;
 `
 const StyledTools = styled.nav`
-  background: ${ colors.mainDarkest }; 
+  // background: ${ colors.mainDarkest }; 
   padding: 0.4rem;
 `
 const StyledSelector = styled.button`
@@ -101,7 +101,7 @@ export default function Events({ data }) {
       <StyledPad>
         <StyledSection className="posts-listing">
           <StyledTools className="filters">
-            <StyledSelector className="tool-block all selected">
+            {/* <StyledSelector className="tool-block all selected">
               <span>All</span>
             </StyledSelector>
             <StyledSelector className="tool-block blocks">
@@ -115,7 +115,7 @@ export default function Events({ data }) {
             <StyledSelector className="tool-block articles">
               <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.notice } />
               <span>Articles</span>
-            </StyledSelector>
+            </StyledSelector> */}
             
           </StyledTools>
           <StyledBlogs className="posts">

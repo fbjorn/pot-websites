@@ -1,7 +1,5 @@
 ---
-title: HeroHex Content
-date: '2019-01-22T13:30:33.962Z'
+page: 'index'
 section: 'herohex'
-type: content
 ---
-#Turn your data into revenue
+# Turn your data into revenue

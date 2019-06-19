@@ -39,8 +39,11 @@ const StyledBenefits = styled.ul`
   }
 `
 
-const IndexPage = ({ data }) => (
-  <Layout>
+const IndexPage = ({ data }) => {
+  const testContent = data.allContent.edges[0].node
+  const contents = data.allContent.edges
+  return (
+    <Layout>
       <SEO title="Home" keywords={[`Platform of Trust`]} />
       <svg height="0" width="0" viewBox="0 0 500 500" >
         <defs>
@@ -49,17 +52,25 @@ const IndexPage = ({ data }) => (
             </clipPath>
         </defs>
       </svg>
-      <StyledMain className="home page-content container">
-        {/*<div className="test">
-          <h1 className="test">TESTING</h1>
-           {data.intro.edges.map(({ node }) => (
-            <div key={node.id}>
-              <h1>{node.frontmatter.title}</h1>
-              <p className="content-fragment" dangerouslySetInnerHTML={{ __html: node.html }} />
-            </div>
-          ))}  
-        </div>*/}
-        
+      <StyledMain className="home page-content container">  
+        <div className="dev-test" style={{display: 'none'}}>
+          <div 
+            key={testContent.id}
+            dangerouslySetInnerHTML={{ __html: testContent.html }}
+          />
+          {contents
+            .filter(content => content.node.frontmatter.section === "foo")
+            .map( ({ node }) => {
+              console.log('[index.js] ContentMapping:', node )
+              return(
+                <div
+                  key={node.id}
+                  dangerouslySetInnerHTML={{ __html: node.html }} 
+                />
+              )
+            })
+          }
+        </div>      
         <div className="row">
           <div className="col-12 col-sm-10 offset-sm-1 col-lg-7">
             <Hero />
@@ -69,26 +80,35 @@ const IndexPage = ({ data }) => (
             <Featured />
           </div>
         </div>
-
-        <div className="row mt-3">
-          <div className="col-md-10 offset-md-1">
-            <h2>What if you <strong>used</strong> your data?</h2>
-          </div>
-          <div className="col-md-10 col-lg-5 offset-md-1 mb-5">
-            <h3>
-              Your business creates exponential amounts of data that you could use to make smarter decisions and more profitable business.
-            </h3>
-          </div>
+        <div className="row mt-5">
+          {contents
+            .filter(content => content.node.frontmatter.section === "intro")
+            .map( ({ node }) => {
+              // console.log('[index.js] ContentMapping:', node )
+              return(
+                <div
+                  key={node.id}
+                  id="intro"
+                  dangerouslySetInnerHTML={{ __html: node.html }} 
+                  className="col-md-10 col-lg-5 offset-md-1 mb-5"
+                />
+              )
+            })
+          }
           <div className="col-6 offset-md-1 col-lg-3 offset-lg-0">
             <StyledBenefits>
-              <li className="benefit">
-                <FontAwesomeIcon icon={['fal', `check-circle`]} size="1x" />
-                Skip the costly and time-consuming part where you build integrations and try the make the data move
-              </li>
-              <li className="benefit">
-                <FontAwesomeIcon icon={['fal', `check-circle`]} size="1x" />
-                Jump right to the part where you start using that data and turning it into revenue
-              </li>
+              {contents
+                .filter(content => content.node.frontmatter.section === "benefits")
+                .map( ({ node }) => {
+                  // console.log('[index.js] ContentMapping:', node )
+                  return(
+                    <li className="benefit" key={node.id}>
+                      <FontAwesomeIcon icon={['fal', `check-circle`]} size="1x" />
+                      {node.html.replace(/<[^>]*>/g, '')}
+                    </li>
+                  )
+                })
+              }
             </StyledBenefits>
           </div>
           <div className="col-6 col-md-3">
@@ -97,9 +117,20 @@ const IndexPage = ({ data }) => (
         </div>
 
         <div className="row mt-3">
-          <div className="col-md-10 offset-md-1 mt-5">
-            <h3>Platform of Trust is a data linking platform with built-in trust capabilities that makes you’re your data flow easily, with marginal of cost while you rule your data:</h3>
-          </div>
+          {contents
+            .filter(content => content.node.frontmatter.section === "definition")
+            .map( ({ node }) => {
+              // console.log('[index.js] ContentMapping:', node )
+              return(
+                <div
+                  key={node.id}
+                  id="definition"
+                  dangerouslySetInnerHTML={{ __html: node.html }} 
+                  className="col-md-10 offset-md-1 mt-5"
+                />
+              )
+            })
+          }
         </div>
 
         <div className="row mt-3 mb-5">
@@ -110,7 +141,7 @@ const IndexPage = ({ data }) => (
               </div>
               
               <div className="hex-blurb col-6 col-lg-3">
-                <HexBlurb title="Improve the productivity of any daily processes" icon="badge" textColor={colors.main} />
+                <HexBlurb title="Improve the productivity of any daily processes" icon="badge-check" textColor={colors.main} />
               </div>
 
               <div className="hex-blurb col-6 col-lg-3">
@@ -156,38 +187,34 @@ const IndexPage = ({ data }) => (
         
         <div className="row mt-5">
           <div className="col-md-10 offset-md-1 mb-3">
-            <h2>These smart companies and organizations are already using Platform of Trust:</h2>
+            <h2>These smart companies and organizations are already using Platform of Trust</h2>
           </div>
           <div className="col-10 offset-1">
             <p>
-              Kojamo Oyj  &middot;  Keskinäinen työeläkevakuutusyhtiö Varma  &middot;  Tampereen Tilapalvelut Oy, GSP Group Oy  &middot;  Hämeen ammattikorkeakoulu HAMK  &middot;  Forum Virium Helsinki  &middot;  Honkio Oy  &middot;  Cozify Oy  &middot; Flexitila / Joustotoimisto Oy  &middot;  Metropolia Ammattikorkeakoulu  &middot;  Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy  &middot;  Tieto Oyj  &middot;  Granlund Oy  &middot;  Digital Living International Oy  &middot;  Tunninen Oy Finland  &middot;  Teknologian tutkimuskeskus VTT Oy  &middot;  Helsingin seudun opiskelija-asuntosäätiö sr (Hoas).
+              Kojamo Oyj  &middot;  Keskinäinen työeläkevakuutusyhtiö Varma  &middot;  Tampereen Tilapalvelut Oy, GSP Group Oy  &middot;  Hämeen ammattikorkeakoulu HAMK  &middot;  Forum Virium Helsinki  &middot;  Honkio Oy  &middot;  Cozify Oy  &middot; Flexitila / Joustotoimisto Oy  &middot;  Metropolia Ammattikorkeakoulu  &middot;  Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy  &middot;  Tieto Oyj  &middot;  Granlund Oy  &middot;  Digital Living International Oy  &middot;  Tunninen Oy Finland  &middot;  Teknologian tutkimuskeskus VTT Oy  &middot; Locia Oy  &middot;  Sport Venue Oy.
             </p> 
             {/* <CustomRoundedButton className="ml-0" label="become reseller"/> */}
           </div>
         </div>
       </StyledMain>
     </Layout>
-)
-
+  )
+}
 export const query = graphql`
   query {
-    intro: allMarkdownRemark(filter: {
-      frontmatter: {
-      path: {eq: "/index#introduction"}, 
-      section: {eq: "introduction"}
-      }}) {
-        totalCount
-        edges {
+    allContent: allMarkdownRemark(
+        filter: { frontmatter: { page: { eq: "index" } } }
+      ) {
+      edges {
         node {
           id
           html
           frontmatter {
-              title
-              path
-            }
+            section
           }
         }
       }
+    }
   }
 `
 

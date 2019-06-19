@@ -3,7 +3,9 @@ import Link from "gatsby-link"
 import { graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
+
 import CustomImage from "../components/CustomImage"
+import CustomSquareButton from "../components/CustomSquareButton"
 import Layout from '../components/layout'
 import { colors, device, variables } from '../Theme.js'
 
@@ -11,18 +13,20 @@ export const subtypeColors = {
   blog: `${colors.ok}`,
   news: `${colors.notice}`,
   article: `${colors.alert}`,
+  business: `${colors.success}`,
+  technical:`${colors.mainLightest}`,
 }
 
 const StyledSection = styled.article`
   &&& { max-width: ${ variables.pageWidthNarrow } }
   margin: 5rem auto;
-  background: ${ colors.mainDarker }
+  // background: ${ colors.mainDarker }
 `
 const StyledBlogs = styled.article`
   padding: 5%;
 `
 const StyledTools = styled.nav`
-  background: ${ colors.mainDarkest }; 
+  // background: ${ colors.mainDarkest }; 
   padding: 0.4rem;
 `
 const StyledSelector = styled.button`
@@ -106,12 +110,12 @@ export default function Cases({ data }) {
               <span>All</span>
             </StyledSelector>
             <StyledSelector className="tool-block blocks">
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.success } />
               <span>Business</span>
             </StyledSelector>
             <StyledSelector className="tool-block press-releases">
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
-              <span>Tech</span>
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.mainLightest } />
+              <span>Technical</span>
             </StyledSelector>
             
           </StyledTools>
@@ -145,12 +149,6 @@ export default function Cases({ data }) {
                           <>
                           <span>{post.frontmatter.subtype}</span>
                           <span className="divider">.</span>
-                          </>
-                        )}
-                        {post.frontmatter.author && (
-                          <>
-                        <span>{post.frontmatter.author}</span>
-                        <span className="divider">.</span>
                           </>
                         )}
                         <span>{post.frontmatter.date}</span>
