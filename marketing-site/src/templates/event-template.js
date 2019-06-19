@@ -216,10 +216,16 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        shorttitle
+        potevent
+        time
+        place
+        eventlink
         subtype
-        author
         pictext
         pic
+        lang
+        status
         image {
           childImageSharp { 
             fluid(maxWidth: 1440) {

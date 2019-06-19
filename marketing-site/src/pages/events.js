@@ -1,9 +1,11 @@
 import React from "react"
 import Link from "gatsby-link"
 import { graphql } from "gatsby"
+import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 import CustomImage from "../components/CustomImage"
+import CustomSquareButton from "../components/CustomSquareButton"
 import Layout from '../components/layout'
 import { colors, device, variables } from '../Theme.js'
 
@@ -115,7 +117,9 @@ export default class Events extends React.Component {
 
   render() {
     const { filters, selected  } = this.state
+    const data = this.props.data.allMdx
     const { edges: posts } = this.props.data.allMdx;
+    console.log(data)
     return (
       <Layout className="blog-posts">
         <StyledPad>
@@ -174,19 +178,37 @@ export default class Events extends React.Component {
                             <span className="divider">.</span>
                             </>
                           )}
-                          {post.frontmatter.author && (
+                          {post.frontmatter.time && (
                             <>
-                          <span>{post.frontmatter.author}</span>
-                          <span className="divider">.</span>
+                            <span>{post.frontmatter.time}</span>
+                            <span className="divider">.</span>
                             </>
                           )}
-                          <span>{post.frontmatter.date}</span>
+                          {post.frontmatter.place && (
+                            <span>{post.frontmatter.place}</span>
+                          )}
                         </p>
                       </div>
-                      <div className="excerpt">
-                        <Link to={post.frontmatter.path} className="post-link" >
-                          <p>{post.excerpt}</p>
-                        </Link>
+                      <div className="event-link">
+                        {post.frontmatter.potevent && (
+                          <Link to={post.frontmatter.path}>
+                            <CustomSquareButton label="Read more" />
+                          </Link>
+                        )}
+                        {!post.frontmatter.potevent && (
+                          <>
+                          <MDXRenderer >
+                            {post.code.body}
+                          </MDXRenderer>
+                          <a 
+                            href={post.frontmatter.eventlink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                          <CustomSquareButton label="Visit event page" />
+                          </a>
+                        </>
+                        )}
                       </div>
                     </div>
                   </StyledBlogBlock>
@@ -215,10 +237,16 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            potevent
             type
-            subtype
-            author
+            subtype 
+            time
+            place
+            eventlink
             pic
+          }
+          code {
+            body
           }
         }
       }

@@ -199,7 +199,7 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query casPostByPath($path: String!) {
+  query casePostByPath($path: String!) {
     mdx(
         frontmatter: { path: { eq: $path } }
     ) {

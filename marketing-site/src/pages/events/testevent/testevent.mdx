@@ -1,33 +1,20 @@
 ---
 path: "/events/testevent" # path to event-page
-title: "Test event"
+potevent: false
+title: "Sustainable & Social Cities"
 shorttitle: "Test event" # max two lines 12 char each
-time: "Thursday, May 16th, 2019"
-place: "Maria01 (Classroom building 2A, 2nd floor), Lapinlahdenkatu 16, Helsinki"
+time: "August 29 2019"
+place: "Helsinki Amos Rex art museum"
 coordinates: "60.166667, 24.921667" # In case we want Google map decimal degrees.
+eventlink: "https://insight.kpmg.fi/smartcity"
 image: "" # Featured image shown on page and listings. Save in same folder. Don't use svg.
 pic: "" # for hex-image Needs to be square for now!
 pictext: "This is kuvateksti"
+
 type: "event" 
 subtype: "business" #If later needed
 tags: [ "event", Platform of Trust", "dataflows"] # Any string, can be used in search / "related content"
 lang: "en-GB" # ISO Lang attr
-author: "Mika Hämäläinen"
 status: "published" # "published" / "draft" / "pending" / "archived"
 ---
-import Agenda from './Agenda'
-import Invitation from './Invitation'
-
-<Agenda />
-<Invitation />
-
-export default ({ children }) => (
-  <article className="event"> 
-    <aside className="left">
-      { children[0] } 
-    </aside>
-    <main className="right">
-      { children[1] } 
-    </main>
-  </article>
-  )
+KPMG and FCG are holding an event at the famous Amos Rex art museum. Our Toni Luhti on stage speaking about how data platforms make it possible to combine sustainability and profit. 

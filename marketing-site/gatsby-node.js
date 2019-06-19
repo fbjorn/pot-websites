@@ -41,7 +41,7 @@ exports.createPages = ({ actions, graphql }) => {
             }
         }
         events: allMdx(
-            filter: { frontmatter: { type: { eq: "event" } } }
+            filter: { frontmatter: { potevent: { eq: true } } }
             sort: { order: DESC, fields: [frontmatter___date] }
         ) {
             edges {
@@ -49,14 +49,19 @@ exports.createPages = ({ actions, graphql }) => {
                     excerpt(pruneLength: 250)
                     id
                     frontmatter {
-                        title
                         date(formatString: "MMMM DD, YYYY")
                         path
-                        type
-                        author
-                        pic
-                        pictext
+                        title
+                        shorttitle
+                        potevent
+                        time
+                        place
+                        eventlink
                         subtype
+                        pictext
+                        pic
+                        lang
+                        status
                     }
                 }
             }
