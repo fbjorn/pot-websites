@@ -32,19 +32,20 @@ const StyledFooter = styled.footer`
   .logo-mobile { @media ${device.laptop} { display: none; } }
   .logo-desk { display: none; }
   .logo-desk { @media ${device.laptop} { display: block; margin: 0; width: 100%;  } }
+  a:link { color: ${colors.light}; }
+  a:visited { color: ${colors.main}; }
+  .sitemap a:link { text-decoration: none; }
   .sitemap { display: none; }
   .sitemap { @media ${device.laptop} { display: block; } }
-  a:link { color: ${colors.main}; }
-  a:visited { color: ${colors.mainDarkest}; }
   .keep-together { white-space: nowrap; }
   .footer-contact { 
-    color: ${colors.main};
+    color: ${colors.light};
     text-align: left;
     line-height: 1;
     font-size: calc(0.5rem + ((1vw - 0.2rem) * 4.4444));
       @media (min-width: 31.25rem) { font-size: 1rem; }
     h5 { 
-      color: ${colors.main}; 
+      color: ${colors.light}; 
       font-size: calc(0.5rem + ((1vw - 0.2rem) * 4.4444));
       @media (min-width: 31.25rem) { font-size: 1rem; }
     }
@@ -70,7 +71,7 @@ const Footer = () => (
 
         <div className="footer-contact col-4 col-lg-4 col-xl-4 mt-md-0 mt-1">
           <h5 className="mb-md-1">Platform of Trust</h5>
-          <p>Business ID FI29800052</p>
+          <p>VAT-number FI29800052</p>
           {/* <p><a href="https://www.tilaajavastuu.fi/en/data-protection/">Data protection statement</a></p>*/}
         </div> 
 
