@@ -1,6 +1,5 @@
 import React from 'react'
-// import { StaticQuery, graphql } from "gatsby"
-// import MDXRenderer from "gatsby-mdx/mdx-renderer"
+import { StaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
 import HexBg from '../images/bg-square2.jpg'
@@ -20,30 +19,58 @@ const StyledBg =styled.div`
   width: 100%;
   z-index: 0;
 `
-const StyledContent =styled.h1`
+const StyledContent =styled.div`
   position: absolute;
-  // padding: 25% 1rem 25% 50%;
   width: 45%;
   top: 25%;
   left: 50%;
-  color: white;
-  font-size: 5vw;
-  // @media ${device.mobileL} { font-size: 1.8rem; }
-  @media ${device.tablet} { font-size: 1.6rem; }
-  @media ${device.laptopL} { font-size: 2rem; }
   z-index: 2;
+  h1 {
+    color: white;
+    // font-size: 5vw;
+    font-size: 9vw;
+    // @media ${device.tablet} { font-size: 1.6rem; }
+    @media ${device.tablet} { font-size: 2.6rem; }
+    // @media ${device.laptopL} { font-size: 2rem; }
+    @media ${device.laptopL} { font-size: 3.6rem; }
+  }
 `
 
-const Hero = ({ data }) => (
-  <StyledHero>
-    <StyledBg>
-      <HexImage pic={HexBg}/>
-    </StyledBg>
-
-    <StyledContent>
-      Create better living environment and make smarter business decisions with flowing data
-    </StyledContent>
-  </StyledHero>
+const Hero = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        intro: allMarkdownRemark(
+          filter: { frontmatter: { section: { eq: "herohex" } } }
+          limit: 1
+        ) {
+          edges {
+          node {
+            id
+            html
+            frontmatter {
+              title
+              path
+            }
+          }
+        }
+      }
+    }
+  `}
+    render={data =>  {
+      const content = data.intro.edges[0].node
+      return (
+      <StyledHero>
+        <StyledBg>
+          <HexImage pic={HexBg}/>
+        </StyledBg>
+        <StyledContent 
+          key={content.id}
+          dangerouslySetInnerHTML={{ __html: content.html }}
+        />
+      </StyledHero>
+    )}}
+  />
 )
 
 export default Hero
