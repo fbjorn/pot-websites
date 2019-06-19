@@ -3,14 +3,18 @@ import Link from "gatsby-link"
 import { graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
+
 import CustomImage from "../components/CustomImage"
 import Layout from '../components/layout'
+import CustomRoundedButton from '../components/CustomRoundedButton'
 import { colors, device, variables } from '../Theme.js'
 
 export const subtypeColors = {
   blog: `${colors.ok}`,
   news: `${colors.notice}`,
   article: `${colors.alert}`,
+  business: `${colors.success}`,
+  technical:`${colors.mainLightest}`,
 }
 
 const StyledSection = styled.article`
@@ -141,7 +145,7 @@ export default class newsList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: [ 'blog', 'article', 'press-release' ],
+      filters: [ 'blog', 'article', 'press-release', 'business', 'technical' ],
       selected: "all",
       showFooter: true,
     }
@@ -183,66 +187,82 @@ export default class newsList extends React.Component {
               <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
               <span onClick={() => this.handleFiltering("press-release")}>Press releases</span>
             </StyledSelector>
-            <StyledSelector className={`tool-block article ${ selected[0] === "article" ? "selected-filter" : "" }`}>
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.notice } />
-              <span onClick={() => this.handleFiltering("article")}>Articles</span>
+            <StyledSelector className={`tool-block business ${ selected[0] === "business" ? "selected-filter" : "" }`}>
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.success } />
+              <span onClick={() => this.handleFiltering("business")}>Business</span>
+            </StyledSelector>
+            <StyledSelector className={`tool-block article ${ selected[0] === "technical" ? "selected-filter" : "" }`}>
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.mainLightest } />
+              <span onClick={() => this.handleFiltering("technical")}>Technical</span>
             </StyledSelector>
             
           </StyledTools>
-          <StyledBlogs className="posts">
-            <h1>News</h1>
-          {posts
-            // .filter(post => post.node.frontmatter.title.length > 0)
-            // .filter(post => post.node.frontmatter.subtype === "article")
-            .filter(post => filters.includes(post.node.frontmatter.subtype))
-            .map(( { node: post }, index ) => {
-              // console.log('Index on', index)
-              // this.setState({items: index})
-              items = index + 1
-              return (
-                <StyledBlogBlock className="post-preview" key={post.id} >
-                  {/* {items} */}
-                  <div className="featured-image">
-                    <Link to={post.frontmatter.path} className="post-link" >
-                      <StyledHexImage>
-                        <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
-                      </StyledHexImage>
-                    </Link>
-                  </div>
-                  <div className="post-preview-content">
-                    <div className="title">
-                    <Link to={post.frontmatter.path} className="post-link" >
-                        <h2>{post.frontmatter.title}</h2>
-                    </Link>
-                    </div>
-                    <div className="meta">
-                      <p>
-                        <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
-                        {post.frontmatter.subtype && (
-                          <>
-                            <span>{post.frontmatter.subtype}</span>
-                            <span className="divider">.</span>
-                          </>
-                        )}
-                        {post.frontmatter.subtype === "blog" && (
-                          <>
-                            <span>{post.frontmatter.author}</span>
-                            <span className="divider">.</span>
-                          </>
-                        )}
-                        <span>{post.frontmatter.date}</span>
-                      </p>
-                    </div>
-                    <div className="excerpt">
-                      <Link to={post.frontmatter.path} className="post-link" >
-                        <p>{post.excerpt}</p>
-                      </Link>
-                    </div>
-                  </div>
-                </StyledBlogBlock>
+          <StyledBlogs className="posts container">
+            <div className="row">
+              <div className="col-6">
+                <h1>News</h1>
+              </div>
+              <div className="col-6 text-right">
+                <Link to="/newsletter">
+                  <CustomRoundedButton label="Sign up for news" />
+                </Link>
+              </div>
+            </div>
+            <div className="row">
+                  
+              {posts
+                // .filter(post => post.node.frontmatter.title.length > 0)
+                // .filter(post => post.node.frontmatter.subtype === "article")
+                .filter(post => filters.includes(post.node.frontmatter.subtype))
+                .map(( { node: post }, index ) => {
+                  // console.log('Index on', index)
+                  // this.setState({items: index})
+                  items = index + 1
+                  return (
+                    <StyledBlogBlock className="post-preview" key={post.id} >
+                      {/* {items} */}
+                      <div className="featured-image">
+                        <Link to={post.frontmatter.path} className="post-link" >
+                          <StyledHexImage>
+                            <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                          </StyledHexImage>
+                        </Link>
+                      </div>
+                      <div className="post-preview-content">
+                        <div className="title">
+                        <Link to={post.frontmatter.path} className="post-link" >
+                            <h2>{post.frontmatter.title}</h2>
+                        </Link>
+                        </div>
+                        <div className="meta">
+                          <p>
+                            <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
+                            {post.frontmatter.subtype && (
+                              <>
+                                <span>{post.frontmatter.subtype}</span>
+                                <span className="divider">.</span>
+                              </>
+                            )}
+                            {post.frontmatter.subtype === "blog" && (
+                              <>
+                                <span>{post.frontmatter.author}</span>
+                                <span className="divider">.</span>
+                              </>
+                            )}
+                            <span>{post.frontmatter.date}</span>
+                          </p>
+                        </div>
+                        <div className="excerpt">
+                          <Link to={post.frontmatter.path} className="post-link" >
+                            <p>{post.excerpt}</p>
+                          </Link>
+                        </div>
+                      </div>
+                    </StyledBlogBlock>
 
-              );
-            })}
+                  );
+                })}
+            </div>
           </StyledBlogs>
 
           {(numPages > 1 || !isFirst ) && (
