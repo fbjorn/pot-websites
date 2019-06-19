@@ -41,6 +41,7 @@ const StyledCustomImage = styled.div`
   margin-bottom: 2rem;
   transform: translateX(-1rem) rotate(10deg) scale(0.9);
   clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
+  .gatsby-image-wrapper { transform: rotate(-10deg); }
 `
 
 const ContactBlurb = (props) => {

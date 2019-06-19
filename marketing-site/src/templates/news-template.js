@@ -101,6 +101,7 @@ const StyledCustomImage = styled.div`
   margin-bottom: 2rem;
   transform: translateX(-1rem) rotate(10deg) scale(0.9);
   clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
+  .gatsby-image-wrapper { transform: rotate(-10deg); }
 `
 const StyledDisqus = styled.div`
   background: ${colors.mainDarker};
@@ -124,7 +125,7 @@ export default function Template({
             <StyledMeta>
               <FontAwesomeIcon icon={['fa', 'hexagon']} color="blue" />
               <span>{post.frontmatter.subtype}</span>
-              <span>{post.frontmatter.author}</span>
+              {post.frontmatter.subtype === "blog" && (<span>{post.frontmatter.author}</span>)}
               <span>{post.frontmatter.date}</span>
             </StyledMeta>
           </div>
@@ -143,7 +144,7 @@ export default function Template({
           </div>
         </StyledPost>
         <StyledPostFooter className="container">
-          <div className="row">
+          {post.frontmatter.subtype === "blog" && (<div className="row">
             <div className="col-1 offset-1">
               <StyledCustomImage>
                 <CustomImage filename={post.frontmatter.authorpic} alt={post.frontmatter.author} />
@@ -155,7 +156,7 @@ export default function Template({
                 Author {post.frontmatter.author} 
               </p>
             </div>
-          </div>
+          </div>)}
           <div className="row">
             <div className="col-10 offset-1">
               <p>

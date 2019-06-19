@@ -219,14 +219,14 @@ export default class newsList extends React.Component {
                         <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
                         {post.frontmatter.subtype && (
                           <>
-                          <span>{post.frontmatter.subtype}</span>
-                          <span className="divider">.</span>
+                            <span>{post.frontmatter.subtype}</span>
+                            <span className="divider">.</span>
                           </>
                         )}
-                        {post.frontmatter.author && (
+                        {post.frontmatter.subtype === "blog" && (
                           <>
-                        <span>{post.frontmatter.author}</span>
-                        <span className="divider">.</span>
+                            <span>{post.frontmatter.author}</span>
+                            <span className="divider">.</span>
                           </>
                         )}
                         <span>{post.frontmatter.date}</span>

@@ -127,8 +127,6 @@ export default function Template({
             <StyledMeta>
               <FontAwesomeIcon icon={['fa', 'hexagon']} color="blue" />
               <span>{post.frontmatter.subtype}</span>
-              <span>{post.frontmatter.author}</span>
-              <span>{post.frontmatter.date}</span>
             </StyledMeta>
           </div>
         </StyledHeader>
@@ -146,19 +144,6 @@ export default function Template({
           </div>
         </StyledPost>
         <StyledPostFooter className="container">
-          <div className="row">
-            <div className="col-1 offset-1">
-              <StyledCustomImage>
-                <CustomImage filename={post.frontmatter.authorpic} alt={post.frontmatter.author} />
-              </StyledCustomImage>
-            </div>
-            <div className="col-10">
-              <p className="pt-md-5">
-                {/* <FontAwesomeIcon icon={['fa', 'hexagon']} color="white" size="4x" /> */}
-                Author {post.frontmatter.author} 
-              </p>
-            </div>
-          </div>
           <div className="row">
             <div className="col-10 offset-1">
               <p>
