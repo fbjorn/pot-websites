@@ -7,6 +7,17 @@
 const path = require('path');
 const { createFilePath, createFileNode } = require(`gatsby-source-filesystem`)
 
+exports.sourceNodes = ({ actions }) => {
+    const { createTypes } = actions
+    const typeDefs = `
+      type AuthorJson implements Node {
+        name: String
+        birthday: Date
+      }
+    `
+    createTypes(typeDefs)
+  }
+
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
     const blogTemplate = path.resolve(`src/templates/blog-template.js`);
@@ -186,8 +197,8 @@ exports.createPages = ({ actions, graphql }) => {
         })
 
         result.data.news.edges.forEach(({ node }, index ) => {
-            const prev = index === 0 ? false : posts[index - 1].node
-            const next = index === posts.length - 1 ? false : posts[index + 1].node
+            const prev = index === 0 ? null : posts[index - 1].node
+            const next = index === posts.length - 1 ? null : posts[index + 1].node
             createPage({
                 path: node.frontmatter.path,
                 component: newsTemplate,
