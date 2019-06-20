@@ -1,5 +1,5 @@
 ---
-path: "/articles/stack-overflow" 
+path: "/news/stack-overflow" 
 date: "2019-04-03T13:45:33.962Z"
 title: "Platform of Trust uses Stack Overflow for technical questions and overall developer experience development"
 image: "./sparks.jpg" 

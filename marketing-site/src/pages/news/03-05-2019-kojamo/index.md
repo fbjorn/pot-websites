@@ -1,5 +1,5 @@
 ---
-path: "/articles/kojamo" # path to where you want blog to be published aka https://preview.oftrust.net/blogs/sport-venue
+path: "/news/kojamo" # path to where you want blog to be published aka https://preview.oftrust.net/blogs/sport-venue
 date: "2019-05-03T13:45:33.962Z"
 title: "Collaboration can help effectively utilise fragmented data in the property sector"
 image: "./light.jpg" # Featured image shown on page and listings. Save in same folder. Don't use svg.

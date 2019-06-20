@@ -1,5 +1,5 @@
 ---
-path: "/articles/signspace" # path to where you want blog to be published aka https://preview.oftrust.net/blogs/sport-venue
+path: "/news/signspace" # path to where you want blog to be published aka https://preview.oftrust.net/blogs/sport-venue
 date: "2019-03-08T13:45:33.962Z"
 title: "With SignSpace, you’ll never need a pen again"
 image: "./harbour-city.jpg" # Featured image shown on page and listings. Save in same folder. Don't use svg.
