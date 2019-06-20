@@ -8,7 +8,6 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Layout from '../components/layout'
-import CustomImage from "../components/CustomImage"
 import { colors, device, variables } from '../Theme.js'
 
 const StyledBlog = styled.article`
@@ -90,34 +89,13 @@ const StyledBlogFooter = styled.div`
     // &.fa-arrow-right { margin-left: 1rem; }
   }
 `
-const StyledPostContent = styled.section`
-  .case { display: flex; flex-direction: column;  }
-  .left { flex: 1; order: 2; }
-  .right { flex: 2; order: 1; }
-  @media ${device.laptop} {
-    .case { flex-direction: row; }
-    .left { flex: 1; order: 1; }
-    .right { 
-      flex: 2; 
-      order: 2; 
-      transform: translateY(-20rem);
-      margin-bottom: -20rem;
-    }
-  }
-`
-const StyledCustomImage = styled.div`
-  max-width: 350px;
-  margin-bottom: 0rem;
-  transform: translateX(-1rem) rotate(10deg) scale(1);
-  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
-`
 
 export default function Template({
   data, location, pageContext 
 }) {
   const post = data.mdx; 
   const { next, prev } = pageContext
-  
+
   return (
     <Layout pathname={location.pathname}>
       <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} />

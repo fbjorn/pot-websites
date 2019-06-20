@@ -157,17 +157,41 @@ export default class Events extends React.Component {
                   
                   <StyledBlogBlock className="post-preview" key={post.id} >
                     <div className="featured-image">
+                      {post.frontmatter.potevent && (
                       <Link to={post.frontmatter.path} className="post-link" >
                         <StyledHexImage>
                           <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
                         </StyledHexImage>
                       </Link>
+                      )}
+                      {!post.frontmatter.potevent && (
+                        <StyledHexImage>
+                          <a 
+                            href={post.frontmatter.eventlink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                          </a>
+                        </StyledHexImage>
+                      )}
                     </div>
                     <div className="post-preview-content">
                       <div className="title">
-                      <Link to={post.frontmatter.path} className="post-link" >
+                      {post.frontmatter.potevent && (
+                        <Link to={post.frontmatter.path} className="post-link" >
                           <h2>{post.frontmatter.title}</h2>
-                      </Link>
+                        </Link>
+                      )}
+                      {!post.frontmatter.potevent && (
+                        <a 
+                          href={post.frontmatter.eventlink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <h2>{post.frontmatter.title}</h2>
+                        </a>
+                      )}
                       </div>
                       <div className="meta">
                         <p>
