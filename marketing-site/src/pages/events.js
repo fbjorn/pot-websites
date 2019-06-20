@@ -21,7 +21,10 @@ const StyledSection = styled.article`
   margin: 5rem auto;
   // background: ${ colors.mainDarker }
 `
-const StyledBlogs = styled.article`
+const StyledHeader = styled.div`
+  h2 { margin-top: 4rem; }
+`
+const StyledBlogs = styled.div`
   padding: 5%;
 `
 const StyledTools = styled.nav`
@@ -42,26 +45,26 @@ const StyledSelector = styled.button`
 const StyledBlogBlock = styled.article`
   display: inline-block;
   width: width: 100%; 
-  @media ${device.laptop} { width: calc(50% - 2rem); }
+  // @media ${device.laptop} { width: calc(50% - 2rem); }
   padding: 1.5rem;
   margin: 1rem;
   border-top: 2px dotted ${ colors.main }; 
   h2 { font-size: 1.4rem; }
 
-  &:nth-of-type(1) { 
-    width: 100%; 
-    border-top: none;
-    h2 { font-size: 2.4rem; }
-  }
+  // &:nth-of-type(1) { 
+  //   width: 100%; 
+  //   border-top: none;
+  //   h2 { font-size: 2.4rem; }
+  // }
 
-  &:nth-child(n+5) {
-    width: 100%; 
-    .featured-image, .excerpt { display: none }
-    .title { order: 2; }
-    .meta { order: 1; }
-    .post-preview-content { width: 100%; }
-    h2 { font-size: 2.4rem; }
-  }
+  // &:nth-child(n+5) {
+  //   width: 100%; 
+  //   .featured-image, .excerpt { display: none }
+  //   .title { order: 2; }
+  //   .meta { order: 1; }
+  //   .post-preview-content { width: 100%; }
+  //   h2 { font-size: 2.4rem; }
+  // }
 
   .post-link { 
     text-decoration: none;
@@ -128,14 +131,6 @@ export default class Events extends React.Component {
               <StyledSelector className={`tool-block all ${ selected[0] === "all" ? "selected-filter" : "" }`}>
                 <span onClick={() => this.handleFiltering("all")}>All</span>
               </StyledSelector>
-              {/* <StyledSelector className={`tool-block blog ${ selected[0] === "blog" ? "selected-filter" : "" }`}>
-                <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
-                <span onClick={() => this.handleFiltering("blog")}>Blogs</span>
-              </StyledSelector>
-              <StyledSelector className={`tool-block press-release ${ selected[0] === "press-release" ? "selected-filter" : "" }`}>
-                <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
-                <span onClick={() => this.handleFiltering("press-release")}>Press releases</span>
-              </StyledSelector> */}
               <StyledSelector className={`tool-block business ${ selected[0] === "business" ? "selected-filter" : "" }`}>
                 <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.success } />
                 <span onClick={() => this.handleFiltering("business")}>Business</span>
@@ -145,100 +140,308 @@ export default class Events extends React.Component {
                 <span onClick={() => this.handleFiltering("technical")}>Technical</span>
               </StyledSelector>
             </StyledTools>
+            <StyledHeader className="container">
+              <div className="row">
+                <div className="col">
+                  <h1>Events</h1>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-4 d-none d-md-block">
+                  <StyledHexImage>
+                    <CustomImage filename="bg-square2.jpg" alt="Graphical element" />
+                  </StyledHexImage>
+                </div>
+                <div className="col-12 col-md-8">
+                  <h2>Come to meet us at following events</h2>
+                </div>
+              </div>
+            </StyledHeader>
             <StyledBlogs className="posts">
-              <h1>Events</h1>
-            
-            {posts
-              // .filter(post => post.node.frontmatter.title.length > 0)
-              // .filter(post => post.node.frontmatter.type === "blog")
-              .filter(post => filters.includes(post.node.frontmatter.subtype))
-              .map(({ node: post }) => {
-                return (
-                  
-                  <StyledBlogBlock className="post-preview" key={post.id} >
-                    <div className="featured-image">
-                      {post.frontmatter.potevent && (
-                      <Link to={post.frontmatter.path} className="post-link" >
-                        <StyledHexImage>
-                          <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
-                        </StyledHexImage>
-                      </Link>
-                      )}
-                      {!post.frontmatter.potevent && (
-                        <StyledHexImage>
-                          <a 
-                            href={post.frontmatter.eventlink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
-                          </a>
-                        </StyledHexImage>
-                      )}
-                    </div>
-                    <div className="post-preview-content">
-                      <div className="title">
-                      {post.frontmatter.potevent && (
-                        <Link to={post.frontmatter.path} className="post-link" >
-                          <h2>{post.frontmatter.title}</h2>
-                        </Link>
-                      )}
-                      {!post.frontmatter.potevent && (
-                        <a 
-                          href={post.frontmatter.eventlink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <h2>{post.frontmatter.title}</h2>
-                        </a>
-                      )}
-                      </div>
-                      <div className="meta">
-                        <p>
-                          <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
-                          {post.frontmatter.subtype && (
-                            <>
-                            <span>{post.frontmatter.subtype}</span>
-                            <span className="divider">.</span>
-                            </>
-                          )}
-                          {post.frontmatter.time && (
-                            <>
-                            <span>{post.frontmatter.time}</span>
-                            <span className="divider">.</span>
-                            </>
-                          )}
-                          {post.frontmatter.place && (
-                            <span>{post.frontmatter.place}</span>
-                          )}
-                        </p>
-                      </div>
-                      <div className="event-link">
-                        {post.frontmatter.potevent && (
-                          <Link to={post.frontmatter.path}>
-                            <CustomSquareButton label="Read more" />
-                          </Link>
-                        )}
-                        {!post.frontmatter.potevent && (
-                          <>
-                          <MDXRenderer >
-                            {post.code.body}
-                          </MDXRenderer>
-                          <a 
-                            href={post.frontmatter.eventlink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                          <CustomSquareButton label="Visit event page" />
-                          </a>
-                        </>
-                        )}
-                      </div>
-                    </div>
-                  </StyledBlogBlock>
+              <div className="row">
+                <div className="potevents col-md-6">
+                  <h3>Events organised by us</h3>
+                  {posts
+                    .filter(post => post.node.frontmatter.potevent)
+                    .filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) <= 0 )
+                    .map(({ node: post }) => {
+                      return (
+                        
+                        <StyledBlogBlock className="post-preview" key={post.id} >
+                          <div className="featured-image">
+                            {post.frontmatter.potevent && (
+                            <Link to={post.frontmatter.path} className="post-link" >
+                              <StyledHexImage>
+                                <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                              </StyledHexImage>
+                            </Link>
+                            )}
+                            {!post.frontmatter.potevent && (
+                              <StyledHexImage>
+                                <a 
+                                  href={post.frontmatter.eventlink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                                </a>
+                              </StyledHexImage>
+                            )}
+                          </div>
+                          <div className="post-preview-content">
+                            <div className="title">
+                            {post.frontmatter.potevent && (
+                              <Link to={post.frontmatter.path} className="post-link" >
+                                <h2>{post.frontmatter.title}</h2>
+                              </Link>
+                            )}
+                            {!post.frontmatter.potevent && (
+                              <a 
+                                href={post.frontmatter.eventlink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <h2>{post.frontmatter.title}</h2>
+                              </a>
+                            )}
+                            </div>
+                            <div className="meta">
+                              <p>
+                                <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
+                                {post.frontmatter.subtype && (
+                                  <>
+                                  <span>{post.frontmatter.subtype}</span>
+                                  <span className="divider">.</span>
+                                  </>
+                                )}
+                                {post.frontmatter.time && (
+                                  <>
+                                  <span>{post.frontmatter.time}</span>
+                                  <span className="divider">.</span>
+                                  </>
+                                )}
+                                {post.frontmatter.place && (
+                                  <span>{post.frontmatter.place}</span>
+                                )}
+                              </p>
+                            </div>
+                            <div className="event-link">
+                              {post.frontmatter.potevent && (
+                                <Link to={post.frontmatter.path}>
+                                  <CustomSquareButton label="Read more" />
+                                </Link>
+                              )}
+                              {!post.frontmatter.potevent && (
+                                <>
+                                <MDXRenderer >
+                                  {post.code.body}
+                                </MDXRenderer>
+                                <a 
+                                  href={post.frontmatter.eventlink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                <CustomSquareButton label="Visit event page" />
+                                </a>
+                              </>
+                              )}
+                            </div>
+                          </div>
+                        </StyledBlogBlock>
 
-                );
-              })}
+                      );
+                    })}
+                </div>
+                <div className="nonpotevents col-md-6">
+                  <h3>Events organised by friends</h3>
+                  {posts
+                    .filter(post => !post.node.frontmatter.potevent)
+                    .filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) <= 0 )
+                    .map(({ node: post }) => {
+                      return (
+                        
+                        <StyledBlogBlock className="post-preview" key={post.id} >
+                          <div className="featured-image">
+                            {post.frontmatter.potevent && (
+                            <Link to={post.frontmatter.path} className="post-link" >
+                              <StyledHexImage>
+                                <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                              </StyledHexImage>
+                            </Link>
+                            )}
+                            {!post.frontmatter.potevent && (
+                              <StyledHexImage>
+                                <a 
+                                  href={post.frontmatter.eventlink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                                </a>
+                              </StyledHexImage>
+                            )}
+                          </div>
+                          <div className="post-preview-content">
+                            <div className="title">
+                            {post.frontmatter.potevent && (
+                              <Link to={post.frontmatter.path} className="post-link" >
+                                <h2>{post.frontmatter.title}</h2>
+                              </Link>
+                            )}
+                            {!post.frontmatter.potevent && (
+                              <a 
+                                href={post.frontmatter.eventlink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <h2>{post.frontmatter.title}</h2>
+                              </a>
+                            )}
+                            </div>
+                            <div className="meta">
+                              <p>
+                                <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
+                                {post.frontmatter.subtype && (
+                                  <>
+                                  <span>{post.frontmatter.subtype}</span>
+                                  <span className="divider">.</span>
+                                  </>
+                                )}
+                                {post.frontmatter.time && (
+                                  <>
+                                  <span>{post.frontmatter.time}</span>
+                                  <span className="divider">.</span>
+                                  </>
+                                )}
+                                {post.frontmatter.place && (
+                                  <span>{post.frontmatter.place}</span>
+                                )}
+                              </p>
+                            </div>
+                            <div className="event-link">
+                              {post.frontmatter.potevent && (
+                                <Link to={post.frontmatter.path}>
+                                  <CustomSquareButton label="Read more" />
+                                </Link>
+                              )}
+                              {!post.frontmatter.potevent && (
+                                <>
+                                <MDXRenderer >
+                                  {post.code.body}
+                                </MDXRenderer>
+                                <a 
+                                  href={post.frontmatter.eventlink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                <CustomSquareButton label="Visit event page" />
+                                </a>
+                              </>
+                              )}
+                            </div>
+                          </div>
+                        </StyledBlogBlock>
+
+                      );
+                    })}
+                </div>
+                
+              </div>
+              <div className="row">
+                <div className="pastevents col-md-12">
+                  <h3>Past events</h3>
+                  {Date.now()}
+                  {posts
+                    .filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) >= 0 )
+                    .map(({ node: post }) => {
+                      return (
+                        
+                        <StyledBlogBlock className="post-preview" key={post.id} >
+                          <div className="featured-image">
+                            {post.frontmatter.potevent && (
+                            <Link to={post.frontmatter.path} className="post-link" >
+                              <StyledHexImage>
+                                <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                              </StyledHexImage>
+                            </Link>
+                            )}
+                            {!post.frontmatter.potevent && (
+                              <StyledHexImage>
+                                <a 
+                                  href={post.frontmatter.eventlink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                                </a>
+                              </StyledHexImage>
+                            )}
+                          </div>
+                          <div className="post-preview-content">
+                            <div className="title">
+                            {post.frontmatter.potevent && (
+                              <Link to={post.frontmatter.path} className="post-link" >
+                                <h2>{post.frontmatter.title}</h2>
+                              </Link>
+                            )}
+                            {!post.frontmatter.potevent && (
+                              <a 
+                                href={post.frontmatter.eventlink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <h2>{post.frontmatter.title}</h2>
+                              </a>
+                            )}
+                            </div>
+                            <div className="meta">
+                              <p>
+                                <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
+                                {post.frontmatter.subtype && (
+                                  <>
+                                  <span>{post.frontmatter.subtype}</span>
+                                  <span className="divider">.</span>
+                                  </>
+                                )}
+                                {post.frontmatter.time && (
+                                  <>
+                                  <span>{post.frontmatter.time}</span>
+                                  <span className="divider">.</span>
+                                  </>
+                                )}
+                                {post.frontmatter.place && (
+                                  <span>{post.frontmatter.place}</span>
+                                )}
+                              </p>
+                            </div>
+                            <div className="event-link">
+                              {post.frontmatter.potevent && (
+                                <Link to={post.frontmatter.path}>
+                                  <CustomSquareButton label="Read more" />
+                                </Link>
+                              )}
+                              {!post.frontmatter.potevent && (
+                                <>
+                                <MDXRenderer >
+                                  {post.code.body}
+                                </MDXRenderer>
+                                <a 
+                                  href={post.frontmatter.eventlink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                <CustomSquareButton label="Visit event page" />
+                                </a>
+                              </>
+                              )}
+                            </div>
+                          </div>
+                        </StyledBlogBlock>
+
+                      );
+                    })}
+                </div>                
+              </div>
             </StyledBlogs>
           </StyledSection>
         </StyledPad>
@@ -251,7 +454,10 @@ export const pageQuery = graphql`
   query eventsQuery {
     allMdx(
       filter: { frontmatter: { type: { eq: "event" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { 
+        order: ASC, 
+        fields: [frontmatter___time]
+      }
     ) {
       edges {
         node {
