@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 import CustomImage from "../components/CustomImage"
 import CustomSquareButton from "../components/CustomSquareButton"
+import CustomRoundedButton from "../components/CustomRoundedButton"
+import SomeIcons from "../components/SomeIcons"
 import Layout from '../components/layout'
 import { colors, device, variables } from '../Theme.js'
 
@@ -42,13 +44,27 @@ const StyledSelector = styled.button`
   &:focus { outline: none; }
   svg { margin-right: 0.2em; }
 `
+const StyledDefault = styled.article`
+  display: inline-block;
+  padding: 1.5rem 0 0 0;
+  margin: 1rem 0;
+  border-top: 2px dotted ${ colors.light }; 
+  h2 { font-size: 1.4rem; }
+  nav { 
+    width: 40%; 
+    margin-left: 1rem;
+    vertical-align: middle;
+  }
+`
 const StyledBlogBlock = styled.article`
   display: inline-block;
-  width: width: 100%; 
+  width: 100%; 
   // @media ${device.laptop} { width: calc(50% - 2rem); }
-  padding: 1.5rem;
-  margin: 1rem;
-  border-top: 2px dotted ${ colors.main }; 
+  padding: 0.5rem;
+  padding-bottom: 0;
+  margin: 1rem 0 0;
+  border-top: 2px dotted ${ colors.light }; 
+  &:last-child { border-bottom: 2px dotted ${ colors.light }; }
   h2 { font-size: 1.4rem; }
 
   // &:nth-of-type(1) { 
@@ -122,7 +138,18 @@ export default class Events extends React.Component {
     const { filters, selected  } = this.state
     const data = this.props.data.allMdx
     const { edges: posts } = this.props.data.allMdx;
-    console.log(data)
+    const ownEvents = posts.filter(post => post.node.frontmatter.potevent)
+    const friendsEvents = posts.filter(post => !post.node.frontmatter.potevent)
+    const ownEventsNow = ownEvents.filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) <= 0 )
+    const friendsEventsNow = friendsEvents.filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) <= 0 )
+    const pastEvents = posts.filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) >= 0 )
+
+    console.log("ownEvents", ownEvents)
+    console.log("ownEventsNow", ownEventsNow)
+    console.log("friendsEvents", friendsEvents)
+    console.log("friendsEventsNow", friendsEventsNow)
+    console.log("pastEvents", pastEvents)
+    
     return (
       <Layout className="blog-posts">
         <StyledPad>
@@ -161,12 +188,20 @@ export default class Events extends React.Component {
               <div className="row">
                 <div className="potevents col-md-6">
                   <h3>Events organised by us</h3>
-                  {posts
-                    .filter(post => post.node.frontmatter.potevent)
-                    .filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) <= 0 )
+
+                  {ownEventsNow.length === 0 && (
+                    <StyledDefault>
+                      <h2>No upcoming event for now. Sign up for news to receive events info and follow us</h2>
+                      <Link to="/newsletter">
+                        <CustomRoundedButton label="Sign up for news" />
+                      </Link>
+                      <SomeIcons color="light" />
+                    </StyledDefault>
+                  )}
+
+                  {ownEventsNow
                     .map(({ node: post }) => {
                       return (
-                        
                         <StyledBlogBlock className="post-preview" key={post.id} >
                           <div className="featured-image">
                             {post.frontmatter.potevent && (
@@ -254,9 +289,7 @@ export default class Events extends React.Component {
                 </div>
                 <div className="nonpotevents col-md-6">
                   <h3>Events organised by friends</h3>
-                  {posts
-                    .filter(post => !post.node.frontmatter.potevent)
-                    .filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) <= 0 )
+                  {friendsEventsNow
                     .map(({ node: post }) => {
                       return (
                         
@@ -347,53 +380,15 @@ export default class Events extends React.Component {
                 </div>
                 
               </div>
+              {( pastEvents.length > 0 && 
               <div className="row">
                 <div className="pastevents col-md-12">
                   <h3>Past events</h3>
-                  {Date.now()}
-                  {posts
-                    .filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) >= 0 )
+                  {pastEvents
                     .map(({ node: post }) => {
-                      return (
-                        
+                      return (          
                         <StyledBlogBlock className="post-preview" key={post.id} >
-                          <div className="featured-image">
-                            {post.frontmatter.potevent && (
-                            <Link to={post.frontmatter.path} className="post-link" >
-                              <StyledHexImage>
-                                <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
-                              </StyledHexImage>
-                            </Link>
-                            )}
-                            {!post.frontmatter.potevent && (
-                              <StyledHexImage>
-                                <a 
-                                  href={post.frontmatter.eventlink}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
-                                </a>
-                              </StyledHexImage>
-                            )}
-                          </div>
                           <div className="post-preview-content">
-                            <div className="title">
-                            {post.frontmatter.potevent && (
-                              <Link to={post.frontmatter.path} className="post-link" >
-                                <h2>{post.frontmatter.title}</h2>
-                              </Link>
-                            )}
-                            {!post.frontmatter.potevent && (
-                              <a 
-                                href={post.frontmatter.eventlink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <h2>{post.frontmatter.title}</h2>
-                              </a>
-                            )}
-                            </div>
                             <div className="meta">
                               <p>
                                 <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
@@ -413,35 +408,30 @@ export default class Events extends React.Component {
                                   <span>{post.frontmatter.place}</span>
                                 )}
                               </p>
-                            </div>
-                            <div className="event-link">
-                              {post.frontmatter.potevent && (
-                                <Link to={post.frontmatter.path}>
-                                  <CustomSquareButton label="Read more" />
-                                </Link>
-                              )}
-                              {!post.frontmatter.potevent && (
-                                <>
-                                <MDXRenderer >
-                                  {post.code.body}
-                                </MDXRenderer>
-                                <a 
-                                  href={post.frontmatter.eventlink}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                <CustomSquareButton label="Visit event page" />
-                                </a>
-                              </>
-                              )}
+                            </div>                            
+                            <div className="title">
+                            {post.frontmatter.potevent && (
+                              <Link to={post.frontmatter.path} className="post-link" >
+                                <h2>{post.frontmatter.title}</h2>
+                              </Link>
+                            )}
+                            {!post.frontmatter.potevent && (
+                              <a 
+                                href={post.frontmatter.eventlink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <h2>{post.frontmatter.title}</h2>
+                              </a>
+                            )}
                             </div>
                           </div>
                         </StyledBlogBlock>
-
                       );
                     })}
                 </div>                
               </div>
+              )}
             </StyledBlogs>
           </StyledSection>
         </StyledPad>
