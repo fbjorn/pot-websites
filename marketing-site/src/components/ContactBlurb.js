@@ -17,13 +17,12 @@ const StyledContactBlurb = styled.article`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  margin: 1rem
+  margin: 1rem;
   h2 {
     display: block;
     font-size: 1.6rem;
     font-weight: 900;
     min-heigth: 2em;
-    border: 1px solid red;
   }
   p {
     font-size: 1.2rem;

@@ -102,7 +102,7 @@ export default function Template({
       <StyledBlog>
         <StyledHeader className="container">
           <div className="row">
-            <Link to="/news"><FontAwesomeIcon icon={['fal', 'arrow-left']} /> Back to news</Link>
+            <Link to="/cases"><FontAwesomeIcon icon={['fal', 'arrow-left']} /> Back to cases</Link>
             <h1>{post.frontmatter.title}</h1>
             <StyledMeta>
               <FontAwesomeIcon icon={['fa', 'hexagon']} color="blue" />

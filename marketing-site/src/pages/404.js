@@ -30,10 +30,10 @@ const NotFoundPage = () => (
     <StyledPage>
       <StyledPad>
         <StyledSection>
-          <h1>Oh no, you must’ve broken the internet! </h1>
-          <p>Or maybe the page you were searching is just missing… either way, apologies – please remain calm and do carry on.</p> 
+          <h1>Hmm... this was not supposed to happen. We are a data linking platform and for some reason, the data is going full 404 on you right now.</h1>
+          <p>If you found this link on the internet (and didn't just type it wrong) we would very much appreciate if you'd report it to us. <a href="mailto:email@oftrust.net">email@oftrust.net</a> Thanks!</p> 
           
-          <p>Please notify us if you think there’s a clitch on our site: <a href="mailto:email@oftrust.net">email@oftrust.net</a>
+          <p>You can also go to the <a href="https://preview.oftrust.net">front page</a> to find what you were looking for. 
           </p>
         </StyledSection>
       </StyledPad>

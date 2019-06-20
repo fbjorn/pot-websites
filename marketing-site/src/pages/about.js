@@ -14,6 +14,7 @@ const StyledPage = styled.div`
   max-width: ${ variables.pageWidthNarrow };
   margin: 0 auto;
   * { color: white }
+  a:link { text-decoration: underline dotted; }
 `
 const StyledGraph = styled.div`
   width: auto;
@@ -47,12 +48,11 @@ const About = () => (
       
        
       <StyledSection className="container">
-        <div classname="row">
-          <h1>About</h1>
-            
-            <StyledGraph>
-              <h2>Graafi</h2> 
-            </StyledGraph> 
+        <div>
+          <h1>About</h1>    
+          <StyledGraph>
+            <h2>Graafi</h2> 
+          </StyledGraph> 
         </div>
         <div className="row">
           <div className="col-md-6">

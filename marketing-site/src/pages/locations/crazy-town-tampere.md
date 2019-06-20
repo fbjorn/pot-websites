@@ -3,7 +3,7 @@ path: "/locations/grazy-town-tampere"
 type: "office" 
 subtype: "location" 
 order: 2
-name: "Grazy Town Tampere"
+name: "Crazy Town Tampere"
 subtitle: "Tampere Co-Working space"
 pic: "../images/map.jpg" 
 phone: "+358505066327"
