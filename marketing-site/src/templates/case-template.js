@@ -113,9 +113,11 @@ const StyledCustomImage = styled.div`
 `
 
 export default function Template({
-  data, location 
+  data, location, pageContext 
 }) {
   const post = data.mdx; 
+  const { next, prev } = pageContext
+  
   return (
     <Layout pathname={location.pathname}>
       <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} />
@@ -168,27 +170,33 @@ export default function Template({
           <div className="row">
             <div className="col col-3 offset-1">
               <p>
-                <Link to="/news">
+              {prev && (
+                <Link to={prev.frontmatter.path}>
                   <FontAwesomeIcon icon={['fal', 'arrow-left']} color="white" size="1x" />
-                  Previous article 
+                  Previous
+                  {/* {prev.frontmatter.title} */}
                 </Link>
+                )}
               </p>
             </div>
 
             <div className="col col-4">
               <p>
-                <Link to="/news">
-                  Back to news
+                <Link to="/cases">
+                  Back to cases
                 </Link>
               </p>
             </div>
 
             <div className="col col-3">
               <p>
-                <Link to="/news">
-                  Next article 
+              {next && (
+                <Link to={next.frontmatter.path}>
+                  Next 
+                  {/* {next.frontmatter.title} */}
                   <FontAwesomeIcon icon={['fal', 'arrow-right']} color="white" size="1x" />
                 </Link>
+                )}
               </p>
             </div>
           </div>

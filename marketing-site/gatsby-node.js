@@ -5,7 +5,7 @@
  */
 
 const path = require('path');
-const { createFilePath, createFileNode } = require(`gatsby-source-filesystem`)
+// const { createFilePath, createFileNode } = require(`gatsby-source-filesystem`)
 
 exports.sourceNodes = ({ actions }) => {
     const { createTypes } = actions
@@ -171,11 +171,18 @@ exports.createPages = ({ actions, graphql }) => {
             });
         });
         
-        result.data.events.edges.forEach(({ node }) => {
+        
+        const events = result.data.events.edges
+        events.forEach(({ node }, index ) => {
+            const prev = index === 0 ? null : events[index - 1].node
+            const next = index === events.length - 1 ? null : events[index + 1].node
             createPage({
                 path: node.frontmatter.path,
                 component: eventTemplate,
-                context: {} // additional data can be passed via context
+                context: {
+                    prev,
+                    next
+                }
             });
         });
         
@@ -186,7 +193,7 @@ exports.createPages = ({ actions, graphql }) => {
         Array.from({ length: numPages }).forEach((_, i) => {
           createPage({
             path: i === 0 ? `/news` : `/news/${i + 1}`,
-            component: path.resolve("./src/templates/news-list-template.js"),
+            component: path.resolve(newsListTemplate),
             context: {
               limit: postsPerPage,
               skip: i * postsPerPage,
@@ -209,11 +216,18 @@ exports.createPages = ({ actions, graphql }) => {
             });
         });
 
-        result.data.cases.edges.forEach(({ node }) => {
+        
+        const cases = result.data.cases.edges
+        cases.forEach(({ node }, index ) => {
+            const prev = index === 0 ? null : cases[index - 1].node
+            const next = index === cases.length - 1 ? null : cases[index + 1].node
             createPage({
                 path: node.frontmatter.path,
                 component: caseTemplate,
-                context: {} // additional data can be passed via context
+                context: {
+                    prev,
+                    next
+                }
             });
         });
 

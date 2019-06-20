@@ -47,19 +47,19 @@ const StyledPost = styled.div`
   background: ${colors.mainDarker};
 `
 const StyledCaption = styled.div`
-width: 100%
-position: absolute;
-transform: translateY(-100%);
-background: linear-gradient(to bottom, rgba(0,0,0,0), ${colors.mainDarker} 100%);
-padding: 4rem 10% 0;
-justify-content: flex-end;
-p {
-  max-width: 30%;
-  border-top: 2px dotted white;
-  padding-top: 1em;
-  font-size: 1rem;
-  color: white;
-}
+  width: 100%
+  position: absolute;
+  transform: translateY(-100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0), ${colors.mainDarker} 100%);
+  padding: 4rem 10% 0;
+  justify-content: flex-end;
+  p {
+    max-width: 30%;
+    border-top: 2px dotted white;
+    padding-top: 1em;
+    font-size: 1rem;
+    color: white;
+  }
 `
 const StyledPostFooter = styled.div`
   &&& { max-width: ${variables.pageWidth} }
@@ -91,7 +91,7 @@ const StyledBlogFooter = styled.div`
 `
 const StyledPostContent = styled.section`
   .event { display: flex; flex-direction: column;  }
-  .left { flex: 1; order: 2; }
+  .left { flex: 1; order: 2; padding-right: 1rem; }
   .right { flex: 2; order: 1; }
   @media ${device.laptop} {
     .event { flex-direction: row; }
@@ -112,9 +112,11 @@ const StyledCustomImage = styled.div`
 `
 
 export default function Template({
-  data, location 
+  data, location, pageContext 
 }) {
   const post = data.mdx; 
+  const { next, prev } = pageContext
+
   return (
     <Layout pathname={location.pathname}>
       <Helmet title={`Platform of Trust - ${post.frontmatter.title}`} />
@@ -177,10 +179,13 @@ export default function Template({
           <div className="row">
             <div className="col col-3 offset-1">
               <p>
-                <Link to="/events">
+                {prev && (
+                <Link to={prev.frontmatter.path}>
                   <FontAwesomeIcon icon={['fal', 'arrow-left']} color="white" size="1x" />
-                  Previous event 
+                  Previous
+                  {/* {prev.frontmatter.title} */}
                 </Link>
+                )}
               </p>
             </div>
 
@@ -194,10 +199,13 @@ export default function Template({
 
             <div className="col col-3">
               <p>
-                <Link to="/events">
-                  Next event 
+              {next && (
+                <Link to={next.frontmatter.path}>
+                  Next 
+                  {/* {next.frontmatter.title} */}
                   <FontAwesomeIcon icon={['fal', 'arrow-right']} color="white" size="1x" />
                 </Link>
+                )}
               </p>
             </div>
           </div>
