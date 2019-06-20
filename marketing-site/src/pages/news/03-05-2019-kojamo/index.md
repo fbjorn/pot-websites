@@ -4,7 +4,7 @@ date: "2019-05-03T13:45:33.962Z"
 title: "Collaboration can help effectively utilise fragmented data in the property sector"
 image: "./light.jpg" # Featured image shown on page and listings. Save in same folder. Don't use svg.
 pic: "light.jpg" # Hex image shown on page and listings. No path, just filename. Save in same folder. Don't use svg.
-pictext: "This is kuvateksti"
+pictext: ""
 type: "news" # All "News" are blogs to separate them from real pages made with MarkDown, so that they appear in blog listings etc.
 subtype: "blog" # "blog" / "news" / "press-realease" etc.
 tags: ['Kojamo'] # Any string, can be used in search / "related content"
