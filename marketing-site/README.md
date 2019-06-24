@@ -2,11 +2,11 @@
 
 `git clone git@github.com:PlatformOfTrust/pot-websites.git`
 
-`git checkout marketing-site/release2`
-
 `cd pot-websites`
 
 `cd marketing-site`
+
+`git checkout marketing-site/release2`
 
 Create file `.npmrc.txt` and add token
 
