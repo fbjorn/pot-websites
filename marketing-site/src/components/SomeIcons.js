@@ -1,16 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import Facebook from "../images/facebook-square-brands.svg"
-import Twitter from "../images/twitter-square-brands.svg"
-import Github from "../images/github-square-brands.svg"
-import Linkedin from "../images/linkedin-square-brands.svg"
-import { colors } from '../Theme.js'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { colors } from '../Theme.js'
 
 const StyledSomeIcons = styled.nav`
   display: inline-flex;
+  flex-direction: ${ props => props.vertical ? "column" : "row" }; 
   width: 100%;
   a {
     display: inline-block;
@@ -30,7 +26,7 @@ const StyledSomeIcons = styled.nav`
 
 const SomeIcons = (props) => {
   return (
-    <StyledSomeIcons className="some-links" color={props.color}>
+    <StyledSomeIcons className="some-links" color={props.color} vertical={props.vertical}>
 
       <a href="https://www.facebook.com/platformoftrust" className="some-link facebook" target="_blank" rel="noopener noreferrer" >
         <FontAwesomeIcon icon={['fab', `facebook-square`]} size="8x" />

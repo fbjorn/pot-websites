@@ -3,6 +3,7 @@ export const colors = {
   main: '#7955ff',
   dark: '#141414',
   light: 'rgb(240, 240, 240)',
+  lightUsed: 'rgb(230, 230, 230)',
   ok: 'rgb(0, 198, 255)',
   alert: 'rgb(251, 99, 77)',
   notice: 'rgb(247, 197, 0)',

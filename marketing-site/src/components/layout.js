@@ -7,7 +7,7 @@ import { createGlobalStyle } from "styled-components";
 import Helmet from 'react-helmet'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHexagon } from '@fortawesome/pro-solid-svg-icons'
+import { faHexagon, faEllipsisV } from '@fortawesome/pro-solid-svg-icons'
 import { fal } from '@fortawesome/pro-light-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
@@ -19,7 +19,7 @@ import BgImage from '../images/bg-image.svg'
 
 import { colors } from '../Theme.js'
 
-library.add( fal, fab, faHexagon )
+library.add( fal, fab, faHexagon, faEllipsisV )
 // icon({prefix: 'fal', iconName: 'draftingCompass'})
 
 const GlobalStyle = createGlobalStyle`
