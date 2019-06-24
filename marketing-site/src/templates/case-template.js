@@ -13,6 +13,7 @@ import { colors, device, variables } from '../Theme.js'
 const StyledBlog = styled.article`
   &&& { max-width: ${ variables.pageWidthNarrow } }
   margin: 0 auto ;
+  padding: 1rem;
   @media ${device.laptop} {
   }
 `

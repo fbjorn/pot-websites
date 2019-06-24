@@ -51,6 +51,11 @@ body h5,
 body h6 {
   line-height: 1.05em;
 }
+body p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.125em;
+}
 body h1 {
   font-weight: 400;
   font-size: 63px;
@@ -80,6 +85,75 @@ body h6 {
   font-weight: 300;
   font-size: 24px;
   letter-spacing: 0.03em;
+}
+@media only screen and (max-width: 1000px) {
+  p {
+    font-size: 2.7vw;
+  }
+  h1 {
+    font-size: 6.3vw;
+  }
+  h2 {
+    font-size: 4.8vw;
+  }
+  h3 {
+    font-size: 3.6vw;
+  }
+  h4 {
+    font-size: 3vw;
+  }
+  h5 {
+    font-size: 2.7vw;
+  }
+  h6 {
+    font-size: 2.4vw;
+  }
+}
+@media only screen and (max-width: 667px) {
+  p {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  p {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 29px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h6 {
+    font-size: 13px;
+  }
 }
 #___gatsby .logo {
   display: inline-block;

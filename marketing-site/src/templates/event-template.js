@@ -14,6 +14,7 @@ import { colors, device, variables } from '../Theme.js'
 const StyledBlog = styled.article`
   &&& { max-width: ${ variables.pageWidthNarrow } }
   margin: 0 auto;
+  padding: 1rem; 
   @media ${device.laptop} {
   }
 `
@@ -44,6 +45,7 @@ const StyledMeta = styled.div`
 const StyledPost = styled.div`
   &&& { max-width: ${variables.pageWidth} }
   position: relative;
+  padding-top: 1rem;
   background: ${colors.mainDarker};
 `
 const StyledCaption = styled.div`

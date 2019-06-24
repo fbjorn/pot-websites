@@ -30,7 +30,7 @@ const ToolsIntro = (props) => {
         <div className="hex-col col-6 col-md-3 col-lg-2 offset-md-1">
           <HexBlurb title="Developer portal" icon="terminal" textColor="white" bgColor="black" />
         </div>
-        <div className="col-md-4 col-lg-6">
+        <div className="col-md-4 col-lg-4">
           <h3>Hack data</h3>
           <p>
           Our developer portal has all the tools and data you need in order to create new solutions and services. This portal has been built from the point of view of a developer in order to create the best possible DX.
@@ -47,7 +47,7 @@ const ToolsIntro = (props) => {
         <div className="hex-col col-6 col-md-3 col-lg-2 offset-lg-2 offset-md-1">
           <HexBlurb title="MyWorld" icon="globe-stand" textColor="white" bgColor={colors.mainDark} />
         </div>
-        <div className="col-md-4 col-lg-5">
+        <div className="col-md-4 col-lg-4">
           <h3>Rule data</h3>
           <p>
           My world is a visualisation tool where you can manage your data in a digital twin, see where it comes from and where it links to.

@@ -16,12 +16,17 @@ import { colors, device, variables } from '../Theme.js'
 const StyledBlog = styled.article`
   &&& { max-width: ${ variables.pageWidthNarrow } }
   margin: 0 auto;
+  padding: 1rem;
   @media ${device.laptop} {
   }
 `
 const StyledHeader = styled.header`
   margin-bottom: 1rem;
-  &&& { max-width: ${variables.pageWidth} }
+  &&& { max-width: ${variables.pageWidthNarrow} }
+  // .row {
+  //   margin: 0 1rem;
+  //   @media (min-width: 1272px)  { margin: 0 -15px; }
+  // }
   &&& a { 
     font-size: 1.2rem; 
     text-decoration: none;
@@ -107,6 +112,9 @@ const StyledDisqus = styled.div`
   background: ${colors.mainDarker};
   padding: 1rem 7%;
 `
+// const StyledPad = styled.div`
+//   margin: 1rem;
+// `
 
 export default function Template({
   data, location, pageContext 

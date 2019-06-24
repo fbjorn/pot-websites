@@ -8,6 +8,7 @@ import Facebook from "../images/facebook-square-brands.svg"
 import Twitter from "../images/twitter-square-brands.svg"
 import Github from "../images/github-square-brands.svg"
 import Linkedin from "../images/linkedin-square-brands.svg"
+import SomeIcons from "./SomeIcons"
 import { colors, device, variables } from '../Theme.js'
 
 const StyledFooter = styled.footer`
@@ -99,7 +100,8 @@ const Footer = () => (
         </div> */}
 
         <div className="footer-somelinks col-4 col-lg-2 col-xl-2 text-right">
-          <nav className="some-links">
+          <SomeIcons color="main" />
+          {/* <nav className="some-links">
             <span className="keep-together">
               <a href="https://www.facebook.com/platformoftrust" className="some-link facebook"><img src={Facebook} className="some-icon" alt="Facebook" /></a>
               <a href="https://twitter.com/PlatformOfTrust" className="some-link twitter"><img src={Twitter} className="some-icon" alt="Twitter" /></a>
@@ -112,7 +114,7 @@ const Footer = () => (
             <span className="keep-together">
               <a href="https://www.youtube.com/channel/UCSHXKYHxBCl_hXdBZU_A-gg" className="some-link youtube"><img src={Linkedin} className="some-icon" alt="Youtube" /></a>
             </span>
-          </nav>
+          </nav> */}
         </div>
 
         {/* <nav className="sitemap col-md-2 mb-md-0 mb-3">

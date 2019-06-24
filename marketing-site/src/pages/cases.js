@@ -150,9 +150,6 @@ export default class Events extends React.Component {
               <h1>Cases</h1>
             
             {posts
-              // .filter(post => post.node.frontmatter.title.length > 0)
-              // .filter(post => post.node.frontmatter.type === "blog")
-              
               .filter(post => filters.includes(post.node.frontmatter.subtype))
               .map(({ node: post }) => {
                 return (
