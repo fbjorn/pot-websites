@@ -30,7 +30,7 @@ Portal is one stop shop to Platform of Trust.
 * ``gatsby develop -o -p 8000``
 * Site will open in browser localhost:8000, use -p to change port
 
-## FrontEnd build for rel2 marketing-site 
+## FrontEnd build for release2 marketing-site 
 
 * Clone repository to local machine with 
 * ``git clone git@github.com:PlatformOfTrust/pot-websites.git``

@@ -72,6 +72,6 @@ yarn-error.log
 .vscode
 
 # font token
-.npmrc.txt
+.npmrc
 
 
