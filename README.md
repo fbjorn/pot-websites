@@ -34,9 +34,9 @@ Portal is one stop shop to Platform of Trust.
 
 * Clone repository to local machine with 
 * ``git clone git@github.com:PlatformOfTrust/pot-websites.git``
-* ``git checkout marketing-site/release2`` 
 * ``cd pot-websites`` 
 * ``cd marketing-site``
+* ``git checkout marketing-site/release2`` 
 * Create file `.npmrc` and add lines: 
 
 ```
@@ -46,7 +46,7 @@ Portal is one stop shop to Platform of Trust.
 
 * ``npm install``
 * ``npm install --global gatsby-cli``
-* ``gatsby develop -o -p 8000``
+* ``gatsby develop``
 * Site will open in browser localhost:8000, use -p to change port
 * (build gives some error, don't mind them, gatsby and mdx will fix them later)
 
