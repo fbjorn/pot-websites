@@ -5,6 +5,7 @@ import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 import CustomImage from "../components/CustomImage"
+import HexImage from "../components/HexImage"
 import CustomSquareButton from "../components/CustomSquareButton"
 import CustomRoundedButton from "../components/CustomRoundedButton"
 import SomeIcons from "../components/SomeIcons"
@@ -112,8 +113,9 @@ const StyledBlogBlock = styled.article`
   }
 `
 const StyledHexImage = styled.div`
+width: 85%;
   transform: translateX(-1rem) rotate(10deg) scale(0.9);
-  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
+  // clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
 `
 const StyledPad = styled.div`
   margin: 1rem;
@@ -309,7 +311,11 @@ export default class Events extends React.Component {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
-                                  <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                                  {/* <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} /> */}
+                                  <HexImage 
+                                    pic={require(`.${post.frontmatter.path}/${post.frontmatter.pic}`)} 
+                                    hexId={`EventHex-${post.id}`} 
+                                  />
                                 </a>
                               </StyledHexImage>
                             )}
