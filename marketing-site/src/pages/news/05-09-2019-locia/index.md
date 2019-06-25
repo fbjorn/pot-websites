@@ -9,8 +9,8 @@ type: "news" # All "News" are blogs to separate them from real pages made with M
 subtype: "article" # "blog" / "news" / "press-realease" etc.
 tags: ['Locia'] # Any string, can be used in search / "related content"
 lang: "en-GB" # ISO Lang attr
-author: "Toni Luhti"
-authorpic: "toni-luhti.jpg"
+author: "Pirkko Laitinen"
+authorpic: "pirkko-laitinen.jpg"
 status: "published" # "published" / "draft" / "pending" / "archived"
 ---
 In the future, the public sector will have to radically change how it operates to enable the customer focus, digitalisation, and overall coordination needed to organise and provide complex services.

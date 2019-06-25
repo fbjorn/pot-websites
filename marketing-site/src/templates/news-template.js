@@ -186,11 +186,13 @@ export default function Template({
           </div>
         </StyledPostFooter>
         <StyledDisqus>
+          {post.frontmatter.subtype === "blog" &&(
           <Disqus 
             identifier={location.pathname}
             title={post.frontmatter.title}
             url={location.href}
           />
+          )}
         </StyledDisqus>
         <StyledBlogFooter>
           <div className="row">
