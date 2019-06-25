@@ -13,7 +13,7 @@ const StyledButton = styled.button`
   outline: none;
 
   &:hover {
-    cursor: pointer;
+    // cursor: pointer;
     border-radius: 1rem;
     color: ${colors.light};
     &&& { box-shadow: 0 0 0.4rem ${colors.mainDarker}; }
@@ -21,7 +21,7 @@ const StyledButton = styled.button`
 
   &:focus {
     // &&& { background: ${colors.light}; }
-    cursor: pointer;
+    // cursor: pointer;
     border-radius: 1rem;
     &&& { outline: none; }
     &&& { box-shadow: 0 0 0.4rem ${colors.mainDarker}; }
@@ -29,7 +29,7 @@ const StyledButton = styled.button`
 
   &:active {
     // &&& { background: ${colors.light}; }
-    cursor: pointer;
+    // cursor: pointer;
     border-radius: 1rem;
     box-shadow: inset 0 0 0.2rem ${colors.mainDark};
     outline: none;
@@ -46,6 +46,7 @@ const StyledButton = styled.button`
     &&& { background: ${colors.main}; }
     color: ${colors.mainDark};
     border: 2px solid ${colors.mainDark};
+    cursor: not-allowed;
   `}
 
 `;

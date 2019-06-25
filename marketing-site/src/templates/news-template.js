@@ -52,6 +52,7 @@ const StyledPost = styled.div`
   &&& { max-width: ${variables.pageWidth} }
   position: relative;
   background: ${colors.mainDarker};
+  p { line-height: 1.5; }
 `
 const StyledCaption = styled.div`
 width: 100%

@@ -187,7 +187,7 @@ const IndexPage = ({ data }) => {
         
         <div className="row mt-5">
           <div className="col-md-10 offset-md-1 mb-3">
-            <h2>These smart companies and organizations are already using Platform of Trust</h2>
+            <h2>Here are some of our partners and first users</h2>
           </div>
           <div className="col-10 offset-1">
             <p>

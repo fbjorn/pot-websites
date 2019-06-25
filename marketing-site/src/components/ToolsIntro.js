@@ -30,6 +30,8 @@ const ToolsSection = styled.div`
     h3 {margin-bottom: 0.4rem; }
     p {font-size: 1rem; }
   }
+
+  .disabled a:link{ cursor: not-allowed !important; }
 `
 
 const ToolsIntro = (props) => {
@@ -68,7 +70,7 @@ const ToolsIntro = (props) => {
           My world is a visualisation tool where you can manage your data in a digital twin, see where it comes from and where it links to.
           </p>
         </div>
-        <div className="button-col col-md-3 col-lg-2 "> 
+        <div className="disabled button-col col-md-3 col-lg-2 "> 
           <Link to="/">
             <CustomRoundedButton label="Coming soon" primary disabled />
           </Link>
@@ -85,9 +87,9 @@ const ToolsIntro = (props) => {
             Make your data earn. We are creating a marketplace for data products and applications where you can offer your data for others to utilise or a ready-made service or application for others to buy. You define the pricing, we take care of contracts and licensing. Automatically.
           </p>
         </div>
-        <div className="button-col col-md-3 col-lg-2"> 
+        <div className="disabled button-col col-md-3 col-lg-2"> 
           <Link to="/">
-            <CustomRoundedButton label="Future feature" primary disabled />
+            <CustomRoundedButton label="Future feature" primary disabled className="disabled" />
           </Link>
         </div>
       </div>
