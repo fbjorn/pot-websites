@@ -4,12 +4,11 @@ import { graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
-import CustomImage from "../components/CustomImage"
+// import CustomImage from "../components/CustomImage"
 import HexImage from '../components/HexImage'
 import CustomSquareButton from "../components/CustomSquareButton"
 import Layout from '../components/layout'
 import { colors, variables } from '../Theme.js'
-import HexPic from '../images/city-square.jpg'
 
 export const subtypeColors = {
   blog: `${colors.ok}`,

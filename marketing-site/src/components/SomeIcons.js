@@ -7,15 +7,18 @@ import { colors } from '../Theme.js'
 const StyledSomeIcons = styled.nav`
   display: inline-flex;
   flex-direction: ${ props => props.vertical ? "column" : "row" }; 
-  width: 100%;
+  // width: 100%;
   a {
     display: inline-block;
     width: 100%;
+    max-width: 32px;
+    // max-width: 100%;
     padding: 0;
     margin: 0 2.5% 0 0;
     line-height: 1;
   } 
   svg {
+    max-width: 30px;
     max-width: 100%;
     height: auto;
     line-height: 0;
