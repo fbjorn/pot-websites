@@ -8,7 +8,7 @@ name: "Jarkko Moilanen"
 title: "Developer Experience Lead"
 pic: "jarkko-moilanen.jpg" 
 phone: "+358405359066"
-email: "pirkko.laitinen@oftrust.net"
+email: "jarkko.moilanen@oftrust.net"
 twitter: "https://twitter.com/Jarkko_Moilanen"
 linkedin: "https://www.linkedin.com/in/jarkkomoilanen/"
  

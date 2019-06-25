@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { colors } from '../Theme.js'
 import CustomImage from "../components/CustomImage"
+import HexImage from './HexImage'
 
 
 export const componentColors = {
@@ -36,10 +37,11 @@ const StyledName = styled.h2`
   font-weight: 900;
 `
 const StyledCustomImage = styled.div`
+  width: 85%;
   max-width: 250px;
   margin-bottom: 2rem;
   transform: translateX(-1rem) rotate(10deg) scale(0.9);
-  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
+  // clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
   .gatsby-image-wrapper { transform: rotate(-10deg); }
 `
 
@@ -48,7 +50,11 @@ const ContactBlurb = (props) => {
   return (
     <StyledContactBlurb className="col-12 col-md-6 col-lg-3">
       <StyledCustomImage>
-        <CustomImage filename={props.pic} alt={props.name} />
+        {/* <CustomImage filename={props.pic} alt={props.name} /> */}
+        <HexImage 
+          pic={require(`./../images/${props.pic}`)} 
+          hexId={`ContactHex-${props.email}-${props.phone}`} 
+        />
       </StyledCustomImage>
       
       <div>
