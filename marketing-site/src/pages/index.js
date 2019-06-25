@@ -136,19 +136,19 @@ const IndexPage = ({ data }) => {
         <div className="row mt-3 mb-5">
           <div className="col-12 col-md-10 offset-md-1 ">
             <div className="row">
-              <div className="hex-blurb col-6 col-lg-3">
+              <div className="hex-blurb col-10 offset-1 col-md-6 offset-md-0 col-lg-3">
                 <HexBlurb title="Create better and smarter buildings and cities" icon="drafting-compass" textColor={colors.main} />
               </div>
               
-              <div className="hex-blurb col-6 col-lg-3">
+              <div className="hex-blurb col-10 offset-1 col-md-6 offset-md-0 col-lg-3">
                 <HexBlurb title="Improve the productivity of any daily processes" icon="badge-check" textColor={colors.main} />
               </div>
 
-              <div className="hex-blurb col-6 col-lg-3">
+              <div className="hex-blurb col-10 offset-1 col-md-6 offset-md-0 col-lg-3">
                 <HexBlurb title="Earn with new services and innovative business models" icon="sack" textColor={colors.main} />
               </div>
 
-              <div className="hex-blurb col-6 col-lg-3">
+              <div className="hex-blurb col-10 offset-1 col-md-6 offset-md-0 col-lg-3">
                 <HexBlurb title="Save on time, energy and material costs" icon="piggy-bank" textColor={colors.main} />
               </div>
             </div>

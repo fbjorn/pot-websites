@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { device } from '../Theme.js'
 
 const Hex = styled.div`
   background: ${props => props.bgColor ? props.bgColor : "white"};
@@ -21,7 +22,11 @@ const HexContent = styled.div`
   && * {
     color: ${props => props.textColor ? props.textColor : "black"}
   }
-  h5 { padding-top: 1em; }
+  h5 { 
+    padding-top: 1em; 
+    @media ${ device.laptop } { font-size: calc(1rem + ((1vw - 9.92px) * 4.4355)); }
+    @media ${ device.laptopM } { font-size: 1.6875rem; }
+  }
 `
 
 const HexBlurb = (props) => {
