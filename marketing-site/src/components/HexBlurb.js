@@ -17,15 +17,21 @@ const HexContent = styled.div`
   left: 0;
   top: 50%;
   left: 50%;
+  padding: 1vw; 
   transform: translate(-50%, -50%);
   text-align: center;
   && * {
     color: ${props => props.textColor ? props.textColor : "black"}
   }
   h5 { 
-    padding-top: 1em; 
+    padding-top: 1.2vw; 
     @media ${ device.laptop } { font-size: calc(1rem + ((1vw - 9.92px) * 4.4355)); }
     @media ${ device.laptopM } { font-size: 1.6875rem; }
+  }
+  svg { 
+    font-size: 3rem; 
+    @media ${ device.tablet } { font-size: 2.5rem ; }
+    @media ${ device.laptop } { font-size: 2.75rem ; }
   }
 `
 
