@@ -163,13 +163,13 @@ exports.createPages = ({ actions, graphql }) => {
             return Promise.reject(result.errors);
         }
         
-        result.data.blogs.edges.forEach(({ node }) => {
-            createPage({
-                path: node.frontmatter.path,
-                component: blogTemplate,
-                context: {} // additional data can be passed via context
-            });
-        });
+        // result.data.blogs.edges.forEach(({ node }) => {
+        //     createPage({
+        //         path: node.frontmatter.path,
+        //         component: blogTemplate,
+        //         context: {} // additional data can be passed via context
+        //     });
+        // });
         
         
         const events = result.data.events.edges

@@ -58,7 +58,7 @@ const Hero = () => (
       return (
       <StyledHero>
         <StyledBg>
-          <HexImage pic={HexBg}/>
+          <HexImage pic={HexBg} hexId="HeroHex"/>
         </StyledBg>
         <StyledContent 
           key={content.id}

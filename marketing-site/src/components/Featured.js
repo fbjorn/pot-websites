@@ -1,13 +1,12 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Hex from './Hex'
-import HexImage2 from './HexImage2'
+import HexImage from './HexImage'
 import FeaturedEvent from './FeaturedEvent'
 import FeaturedCase from './FeaturedCase'
 import HexPic from '../images/city-square.jpg'
-import { colors, device } from '../Theme.js'
+import { colors } from '../Theme.js'
 
 const StyledFeatured = styled.div`
   position: relative;
@@ -28,7 +27,7 @@ const StyledFeaturedHex = styled.div`
 const Featured = ({ data }) => (
   
   <StyledFeatured className="featured">
-    <HexImage2 pic={HexPic} />
+    <HexImage pic={HexPic} hexId="FeaturedHex" />
     
     <StyledFeaturedHex className="featured-case">
       <FeaturedCase />
