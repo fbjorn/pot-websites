@@ -4,8 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
 import HexSvg from '../images/hex.svg'
-import { device } from '../Theme.js'
+import { device, colors } from '../Theme.js'
 
+export const subtypeColors = {
+  blog: `${colors.ok}`,
+  news: `${colors.notice}`,
+  article: `${colors.alert}`,
+  business: `${colors.success}`,
+  technical:`${colors.mainLightest}`,
+}
 const StyledNews = styled.div`
   display: none; 
   @media ${device.tablet} { display: block }
@@ -62,7 +69,7 @@ const FeaturedNews = ({ data }) => (
     query={graphql`
       query {
         news: allMarkdownRemark(
-          limit: 2
+          limit: 3
           filter: {
             frontmatter: {
               type: {eq: "news"}
@@ -109,10 +116,10 @@ const FeaturedNews = ({ data }) => (
               <div>
                 <p className="meta">
                   <span className="icon icon-blog">
-                    <FontAwesomeIcon icon="hexagon" />
+                    <FontAwesomeIcon icon="hexagon" color={ subtypeColors[node.frontmatter.subtype] } />
                     {/* <FontAwesomeIcon icon={['fas', 'hexagon']} size="1x" /> */}
                   </span>
-                  <span className="type">{ node.frontmatter.type }</span>
+                  <span className="type">{ node.frontmatter.subtype }</span>
                   <span className="date">{ node.frontmatter.date }</span>
                 </p>
                 <p className="title-excerpt">

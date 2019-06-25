@@ -58,11 +58,13 @@ const StyledBlogBlock = styled.article`
 
   &:nth-child(n+5) {
     width: 100%; 
+    padding-top: 0;
+    padding-bottom: 0;
     .featured-image, .excerpt { display: none }
     .title { order: 2; }
     .meta { order: 1; }
     .post-preview-content { width: 100%; }
-    h2 { font-size: 2.4rem; }
+    h2 { font-size: 1.5rem; }
   }
 
   .post-link { 

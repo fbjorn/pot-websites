@@ -29,9 +29,8 @@ const StyledContent =styled.div`
     color: white;
     // font-size: 5vw;
     font-size: 9vw;
-    // @media ${device.tablet} { font-size: 1.6rem; }
     @media ${device.tablet} { font-size: 2.6rem; }
-    // @media ${device.laptopL} { font-size: 2rem; }
+    @media ${device.laptopM} { font-size: 3rem; }
     @media ${device.laptopL} { font-size: 3.6rem; }
   }
 `
