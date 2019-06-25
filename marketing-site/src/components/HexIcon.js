@@ -12,7 +12,7 @@ const Hex = styled.div`
 `
 const HexContent = styled.div`
   position: absolute;
-  width: 85%;
+  width: 86%;
   top: 0;
   left: 0;
   top: 50%;

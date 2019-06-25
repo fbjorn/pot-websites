@@ -10,7 +10,12 @@ import { variables, colors, device } from '../Theme.js'
 const ToolsSection = styled.div`
   &&& { max-width: ${variables.pageWidth}; }
   width: 100%;
-  
+
+  // I don't thing we should drop the button, but...
+  @media ${ device.tablet } {
+    .button-col { transform: translateY(2.5rem); }
+  }
+
   @media ${ device.laptop }  {
     .row:nth-of-type(2) { transform: translateY(25%) }
     .row:nth-of-type(3) { transform: translateX(-1.5%) }
@@ -38,7 +43,7 @@ const ToolsIntro = (props) => {
 
       <div className="row mb-5 mb-md-3 mb-lg-0">
         <div className="hex-col col-8 col-sm-6 col-md-3 col-lg-2 offset-md-1">
-          <HexBlurb title="Developer portal" icon="terminal" textColor="white" bgColor="black" />
+          <HexBlurb title="Developer portal" icon="terminal" textColor="white" bgColor="dark" />
         </div>
         <div className="col-md-4 col-lg-4">
           <h3>Hack data</h3>
@@ -46,7 +51,7 @@ const ToolsIntro = (props) => {
           Our developer portal has all the tools and data you need in order to create new solutions and services. This portal has been built from the point of view of a developer in order to create the best possible DX.
           </p>
         </div>
-        <div className="col-md-3 col-lg-2"> 
+        <div className="button-col col-md-3 col-lg-2"> 
           <a href="https://developers.oftrust.net">
             <CustomRoundedButton label="Join the party" />
           </a>
@@ -55,7 +60,7 @@ const ToolsIntro = (props) => {
 
       <div className="row mb-5 mb-md-3 mb-lg-0">
         <div className="hex-col col-8 col-sm-6 col-md-3 col-lg-2 offset-lg-2 offset-md-1">
-          <HexBlurb title="MyWorld" icon="globe-stand" textColor="white" bgColor={colors.mainDark} />
+          <HexBlurb title="MyWorld" icon="globe-stand" textColor="white" bgColor="mainDark" />
         </div>
         <div className="col-md-4 col-lg-4">
           <h3>Rule data</h3>
@@ -63,7 +68,7 @@ const ToolsIntro = (props) => {
           My world is a visualisation tool where you can manage your data in a digital twin, see where it comes from and where it links to.
           </p>
         </div>
-        <div className="col-md-3 col-lg-2 "> 
+        <div className="button-col col-md-3 col-lg-2 "> 
           <Link to="/">
             <CustomRoundedButton label="Coming soon" primary disabled />
           </Link>
@@ -72,7 +77,7 @@ const ToolsIntro = (props) => {
 
       <div className="row mb-5 mb-md-3 mb-lg-0">
         <div className="hex-col col-8 col-sm-6 col-md-3 col-lg-2 offset-lg-3 offset-md-1">
-          <HexBlurb title="Market place" icon="shopping-bag" textColor={colors.main} />
+          <HexBlurb title="Market place" icon="shopping-bag" textColor={colors.main} bgColor="light" />
         </div>
         <div className="col-md-4 col-lg-4">
           <h3>Sell &amp; Buy</h3>
@@ -80,7 +85,7 @@ const ToolsIntro = (props) => {
             Make your data earn. We are creating a marketplace for data products and applications where you can offer your data for others to utilise or a ready-made service or application for others to buy. You define the pricing, we take care of contracts and licensing. Automatically.
           </p>
         </div>
-        <div className="col-md-3 col-lg-2 "> 
+        <div className="button-col col-md-3 col-lg-2"> 
           <Link to="/">
             <CustomRoundedButton label="Future feature" primary disabled />
           </Link>
