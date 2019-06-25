@@ -1,6 +1,6 @@
 ---
 path: "/news/data-is-not-the-new-oil" # path to where you want blog to be published aka https://preview.oftrust.net/blogs/sport-venue
-date: "2019-05-03T13:45:33.962Z"
+date: "2019-06-25T13:45:33.962Z"
 title: "Data is not the new oil"
 image: "./drop-of-water-3671613_1920.jpg" # Featured image shown on page and listings. Save in same folder. Don't use svg.
 pic: "drop-of-water-3671613_1920.jpg" # Hex image shown on page and listings. No path, just filename. Save in same folder. Don't use svg.
