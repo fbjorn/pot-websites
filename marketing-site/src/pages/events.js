@@ -113,7 +113,7 @@ const StyledBlogBlock = styled.article`
   }
 `
 const StyledHexImage = styled.div`
-width: 85%;
+  width: 85%;
   transform: translateX(-1rem) rotate(10deg) scale(0.9);
   // clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
 `
@@ -178,7 +178,11 @@ export default class Events extends React.Component {
               <div className="row">
                 <div className="col-md-4 d-none d-md-block">
                   <StyledHexImage>
-                    <CustomImage filename="bg-square2.jpg" alt="Graphical element" />
+                    {/* <CustomImage filename="bg-square2.jpg" alt="Graphical element" /> */}
+                    <HexImage 
+                      pic={require(`./../images/bg-square2.jpg`)} 
+                      hexId={`EventHex-Hero`} 
+                    />
                   </StyledHexImage>
                 </div>
                 <div className="col-12 col-md-8">
