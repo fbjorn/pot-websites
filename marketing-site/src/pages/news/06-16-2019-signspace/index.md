@@ -18,15 +18,15 @@ SignSpace is a service that allows you to sign, distribute, polish and archive d
 Read more about SignSpace at signspace.fi
 SignSpace is a service provided by Suomen Tilaajavastuu Oy and Platform of Trust Oy. It makes business operations smoother and more secure.
 
-#### More information
+### More information
 
-**Henri Svensson**
+#### Henri Svensson
 
 +358 50 538 7289
 
 henri.svensson@tilaajavastuu.fi
 
-**Jani Syvähuoko**
+#### Jani Syvähuoko
 
 +358 40 584 3807
 
