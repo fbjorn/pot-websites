@@ -3,7 +3,7 @@ path: "/news/locia" # path to where you want blog to be published aka https://pr
 date: "2019-04-09T13:45:33.962Z"
 title: "Preventive overall management of premises and service networks for public organisations"
 image: "./plexiglas.jpg" # Featured image shown on page and listings. Save in same folder. Don't use svg.
-pic: "plexiglas.jpg" # Hex image shown on page and listings. No path, just filename. Save in same folder. Don't use svg.
+pic: "plexiglas-square.jpg" # Hex image shown on page and listings. No path, just filename. Save in same folder. Don't use svg.
 pictext: ""
 type: "news" # All "News" are blogs to separate them from real pages made with MarkDown, so that they appear in blog listings etc.
 subtype: "article" # "blog" / "news" / "press-realease" etc.

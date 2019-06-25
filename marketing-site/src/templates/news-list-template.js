@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
 
-import CustomImage from "../components/CustomImage"
+import HexImage from "../components/HexImage"
 import Layout from '../components/layout'
 import CustomRoundedButton from '../components/CustomRoundedButton'
 import CustomSquareButton from "../components/CustomSquareButton"
@@ -95,8 +95,11 @@ const StyledBlogBlock = styled.article`
   }
 `
 const StyledHexImage = styled.div`
+  width: 85%;
+  // max-width: 250px;
+  // // margin-bottom: 2rem;
   transform: translateX(-1rem) rotate(10deg) scale(0.9);
-  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
+  // clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
 `
 const StyledPad = styled.div`
   margin: 1rem;
@@ -224,7 +227,12 @@ export default class NewsList extends React.Component {
                       <div className="featured-image">
                         <Link to={post.frontmatter.path} className="post-link" >
                           <StyledHexImage>
-                            <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                            {/* <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} /> */}
+                            <HexImage 
+                              pic={require(`../pages${post.frontmatter.path}/${post.frontmatter.pic}`)} 
+                              hexId={`NewHex-${post.id}`} 
+                              rotate={true}
+                            />
                           </StyledHexImage>
                         </Link>
                       </div>

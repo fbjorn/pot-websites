@@ -181,7 +181,8 @@ export default class Events extends React.Component {
                     {/* <CustomImage filename="bg-square2.jpg" alt="Graphical element" /> */}
                     <HexImage 
                       pic={require(`./../images/bg-square2.jpg`)} 
-                      hexId={`EventHex-Hero`} 
+                      hexId={`EventHex-Hero`}
+                      rotate={true} 
                     />
                   </StyledHexImage>
                 </div>
@@ -213,7 +214,12 @@ export default class Events extends React.Component {
                             {post.frontmatter.potevent && (
                             <Link to={post.frontmatter.path} className="post-link" >
                               <StyledHexImage>
-                                <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                                {/* <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} /> */}
+                                <HexImage 
+                                  pic={require(`.${post.frontmatter.path}/${post.frontmatter.pic}`)} 
+                                  hexId={`EventHex-${post.id}`} 
+                                  rotate={true}
+                                />
                               </StyledHexImage>
                             </Link>
                             )}
@@ -224,7 +230,12 @@ export default class Events extends React.Component {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
-                                  <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                                  {/* <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} /> */}
+                                  <HexImage 
+                                    pic={require(`.${post.frontmatter.path}/${post.frontmatter.pic}`)} 
+                                    hexId={`EventHex-${post.id}`} 
+                                    rotate={true}
+                                  />
                                 </a>
                               </StyledHexImage>
                             )}
@@ -304,7 +315,12 @@ export default class Events extends React.Component {
                             {post.frontmatter.potevent && (
                             <Link to={post.frontmatter.path} className="post-link" >
                               <StyledHexImage>
-                                <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} />
+                                {/* <CustomImage filename={post.frontmatter.pic} alt={post.frontmatter.title} /> */}
+                                  <HexImage 
+                                    pic={require(`.${post.frontmatter.path}/${post.frontmatter.pic}`)} 
+                                    hexId={`EventHex-${post.id}`} 
+                                    rotate={true}
+                                  />
                               </StyledHexImage>
                             </Link>
                             )}
@@ -319,6 +335,7 @@ export default class Events extends React.Component {
                                   <HexImage 
                                     pic={require(`.${post.frontmatter.path}/${post.frontmatter.pic}`)} 
                                     hexId={`EventHex-${post.id}`} 
+                                    rotate={true}
                                   />
                                 </a>
                               </StyledHexImage>

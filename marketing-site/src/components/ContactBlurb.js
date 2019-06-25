@@ -54,6 +54,7 @@ const ContactBlurb = (props) => {
         <HexImage 
           pic={require(`./../images/${props.pic}`)} 
           hexId={`ContactHex-${props.email}-${props.phone}`} 
+          rotate={true}
         />
       </StyledCustomImage>
       
