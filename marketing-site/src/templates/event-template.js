@@ -17,6 +17,7 @@ const StyledBlog = styled.article`
   padding: 1rem; 
   @media ${device.laptop} {
   }
+  hr {border-top: 2px dotted ${colors.light};}
 `
 const StyledHeader = styled.header`
   margin-bottom: 1rem;
