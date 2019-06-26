@@ -5,7 +5,7 @@ subtype: "contact"
 order: 6
 
 name: "Ivan Nokhrin"
-title: "Sales Representative, Public sector"
+title: "Sales Representative"
 pic: "ivan-nokhrin.jpg" 
 phone: "+358466143209"
 email: "ivan.nokhrin@oftrust.net"
