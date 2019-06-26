@@ -6,7 +6,6 @@ import { colors } from '../Theme.js'
 // import CustomImage from "../components/CustomImage"
 import HexImage from './HexImage'
 
-
 export const componentColors = {
   freemium: `${colors.mainDark}`,
   transaction: `${colors.ok}`,
@@ -82,6 +81,5 @@ const ContactBlurb = (props) => {
       </div>
     </StyledContactBlurb>
 )}
-
 
 export default ContactBlurb

@@ -1,12 +1,12 @@
 import React from 'react'
-// import { Link } from 'gatsby'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import { graphql } from 'gatsby' 
+import Img from "gatsby-image"
 import styled from 'styled-components'
 
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 import Video from '../components/Video'
 import Logos from '../components/Logos'
-// import CustomRoundedButton from '../components/CustomRoundedButton'
 import HexIcon from '../components/hexIcon'
 import { colors, variables } from '../Theme.js'
 
@@ -35,25 +35,16 @@ const StyledVideo = styled.section`
 
 `
 
-const About = () => (
+const About = ({ data }) => (
   <Layout>
     <SEO title="About Platform of Trust" />
-    <svg height="0" width="0" viewBox="0 0 500 500" >
-      <defs>
-          <clipPath id="hex-clip" clipPathUnits="objectBoundingBox">
-            <polygon fill="none" points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
-          </clipPath>
-      </defs>
-    </svg>
     <StyledPage>
-      
-       
       <StyledSection className="container">
-        <div>
-          <h1>About</h1>    
-          <StyledGraph>
-            <h2>Graafi</h2> 
-          </StyledGraph> 
+        <div className="row">
+          <div className="col-12">
+            <h1>About</h1>    
+            <Img fluid={data.file.childImageSharp.fluid} />
+          </div>
         </div>
         <div className="row">
           <div className="col-md-6">
@@ -95,9 +86,7 @@ const About = () => (
       </StyledSection>
       <StyledSection className="container">
         <h2>Our partners and customers</h2>
-        
           <Logos />
-        
       </StyledSection>
       <StyledSection className="container">
         <h3>Platform of Trust is part of <a href="https://www.tilaajavastuu.fi/en/" >Suomen Tilaajavastuu Group</a></h3>
@@ -108,3 +97,17 @@ const About = () => (
 )
 
 export default About
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "PoT-graaffi.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid(maxWidth: 1240) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

@@ -70,39 +70,32 @@ const FeaturedEvent = ({ data }) => (
       const allEvents = data.allMdx.edges
       const upcomingEvents = allEvents.filter(event => (Date.now() - Date.parse(event.node.frontmatter.time)) <= 0 )
       const hasUpcomingEvents = upcomingEvents.length > 0 
-
       const ownUpcomingEvents = upcomingEvents.filter(event => event.node.frontmatter.potevent)
       const friendsUpcomingEvents = upcomingEvents.filter(event => !event.node.frontmatter.potevent)
-
-
-      console.log("ownUpcomingEvents", ownUpcomingEvents)
-      console.log("friendsUpcomingEvents", friendsUpcomingEvents)
-
-      
       const hasOwnUpgomingEvents = hasUpcomingEvents && ownUpcomingEvents.length > 0 ? true : false
-
-
 
       return (
         <>
-        {hasUpcomingEvents && (<StyledFeaturedEvent className="hex-content">
-          <div className="content-wrapper">
-            {hasOwnUpgomingEvents && (
-            <Link to={ ownUpcomingEvents[0].node.frontmatter.path }>
-              <h3>{ ownUpcomingEvents[0].node.frontmatter.type }</h3>
-              <p>{ ownUpcomingEvents[0].node.frontmatter.shorttitle }</p>
-              <span className="read-more">Read more</span>
-            </Link>
-            )}
-            {!hasOwnUpgomingEvents && (
-            <a href={ friendsUpcomingEvents[0].node.frontmatter.eventlink }>
-              <h3>{ friendsUpcomingEvents[0].node.frontmatter.type }</h3>
-              <p>{ friendsUpcomingEvents[0].node.frontmatter.shorttitle }</p>
-              <span className="read-more">Read more</span>
-            </a>
-            )}
-          </div>
-        </StyledFeaturedEvent>)}
+        {hasUpcomingEvents && (
+          <StyledFeaturedEvent className="hex-content">
+            <div className="content-wrapper">
+              {hasOwnUpgomingEvents && (
+              <Link to={ ownUpcomingEvents[0].node.frontmatter.path }>
+                <h3>{ ownUpcomingEvents[0].node.frontmatter.type }</h3>
+                <p>{ ownUpcomingEvents[0].node.frontmatter.shorttitle }</p>
+                <span className="read-more">Read more</span>
+              </Link>
+              )}
+              {!hasOwnUpgomingEvents && (
+              <a href={ friendsUpcomingEvents[0].node.frontmatter.eventlink }>
+                <h3>{ friendsUpcomingEvents[0].node.frontmatter.type }</h3>
+                <p>{ friendsUpcomingEvents[0].node.frontmatter.shorttitle }</p>
+                <span className="read-more">Read more</span>
+              </a>
+              )}
+            </div>
+          </StyledFeaturedEvent>
+        )}
         </>
       )
   }  
