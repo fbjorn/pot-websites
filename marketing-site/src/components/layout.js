@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { createGlobalStyle } from "styled-components";
-
 import Helmet from 'react-helmet'
+import CookieConsent from "react-cookie-consent";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHexagon, faEllipsisV } from '@fortawesome/pro-solid-svg-icons'
@@ -57,14 +57,18 @@ const Layout = ({ pathname, children }) => (
     render={data => (
       <StyledSite>
         <GlobalStyle />
-        <Helmet title={data.site.siteMetadata.title}>}
-          />
+        <Helmet title={data.site.siteMetadata.title}>
+
         </Helmet>
+        
         <Header siteTitle={data.site.siteMetadata.title} />
         <StyledWrapper>
           {children}
         </StyledWrapper>
         <Footer />
+        <CookieConsent>
+    This website uses cookies to enhance the user experience.
+</CookieConsent>
       </StyledSite>
     )}
   />

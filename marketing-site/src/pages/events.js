@@ -144,12 +144,6 @@ export default class Events extends React.Component {
     const ownEventsNow = ownEvents.filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) <= 0 )
     const friendsEventsNow = friendsEvents.filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) <= 0 )
     const pastEvents = posts.filter(post => (Date.now() - Date.parse(post.node.frontmatter.time)) >= 0 )
-
-    console.log("ownEvents", ownEvents)
-    console.log("ownEventsNow", ownEventsNow)
-    console.log("friendsEvents", friendsEvents)
-    console.log("friendsEventsNow", friendsEventsNow)
-    console.log("pastEvents", pastEvents)
     
     return (
       <Layout className="blog-posts">
