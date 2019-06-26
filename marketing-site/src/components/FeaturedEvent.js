@@ -87,11 +87,11 @@ const FeaturedEvent = ({ data }) => (
               </Link>
               )}
               {!hasOwnUpgomingEvents && (
-              <a href={ friendsUpcomingEvents[0].node.frontmatter.eventlink }>
+              <Link to="/events">
                 <h3>{ friendsUpcomingEvents[0].node.frontmatter.type }</h3>
                 <p>{ friendsUpcomingEvents[0].node.frontmatter.shorttitle }</p>
                 <span className="read-more">Read more</span>
-              </a>
+              </Link>
               )}
             </div>
           </StyledFeaturedEvent>
