@@ -2,6 +2,7 @@ import React from 'react'
 import Link from "gatsby-link"
 import styled from 'styled-components'
 
+import FooterInfo from './FooterInfo'
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
 import LogoSymbol from "../images/logo-symbol.svg"
 import SomeIcons from "./SomeIcons"
@@ -28,7 +29,7 @@ const StyledFooter = styled.footer`
   .logo-desk { display: none; }
   .logo-desk { @media ${device.laptop} { display: block; margin: 0; width: 100%;  } }
   a:link { color: ${colors.light}; }
-  a:visited { color: ${colors.main}; }
+  a:visited { color: ${colors.lightUsed}; }
   .sitemap a:link { text-decoration: none; }
   .sitemap { display: none; }
   .sitemap { @media ${device.laptop} { display: block; } }
@@ -69,8 +70,9 @@ const Footer = () => (
         </div>
 
         <div className="footer-contact col-4 col-lg-4 col-xl-4 mt-md-0 mt-1">
-          <h5 className="mb-md-1">Platform of Trust</h5>
-          <p>VAT-number FI29800052</p>
+          <FooterInfo />
+          {/* <h5 className="mb-md-1">Platform of Trust</h5>
+          <p>VAT-number FI29800052</p> */}
           {/* <p><a href="https://www.tilaajavastuu.fi/en/data-protection/">Data protection statement</a></p>*/}
         </div> 
 

@@ -92,7 +92,7 @@ export default About
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "PoT-graaffi.png" }) {
+    file(relativePath: { eq: "PoT-Infographic.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
