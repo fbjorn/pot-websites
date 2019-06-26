@@ -6,7 +6,7 @@ image: "./harbour-city.jpg" # Featured image shown on page and listings. Save in
 pic: "harbour-city-square.jpg" # Hex image shown on page and listings. No path, just filename. Save in same folder. Don't use svg.
 pictext: ""
 type: "news" # All "News" are blogs to separate them from real pages made with MarkDown, so that they appear in blog listings etc.
-subtype: "article" # "blog" / "news" / "press-release" etc.
+subtype: "article" # "blog" / "news" / "pressRelease" etc.
 tags: ['SignSpace'] # Any string, can be used in search / "related content"
 lang: "en-GB" # ISO Lang attr
 author: "Henri Svensson"

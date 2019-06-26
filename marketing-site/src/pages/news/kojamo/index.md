@@ -6,7 +6,7 @@ image: "./light.jpg" # Featured image shown on page and listings. Save in same f
 pic: "light-square.jpg" # Hex image shown on page and listings. No path, just filename. Save in same folder. Don't use svg.
 pictext: ""
 type: "news" # All "News" are blogs to separate them from real pages made with MarkDown, so that they appear in blog listings etc.
-subtype: "press-release" # "blog" / "news" / "press-release" etc.
+subtype: "pressRelease" # "blog" / "news" / "pressRelease" etc.
 tags: ['Kojamo'] # Any string, can be used in search / "related content"
 lang: "en-GB" # ISO Lang attr
 author: "Pirkko Laitinen"

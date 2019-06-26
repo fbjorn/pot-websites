@@ -151,14 +151,14 @@ export default class NewsList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: [ 'blog', 'article', 'press-release', 'business', 'technical' ],
+      filters: [ 'blog', 'article', 'pressRelease', 'business', 'technical' ],
       selected: "all",
       showFooter: true,
     }
   }
 
   handleFiltering = filter => {
-    filter === "all" ? this.setState({ filters: ['blog', 'article', 'press-release'] }) : this.setState({ filters: [filter] })
+    filter === "all" ? this.setState({ filters: ['blog', 'article', 'pressRelease'] }) : this.setState({ filters: [filter] })
     this.setState({ selected: [filter] })
   }
 
@@ -176,25 +176,36 @@ export default class NewsList extends React.Component {
       <StyledPad>
         <StyledSection className="posts-listing">
           <StyledTools className="filters">
+
             <StyledSelector className={`tool-block all ${ selected[0] === "all" ? "selected-filter" : "" }`}>
               <span onClick={() => this.handleFiltering("all")}>All</span>
             </StyledSelector>
+
             <StyledSelector className={`tool-block blog ${ selected[0] === "blog" ? "selected-filter" : "" }`}>
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.blog } />
               <span onClick={() => this.handleFiltering("blog")}>Blogs</span>
             </StyledSelector>
-            <StyledSelector className={`tool-block press-release ${ selected[0] === "press-release" ? "selected-filter" : "" }`}>
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
-              <span onClick={() => this.handleFiltering("press-release")}>Press releases</span>
+
+            <StyledSelector className={`tool-block article ${ selected[0] === "article" ? "selected-filter" : "" }`}>
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.article } />
+              <span onClick={() => this.handleFiltering("article")}>Articles</span>
             </StyledSelector>
+
+            <StyledSelector className={`tool-block pressRelease ${ selected[0] === "pressRelease" ? "selected-filter" : "" }`}>
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.press } />
+              <span onClick={() => this.handleFiltering("pressRelease")}>Press releases</span>
+            </StyledSelector>
+
             <StyledSelector className={`tool-block business ${ selected[0] === "business" ? "selected-filter" : "" }`}>
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.success } />
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.business } />
               <span onClick={() => this.handleFiltering("business")}>Business</span>
             </StyledSelector>
+
             <StyledSelector className={`tool-block article ${ selected[0] === "technical" ? "selected-filter" : "" }`}>
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.mainLightest } />
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.technical } />
               <span onClick={() => this.handleFiltering("technical")}>Technical</span>
             </StyledSelector>
+
           </StyledTools>
           <StyledBlogs className="posts container">
             <div className="row">

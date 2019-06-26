@@ -108,14 +108,14 @@ export default class Events extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: [ 'blog', 'article', 'press-release', 'business', 'technical' ],
+      filters: [ 'blog', 'article', 'pressRelease', 'business', 'technical' ],
       selected: "all",
       showFooter: true,
     }
   }
 
   handleFiltering = filter => {
-    filter === "all" ? this.setState({ filters: ['blog', 'article', 'press-release', 'business', 'technical'] }) : this.setState({ filters: [filter] })
+    filter === "all" ? this.setState({ filters: ['blog', 'article', 'pressRelease', 'business', 'technical'] }) : this.setState({ filters: [filter] })
     this.setState({ selected: [filter] })
   }
 
@@ -134,9 +134,9 @@ export default class Events extends React.Component {
                 <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.ok } />
                 <span onClick={() => this.handleFiltering("blog")}>Blogs</span>
               </StyledSelector>
-              <StyledSelector className={`tool-block press-release ${ selected[0] === "press-release" ? "selected-filter" : "" }`}>
+              <StyledSelector className={`tool-block pressRelease ${ selected[0] === "pressRelease" ? "selected-filter" : "" }`}>
                 <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.alert } />
-                <span onClick={() => this.handleFiltering("press-release")}>Press releases</span>
+                <span onClick={() => this.handleFiltering("pressRelease")}>Press releases</span>
               </StyledSelector> */}
               <StyledSelector className={`tool-block business ${ selected[0] === "business" ? "selected-filter" : "" }`}>
                 <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors.success } size="1x" />

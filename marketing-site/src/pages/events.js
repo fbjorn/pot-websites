@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components'
-import CustomImage from "../components/CustomImage"
 import HexImage from "../components/HexImage"
 import CustomSquareButton from "../components/CustomSquareButton"
 import CustomRoundedButton from "../components/CustomRoundedButton"
@@ -125,20 +124,20 @@ export default class Events extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: [ 'blog', 'article', 'press-release', 'business', 'technical' ],
+      filters: [ 'blog', 'article', 'pressRelease', 'business', 'technical' ],
       selected: "all",
       showFooter: true,
     }
   }
 
   handleFiltering = filter => {
-    filter === "all" ? this.setState({ filters: ['blog', 'article', 'press-release', 'business', 'technical'] }) : this.setState({ filters: [filter] })
+    filter === "all" ? this.setState({ filters: ['blog', 'article', 'pressRelease', 'business', 'technical'] }) : this.setState({ filters: [filter] })
     this.setState({ selected: [filter] })
   }
 
   render() {
-    const { filters, selected  } = this.state
-    const data = this.props.data.allMdx
+    const { selected  } = this.state
+    // const data = this.props.data.allMdx
     const { edges: posts } = this.props.data.allMdx;
     const ownEvents = posts.filter(post => post.node.frontmatter.potevent)
     const friendsEvents = posts.filter(post => !post.node.frontmatter.potevent)
@@ -187,7 +186,7 @@ export default class Events extends React.Component {
                   </StyledHexImage>
                 </div>
                 <div className="col-12 col-md-8">
-                  <h2>Come to meet us at following events</h2>
+                  <h2>Come meet us at following events</h2>
                 </div>
               </div>
             </StyledHeader>

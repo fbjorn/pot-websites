@@ -45,7 +45,11 @@ const StyledCustomImage = styled.div`
 `
 
 const ContactBlurb = (props) => {
-  // console.log(<CustomImage filename={props.pic} />);
+  // const phone = "+358456764842"
+  const phone = props.phone
+  const formattedPhone = `${phone.substring(0,4)} ${phone.substring(4,6)} ${phone.substring(6,9)} ${phone.substring(9,13)} ${phone.substring(13,16)}`  
+
+  console.log(formattedPhone);
   return (
     <StyledContactBlurb className="col-12 col-md-6 col-lg-3">
       <StyledCustomImage>
@@ -60,7 +64,7 @@ const ContactBlurb = (props) => {
       <div>
         <StyledName>{props.name}</StyledName>
         <p>{props.title}</p>
-        <p><a href={`tel:${props.phone}`}>{props.phone}</a></p>
+        <p><a href={`tel:${props.phone}`}>{formattedPhone}</a></p>
         <p><a href={`mailto:${props.email}`}>{props.email}</a></p>
         <p>
           {props.linkedin && (

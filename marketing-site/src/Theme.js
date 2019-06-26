@@ -14,6 +14,13 @@ export const colors = {
   mainDark: '#583eb9',
   mainLight: '#9176fe',
   mainLightest: '#a897fe',
+  blog: 'rgb(0, 198, 255)',
+  news: 'rgb(247, 197, 0)',
+  article: 'rgb(255,200,9)',
+  press: 'rgb(251, 99, 77)',
+  business: 'rgb(151, 209, 41)',
+  technical: '#a897fe',
+  
 }
 
 export const variables = {

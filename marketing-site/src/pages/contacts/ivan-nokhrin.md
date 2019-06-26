@@ -5,9 +5,9 @@ subtype: "contact"
 order: 6
 
 name: "Ivan Nokhrin"
-title: "Director, Public sector"
+title: "Sales Representative, Public sector"
 pic: "ivan-nokhrin.jpg" 
-phone: "+358405039208"
+phone: "+358466143209"
 email: "ivan.nokhrin@oftrust.net"
 twitter: ""
 linkedin: "https://www.linkedin.com/in/nokhrin"
