@@ -163,20 +163,14 @@ export default class NewsList extends React.Component {
   }
 
   render() {
-    const { filters, selected, showFooter } = this.state
+    const { filters, selected } = this.state
     const posts = this.props.data.allMdx.edges
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? "/news" : `/news/${(currentPage - 1).toString()}`
     const nextPage = `/news/${(currentPage + 1).toString()}`
-    const limitNews = this.props.pageContext.limit
-
-    // const numPages = this.props.pageContext.numPages
-    // const currentPage = this.props.pageContext.currentPage
-    // const nextPage = this.props.pageContext.currentPage + 1
-    // const prevPage = currentPage === 2 ? "" : this.props.pageContext.currentPage - 1
-    // console.log(this.props)
+ 
     return (
       <Layout className="blog-posts">
       <StyledPad>
@@ -216,12 +210,8 @@ export default class NewsList extends React.Component {
             <div className="row">
                   
               {posts
-                // .filter(post => post.node.frontmatter.title.length > 0)
-                // .filter(post => post.node.frontmatter.subtype === "article")
                 .filter(post => filters.includes(post.node.frontmatter.subtype))
                 .map(( { node: post }, index ) => {
-                  // console.log('Index on', index)
-                  // this.setState({items: index})
                   items = index + 1
                   return (
                     <StyledBlogBlock className="post-preview" key={post.id} >

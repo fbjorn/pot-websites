@@ -4,7 +4,7 @@ import styled from 'styled-components'
 // import ToolsNav from './ToolsNav';
 import SiteNav from './SiteNav';
 import AppsNav from './AppsNav';
-import { colors, device } from '../Theme.js'
+import { device } from '../Theme.js'
 
 const StyledDeskMenu = styled.div`
   display: none;

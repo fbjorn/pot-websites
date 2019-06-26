@@ -1,6 +1,5 @@
 import React from "react"
 import Helmet from "react-helmet"
-import Img from 'gatsby-image'
 import { graphql, Link } from "gatsby"
 import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import styled from 'styled-components'
@@ -33,36 +32,11 @@ const StyledHeader = styled.header`
     width: 100%;
   }
 `
-const StyledMeta = styled.div`
-  // display: block;
-  text-transform: capitalize;
-  * { margin-right: 0.5em; }
-  svg { 
-    fill: ${colors.ok};
-    stroke: ${colors.ok};
-    color: ${colors.ok};
-  }
-`
 const StyledPost = styled.div`
   &&& { max-width: ${variables.pageWidth} }
   position: relative;
   padding-top: 1rem;
   background: ${colors.mainDarker};
-`
-const StyledCaption = styled.div`
-  width: 100%
-  position: absolute;
-  transform: translateY(-100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0), ${colors.mainDarker} 100%);
-  padding: 4rem 10% 0;
-  justify-content: flex-end;
-  p {
-    max-width: 30%;
-    border-top: 2px dotted white;
-    padding-top: 1em;
-    font-size: 1rem;
-    color: white;
-  }
 `
 const StyledPostFooter = styled.div`
   &&& { max-width: ${variables.pageWidth} }

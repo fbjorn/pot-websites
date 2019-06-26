@@ -45,13 +45,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`Platform of Trust`]} />
-      <svg height="0" width="0" viewBox="0 0 500 500" >
-        <defs>
-            <clipPath id="hex-clip" clipPathUnits="objectBoundingBox">
-              <polygon fill="none" points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
-            </clipPath>
-        </defs>
-      </svg>
       <StyledMain className="home page-content container">  
         <div className="dev-test" style={{display: 'none'}}>
           <div 

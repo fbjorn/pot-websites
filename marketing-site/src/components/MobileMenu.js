@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import ToolsNav from './ToolsNav';
 import SiteNav from './SiteNav';
 import AppsNav from './AppsNav';
-import SomeIcons from './SomeIcons';
 import MenuFooter from './MenuFooter';
 import { device } from '../Theme.js'
 

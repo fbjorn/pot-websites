@@ -4,10 +4,6 @@ import styled from 'styled-components'
 
 import Logo from "../images/platformoftrust-wide-white-rgb.svg"
 import LogoSymbol from "../images/logo-symbol.svg"
-import Facebook from "../images/facebook-square-brands.svg"
-import Twitter from "../images/twitter-square-brands.svg"
-import Github from "../images/github-square-brands.svg"
-import Linkedin from "../images/linkedin-square-brands.svg"
 import SomeIcons from "./SomeIcons"
 import { colors, device, variables } from '../Theme.js'
 

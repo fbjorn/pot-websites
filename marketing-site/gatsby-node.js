@@ -25,7 +25,6 @@ exports.createPages = ({ actions, graphql }) => {
     const newsListTemplate = path.resolve(`src/templates/news-list-template.js`);
     const caseTemplate = path.resolve(`src/templates/case-template.js`);
     const eventTemplate = path.resolve(`src/templates/event-template.js`);
-    const pageTemplate = path.resolve(`src/templates/page-template.js`);
     const pricingTemplate = path.resolve(`src/templates/pricing-template.js`);
     return graphql(`
     {
@@ -94,24 +93,6 @@ exports.createPages = ({ actions, graphql }) => {
                         pic
                         pictext
                         subtype
-                    }
-                }
-            }
-        }
-        pages: allMarkdownRemark(
-            filter: { frontmatter: { type: { eq: "page" } } }
-            sort: { order: DESC, fields: [frontmatter___date] }
-        ) {
-            edges {
-                node {
-                    excerpt(pruneLength: 250)
-                    html
-                    id
-                    frontmatter {
-                        title
-                        date(formatString: "MMMM DD, YYYY")
-                        path
-                        type
                     }
                 }
             }
@@ -199,14 +180,6 @@ exports.createPages = ({ actions, graphql }) => {
                 }
             });
         });
-
-        // result.data.pages.edges.forEach(({ node }) => {
-        //     createPage({
-        //         path: node.frontmatter.path,
-        //         component: pageTemplate,
-        //         context: {} // additional data can be passed via context
-        //     });
-        // });
 
         result.data.pricing.edges.forEach(({ node }) => {
             createPage({
