@@ -40,7 +40,7 @@ const About = ({ data }) => (
     <SEO title="About Platform of Trust" />
     <StyledPage>
       <StyledSection className="container">
-        <div className="row">
+        <div className="row mb-5">
           <div className="col-12">
             <h1>About</h1>    
             <Img fluid={data.file.childImageSharp.fluid} />
