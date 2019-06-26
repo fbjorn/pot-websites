@@ -136,7 +136,7 @@ export default class Events extends React.Component {
   }
 
   render() {
-    const { selected  } = this.state
+    const { selected, filters  } = this.state
     // const data = this.props.data.allMdx
     const { edges: posts } = this.props.data.allMdx;
     const ownEvents = posts.filter(post => post.node.frontmatter.potevent)
@@ -191,7 +191,7 @@ export default class Events extends React.Component {
 
                   {ownEventsNow.length === 0 && (
                     <StyledDefault>
-                      <h2>No upcoming event for now. Sign up for news to receive events info and follow us</h2>
+                      <h2>No upcoming events for now. Sign up for news to receive events info and follow us</h2>
                       <Link to="/newsletter">
                         <CustomRoundedButton label="Sign up for news" />
                       </Link>
@@ -200,6 +200,7 @@ export default class Events extends React.Component {
                   )}
 
                   {ownEventsNow
+                    .filter(post => filters.includes(post.node.frontmatter.subtype))
                     .map(({ node: post }) => {
                       return (
                         <StyledBlogBlock className="post-preview" key={post.id} >
@@ -300,6 +301,7 @@ export default class Events extends React.Component {
                 <div className="nonpotevents col-md-6">
                   <h3>Events organised by friends</h3>
                   {friendsEventsNow
+                    .filter(post => filters.includes(post.node.frontmatter.subtype))
                     .map(({ node: post }) => {
                       return (
                         
@@ -405,6 +407,7 @@ export default class Events extends React.Component {
                 <div className="pastevents col-md-12">
                   <h3>Past events</h3>
                   {pastEvents
+                    .filter(post => filters.includes(post.node.frontmatter.subtype))
                     .map(({ node: post }) => {
                       return (          
                         <StyledBlogBlock className="post-preview" key={post.id} >

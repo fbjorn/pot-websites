@@ -1,5 +1,5 @@
 ---
-path: "/news/locia" # path to where you want blog to be published aka https://preview.oftrust.net/blogs/sport-venue
+path: "/news/locia" # path to where you want blog to be published aka https://www.platformoftrust.net//blogs/sport-venue
 date: "2019-04-09T13:45:33.962Z"
 title: "Preventive overall management of premises and service networks for public organisations"
 image: "./plexiglas.jpg" # Featured image shown on page and listings. Save in same folder. Don't use svg.
