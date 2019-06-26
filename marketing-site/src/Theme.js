@@ -17,7 +17,8 @@ export const colors = {
   blog: 'rgb(0, 198, 255)',
   news: 'rgb(247, 197, 0)',
   article: 'rgb(255,200,9)',
-  press: 'rgb(251, 99, 77)',
+  press: 'rgb(252,88,107)',
+  pressRelease: 'rgb(252,88,107)',
   business: 'rgb(151, 209, 41)',
   technical: '#a897fe',
   

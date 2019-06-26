@@ -247,7 +247,7 @@ export default class NewsList extends React.Component {
                         </div>
                         <div className="meta">
                           <p>
-                            <FontAwesomeIcon icon={['fa', 'hexagon']} color={ subtypeColors[post.frontmatter.subtype] } />
+                            <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors[post.frontmatter.subtype] } />
                             {post.frontmatter.subtype && (
                               <>
                                 <span>{post.frontmatter.subtype}</span>
