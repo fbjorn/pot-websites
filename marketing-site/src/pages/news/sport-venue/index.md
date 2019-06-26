@@ -25,6 +25,8 @@ The more data you have, the easier it is to manage operations. Platform of Trust
 
 _Book your 30-minute online presentation of Platform of Trust here and read more about the Sport Venue’s KnowUr.Biz solution here._
 
+<br/><br/><br/><br/>
+
 ### More information
 
 #### Toni Luhti

@@ -18,6 +18,8 @@ SignSpace is a service that allows you to sign, distribute, polish and archive d
 Read more about SignSpace at signspace.fi
 SignSpace is a service provided by Suomen Tilaajavastuu Oy and Platform of Trust Oy. It makes business operations smoother and more secure.
 
+<br/><br/><br/><br/>
+
 ### More information
 
 #### Henri Svensson

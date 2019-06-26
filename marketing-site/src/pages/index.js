@@ -38,6 +38,15 @@ const StyledBenefits = styled.ul`
     path { color: white; }
   }
 `
+const StyledPartners = styled.div`
+  p {
+    display: inline-block;
+    margin-right: 0.4em;
+    &:after {
+      // content: "";
+    }
+  }
+`
 
 const IndexPage = ({ data }) => {
   const testContent = data.allContent.edges[0].node
@@ -113,7 +122,6 @@ const IndexPage = ({ data }) => {
           {contents
             .filter(content => content.node.frontmatter.section === "definition")
             .map( ({ node }) => {
-              // console.log('[index.js] ContentMapping:', node )
               return(
                 <div
                   key={node.id}
@@ -128,22 +136,17 @@ const IndexPage = ({ data }) => {
 
         <div className="row mt-3 mb-5">
           <div className="col-12 col-md-10 offset-md-1 ">
-            <div className="row">
-              <div className="hex-blurb col-10 offset-1 col-md-6 offset-md-0 col-lg-3">
-                <HexBlurb title="Create better and smarter buildings and cities" icon="drafting-compass" textColor={colors.main} bgColor="light" />
-              </div>
-              
-              <div className="hex-blurb col-10 offset-1 col-md-6 offset-md-0 col-lg-3">
-                <HexBlurb title="Improve the productivity of any daily processes" icon="badge-check" textColor={colors.main} bgColor="light" />
-              </div>
-
-              <div className="hex-blurb col-10 offset-1 col-md-6 offset-md-0 col-lg-3">
-                <HexBlurb title="Earn with new services and innovative business models" icon="sack" textColor={colors.main} bgColor="light" />
-              </div>
-
-              <div className="hex-blurb col-10 offset-1 col-md-6 offset-md-0 col-lg-3">
-                <HexBlurb title="Save on time, energy and material costs" icon="piggy-bank" textColor={colors.main} bgColor="light" />
-              </div>
+            <div id="hex-blurbs" className="row">
+              {contents
+                .filter(content => content.node.frontmatter.section === "hex-blurbs")
+                .map( ({ node }) => {
+                  return(
+                    <div className="hex-blurb col-10 offset-1 col-md-6 offset-md-0 col-lg-3" key={node.id}>
+                      <HexBlurb title={ node.html.replace(/<[^>]*>/g, '') } icon={ node.frontmatter.icon } textColor={colors.main} bgColor="light" />
+                    </div>
+                  )
+                })
+              }
             </div>
           </div>
         </div>
@@ -182,12 +185,23 @@ const IndexPage = ({ data }) => {
           <div className="col-md-10 offset-md-1 mb-3">
             <h2>Here are some of our partners and first users</h2>
           </div>
-          <div className="col-10 offset-1">
-            <p>
+          <StyledPartners id="partners" className="col-10 offset-1">
+          {contents
+            .filter(content => content.node.frontmatter.section === "partners")
+            .map( ({ node }) => {
+              return(
+                <div
+                  key={node.id}
+                  dangerouslySetInnerHTML={{ __html: node.html }} 
+                />
+              )
+            })
+          }
+            {/* <p>
               Kojamo Oyj  &middot;  Keskinäinen työeläkevakuutusyhtiö Varma  &middot;  Tampereen Tilapalvelut Oy, GSP Group Oy  &middot;  Hämeen ammattikorkeakoulu HAMK  &middot;  Forum Virium Helsinki  &middot;  Honkio Oy  &middot;  Cozify Oy  &middot; Flexitila / Joustotoimisto Oy  &middot;  Metropolia Ammattikorkeakoulu  &middot;  Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy  &middot;  Tieto Oyj  &middot;  Granlund Oy  &middot;  Digital Living International Oy  &middot;  Tunninen Oy Finland  &middot;  Teknologian tutkimuskeskus VTT Oy  &middot; Locia Oy  &middot;  Sport Venue Oy.
-            </p> 
+            </p>  */}
             {/* <CustomRoundedButton className="ml-0" label="become reseller"/> */}
-          </div>
+          </StyledPartners>
         </div>
       </StyledMain>
     </Layout>
@@ -197,6 +211,7 @@ export const query = graphql`
   query {
     allContent: allMarkdownRemark(
         filter: { frontmatter: { page: { eq: "index" } } }
+      sort: { order: ASC, fields: [frontmatter___order]}
       ) {
       edges {
         node {
@@ -204,6 +219,7 @@ export const query = graphql`
           html
           frontmatter {
             section
+            icon
           }
         }
       }

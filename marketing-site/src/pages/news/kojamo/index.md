@@ -39,6 +39,8 @@ _“Platform of Trust helped Kojamo harmonise its fragmented data models, making
 
 The development of Platform of Trust began in 2018 as a collaborative project between operators in the property and construction sectors. The goal was to promote the harmonisation of the data these sectors use and to open up new business models. In the future, the platform will be available for operators in any sector. Platform of Trust Oy, a part of the Suomen Tilaajavastuu group, was incorporated in February 2019. Business Finland has granted Platform of Trust EUR 5 million of funding for international expansion.
 
+<br/><br/><br/><br/>
+
 ### Further information
 
 #### Vesa Ilmarinen

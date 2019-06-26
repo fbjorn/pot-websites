@@ -24,6 +24,8 @@ The collaboration between Platform of Trust and Locia will make it possible to e
 
 Platform of Trust is a community-based platform that will be launched in June. It harmonises data from a range of sources into a format that can be used by many operators. Data source validation and the use of automated authorisation and agreement tools will ensure data reliability. The development of the platform was begun to address the needs of the construction and property sectors. While the majority of the data on the platform in its initial phase is related to these sectors, in the future, the platform will be available for the needs of any sector.
 
+<br/><br/><br/><br/>
+
 ### More information
 
 #### Toni Luhti
