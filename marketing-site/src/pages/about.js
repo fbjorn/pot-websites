@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import styled from 'styled-components'
 
 import Video from '../components/Video'
+import Logos from '../components/Logos'
 // import CustomRoundedButton from '../components/CustomRoundedButton'
 import HexIcon from '../components/hexIcon'
 import { colors, variables } from '../Theme.js'
@@ -94,9 +95,9 @@ const About = () => (
       </StyledSection>
       <StyledSection className="container">
         <h2>Our partners and customers</h2>
-        <StyledGraph>
-          <h2>Logot</h2>
-        </StyledGraph>
+        
+          <Logos />
+        
       </StyledSection>
       <StyledSection className="container">
         <h3>Platform of Trust is part of <a href="https://www.tilaajavastuu.fi/en/" >Suomen Tilaajavastuu Group</a></h3>

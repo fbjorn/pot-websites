@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { colors } from '../Theme.js'
-import CustomImage from "../components/CustomImage"
+// import CustomImage from "../components/CustomImage"
 import HexImage from './HexImage'
 
 
