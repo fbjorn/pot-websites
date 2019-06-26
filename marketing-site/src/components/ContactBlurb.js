@@ -40,7 +40,7 @@ const StyledCustomImage = styled.div`
   width: 85%;
   max-width: 250px;
   margin-bottom: 2rem;
-  transform: translateX(-1rem) rotate(10deg) scale(0.9);
+  transform: translateX(-1rem) rotate(10deg) scale(1);
   // clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%); 
   .gatsby-image-wrapper { transform: rotate(-10deg); }
 `
