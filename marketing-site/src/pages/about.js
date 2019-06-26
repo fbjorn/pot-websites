@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 import Video from '../components/Video'
 import Logos from '../components/Logos'
 import HexIcon from '../components/hexIcon'
-import { colors, variables } from '../Theme.js'
+import { variables } from '../Theme.js'
 
 const StyledPage = styled.div`
   width: auto;
@@ -16,14 +16,6 @@ const StyledPage = styled.div`
   margin: 0 auto;
   * { color: white }
   a:link { text-decoration: underline dotted; }
-`
-const StyledGraph = styled.div`
-  width: auto;
-  max-width: ${ variables.pageWidth };
-  min-height: 30vh;
-  margin: 0 auto;   
-  background-color: white;
-  h2{ color: ${ colors.main }; }
 `
 const StyledSection = styled.section`
   &&& { max-width: ${ variables.pageWidth } }

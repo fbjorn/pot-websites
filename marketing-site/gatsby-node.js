@@ -20,7 +20,7 @@ exports.sourceNodes = ({ actions }) => {
 
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
-    const blogTemplate = path.resolve(`src/templates/blog-template.js`);
+    // const blogTemplate = path.resolve(`src/templates/blog-template.js`);
     const newsTemplate = path.resolve(`src/templates/news-template.js`);
     const newsListTemplate = path.resolve(`src/templates/news-list-template.js`);
     const caseTemplate = path.resolve(`src/templates/case-template.js`);
@@ -29,28 +29,6 @@ exports.createPages = ({ actions, graphql }) => {
     const pricingTemplate = path.resolve(`src/templates/pricing-template.js`);
     return graphql(`
     {
-        blogs: allMarkdownRemark(
-            filter: { frontmatter: { type: { eq: "blog" } } }
-            sort: { order: DESC, fields: [frontmatter___date] }
-        ) {
-            edges {
-                node {
-                    excerpt(pruneLength: 250)
-                    html
-                    id
-                    frontmatter {
-                        title
-                        date(formatString: "MMMM DD, YYYY")
-                        path
-                        type
-                        author
-                        pic
-                        pictext
-                        subtype
-                    }
-                }
-            }
-        }
         events: allMdx(
             filter: { frontmatter: { potevent: { eq: true } } }
             sort: { order: DESC, fields: [frontmatter___date] }
@@ -163,15 +141,6 @@ exports.createPages = ({ actions, graphql }) => {
             return Promise.reject(result.errors);
         }
         
-        // result.data.blogs.edges.forEach(({ node }) => {
-        //     createPage({
-        //         path: node.frontmatter.path,
-        //         component: blogTemplate,
-        //         context: {} // additional data can be passed via context
-        //     });
-        // });
-        
-        
         const events = result.data.events.edges
         events.forEach(({ node }, index ) => {
             const prev = index === 0 ? null : events[index - 1].node
@@ -231,13 +200,13 @@ exports.createPages = ({ actions, graphql }) => {
             });
         });
 
-        result.data.pages.edges.forEach(({ node }) => {
-            createPage({
-                path: node.frontmatter.path,
-                component: pageTemplate,
-                context: {} // additional data can be passed via context
-            });
-        });
+        // result.data.pages.edges.forEach(({ node }) => {
+        //     createPage({
+        //         path: node.frontmatter.path,
+        //         component: pageTemplate,
+        //         context: {} // additional data can be passed via context
+        //     });
+        // });
 
         result.data.pricing.edges.forEach(({ node }) => {
             createPage({
