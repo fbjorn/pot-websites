@@ -43,7 +43,7 @@ const About = ({ data }) => (
             <p>Communally built Platform of Trust is a platform that makes data move between systems and organisations. It makes knowledge-based decisions possible but also creates grounds for new business models with harmonised data. </p>
           </div>
           <div className="col-md-6">
-            <p>Platform of Trust differs from other platforms with a built-in trust engine that makes sure both the data and the data producers and users are trustworthy. </p>
+            <p>Platform of Trust differs from other platforms with a built-in trust engine that makes sure both the data producers and data users are trustworthy </p>
           </div>
         </div>
       </StyledSection>
