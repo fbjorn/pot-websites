@@ -39,11 +39,11 @@ const SomeIcons = (props) => {
         <FontAwesomeIcon icon={['fab', `twitter-square`]} size="8x" />
       </a>
     
-      <a href="https://www.linkedin.com/company/platform-of-trust/" className="some-link github" target="_blank" rel="noopener noreferrer" >
+      <a href="https://github.com/PlatformOfTrust/" className="some-link github" target="_blank" rel="noopener noreferrer" >
         <FontAwesomeIcon icon={['fab', `github-square`]} size="8x" />
       </a>
     
-      <a href="https://github.com/PlatformOfTrust/" className="some-link linkedin" target="_blank" rel="noopener noreferrer" >
+      <a href="https://www.linkedin.com/company/platform-of-trust/" className="some-link linkedin" target="_blank" rel="noopener noreferrer" >
         <FontAwesomeIcon icon={['fab', `linkedin`]} size="8x" />
       </a>
     

@@ -122,7 +122,7 @@ const FeaturedNews = ({ data }) => (
             </Link>
           ))}
 
-          <Link to="/" className="go-to-link">Go to news</Link>
+          <Link to="/news" className="go-to-link">Go to news</Link>
         </StyledContent>
       </StyledNews>
     )}
