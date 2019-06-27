@@ -2,10 +2,15 @@ language: generic
 services:
  - docker
 
-# BE CAREFUL: There is a risk of outputting real credentials to logs here!
-before_install:
- - echo "$DOCKER_PASSWORD" | docker login -u="$DOCKER_USERNAME" --password-stdin
- - docker build -t platformoftrust/website:$TRAVIS_BUILD_NUMBER .
 
 script:
- - docker push platformoftrust/website:$TRAVIS_BUILD_NUMBER
+ - docker build -t platformoftrust/website:$TRAVIS_BUILD_NUMBER .
+
+# Custom deployment to Dockerhub
+# BE CAREFUL: There is a risk of outputting real credentials to logs here!
+after_success:
+ - |
+  if [[ "$TRAVIS_BRANCH" == "master" ]]; then
+     echo "$DOCKER_PASSWORD" | docker login -u="$DOCKER_USERNAME" --password-stdin
+     docker push platformoftrust/website:$TRAVIS_BUILD_NUMBER
+  fi
