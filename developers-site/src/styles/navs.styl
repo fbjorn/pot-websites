@@ -1,0 +1,391 @@
+@require 'variables.styl'
+@require 'colors.styl'
+
+breakpoint = $mobi-navi-breakpoint 
+
+#___gatsby
+  @media(min-width breakpoint)
+    header.wrapper
+      position relative
+      display flex
+      align-items center
+    nav.menus
+      flex 2
+      display flex
+      align-items center
+    input[data-function*='swipe'], label[data-function*='swipe']
+      display none
+
+     
+  @media(max-width breakpoint - 1px)
+      
+    header.wrapper
+      display flex
+      flex-direction column
+      min-height 100%
+      padding-top 36px
+    
+    nav.menus
+      display flex
+      position fixed
+      flex-direction column
+      background-color white
+      z-index 100
+      
+    input[data-function*='swipe']
+      position absolute
+      opacity 0
+    
+    /*    
+    $right = calc(100vw - 34px)
+    label[data-function*='swipe']
+      position fixed
+      // width 10%
+      // border 1px solid
+      top 2rem
+      // left auto
+      // right 1rem
+      left 0
+      // margin-left 54px
+      color $color__helpers--light
+      z-index 1
+      display block
+      font-size 3rem
+      cursor pointer
+      transform translate($right, 0) rotate(90deg)
+      transition transform .3s ease-in
+      z-index 110
+    
+    $left = calc(10vw + 32px)
+    input[data-function*='swipe']:checked
+      & ~ label[data-function*='swipe']
+        position fixed
+        color $color__main
+        transform translate($left, -2rem) rotate(0deg)
+      & ~ .menus     
+        transform translate3d(0%, 0px, 0px)
+        box-shadow -1.5rem 0 1.5rem 0 rgba(0,0,0,0.4) */
+            
+    nav.menus
+      transform translate3d(102%, 0px, 0px)
+      position fixed
+      width 90%
+      top 0
+      left 0
+      margin-left 10%
+      height 100%
+      transition all .3s
+
+
+  // NaviPlay styles https://codepen.io/MikaHamalainen/pen/MxRxzB
+        
+  nav.apps
+    @media(max-width breakpoint - 1px)
+      flex 4
+      order 3
+      // display flex
+      // flex-direction column
+      padding 1rem
+      padding-top 110px
+      a.nav-link, a.nav-link:visited
+        flex 1
+        display block
+        font-size 1.2rem
+        text-decoration none
+        margin-bottom 0
+        padding-bottom 0
+        &.active
+          font-weight 700
+      
+    @media(min-width breakpoint)
+      position absolute
+      width 60.666%
+      top 0
+      right 0
+      display inline-block
+      padding 0.2em 3em 0.2em 
+      text-align right
+      background $color__main--dark
+      clip-path  polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%)
+      a.nav-link 
+        position relative
+        display inline-block
+        padding 0
+        padding-bottom 0.4em
+        margin 0.9em 0.9em 0.5rem
+        border-bottom 3px dotted $color__main--dark
+        border-radius 5%
+        transition all 0.3s ease-in 
+        &:hover
+          text-shadow 0px 0px 2px alpha($color__helpers--light, 0.4)
+          border-bottom 3px dotted $color__main--light
+          border-radius 0
+        &.active
+          font-weight 700
+          border-bottom 3px dotted $color__main--lightest
+          border-radius 0
+          
+  
+  nav.some
+    @media(max-width breakpoint - 1px)
+      flex 2
+      order 4
+      display flex
+      flex-direction column
+      padding 1rem
+      align-items flex-end
+      a, a:visited
+        flex 1
+        display block
+        font-size 1rem
+        text-decoration none
+    @media(min-width breakpoint)
+      position absolute
+      bottom 1rem
+      right 1rem
+       
+  nav.site
+    @media(max-width breakpoint - 1px)
+      flex 2
+      order 2
+      display flex
+      flex-direction column
+      padding 2rem
+      padding-top 60px
+      margin-bottom 4rem
+      a, a:visited
+        flex 1
+        padding-left 0
+        display block
+        font-size 1.4rem
+        text-decoration none
+        margin-bottom 0
+        padding-bottom 0
+      
+    @media(min-width breakpoint)
+      display inline-block
+      margin-right 0
+      margin-left auto
+      vertical-align middle
+      font-size 2rem
+      a.nav-link
+        display inline-block
+        padding 0
+        padding-bottom 0.2em
+        margin 1em 0 0 0.5em
+        border-bottom 0.2em dotted alpha($color__helpers--light, 0)
+        border-radius 3%
+        transition all 0.3s
+        &:hover
+          // font-weight 600
+          text-shadow 0px 0px 2px alpha($color__main--lightest, 0.8)
+          border-bottom 0.2em dotted alpha($color__helpers--light, 0.6)
+          border-radius 0%
+        &.active
+          border-bottom 0.2em dotted $color__helpers--light
+          border-radius 0%
+      
+  nav.tools
+    @media(max-width breakpoint - 1px)
+      flex 1
+      order 1
+      display flex
+      flex-direction column
+      align-items flex-end
+      padding 2rem
+      .hex-wrapper
+        flex 1
+      img
+        width 20px
+        margin-right 0em
+      .reveal, .reveal-hex, .hexagon
+        // border 1px solid green
+        // display inline-block
+        text-align right
+        vertical-align middel
+      .reveal p, .reveal-hex p
+        position relative
+        vertical-align middel
+        right 4rem
+        top 2em
+        margin 0
+        display block
+        visibility hidden
+        display none
+      input
+        display none
+
+        
+    @media(min-width breakpoint)
+      float right
+      display inline-block
+      margin 3rem 4rem 0 auto
+      color $color__main--darkest
+      .language
+        span, a
+          display inline-block
+          width auto
+          margin 0 0.2em
+
+      .hex-wrapper
+        position relative
+        &:nth-of-type(even)
+          transform translateX(-50px)
+
+      .reveal
+        display block
+        position absolute
+        top 0
+        color white
+        transition all 0.3s ease-in 
+        .search-wrapper
+          position relative
+          text-align right
+          width 320px
+          padding-left 299px
+          overflow hidden
+          transform translate(-250px, 10px) 
+          transition all 0.5s ease-in 
+          // border 1px solid red
+          input
+            // position absolute
+            // left 300px
+            // top 0
+            padding 0.4em 1em
+            width auto
+
+      .reveal-hex
+        display block
+        position absolute
+        top 0
+        color white
+        transition all 0.3s ease-in 
+        .hexagon
+          position absolute
+          top -34px
+          background white
+          p.language
+            text-align center
+          p, a, a:visited
+            color white // $color__main--darkest
+        .hexagon.blue
+          background-color $color__main--dark
+          &:before
+            bottom 100%
+            border-bottom 28.87px solid $color__main--dark
+          &:after
+            top 100%
+            width 0
+            border-top 28.87px solid $color__main--dark !important
+
+      .hex-wrapper
+        &:hover 
+          > .reveal
+            transform translateX(-75px) 
+          .search-wrapper
+            padding-left 0px
+            // transform translate(-270px, 10px) 
+            input
+              width auto
+              // transform translateX(-10px) 
+
+
+      .hexagon
+        position relative
+        width 100px
+        height 57.74px
+        background-color #ffffff
+        // margin 28.87px 0
+        margin 35px 0
+        transition all 0.3s
+        &:hover
+          cursor pointer
+        img
+          position absolute
+          width 50%
+          top 5%
+          left 25%
+        &:before
+          bottom 100%
+          border-bottom 28.87px solid #ffffff
+        &:after
+          top 100%
+          width 0
+          border-top 28.87px solid #ffffff
+
+      .hexagon:before, .hexagon:after
+        content ""
+        position absolute
+        width 0
+        border-left 50px solid transparent
+        border-right 50px solid transparent
+
+
+
+      .flip-box {
+        background-color: transparent;
+        width: 100px;
+        height: 57.74px;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+      /* This container is needed to position the front and back side */
+      .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        // text-align: center;
+        transform-origin: -3px;
+        transition: transform 0.8s;
+        transition-delay: 0.2s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .hex-wrapper:hover .flip-box-inner {
+        transform: rotateY(-180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-box-front, .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side */
+      .flip-box-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-box-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+      
+  .menu-footer
+    flex 1
+    order 5
+    @media (min-width $mobi-navi-breakpoint)
+      display none
+    .footer-somelinks
+      img.some-icon 
+        padding 0
+        margin 0
+
+  footer
+    .sitemap
+      ul
+        margin-left 0
+        padding-left 0
+        li
+          padding 0
+          margin-bottom 0
+    .nav-link 
+      padding 0.2em 0
+      margin 0
+        

@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700");
+html {
+  font-size: 100%;
+}
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+#___gatsby * {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#___gatsby h1,
+#___gatsby h1 a {
+  margin-bottom: 10px;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 44px;
+}
+#___gatsby h2,
+#___gatsby h2 a {
+  margin-top: 1em;
+}
+#___gatsby h3,
+#___gatsby h4,
+#___gatsby h5,
+#___gatsby h6,
+#___gatsby h3 a,
+#___gatsby h4 a,
+#___gatsby h5 a,
+#___gatsby h6 a {
+  margin-top: 0.5em;
+}
+#___gatsby p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22.6px;
+}
+#___gatsby code {
+  font-family: 'Fira Mono', Courier, monospace;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+#___gatsby pre {
+  color: #fff;
+}
+#___gatsby pre code,
+#___gatsby pre code span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+#___gatsby code {
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  margin: 0 0.4em;
+  background: $color__main--medium;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+#___gatsby li {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22.6px;
+}
+#___gatsby strong {
+  font-weight: 600;
+}
+#___gatsby p,
+#___gatsby h1,
+#___gatsby h1 a,
+#___gatsby h2,
+#___gatsby h3,
+#___gatsby h4,
+#___gatsby h5,
+#___gatsby h6,
+#___gatsby a,
+#___gatsby h3 a,
+#___gatsby h4 a,
+#___gatsby h5 a,
+#___gatsby h6 a {
+  margin-bottom: 0.5em;
+}
+#___gatsby h1,
+#___gatsby h1 a,
+#___gatsby h2,
+#___gatsby h3,
+#___gatsby h4,
+#___gatsby h5,
+#___gatsby h6 {
+  line-height: 1.05em;
+}
+#___gatsby p,
+#___gatsby label,
+#___gatsby input,
+#___gatsby button {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 1.125em;
+  color: #141414;
+}
+#___gatsby a {
+  font-size: inherit;
+}
+#___gatsby li {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 1.125em;
+  color: #141414;
+}
+#___gatsby code {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.9em;
+  letter-spacing: 1px;
+}
+#___gatsby h1,
+#___gatsby h1 a {
+  font-weight: 400;
+  font-size: 63px;
+  line-height: 1.125em;
+  letter-spacing: 0.01em;
+}
+#___gatsby h2 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.125em;
+  letter-spacing: 0.01em;
+}
+#___gatsby h3 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.125em;
+  letter-spacing: 0.02em;
+}
+#___gatsby h4 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.125em;
+  letter-spacing: 0.02em;
+}
+#___gatsby h5 {
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 1.125em;
+  letter-spacing: 0.03em;
+}
+#___gatsby h6 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.125em;
+  letter-spacing: 0.03em;
+}
+#___gatsby .megaheadline {
+  font-weight: 200;
+  font-size: 108px;
+  line-height: 0.95em;
+}
+#___gatsby .post-meta {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1em;
+  color: #7955ff;
+  margin-bottom: 1em;
+}
+#___gatsby .blockquote {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 27px;
+  line-height: 1.125em;
+}
+@media (max-width: 1000px) {
+  #___gatsby p,
+  #___gatsby li,
+  #___gatsby a,
+  #___gatsby label,
+  #___gatsby input,
+  #___gatsby button {
+    font-size: 2.7vw;
+  }
+  #___gatsby h1,
+  #___gatsby h1 a {
+    font-size: 6.3vw;
+  }
+  #___gatsby h2 {
+    font-size: 4.8vw;
+  }
+  #___gatsby h3 {
+    font-size: 3.6vw;
+  }
+  #___gatsby h4 {
+    font-size: 3vw;
+  }
+  #___gatsby h5 {
+    font-size: 2.7vw;
+  }
+  #___gatsby h6 {
+    font-size: 2.4vw;
+  }
+  #___gatsby code {
+    font-size: 2.7vw;
+  }
+  #___gatsby pre code,
+  #___gatsby pre code span {
+    font-size: 2.7vw;
+  }
+}
+#___gatsby .megaheadline {
+  font-size: 10.8vw;
+}
+#___gatsby .blockquote {
+  font-size: 2.7vw;
+}
+@media (max-width: 667px) {
+  #___gatsby p,
+  #___gatsby li,
+  #___gatsby a,
+  #___gatsby label,
+  #___gatsby input,
+  #___gatsby button {
+    font-size: 18px;
+  }
+  #___gatsby h1,
+  #___gatsby h1 a {
+    font-size: 42px;
+  }
+  #___gatsby h2 {
+    font-size: 36px;
+  }
+  #___gatsby h3 {
+    font-size: 24px;
+  }
+  #___gatsby h4 {
+    font-size: 20px;
+  }
+  #___gatsby h5 {
+    font-size: 18px;
+  }
+  #___gatsby h6 {
+    font-size: 16px;
+  }
+  #___gatsby code {
+    font-size: 18px;
+  }
+  #___gatsby pre code,
+  #___gatsby pre code span {
+    font-size: 18px;
+  }
+}
+#___gatsby .megaheadline {
+  font-size: 72px;
+}
+#___gatsby .blockquote {
+  font-size: 18px;
+}
+@media (max-width: 640px) {
+  #___gatsby p,
+  #___gatsby li,
+  #___gatsby a,
+  #___gatsby label,
+  #___gatsby input,
+  #___gatsby button {
+    font-size: 15px;
+  }
+  #___gatsby h1,
+  #___gatsby h1 a {
+    font-size: 34px;
+  }
+  #___gatsby h2 {
+    font-size: 29px;
+  }
+  #___gatsby h3 {
+    font-size: 19px;
+  }
+  #___gatsby h4 {
+    font-size: 16px;
+  }
+  #___gatsby h5 {
+    font-size: 15px;
+  }
+  #___gatsby h6 {
+    font-size: 13px;
+  }
+  #___gatsby code {
+    font-size: 14px;
+  }
+  #___gatsby pre code,
+  #___gatsby pre code span {
+    font-size: 14px;
+  }
+  #___gatsby .megaheadline {
+    font-size: 58px;
+  }
+  #___gatsby .blockquote {
+    font-size: 15px;
+  }
+}
+#___gatsby nav.apps a {
+  font-size: 12px;
+  font-weight: 500;
+}
+@media (min-width: 820px) {
+  #___gatsby footer h5,
+  #___gatsby footer p,
+  #___gatsby footer a:link {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+}
