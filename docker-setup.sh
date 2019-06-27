@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 echo "The build environment consists of the following files:"
 find /src
 
-set -euxo pipefail
+set -eux
 
 # Clean up any defaults
 rm -rf /etc/nginx/nginx.conf /etc/nginx/conf.d /var/lib/nginx /var/www
@@ -16,7 +16,8 @@ mkdir -p /var/log/nginx
 mkdir -p /var/lib/nginx/logs
 
 # And non-root user for Nginx to run as
-adduser -D -g www www
+adduser --disabled-password --gecos "" www
+usermod -aG www www
 
 # Set up Nginx configuration in place
 cp -r /src/nginx/* /etc/nginx
