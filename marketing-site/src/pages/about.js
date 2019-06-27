@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Video from '../components/Video'
 import Logos from '../components/Logos'
-import HexIcon from '../components/hexIcon'
+import HexIcon from '../components/HexIcon'
 import { variables } from '../Theme.js'
 
 const StyledPage = styled.div`
