@@ -7,16 +7,16 @@
 const path = require('path');
 // const { createFilePath, createFileNode } = require(`gatsby-source-filesystem`)
 
-exports.sourceNodes = ({ actions }) => {
-    const { createTypes } = actions
-    const typeDefs = `
-      type AuthorJson implements Node {
-        name: String
-        birthday: Date
-      }
-    `
-    createTypes(typeDefs)
-  }
+// exports.sourceNodes = ({ actions }) => {
+//     const { createTypes } = actions
+//     const typeDefs = `
+//       type AuthorJson implements Node {
+//         name: String
+//         birthday: Date
+//       }
+//     `
+//     createTypes(typeDefs)
+//   }
 
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
