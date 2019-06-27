@@ -26,7 +26,7 @@ const HexImage = (props) => {
             <image xlinkHref={props.pic} x="0" y="0" width="1" height="1" 
             transform={`scale(1.2 1.1) 
               rotate(${ props.rotate ? -10 : 0 })
-              translate(-0.15 0.01)`}
+              translate(-0.15 0.0)`}
             />
           </pattern>
           
