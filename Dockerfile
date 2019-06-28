@@ -6,7 +6,8 @@ ENV LC_ALL=C.UTF-8 \
 ADD . /src
 WORKDIR /src
 
-RUN apk update \
+RUN set -x \
+ && apk update \
  && apk upgrade \
  && apk add --virtual build-dependencies \
     nodejs \
@@ -17,7 +18,14 @@ RUN apk update \
     autoconf \
     automake \
     libtool \
+    libc6-compat \
+    g++ \
+    libjpeg-turbo-dev \
+    libpng-dev \
+    make \
+    bash \
     nasm \
+    fftw-dev \
     util-linux \
  && apk add nginx \
     openssl \
