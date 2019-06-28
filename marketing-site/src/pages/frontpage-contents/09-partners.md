@@ -67,3 +67,7 @@ Locia Oy
 &middot;
 
 Sport Venue Oy
+<<<<<<< HEAD
+=======
+
+>>>>>>> bc5a77ecc1a52ee8dfeeb07185a5c73496e19fdb

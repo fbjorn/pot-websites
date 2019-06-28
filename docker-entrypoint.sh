@@ -1,5 +1,5 @@
 #!/bin/sh
-set -eux
+set -euxo pipefail
 
 if [ -z "${MARKETING_HOST:-}" ]; then
   MARKETING_HOST="marketing.example.host"
