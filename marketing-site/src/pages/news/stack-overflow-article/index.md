@@ -28,7 +28,8 @@ To be able to track new questions easily our developer team managed to pull some
 We analyse the questions asked in SO every three months and identify the challenges users encounter. The reoccuring issues obviously offer us information where to focus next in enhancing the platform developer experience.
 
 Based on the analysis we'll know which functions and features require more guides (or fixes in existing guides) in Developers Portal. Guides will be available in written format and with video tutorials, uploaded to YouTube and embedded to platformoftrust.net.
-From guides to better developer experience
+
+## From guides to better developer experience
 
 Ultimate goal is to use gained knowledge in developer experience development which is a never ending task. Obviously guides are just plasters - a quick fix to a problem. Guides will anyway help platform consumers get things done. Longer term fix is to refactor features and processes so that guides become obsolete.
 
