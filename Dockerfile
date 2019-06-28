@@ -7,20 +7,14 @@ ADD . /src
 WORKDIR /src
 
 RUN set -exu && apt-get clean && apt-get -y update \
- && df -h \
  && apt-get -y install build-essential \
+    nodejs \
     npm \
     gcc \
     git \
     autoconf \
     automake \
     libtool \
-    libc6-compat \
-    g++ \
-    libjpeg-turbo-dev \
-    libpng-dev \
-    make \
-    bash \
     nasm \
     nginx \
     openssl \
