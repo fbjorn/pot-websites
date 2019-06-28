@@ -24,6 +24,7 @@ The solution will be able to forecast the number of visitors to a swimming pool 
 
 The more data you have, the easier it is to manage operations. Platform of Trust makes compatible data available, and Sport Venue’s KnowUr.Biz® solution analyses the data, compiling it in an accessible format. As a result, it will be as quick and easy as possible to use it when supporting and developing business operations.
 
+Read more about Sport Venue´s [KnowUr.Biz](http://www.sportvenue.fi/en/analytics/)
 
 <br/><br/><br/><br/>
 
