@@ -69,7 +69,6 @@ export default class HeaderFoo extends React.Component {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-    console.log("Something happened", open)
     this.setState(prevState  => ({ right: !prevState.right }))
   };
 
