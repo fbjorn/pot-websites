@@ -7,6 +7,7 @@ import { colors } from '../Theme.js'
 const StyledSomeIcons = styled.nav`
   display: inline-flex;
   flex-direction: ${ props => props.vertical ? "column" : "row" }; 
+  align-items: center;
   // width: 100%;
   a {
     display: inline-block;

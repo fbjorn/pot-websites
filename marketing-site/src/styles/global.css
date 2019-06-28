@@ -31,8 +31,6 @@ html {
 body {
   font-family: 'Fira Sans', sans-serif;
   line-height: 1.125em;
-/* SHARED PROPERTIES */
-/* SPECIFIC PROPERTIES */
 }
 body p,
 body h1,
@@ -87,71 +85,71 @@ body h6 {
   letter-spacing: 0.03em;
 }
 @media only screen and (max-width: 1000px) {
-  p {
+  body p {
     font-size: 2.7vw;
   }
-  h1 {
+  body h1 {
     font-size: 6.3vw;
   }
-  h2 {
+  body h2 {
     font-size: 4.8vw;
   }
-  h3 {
+  body h3 {
     font-size: 3.6vw;
   }
-  h4 {
+  body h4 {
     font-size: 3vw;
   }
-  h5 {
+  body h5 {
     font-size: 2.7vw;
   }
-  h6 {
+  body h6 {
     font-size: 2.4vw;
   }
 }
 @media only screen and (max-width: 667px) {
-  p {
+  body p {
     font-size: 18px;
   }
-  h1 {
+  body h1 {
     font-size: 42px;
   }
-  h2 {
+  body h2 {
     font-size: 36px;
   }
-  h3 {
+  body h3 {
     font-size: 24px;
   }
-  h4 {
+  body h4 {
     font-size: 20px;
   }
-  h5 {
+  body h5 {
     font-size: 18px;
   }
-  h6 {
+  body h6 {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 640px) {
-  p {
+  body p {
     font-size: 15px;
   }
-  h1 {
+  body h1 {
     font-size: 34px;
   }
-  h2 {
+  body h2 {
     font-size: 29px;
   }
-  h3 {
+  body h3 {
     font-size: 19px;
   }
-  h4 {
+  body h4 {
     font-size: 16px;
   }
-  h5 {
+  body h5 {
     font-size: 15px;
   }
-  h6 {
+  body h6 {
     font-size: 13px;
   }
 }

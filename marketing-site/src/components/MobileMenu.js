@@ -10,8 +10,9 @@ import { device } from '../Theme.js'
 const StyledMobileMenu = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90vw;
-  height: 100vh;
+  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
   nav { flex: 1; }
   @media ${device.tablet}{ display: none; }
 `
