@@ -44,7 +44,6 @@ cp -r . /var/www/developers-site
 # Build the contents to be published
 cd /src/marketing-site
 npm install
-echo -e "\nsharp.cache(false)\n" >> node_modules/gatsby-plugin-sharp/process-file.js
 npm run build
 
 # Publish everything necessary
