@@ -15,7 +15,8 @@ status: "published" # "published" / "draft" / "pending" / "archived"
 ---
 
 Knowledge management, or making data-based business decisions, is a hot topic, and now services are starting to emerge that make it easy to exploit data quickly. The collaboration between Platform of Trust and Sport Venue is a step towards more efficient processes and improved services for end users.
-Platform of Trust will be launched in June. It is a platform that harmonises data from a range of sources into a format that can be used by many operators. Data source validation and the use of automated authorisation and agreement tools will ensure data reliability. The development of the platform was begun to address the needs of the construction and property sectors. While the majority of the data on the platform in its initial phase is related to these sectors, in the future, the platform will be available for the needs of any sector.
+
+Platform of Trust is a platform that harmonises data from a range of sources into a format that can be used by many operators. Data source validation and the use of automated authorisation and agreement tools will ensure data reliability. The development of the platform was begun to address the needs of the construction and property sectors. While the majority of the data on the platform in its initial phase is related to these sectors, in the future, the platform will be available for the needs of any sector.
 
 Sport Venue Oy has developed a solution called KnowUr.Biz® that gathers data from a range of sources. The data sources fall into three categories: business data, sensor data (such as energy consumption data), and external data (such as the weather, bus timetables, etc.). The data will be integrated according to the customer’s needs. KnowUr.Biz® provides current information and creates forecasts that you can use for bringing your business from reactive to proactive mode.
 
@@ -23,7 +24,6 @@ The solution will be able to forecast the number of visitors to a swimming pool 
 
 The more data you have, the easier it is to manage operations. Platform of Trust makes compatible data available, and Sport Venue’s KnowUr.Biz® solution analyses the data, compiling it in an accessible format. As a result, it will be as quick and easy as possible to use it when supporting and developing business operations.
 
-_Book your 30-minute online presentation of Platform of Trust here and read more about the Sport Venue’s KnowUr.Biz solution here._
 
 <br/><br/><br/><br/>
 
