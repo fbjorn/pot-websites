@@ -45,11 +45,9 @@ const StyledCustomImage = styled.div`
 `
 
 const ContactBlurb = (props) => {
-  // const phone = "+358456764842"
   const phone = props.phone
   const formattedPhone = `${phone.substring(0,4)} ${phone.substring(4,6)} ${phone.substring(6,9)} ${phone.substring(9,13)} ${phone.substring(13,16)}`  
 
-  console.log(formattedPhone);
   return (
     <StyledContactBlurb className="col-12 col-md-6 col-lg-3">
       <StyledCustomImage>
