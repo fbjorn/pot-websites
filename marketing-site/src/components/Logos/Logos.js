@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Cozify from './Cozify.png'
-import Dl from './digital-living.png'
+import Dl from './digitalliving.png'
 import Flextila from './Flextila.png'
 import Forumvirium from './Forum-virium.png'
 import Granlund from './Granlund.png'
@@ -58,8 +58,8 @@ const Logos = (props) => {
     <a href="https://www.hamk.fi/" target="_blank" rel="noopener noreferrer"><img src={Hamk} alt="HAMK" /></a>
     <a href="https://forumvirium.fi/" target="_blank" rel="noopener noreferrer"><img src={Forumvirium} alt="ForumVirium" /></a>
     <a href="https://honkio.com/" target="_blank" rel="noopener noreferrer"><img src={Honkio} alt="Honkio" /></a>
-    <a href="https://www.cozify.fi/" target="_blank" rel="noopener noreferrer"><img src={Cozify} alt="" />}</a>
-    <a href="https://flextila.com/" target="_blank" rel="noopener noreferrer"><img src={Flextila}alt="Flextila" />}</a>
+    <a href="https://www.cozify.fi/" target="_blank" rel="noopener noreferrer"><img src={Cozify} alt="cozify" /></a>
+    <a href="https://flextila.com/" target="_blank" rel="noopener noreferrer"><img src={Flextila}alt="Flextila" /></a>
     <a href="https://www.metropolia.fi/" target="_blank" rel="noopener noreferrer"><img src={Metropolia} alt="Metropolia" /></a>
     <a href="https://www.senaatti.fi/" target="_blank" rel="noopener noreferrer"><img src={Senaatti} alt="Senaatti" /></a>
     <a href="https://sykoy.fi/" target="_blank" rel="noopener noreferrer"><img src={Syk} alt="SYK" /></a>
