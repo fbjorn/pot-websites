@@ -19,7 +19,7 @@ const StyledSomeIcons = styled.nav`
     line-height: 1;
   } 
   svg {
-    max-width: 30px;
+    max-width: 24px;
     max-width: 100%;
     height: auto;
     line-height: 0;

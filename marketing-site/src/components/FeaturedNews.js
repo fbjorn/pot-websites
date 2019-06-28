@@ -33,6 +33,7 @@ const StyledContent = styled.div`
     @media ${device.tablet} { font-size: 1.6rem; }
   }
   span {
+    @media ${device.tablet} { font-size: 40% }
     @media ${device.laptop} { font-size: 60% }
     @media ${device.laptopL} { font-size: 80% }
   }
