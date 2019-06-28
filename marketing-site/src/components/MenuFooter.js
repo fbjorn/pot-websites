@@ -10,7 +10,7 @@ const StyledMenuFooter = styled.footer`
 flex: 1;
 display: flex;
 max-width: 100%;
-height: 100vh;
+height: 100%;
 background: ${colors.mainDarker};
 img { margin-bottom: 2rem; }
 h5 { font-size: 1rem; }

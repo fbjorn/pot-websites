@@ -8,19 +8,17 @@ const StyledSomeIcons = styled.nav`
   display: inline-flex;
   flex-direction: ${ props => props.vertical ? "column" : "row" }; 
   align-items: center;
-  // width: 100%;
   a {
     display: inline-block;
     width: 100%;
-    max-width: 32px;
-    // max-width: 100%;
+    max-width: 24px;
     padding: 0;
     margin: 0 2.5% 0 0;
     line-height: 1;
   } 
   svg {
     max-width: 24px;
-    max-width: 100%;
+    // max-width: 100%;
     height: auto;
     line-height: 0;
     vertical-align: 0;

@@ -6,8 +6,6 @@ module.exports = {
     author: `mika@eqsign.fi`,
   },
   plugins: [
-    // `gatsby-plugin-emotion`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-mdx`,
@@ -88,12 +86,12 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-source-hubspot',
-      options: {
-        key: '5c1263ec-7b42-44b0-b511-d4677ab3d08c'
-      }
-    },
+    // {
+    //   resolve: 'gatsby-source-hubspot',
+    //   options: {
+    //     key: '5c1263ec-7b42-44b0-b511-d4677ab3d08c'
+    //   }
+    // },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-disqus`,
@@ -101,17 +99,5 @@ module.exports = {
         shortname: `oftrust`
       }
     },
-    // {
-    //   resolve: `gatsby-source-wordpress`,
-    //   options: {
-    //     baseUrl: `http://www.katalysti.fi/blog`,
-    //     protocol: `http`,
-    //     hostingWPCOM: false,
-    //     useACF: false,
-    //   },
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 }

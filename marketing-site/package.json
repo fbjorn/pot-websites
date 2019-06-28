@@ -5,8 +5,6 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.11",
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-brands-svg-icons": "^5.8.2",
     "@fortawesome/pro-light-svg-icons": "^5.8.2",
@@ -25,7 +23,6 @@
     "gatsby-mdx": "^0.6.3",
     "gatsby-plugin-catch-links": "^2.0.9",
     "gatsby-plugin-disqus": "^1.0.3",
-    "gatsby-plugin-emotion": "^4.0.6",
     "gatsby-plugin-google-analytics": "^2.1.0",
     "gatsby-plugin-hubspot": "^1.2.1",
     "gatsby-plugin-manifest": "^2.0.9",
@@ -66,8 +63,6 @@
     "bootstrap-scss": "^4.3.1",
     "eslint-config-react-app": "^3.0.8",
     "gatsby-cli": "^2.4.13",
-    "gatsby-plugin-sass": "^2.0.11",
-    "node-sass": "^4.12.0",
     "prettier": "^1.15.2"
   },
   "repository": {

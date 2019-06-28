@@ -45,6 +45,8 @@ const StyledFooter = styled.footer`
       font-size: calc(0.5rem + ((1vw - 0.2rem) * 4.4444));
       @media (min-width: 31.25rem) { font-size: 1rem; }
     }
+    p { font-size: 1rem; }
+    a { font-weight: 400; }
   }
   .some-links { flex-wrap: wrap; }
 `
