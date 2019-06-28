@@ -24,7 +24,7 @@ const StyledToggler = styled.div`
   // width: 2rem;
   top: 1.8rem;
   left: 0;
-  transform: translateX( calc(100vw - 5.2rem )) rotate(0deg);
+  transform: translateX( calc(100vw - 4.2rem )) rotate(0deg);
   padding: 0.5rem;
   margin: 0 0 0 auto;
   border: 16px solid transparent;
@@ -35,7 +35,8 @@ const StyledToggler = styled.div`
     cursor: pointer;
   }
   &.open {
-    transform: translateX(calc(10vw - 1rem)) rotate(-90deg);
+    top: -1rem;
+    transform: translateX(calc(10vw + 0rem)) rotate(-90deg);
     background: transparent;
     svg { color: ${colors.mainDarker}; }
     .hamburger { background: transparent; }
@@ -68,7 +69,6 @@ export default class HeaderFoo extends React.Component {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-    console.log("Something happened", open)
     this.setState(prevState  => ({ right: !prevState.right }))
   };
 

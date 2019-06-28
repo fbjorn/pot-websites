@@ -16,8 +16,6 @@ const NewsletterForm = (props) => {
       <HubspotForm
         portalId='4568282'
         formId='6ac54a8a-a93a-4e18-91ef-6698f8ba380f'
-        onSubmit={() => console.log('Submit!')}
-        onReady={(form) => console.log('Form ready!')}
         loading={<div>Loading...</div>}
       />
 

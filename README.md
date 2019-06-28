@@ -33,10 +33,9 @@ Portal is one stop shop to Platform of Trust.
 ## FrontEnd build for release2 marketing-site 
 
 * Clone repository to local machine with 
-* ``git clone git@github.com:PlatformOfTrust/pot-websites.git``
+* ``git clone https://github.com/PlatformOfTrust/pot-websites.git``
 * ``cd pot-websites`` 
-* ``cd marketing-site``
-* ``git checkout marketing-site/release2`` 
+* ``cd marketing-site`` 
 * Create file `.npmrc` and add lines: 
 
 ```

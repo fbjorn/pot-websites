@@ -7,6 +7,7 @@ import { colors } from '../Theme.js'
 const StyledSomeIcons = styled.nav`
   display: inline-flex;
   flex-direction: ${ props => props.vertical ? "column" : "row" }; 
+  align-items: center;
   // width: 100%;
   a {
     display: inline-block;
@@ -18,7 +19,7 @@ const StyledSomeIcons = styled.nav`
     line-height: 1;
   } 
   svg {
-    max-width: 30px;
+    max-width: 24px;
     max-width: 100%;
     height: auto;
     line-height: 0;

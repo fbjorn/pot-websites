@@ -63,7 +63,6 @@ const IndexPage = ({ data }) => {
           {contents
             .filter(content => content.node.frontmatter.section === "foo")
             .map( ({ node }) => {
-              console.log('[index.js] ContentMapping:', node )
               return(
                 <div
                   key={node.id}

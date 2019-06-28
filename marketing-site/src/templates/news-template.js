@@ -48,21 +48,22 @@ const StyledPost = styled.div`
   position: relative;
   background: ${colors.mainDarker};
   p { line-height: 1.5; }
+  a:link { text-decoration: underline dotted }
 `
 const StyledCaption = styled.div`
-width: 100%
-position: absolute;
-transform: translateY(-100%);
-background: linear-gradient(to bottom, rgba(0,0,0,0), ${colors.mainDarker} 100%);
-padding: 4rem 10% 0;
-justify-content: flex-end;
-p {
-  max-width: 30%;
-  border-top: 2px dotted white;
-  padding-top: 1em;
-  font-size: 1rem;
-  color: white;
-}
+  width: 100%
+  position: absolute;
+  transform: translateY(-100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0), ${colors.mainDarker} 100%);
+  padding: 4rem 10% 0;
+  justify-content: flex-end;
+  p {
+    max-width: 30%;
+    border-top: 2px dotted white;
+    padding-top: 1em;
+    font-size: 1rem;
+    color: white;
+  }
 `
 const StyledPostFooter = styled.div`
   &&& { max-width: ${variables.pageWidth} }
@@ -168,13 +169,13 @@ export default function Template({
                 Come on, share this piece. You know you want to. 
                 <FontAwesomeIcon icon={['fal', 'arrow-right']} color="white" size="1x" />
 
-                <a href={`https://www.facebook.com/sharer/sharer.php?u=https://www.platformoftrust.net/${post.frontmatter.path}`} target="_blank"  rel="noopener noreferrer">
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=https://www.platformoftrust.net${post.frontmatter.path}`} target="_blank"  rel="noopener noreferrer">
                     <FontAwesomeIcon icon={['fab', 'facebook-square']} color="white" size="1x" />
                 </a> 
-                <a href={`https://twitter.com/intent/tweet/?text=${post.frontmatter.title}&url=https://www.platformoftrust.net/${post.frontmatter.path}%2F&via=PlatformOfTrust`}  target="_blank"  rel="noopener noreferrer">
+                <a href={`https://twitter.com/intent/tweet/?text=${post.frontmatter.title}&url=https://www.platformoftrust.net${post.frontmatter.path}%2F&via=PlatformOfTrust`}  target="_blank"  rel="noopener noreferrer">
                     <FontAwesomeIcon icon={['fab', 'twitter-square']} color="white" size="1x" />
                 </a>
-                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=https://www.platformoftrust.net/${post.frontmatter.path}&title=${post.frontmatter.title}&source=${post.frontmatter.title}`}target="_blank"  rel="noopener noreferrer">
+                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=https://www.platformoftrust.net${post.frontmatter.path}&title=${post.frontmatter.title}&source=${post.frontmatter.title}`}target="_blank"  rel="noopener noreferrer">
                     <FontAwesomeIcon icon={['fab', 'linkedin']} color="white" size="1x" />
                 </a>
               </p>
