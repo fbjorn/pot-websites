@@ -7,9 +7,10 @@ ADD . /src
 WORKDIR /src
 
 RUN set -exu && apt-get clean && apt-get -y update \
+ && apt-get -y install build-essential apt-transport-https lsb-release ca-certificates curl \
+ && curl -sL https://rpm.nodesource.com/setup_10.x | bash - \
  && apt-get -y install build-essential \
     nodejs \
-    npm \
     gcc \
     git \
     autoconf \
