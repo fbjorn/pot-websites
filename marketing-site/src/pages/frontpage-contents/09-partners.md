@@ -67,4 +67,3 @@ Locia Oy
 &middot;
 
 Sport Venue Oy
-

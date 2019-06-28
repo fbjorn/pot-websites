@@ -17,12 +17,11 @@ As part of the Developer relations we decided to utilise Stack Overflow as the p
 
 According to [Hackerrank 2018 survey](https://research.hackerrank.com/developer-skills/2018) 67% of developers have Computer Science degrees, yet roughly 74% say they have at-least self-taught themselves partially. Over 88% of respondents use Stack Overflow (or SO) as knowledge-base on how to learn code. But SO is much more than just highly scalable "support".
 
-
 ## Stackoverflow - Practical daily knowledge-base
 
 We encourage all developers to ask Platform of Trust related questions in Stack Overflow. (See [example](https://stackoverflow.com/questions/55381785/how-to-list-all-products-in-platform-of-trust) )
 
-To be able to track new questions easily our developer team managed to pull some strings and have [platform-of-trust tag](https://stackoverflow.com/questions/tagged/platform-of-trust) created on Stack Overflow. (Which, for a good reason, caused a round of applause at our team bootcamp last week.) 
+To be able to track new questions easily our developer team managed to pull some strings and have [platform-of-trust tag](https://stackoverflow.com/questions/tagged/platform-of-trust) created on Stack Overflow. (Which, for a good reason, caused a round of applause at our team bootcamp last week.)
 
 ## From questions to guides
 
