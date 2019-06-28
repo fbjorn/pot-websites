@@ -35,11 +35,6 @@ const StyledMeta = styled.div`
   // display: block;
   text-transform: capitalize;
   * { margin-right: 0.5em; }
-  svg { 
-    fill: ${colors.ok};
-    stroke: ${colors.ok};
-    color: ${colors.ok};
-  }
 `
 const StyledPost = styled.div`
   &&& { max-width: ${variables.pageWidth} }
@@ -105,8 +100,8 @@ export default function Template({
           <div className="row">
             <Link to="/cases"><FontAwesomeIcon icon={['fal', 'arrow-left']} /> Back to cases</Link>
             <h1>{post.frontmatter.title}</h1>
-            <StyledMeta>
-              <FontAwesomeIcon icon={['fa', 'hexagon']} color="blue" />
+            <StyledMeta> 
+              <FontAwesomeIcon icon={['fa', 'hexagon']} color={ colors[post.frontmatter.subtype] } />
               <span>{post.frontmatter.subtype}</span>
             </StyledMeta>
           </div>
