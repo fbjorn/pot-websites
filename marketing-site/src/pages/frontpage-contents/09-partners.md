@@ -10,7 +10,11 @@ Keskinäinen työeläkevakuutusyhtiö Varma
 
 &middot;
 
-Tampereen Tilapalvelut Oy, GSP Group Oy
+Tampereen Tilapalvelut Oy
+
+&middot;
+
+GSP Group Oy
 
 &middot;
 
@@ -38,7 +42,11 @@ Metropolia Ammattikorkeakoulu
 
 &middot;
 
-Senaatti-kiinteistöt, Suomen Yliopistokiinteistöt Oy
+Senaatti-kiinteistöt
+
+&middot;
+
+Suomen Yliopistokiinteistöt Oy
 
 &middot;
 
@@ -67,7 +75,3 @@ Locia Oy
 &middot;
 
 Sport Venue Oy
-<<<<<<< HEAD
-=======
-
->>>>>>> bc5a77ecc1a52ee8dfeeb07185a5c73496e19fdb
